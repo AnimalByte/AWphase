@@ -144,18 +144,21 @@ AWPHASE_READSET=pacbio_hifi30x \
   results/phase8f_manifests/chr6_mhc_windows.window_beds.tsv hard_chr6
 ```
 
-Those outputs are written under `results/phase8/pbwt_hmm_pacbio_hifi_manifest/`
-and `results/phase8/panel_reliance_pacbio_hifi_manifest/` for the original
-diagnostic profile. The default PacBio runner profile now uses smaller Phase6C
-WMEC chunks (`AWPHASE_MAX_COMPONENT_SITES=128`,
-`AWPHASE_LOCAL_REFINE_ITERS=20`) and writes to
-`results/phase8/pbwt_hmm_pacbio_hifi_mcs128_manifest/`. On chr6 MHC this
-reduced PacBio-AWPhase PBWT+HMM v2 hamming error from about 20.1% to about 4.5%
-at the same 93.35% phased coverage. It is still below WhatsHap PacBio HiFi, so
-PacBio input mode remains diagnostic rather than promoted.
+The default PacBio runner profile uses smaller Phase6C WMEC chunks
+(`AWPHASE_MAX_COMPONENT_SITES=64`, `AWPHASE_LOCAL_REFINE_ITERS=20`) and writes
+to `results/phase8/pbwt_hmm_pacbio_hifi_mcs64_manifest/`,
+`results/phase8/panel_reliance_pacbio_hifi_mcs64_manifest/`, and
+`results/phase8/confidence_calibration_pacbio_hifi_mcs64_manifest/`. On chr6
+MHC this reduced PacBio-AWPhase PBWT+HMM v2 hamming error from about 20.1% in
+the original large-component diagnostic profile to about 1.86%, with 93.29%
+phased coverage and 91.55% truth-correct coverage. It also improves on the
+mcs128 profile, which was about 4.48% hamming error at 93.35% phased coverage.
+It is still below WhatsHap PacBio HiFi, so PacBio input mode remains diagnostic
+rather than promoted.
 
 Confidence calibration summaries are produced by
 `scripts/phase8/calibrate_phase8_confidence_v1.py`. The retained chr6 MHC
-PacBio mcs128 calibration shows the remaining AWPhase PacBio calls are still
-overconfident by about 3-4 percentage points, while the original PacBio
+PacBio mcs64 calibration shows the remaining AWPhase PacBio PBWT+HMM v2 calls
+are overconfident by about 1.1 percentage points, while the mcs128 profile was
+overconfident by about 3-4 percentage points and the original PacBio
 large-component profile was overconfident by about 18-19 percentage points.

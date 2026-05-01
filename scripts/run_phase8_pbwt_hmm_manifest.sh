@@ -14,11 +14,11 @@ case "$READSET" in
     ;;
   pacbio | hifi | pacbio_hifi30x)
     READSET="pacbio_hifi30x"
-    SOURCE_SUFFIX="${AWPHASE_SOURCE_SUFFIX:-_pacbio_hifi30x_mcs128_phase7a}"
-    SUMMARY_OUT_DIR="${AWPHASE_PHASE8_SUMMARY_DIR:-results/phase8/pbwt_hmm_pacbio_hifi_mcs128_manifest}"
-    PANEL_RELIANCE_OUT_DIR="${AWPHASE_PANEL_RELIANCE_DIR:-results/phase8/panel_reliance_pacbio_hifi_mcs128_manifest}"
-    CALIBRATION_OUT_DIR="${AWPHASE_CALIBRATION_DIR:-results/phase8/confidence_calibration_pacbio_hifi_mcs128_manifest}"
-    export AWPHASE_MAX_COMPONENT_SITES="${AWPHASE_MAX_COMPONENT_SITES:-128}"
+    SOURCE_SUFFIX="${AWPHASE_SOURCE_SUFFIX:-_pacbio_hifi30x_mcs64_phase7a}"
+    SUMMARY_OUT_DIR="${AWPHASE_PHASE8_SUMMARY_DIR:-results/phase8/pbwt_hmm_pacbio_hifi_mcs64_manifest}"
+    PANEL_RELIANCE_OUT_DIR="${AWPHASE_PANEL_RELIANCE_DIR:-results/phase8/panel_reliance_pacbio_hifi_mcs64_manifest}"
+    CALIBRATION_OUT_DIR="${AWPHASE_CALIBRATION_DIR:-results/phase8/confidence_calibration_pacbio_hifi_mcs64_manifest}"
+    export AWPHASE_MAX_COMPONENT_SITES="${AWPHASE_MAX_COMPONENT_SITES:-64}"
     export AWPHASE_LOCAL_REFINE_ITERS="${AWPHASE_LOCAL_REFINE_ITERS:-20}"
     ;;
   *)
