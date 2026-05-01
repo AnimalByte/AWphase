@@ -50,7 +50,11 @@ results/runs/
 results/experiments/
 results/comparisons/
 results/phase7a_windows/
+results/phase8/confidence_calibration_pacbio_hifi_mcs128_chr6_mhc/
 results/phase8/confidence_calibration*/phase8_confidence.*.sites.tsv
+results/phase8/feature_pruning_phase8f_v1/
+results/phase8/pbwt_hmm_diagnostics/
+results/phase8/pbwt_hmm_gate_sweep/
 
 # Local logs and scratch output
 *.log
