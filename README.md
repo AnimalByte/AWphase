@@ -124,3 +124,28 @@ The retained chr6 summary tables are:
 
 - `results/phase8/pbwt_hmm_chr6_mhc_manifest/phase8_pbwt_hmm.hard_chr6.average.tsv`
 - `results/phase8/pbwt_hmm_chr6_mhc_manifest/phase8_pbwt_hmm.hard_chr6.per_window.tsv`
+
+Panel-reliance diagnostics are retained separately:
+
+- `results/phase8/panel_reliance_chr6_mhc_manifest/panel_reliance.hard_chr6.average.tsv`
+- `results/phase8/panel_reliance_manifest/panel_reliance.train.average.tsv`
+
+The Phase8 PBWT/HMM runner now emits the original PBWT/HMM paths, v2
+exact-prefix PBWT with forward-backward HMM, and an experimental v3
+bidirectional-prefix PBWT path. On the retained chr6 MHC run, v3 matched v2 but
+was slower, so v2 remains the better current default.
+
+To run AWPhase itself on PacBio Revio HiFi 30x input instead of the manifest's
+Illumina BAM, use:
+
+```bash
+AWPHASE_READSET=pacbio_hifi30x \
+  bash scripts/run_phase8_pbwt_hmm_manifest.sh \
+  results/phase8f_manifests/chr6_mhc_windows.window_beds.tsv hard_chr6
+```
+
+Those outputs are written under `results/phase8/pbwt_hmm_pacbio_hifi_manifest/`
+and `results/phase8/panel_reliance_pacbio_hifi_manifest/`. This path is
+currently diagnostic: the retained chr6 MHC PacBio-AWPhase run has much worse
+hamming error than WhatsHap PacBio HiFi, so the PacBio input mode should not be
+treated as a promoted mode yet.

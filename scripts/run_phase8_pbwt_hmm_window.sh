@@ -19,7 +19,13 @@ TRUTH_BED="$8"
 ROOT="results/phase7a_windows/${SOURCE_WINDOW}"
 VARIANT_JSON="${ROOT}/variants.window.json"
 BACKBONE="${ROOT}/local_calls.phase6c.tsv"
-mkdir -p "$ROOT/phase8_pbwt" "$ROOT/phase8_pbwt_hmm" "$ROOT/phase8_pbwt_v2" "$ROOT/phase8_pbwt_hmm_v2"
+mkdir -p \
+  "$ROOT/phase8_pbwt" \
+  "$ROOT/phase8_pbwt_hmm" \
+  "$ROOT/phase8_pbwt_v2" \
+  "$ROOT/phase8_pbwt_hmm_v2" \
+  "$ROOT/phase8_pbwt_v3" \
+  "$ROOT/phase8_pbwt_hmm_v3"
 TIMING_TSV="$ROOT/phase8_timing.tsv"
 
 printf 'label\tmethod\tstep\truntime_seconds\tstarted_epoch\tended_epoch\n' > "$TIMING_TSV"
@@ -166,3 +172,61 @@ PYTHONPATH=python python python/awphase_py/evaluate_phase_truth.py \
   --sample HG002 \
   --phase-column local_phase_state \
   --out-prefix "$ROOT/truth_eval_phase8pbwt_hmm_v2"
+
+echo
+echo "===== ${SOURCE_WINDOW}: Phase8 PBWT v3 bidirectional-prefix projection ====="
+started="$(date +%s)"
+"${RUST_PBWT_CMD[@]}" \
+  --mode pbwt-v3 \
+  --panel-bcf "$PANEL_BCF" \
+  --backbone-local-calls-tsv "$BACKBONE" \
+  --variant-json "$VARIANT_JSON" \
+  --chrom "$CHROM" \
+  --start "$START" \
+  --end "$END" \
+  --out-tsv "$ROOT/local_calls.phase8pbwt_v3.tsv" \
+  --out-candidates-tsv "$ROOT/phase8_pbwt_v3/candidates.pbwt_v3.tsv" \
+  --out-summary-json "$ROOT/phase8_pbwt_v3/summary.pbwt_v3.json" \
+  > "$ROOT/phase8_pbwt_v3/run.pbwt_v3.log" 2>&1
+record_timing "AWPhase_Phase8_PBWT_V3_bidirectional_prefix" "phase_panel_pbwt" "$started"
+
+cat "$ROOT/phase8_pbwt_v3/summary.pbwt_v3.json"
+
+PYTHONPATH=python python python/awphase_py/evaluate_phase_truth.py \
+  --pred-tsv "$ROOT/local_calls.phase8pbwt_v3.tsv" \
+  --variant-json "$VARIANT_JSON" \
+  --truth-vcf "$TRUTH_VCF" \
+  --truth-bed "$TRUTH_BED" \
+  --sample HG002 \
+  --phase-column local_phase_state \
+  --out-prefix "$ROOT/truth_eval_phase8pbwt_v3"
+
+echo
+echo "===== ${SOURCE_WINDOW}: Phase8 PBWT v3 + forward-backward HMM projection ====="
+started="$(date +%s)"
+"${RUST_PBWT_CMD[@]}" \
+  --mode pbwt-hmm-v3 \
+  --panel-bcf "$PANEL_BCF" \
+  --backbone-local-calls-tsv "$BACKBONE" \
+  --variant-json "$VARIANT_JSON" \
+  --chrom "$CHROM" \
+  --start "$START" \
+  --end "$END" \
+  --genetic-map "$GENETIC_MAP" \
+  --hmm-min-margin 0.25 \
+  --out-tsv "$ROOT/local_calls.phase8pbwt_hmm_v3.tsv" \
+  --out-candidates-tsv "$ROOT/phase8_pbwt_hmm_v3/candidates.pbwt_hmm_v3.tsv" \
+  --out-summary-json "$ROOT/phase8_pbwt_hmm_v3/summary.pbwt_hmm_v3.json" \
+  > "$ROOT/phase8_pbwt_hmm_v3/run.pbwt_hmm_v3.log" 2>&1
+record_timing "AWPhase_Phase8_PBWT_HMM_V3_bidirectional_forward_backward" "phase_panel_pbwt" "$started"
+
+cat "$ROOT/phase8_pbwt_hmm_v3/summary.pbwt_hmm_v3.json"
+
+PYTHONPATH=python python python/awphase_py/evaluate_phase_truth.py \
+  --pred-tsv "$ROOT/local_calls.phase8pbwt_hmm_v3.tsv" \
+  --variant-json "$VARIANT_JSON" \
+  --truth-vcf "$TRUTH_VCF" \
+  --truth-bed "$TRUTH_BED" \
+  --sample HG002 \
+  --phase-column local_phase_state \
+  --out-prefix "$ROOT/truth_eval_phase8pbwt_hmm_v3"

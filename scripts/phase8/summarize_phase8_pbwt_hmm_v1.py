@@ -73,6 +73,11 @@ def load_runtime_seconds(path):
     return out
 
 
+def source_root(label, source_suffix):
+    suffix = source_suffix if source_suffix.startswith("_") else f"_{source_suffix}"
+    return Path(f"results/phase7a_windows/{label}{suffix}")
+
+
 def add_json(rows, split, label, method, path, runtime_seconds=""):
     path = Path(path)
     if not path.exists() or path.stat().st_size == 0:
@@ -161,7 +166,12 @@ def summarize(rows):
 def write_tsv(path, rows, fields):
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", newline="") as fh:
-        writer = csv.DictWriter(fh, fieldnames=fields, delimiter="\t")
+        writer = csv.DictWriter(
+            fh,
+            fieldnames=fields,
+            delimiter="\t",
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(rows)
 
@@ -177,6 +187,7 @@ def main():
         "--out-dir",
         default="results/phase8/pbwt_hmm_manifest",
     )
+    ap.add_argument("--source-suffix", default="_illumina30x_phase7a")
     args = ap.parse_args()
 
     manifest_rows = load_manifest(args.manifest, args.split)
@@ -184,7 +195,7 @@ def main():
     for row in manifest_rows:
         split = row["split"]
         label = row["label"]
-        root = Path(f"results/phase7a_windows/{label}_illumina30x_phase7a")
+        root = source_root(label, args.source_suffix)
         runtimes = {}
         runtimes.update(load_runtime_seconds(root / "run_timing.tsv"))
         runtimes.update(load_runtime_seconds(root / "phase8_timing.tsv"))
@@ -235,6 +246,25 @@ def main():
             "AWPhase_Phase8_PBWT_HMM_V2_forward_backward",
             root / "truth_eval_phase8pbwt_hmm_v2.metrics.json",
             runtimes.get("AWPhase_Phase8_PBWT_HMM_V2_forward_backward", ""),
+        )
+        add_json(
+            rows,
+            split,
+            label,
+            "AWPhase_Phase8_PBWT_V3_bidirectional_prefix",
+            root / "truth_eval_phase8pbwt_v3.metrics.json",
+            runtimes.get("AWPhase_Phase8_PBWT_V3_bidirectional_prefix", ""),
+        )
+        add_json(
+            rows,
+            split,
+            label,
+            "AWPhase_Phase8_PBWT_HMM_V3_bidirectional_forward_backward",
+            root / "truth_eval_phase8pbwt_hmm_v3.metrics.json",
+            runtimes.get(
+                "AWPhase_Phase8_PBWT_HMM_V3_bidirectional_forward_backward",
+                "",
+            ),
         )
         illumina_runtime = load_runtime_seconds(
             Path(f"baselines/whatshap/{label}_whatshap_illumina30x/run_timing.tsv")

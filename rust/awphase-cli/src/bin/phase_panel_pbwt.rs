@@ -16,11 +16,14 @@ enum Mode {
     PbwtHmm,
     PbwtV2,
     PbwtHmmV2,
+    PbwtV3,
+    PbwtHmmV3,
 }
 
 #[derive(Copy, Clone, Debug, Eq, PartialEq, ValueEnum)]
 enum PbwtRetrieval {
     ExactPrefix,
+    BidirectionalPrefix,
     NeighborDebug,
 }
 
@@ -212,8 +215,8 @@ fn as_array_root(value: &Value) -> Result<&Vec<Value>> {
 }
 
 fn load_variants(path: &str, chrom: &str, start: u64, end: u64) -> Result<Vec<Variant>> {
-    let text = fs::read_to_string(path)
-        .with_context(|| format!("failed to read variant JSON: {path}"))?;
+    let text =
+        fs::read_to_string(path).with_context(|| format!("failed to read variant JSON: {path}"))?;
     let value: Value = serde_json::from_str(&text)
         .with_context(|| format!("failed to parse variant JSON: {path}"))?;
 
@@ -296,9 +299,7 @@ fn parse_i8(value: Option<&String>) -> i8 {
 }
 
 fn parse_u64(value: Option<&String>) -> Option<u64> {
-    value
-        .and_then(|v| v.parse::<f64>().ok())
-        .map(|v| v as u64)
+    value.and_then(|v| v.parse::<f64>().ok()).map(|v| v as u64)
 }
 
 fn call_state(row: &CallRow) -> i8 {
@@ -790,8 +791,8 @@ fn path_match_stats(
         }
     }
 
-    let exact_bonus = 0.75 * (left_match_anchors + right_match_anchors) as f64
-        + 0.10 * matched_anchors as f64;
+    let exact_bonus =
+        0.75 * (left_match_anchors + right_match_anchors) as f64 + 0.10 * matched_anchors as f64;
 
     ScoredDonor {
         hap,
@@ -824,6 +825,52 @@ fn pbwt_long_match_neighbors(
     };
 
     let shared_anchor_count = seed.left_match_anchors.max(min_match_anchors);
+    let min_site_index = anchor_site_index.saturating_sub(shared_anchor_count.saturating_sub(1));
+    let rank = order.rank[seed.hap];
+    let mut out = vec![seed.hap];
+
+    let mut j = rank;
+    while j > 0 {
+        if order.divergence[j] > min_site_index {
+            break;
+        }
+        j -= 1;
+        out.push(order.order[j]);
+    }
+
+    let mut j = rank + 1;
+    while j < order.order.len() {
+        if order.divergence[j] > min_site_index {
+            break;
+        }
+        out.push(order.order[j]);
+        j += 1;
+    }
+
+    out
+}
+
+fn pbwt_right_match_neighbors(
+    seed: &ScoredDonor,
+    candidate_pos: u64,
+    anchors: &[Anchor],
+    pbwt: &PbwtIndex,
+    min_match_anchors: usize,
+) -> Vec<usize> {
+    let Some(anchor) = anchors
+        .iter()
+        .find(|a| a.pos > candidate_pos && pbwt.by_pos.contains_key(&a.pos))
+    else {
+        return vec![seed.hap];
+    };
+    let Some(order) = pbwt.by_pos.get(&anchor.pos) else {
+        return vec![seed.hap];
+    };
+    let Some(anchor_site_index) = pbwt.site_index_by_pos.get(&anchor.pos).copied() else {
+        return vec![seed.hap];
+    };
+
+    let shared_anchor_count = seed.right_match_anchors.max(min_match_anchors);
     let min_site_index = anchor_site_index.saturating_sub(shared_anchor_count.saturating_sub(1));
     let rank = order.rank[seed.hap];
     let mut out = vec![seed.hap];
@@ -884,7 +931,73 @@ fn exact_prefix_retrieve(
     }
 
     if candidate_haps.is_empty() {
-        return ranked.into_iter().filter(|d| d.score > 0.0).take(top_k).collect();
+        return ranked
+            .into_iter()
+            .filter(|d| d.score > 0.0)
+            .take(top_k)
+            .collect();
+    }
+
+    let mut donors: Vec<_> = candidate_haps
+        .into_iter()
+        .map(|hap| path_match_stats(candidate_pos, anchors, plus_path, panel, hap))
+        .filter(|d| d.score > 0.0)
+        .collect();
+    donors.sort_by(|a, b| {
+        (b.left_match_anchors + b.right_match_anchors)
+            .cmp(&(a.left_match_anchors + a.right_match_anchors))
+            .then_with(|| b.matched_anchors.cmp(&a.matched_anchors))
+            .then_with(|| b.score.partial_cmp(&a.score).unwrap_or(Ordering::Equal))
+            .then_with(|| a.hap.cmp(&b.hap))
+    });
+    donors.truncate(top_k);
+    donors
+}
+
+fn bidirectional_prefix_retrieve(
+    candidate_pos: u64,
+    anchors: &[Anchor],
+    plus_path: bool,
+    panel: &PanelData,
+    pbwt: &PbwtIndex,
+    top_k: usize,
+    seed_count: usize,
+    min_match_anchors: usize,
+) -> Vec<ScoredDonor> {
+    let mut ranked: Vec<_> = (0..panel.n_haps)
+        .map(|hap| path_match_stats(candidate_pos, anchors, plus_path, panel, hap))
+        .collect();
+    ranked.sort_by(|a, b| {
+        (b.left_match_anchors + b.right_match_anchors)
+            .cmp(&(a.left_match_anchors + a.right_match_anchors))
+            .then_with(|| b.matched_anchors.cmp(&a.matched_anchors))
+            .then_with(|| b.score.partial_cmp(&a.score).unwrap_or(Ordering::Equal))
+            .then_with(|| a.hap.cmp(&b.hap))
+    });
+
+    let mut candidate_haps = HashSet::new();
+    for seed in ranked
+        .iter()
+        .filter(|d| d.score > 0.0)
+        .filter(|d| d.left_match_anchors + d.right_match_anchors >= min_match_anchors)
+        .take(seed_count.max(top_k))
+    {
+        for hap in pbwt_long_match_neighbors(seed, candidate_pos, anchors, pbwt, min_match_anchors)
+        {
+            candidate_haps.insert(hap);
+        }
+        for hap in pbwt_right_match_neighbors(seed, candidate_pos, anchors, pbwt, min_match_anchors)
+        {
+            candidate_haps.insert(hap);
+        }
+    }
+
+    if candidate_haps.is_empty() {
+        return ranked
+            .into_iter()
+            .filter(|d| d.score > 0.0)
+            .take(top_k)
+            .collect();
     }
 
     let mut donors: Vec<_> = candidate_haps
@@ -934,6 +1047,16 @@ fn retrieve_path_donors(
             args.pbwt_seed_count,
             args.min_pbwt_match_anchors,
         ),
+        PbwtRetrieval::BidirectionalPrefix => bidirectional_prefix_retrieve(
+            candidate_pos,
+            anchors,
+            plus_path,
+            panel,
+            pbwt,
+            args.top_k,
+            args.pbwt_seed_count,
+            args.min_pbwt_match_anchors,
+        ),
     }
 }
 
@@ -947,11 +1070,19 @@ fn effective_donor_count(donors: &[ScoredDonor]) -> f64 {
 }
 
 fn max_left_match(donors: &[ScoredDonor]) -> usize {
-    donors.iter().map(|d| d.left_match_anchors).max().unwrap_or(0)
+    donors
+        .iter()
+        .map(|d| d.left_match_anchors)
+        .max()
+        .unwrap_or(0)
 }
 
 fn max_right_match(donors: &[ScoredDonor]) -> usize {
-    donors.iter().map(|d| d.right_match_anchors).max().unwrap_or(0)
+    donors
+        .iter()
+        .map(|d| d.right_match_anchors)
+        .max()
+        .unwrap_or(0)
 }
 
 fn pbwt_prediction_for_block(
@@ -963,24 +1094,9 @@ fn pbwt_prediction_for_block(
     retrieval: PbwtRetrieval,
 ) -> Option<Prediction> {
     let candidate_site = panel.sites.get(&bc.pos)?;
-    let plus_donors = retrieve_path_donors(
-        bc.pos,
-        &bc.anchors,
-        true,
-        panel,
-        pbwt,
-        args,
-        retrieval,
-    );
-    let minus_donors = retrieve_path_donors(
-        bc.pos,
-        &bc.anchors,
-        false,
-        panel,
-        pbwt,
-        args,
-        retrieval,
-    );
+    let plus_donors = retrieve_path_donors(bc.pos, &bc.anchors, true, panel, pbwt, args, retrieval);
+    let minus_donors =
+        retrieve_path_donors(bc.pos, &bc.anchors, false, panel, pbwt, args, retrieval);
 
     let mut support_plus = 0.0;
     let mut support_minus = 0.0;
@@ -1032,7 +1148,8 @@ fn pbwt_prediction_for_block(
         n_block_candidates: 0,
         method: method.to_string(),
         donor_entropy: (donor_entropy(&plus_donors) + donor_entropy(&minus_donors)) / 2.0,
-        effective_donors: effective_donor_count(&plus_donors) + effective_donor_count(&minus_donors),
+        effective_donors: effective_donor_count(&plus_donors)
+            + effective_donor_count(&minus_donors),
         pbwt_left_match_anchors: max_left_match(&plus_donors).max(max_left_match(&minus_donors)),
         pbwt_right_match_anchors: max_right_match(&plus_donors).max(max_right_match(&minus_donors)),
         retrieval: format!("{:?}", retrieval),
@@ -1108,8 +1225,8 @@ fn load_genetic_map(path: Option<&str>) -> Result<Option<GeneticMap>> {
     let Some(path) = path else {
         return Ok(None);
     };
-    let text = fs::read_to_string(path)
-        .with_context(|| format!("failed to read genetic map: {path}"))?;
+    let text =
+        fs::read_to_string(path).with_context(|| format!("failed to read genetic map: {path}"))?;
     let mut pairs = Vec::new();
 
     for line in text.lines() {
@@ -1635,8 +1752,10 @@ fn hmm_predictions(
                     / 2.0,
                 effective_donors: weighted_effective_donors(plus_weights)
                     + weighted_effective_donors(minus_weights),
-                pbwt_left_match_anchors: max_left_match(&plus_donors).max(max_left_match(&minus_donors)),
-                pbwt_right_match_anchors: max_right_match(&plus_donors).max(max_right_match(&minus_donors)),
+                pbwt_left_match_anchors: max_left_match(&plus_donors)
+                    .max(max_left_match(&minus_donors)),
+                pbwt_right_match_anchors: max_right_match(&plus_donors)
+                    .max(max_right_match(&minus_donors)),
                 retrieval: format!("{:?}", PbwtRetrieval::NeighborDebug),
             });
         }
@@ -1651,6 +1770,7 @@ fn hmm_predictions_v2(
     pbwt: &PbwtIndex,
     genetic_map: Option<&GeneticMap>,
     args: &Args,
+    method: &str,
 ) -> HashMap<u64, Vec<Prediction>> {
     let mut by_block: HashMap<String, Vec<BlockCandidate>> = HashMap::new();
     for bc in block_candidates {
@@ -1801,7 +1921,7 @@ fn hmm_predictions_v2(
                 anchors: anchors.len(),
                 best_vs_second_margin: 0.0,
                 n_block_candidates: 0,
-                method: "pbwt_hmm_v2".to_string(),
+                method: method.to_string(),
                 donor_entropy: (weighted_donor_entropy(plus_weights)
                     + weighted_donor_entropy(minus_weights))
                     / 2.0,
@@ -1836,6 +1956,8 @@ fn write_calls(
         Mode::PbwtHmm => "phase8_pbwt_hmm",
         Mode::PbwtV2 => "phase8_pbwt_v2",
         Mode::PbwtHmmV2 => "phase8_pbwt_hmm_v2",
+        Mode::PbwtV3 => "phase8_pbwt_v3",
+        Mode::PbwtHmmV3 => "phase8_pbwt_hmm_v3",
     };
     let extra = [
         format!("{prefix}_filled"),
@@ -1874,8 +1996,7 @@ fn write_calls(
             set_call_state(&mut out, pred.pred_state);
             out.fields
                 .insert("block_id".to_string(), pred.block_id.clone());
-            out.fields
-                .insert(extra[0].clone(), "1".to_string());
+            out.fields.insert(extra[0].clone(), "1".to_string());
             out.fields
                 .insert(extra[1].clone(), format!("{:.6}", pred.confidence));
             out.fields
@@ -1884,12 +2005,10 @@ fn write_calls(
                 .insert(extra[3].clone(), format!("{:.6}", pred.support_plus));
             out.fields
                 .insert(extra[4].clone(), format!("{:.6}", pred.support_minus));
-            out.fields
-                .insert(extra[5].clone(), pred.donors.to_string());
+            out.fields.insert(extra[5].clone(), pred.donors.to_string());
             out.fields
                 .insert(extra[6].clone(), pred.anchors.to_string());
-            out.fields
-                .insert(extra[7].clone(), pred.method.clone());
+            out.fields.insert(extra[7].clone(), pred.method.clone());
             out.fields
                 .insert(extra[8].clone(), format!("{:.6}", pred.donor_entropy));
             out.fields
@@ -1898,10 +2017,11 @@ fn write_calls(
                 .insert(extra[10].clone(), pred.pbwt_left_match_anchors.to_string());
             out.fields
                 .insert(extra[11].clone(), pred.pbwt_right_match_anchors.to_string());
-            out.fields
-                .insert(extra[12].clone(), pred.retrieval.clone());
+            out.fields.insert(extra[12].clone(), pred.retrieval.clone());
         } else {
-            out.fields.entry(extra[0].clone()).or_insert("0".to_string());
+            out.fields
+                .entry(extra[0].clone())
+                .or_insert("0".to_string());
             for field in extra.iter().skip(1) {
                 out.fields.entry(field.clone()).or_default();
             }
@@ -2025,15 +2145,23 @@ fn main() -> Result<()> {
     let retrieval = match args.mode {
         Mode::Pbwt | Mode::PbwtHmm => PbwtRetrieval::NeighborDebug,
         Mode::PbwtV2 | Mode::PbwtHmmV2 => args.pbwt_retrieval,
+        Mode::PbwtV3 | Mode::PbwtHmmV3 => PbwtRetrieval::BidirectionalPrefix,
     };
     let pbwt_method = match args.mode {
         Mode::Pbwt | Mode::PbwtHmm => "pbwt",
         Mode::PbwtV2 | Mode::PbwtHmmV2 => "pbwt_v2",
+        Mode::PbwtV3 | Mode::PbwtHmmV3 => "pbwt_v3",
     };
-    let pbwt_candidates_by_pos =
-        pbwt_predictions(&block_candidates, &panel, &pbwt, &args, pbwt_method, retrieval);
+    let pbwt_candidates_by_pos = pbwt_predictions(
+        &block_candidates,
+        &panel,
+        &pbwt,
+        &args,
+        pbwt_method,
+        retrieval,
+    );
     let (candidates_by_pos, chosen) = match args.mode {
-        Mode::Pbwt | Mode::PbwtV2 => {
+        Mode::Pbwt | Mode::PbwtV2 | Mode::PbwtV3 => {
             let chosen = choose_predictions(&pbwt_candidates_by_pos, &args);
             (pbwt_candidates_by_pos, chosen)
         }
@@ -2075,10 +2203,20 @@ fn main() -> Result<()> {
 
             (combined_candidates, chosen)
         }
-        Mode::PbwtHmmV2 => {
+        Mode::PbwtHmmV2 | Mode::PbwtHmmV3 => {
             let genetic_map = load_genetic_map(args.genetic_map.as_deref())?;
-            let hmm_candidates_by_pos =
-                hmm_predictions_v2(&block_candidates, &panel, &pbwt, genetic_map.as_ref(), &args);
+            let hmm_method = match args.mode {
+                Mode::PbwtHmmV3 => "pbwt_hmm_v3",
+                _ => "pbwt_hmm_v2",
+            };
+            let hmm_candidates_by_pos = hmm_predictions_v2(
+                &block_candidates,
+                &panel,
+                &pbwt,
+                genetic_map.as_ref(),
+                &args,
+                hmm_method,
+            );
             let mut combined_candidates = pbwt_candidates_by_pos.clone();
             for (pos, preds) in hmm_candidates_by_pos {
                 combined_candidates.entry(pos).or_default().extend(preds);
@@ -2093,7 +2231,7 @@ fn main() -> Result<()> {
                             *pos,
                             preds
                                 .iter()
-                                .filter(|pred| pred.method == "pbwt_hmm_v2")
+                                .filter(|pred| pred.method == hmm_method)
                                 .cloned()
                                 .collect::<Vec<_>>(),
                         )
@@ -2143,6 +2281,8 @@ fn main() -> Result<()> {
         Mode::PbwtHmm => "pbwt_hmm",
         Mode::PbwtV2 => "pbwt_v2",
         Mode::PbwtHmmV2 => "pbwt_hmm_v2",
+        Mode::PbwtV3 => "pbwt_v3",
+        Mode::PbwtHmmV3 => "pbwt_hmm_v3",
     };
     let summary = Summary {
         mode: mode_name,
@@ -2157,20 +2297,19 @@ fn main() -> Result<()> {
         candidate_block_pairs: block_candidates.len(),
         panel_positions_needed: needed_positions.len(),
         panel_positions_found: panel.positions_found,
-        panel_positions_missing: needed_positions
-            .len()
-            .saturating_sub(panel.positions_found),
+        panel_positions_missing: needed_positions.len().saturating_sub(panel.positions_found),
         panel_allele_mismatch_records: panel.allele_mismatch,
         panel_nonbiallelic_records: panel.nonbiallelic,
         pbwt_index_positions: pbwt.by_pos.len(),
         pbwt_retrieval: match retrieval {
             PbwtRetrieval::ExactPrefix => "exact_prefix",
+            PbwtRetrieval::BidirectionalPrefix => "bidirectional_prefix",
             PbwtRetrieval::NeighborDebug => "neighbor_debug",
         },
         hmm_decoder: match args.mode {
-            Mode::PbwtHmmV2 => "forward_backward",
+            Mode::PbwtHmmV2 | Mode::PbwtHmmV3 => "forward_backward",
             Mode::PbwtHmm => "forward_only",
-            Mode::Pbwt | Mode::PbwtV2 => "off",
+            Mode::Pbwt | Mode::PbwtV2 | Mode::PbwtV3 => "off",
         },
         accepted_sites: chosen.len(),
         out_tsv: &args.out_tsv,
