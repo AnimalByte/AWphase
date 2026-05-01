@@ -10,17 +10,22 @@ case "$READSET" in
     SOURCE_SUFFIX="${AWPHASE_SOURCE_SUFFIX:-_illumina30x_phase7a}"
     SUMMARY_OUT_DIR="${AWPHASE_PHASE8_SUMMARY_DIR:-results/phase8/pbwt_hmm_manifest}"
     PANEL_RELIANCE_OUT_DIR="${AWPHASE_PANEL_RELIANCE_DIR:-results/phase8/panel_reliance_manifest}"
+    CALIBRATION_OUT_DIR="${AWPHASE_CALIBRATION_DIR:-results/phase8/confidence_calibration_manifest}"
     ;;
   pacbio | hifi | pacbio_hifi30x)
     READSET="pacbio_hifi30x"
-    SOURCE_SUFFIX="${AWPHASE_SOURCE_SUFFIX:-_pacbio_hifi30x_phase7a}"
-    SUMMARY_OUT_DIR="${AWPHASE_PHASE8_SUMMARY_DIR:-results/phase8/pbwt_hmm_pacbio_hifi_manifest}"
-    PANEL_RELIANCE_OUT_DIR="${AWPHASE_PANEL_RELIANCE_DIR:-results/phase8/panel_reliance_pacbio_hifi_manifest}"
+    SOURCE_SUFFIX="${AWPHASE_SOURCE_SUFFIX:-_pacbio_hifi30x_mcs128_phase7a}"
+    SUMMARY_OUT_DIR="${AWPHASE_PHASE8_SUMMARY_DIR:-results/phase8/pbwt_hmm_pacbio_hifi_mcs128_manifest}"
+    PANEL_RELIANCE_OUT_DIR="${AWPHASE_PANEL_RELIANCE_DIR:-results/phase8/panel_reliance_pacbio_hifi_mcs128_manifest}"
+    CALIBRATION_OUT_DIR="${AWPHASE_CALIBRATION_DIR:-results/phase8/confidence_calibration_pacbio_hifi_mcs128_manifest}"
+    export AWPHASE_MAX_COMPONENT_SITES="${AWPHASE_MAX_COMPONENT_SITES:-128}"
+    export AWPHASE_LOCAL_REFINE_ITERS="${AWPHASE_LOCAL_REFINE_ITERS:-20}"
     ;;
   *)
     SOURCE_SUFFIX="${AWPHASE_SOURCE_SUFFIX:-_${READSET}_phase7a}"
     SUMMARY_OUT_DIR="${AWPHASE_PHASE8_SUMMARY_DIR:-results/phase8/pbwt_hmm_${READSET}_manifest}"
     PANEL_RELIANCE_OUT_DIR="${AWPHASE_PANEL_RELIANCE_DIR:-results/phase8/panel_reliance_${READSET}_manifest}"
+    CALIBRATION_OUT_DIR="${AWPHASE_CALIBRATION_DIR:-results/phase8/confidence_calibration_${READSET}_manifest}"
     ;;
 esac
 
@@ -130,4 +135,10 @@ PYTHONPATH=python python scripts/phase8/analyze_panel_reliance_v1.py \
   --manifest "$MANIFEST" \
   --split "$SPLIT_FILTER" \
   --out-dir "$PANEL_RELIANCE_OUT_DIR" \
+  --source-suffix "$SOURCE_SUFFIX"
+
+PYTHONPATH=python python scripts/phase8/calibrate_phase8_confidence_v1.py \
+  --manifest "$MANIFEST" \
+  --split "$SPLIT_FILTER" \
+  --out-dir "$CALIBRATION_OUT_DIR" \
   --source-suffix "$SOURCE_SUFFIX"

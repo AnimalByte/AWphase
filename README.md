@@ -145,7 +145,17 @@ AWPHASE_READSET=pacbio_hifi30x \
 ```
 
 Those outputs are written under `results/phase8/pbwt_hmm_pacbio_hifi_manifest/`
-and `results/phase8/panel_reliance_pacbio_hifi_manifest/`. This path is
-currently diagnostic: the retained chr6 MHC PacBio-AWPhase run has much worse
-hamming error than WhatsHap PacBio HiFi, so the PacBio input mode should not be
-treated as a promoted mode yet.
+and `results/phase8/panel_reliance_pacbio_hifi_manifest/` for the original
+diagnostic profile. The default PacBio runner profile now uses smaller Phase6C
+WMEC chunks (`AWPHASE_MAX_COMPONENT_SITES=128`,
+`AWPHASE_LOCAL_REFINE_ITERS=20`) and writes to
+`results/phase8/pbwt_hmm_pacbio_hifi_mcs128_manifest/`. On chr6 MHC this
+reduced PacBio-AWPhase PBWT+HMM v2 hamming error from about 20.1% to about 4.5%
+at the same 93.35% phased coverage. It is still below WhatsHap PacBio HiFi, so
+PacBio input mode remains diagnostic rather than promoted.
+
+Confidence calibration summaries are produced by
+`scripts/phase8/calibrate_phase8_confidence_v1.py`. The retained chr6 MHC
+PacBio mcs128 calibration shows the remaining AWPhase PacBio calls are still
+overconfident by about 3-4 percentage points, while the original PacBio
+large-component profile was overconfident by about 18-19 percentage points.

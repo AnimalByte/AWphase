@@ -24,6 +24,13 @@ VARIANT_JSON="$ROOT/variants.window.json"
 TIMING_TSV="$ROOT/run_timing.tsv"
 RUN_STARTED_EPOCH="$(date +%s)"
 
+MIN_MAPQ="${AWPHASE_MIN_MAPQ:-20}"
+MIN_BASEQ="${AWPHASE_MIN_BASEQ:-15}"
+MIN_SITES_PER_FRAGMENT="${AWPHASE_MIN_SITES_PER_FRAGMENT:-2}"
+MAX_EXACT_SITES="${AWPHASE_MAX_EXACT_SITES:-18}"
+MAX_COMPONENT_SITES="${AWPHASE_MAX_COMPONENT_SITES:-1024}"
+LOCAL_REFINE_ITERS="${AWPHASE_LOCAL_REFINE_ITERS:-8}"
+
 printf 'label\tmethod\tstep\truntime_seconds\tstarted_epoch\tended_epoch\n' > "$TIMING_TSV"
 
 record_timing() {
@@ -57,9 +64,9 @@ PYTHONPATH=python python python/awphase_py/build_template_fragments_from_bam_v1.
   --chrom "$CHROM" \
   --start "$START" \
   --end "$END" \
-  --min-mapq 20 \
-  --min-baseq 15 \
-  --min-sites-per-fragment 2 \
+  --min-mapq "$MIN_MAPQ" \
+  --min-baseq "$MIN_BASEQ" \
+  --min-sites-per-fragment "$MIN_SITES_PER_FRAGMENT" \
   --out-tsv "$ROOT/fragments.tsv" \
   --out-summary-json "$ROOT/fragments.summary.json" \
   > "$ROOT/build_fragments.log" 2>&1
@@ -71,9 +78,9 @@ echo "===== ${LABEL}: Phase6C solve ====="
 SOLVER_ARGS=(
   --fragments-tsv "$ROOT/fragments.tsv" \
   --variant-json "$VARIANT_JSON" \
-  --max-exact-sites 18 \
-  --max-component-sites 1024 \
-  --local-refine-iters 8 \
+  --max-exact-sites "$MAX_EXACT_SITES" \
+  --max-component-sites "$MAX_COMPONENT_SITES" \
+  --local-refine-iters "$LOCAL_REFINE_ITERS" \
   --out-local-calls-tsv "$ROOT/local_calls.phase6c.tsv" \
   --out-components-tsv "$ROOT/components.phase6c.tsv" \
   --out-summary-json "$ROOT/solve.phase6c.summary.json"

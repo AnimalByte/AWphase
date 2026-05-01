@@ -50,6 +50,7 @@ results/runs/
 results/experiments/
 results/comparisons/
 results/phase7a_windows/
+results/phase8/confidence_calibration*/phase8_confidence.*.sites.tsv
 
 # Local logs and scratch output
 *.log
