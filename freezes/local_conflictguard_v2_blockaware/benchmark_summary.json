@@ -1,0 +1,13 @@
+{
+  "sample_id": "HG002",
+  "region": "chr20:1-5000000",
+  "decoder_mode": "read_plus_donor_ancestry_on",
+  "number_of_sites": 5975,
+  "number_phased": 4481,
+  "number_abstained": 1494,
+  "informative_boundaries": 535,
+  "joined_boundaries": 233,
+  "abstained_boundaries": 692,
+  "flipped_boundaries": 0,
+  "runtime_seconds": 35.898457
+}

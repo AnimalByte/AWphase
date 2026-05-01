@@ -1,0 +1,7 @@
+metric	value
+filled_sites	97
+filled_correct_oriented	52
+filled_wrong_oriented	8
+filled_no_truth_comparison	33
+filled_unknown_no_block_orientation	4
+oriented_fill_accuracy	0.8666666666666667

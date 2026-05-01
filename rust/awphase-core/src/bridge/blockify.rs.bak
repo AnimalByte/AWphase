@@ -1,0 +1,86 @@
+use crate::bridge::summarize::BlockRange;
+use crate::types::LocalPhaseCall;
+
+pub fn make_blocks_from_local_calls(calls: &[LocalPhaseCall]) -> Vec<BlockRange> {
+    let mut informative: Vec<&LocalPhaseCall> = calls.iter().filter(|c| c.phase_state != 0).collect();
+    informative.sort_by_key(|c| c.pos);
+
+    if informative.is_empty() {
+        return vec![];
+    }
+
+    let mut out: Vec<BlockRange> = Vec::new();
+
+    let mut current_sign = informative[0].phase_state;
+    let mut current_start = informative[0].pos;
+    let mut current_end = informative[0].pos;
+    let mut block_idx = 1usize;
+
+    for call in informative.iter().skip(1) {
+        if call.phase_state == current_sign {
+            current_end = call.pos;
+        } else {
+            out.push(BlockRange {
+                block_id: format!("block_{}", block_idx),
+                start: current_start,
+                end: current_end,
+            });
+            block_idx += 1;
+            current_sign = call.phase_state;
+            current_start = call.pos;
+            current_end = call.pos;
+        }
+    }
+
+    out.push(BlockRange {
+        block_id: format!("block_{}", block_idx),
+        start: current_start,
+        end: current_end,
+    });
+
+    out
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::types::LocalPhaseCall;
+
+    #[test]
+    fn groups_consecutive_same_sign_calls_into_blocks() {
+        let calls = vec![
+            LocalPhaseCall { pos: 101, phase_state: 1, confidence: 0.8 },
+            LocalPhaseCall { pos: 121, phase_state: 1, confidence: 0.8 },
+            LocalPhaseCall { pos: 141, phase_state: 0, confidence: 0.5 },
+            LocalPhaseCall { pos: 201, phase_state: -1, confidence: 0.7 },
+            LocalPhaseCall { pos: 221, phase_state: -1, confidence: 0.7 },
+            LocalPhaseCall { pos: 301, phase_state: 1, confidence: 0.6 },
+        ];
+
+        let blocks = make_blocks_from_local_calls(&calls);
+        assert_eq!(blocks.len(), 3);
+
+        assert_eq!(blocks[0].block_id, "block_1");
+        assert_eq!(blocks[0].start, 101);
+        assert_eq!(blocks[0].end, 121);
+
+        assert_eq!(blocks[1].block_id, "block_2");
+        assert_eq!(blocks[1].start, 201);
+        assert_eq!(blocks[1].end, 221);
+
+        assert_eq!(blocks[2].block_id, "block_3");
+        assert_eq!(blocks[2].start, 301);
+        assert_eq!(blocks[2].end, 301);
+    }
+
+    #[test]
+    fn empty_if_no_informative_calls() {
+        let calls = vec![
+            LocalPhaseCall { pos: 101, phase_state: 0, confidence: 0.5 },
+            LocalPhaseCall { pos: 121, phase_state: 0, confidence: 0.5 },
+        ];
+
+        let blocks = make_blocks_from_local_calls(&calls);
+        assert!(blocks.is_empty());
+    }
+}

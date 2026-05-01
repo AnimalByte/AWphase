@@ -1,0 +1,3 @@
+model	threshold	n_windows	total_pred_sites_nonzero	total_hamming_errors	weighted_hamming_error_rate	total_switch_errors	weighted_switch_error_rate	mean_truth_correct_pct	mean_raw_block_n50_bp	mean_median_block_span_bp
+Phase7G_stable	0.50	6	24607	75	0.0035849037938342227	32	0.0022234662643526655	69.3187404027055	227075.66666666666	701.1666666666666
+Phase8AB_experimental	0.50	6	24603	77	0.0037475600396474646	34	0.002436074315150133	69.2911134779721	227119.66666666666	702.6666666666666

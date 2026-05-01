@@ -1,0 +1,17 @@
+{
+  "fragments_tsv": "results/depth_curve/chr22_20_25mb/phase6c_20x_from35x/fragments.tsv",
+  "variant_json": "data/derived/hg002_chr22_variants.real.json",
+  "raw_fragments": 13951,
+  "raw_connected_components": 703,
+  "components_after_chunking": 703,
+  "components_solved": 703,
+  "components_skipped": 0,
+  "exact_components": 687,
+  "greedy_components": 16,
+  "total_projected_fragments": 13951,
+  "variant_rows": 3776,
+  "solved_sites": 3043,
+  "out_local_calls_tsv": "results/depth_curve/chr22_20_25mb/phase6c_20x_from35x/local_calls.phase6c.tsv",
+  "max_exact_sites": 18,
+  "max_component_sites": 1024
+}

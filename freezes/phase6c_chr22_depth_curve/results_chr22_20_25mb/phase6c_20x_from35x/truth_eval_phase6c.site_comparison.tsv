@@ -1,0 +1,3777 @@
+pos	block_id	pred_state	confidence	ref	alt	matched_exact_truth	truth_state	truth_gt	truth_ref	truth_alt
+20000722	phase6_comp_1	1	1.0	G	A	1	1	0|1	G	A
+20000735	phase6_comp_1	-1	1.0	G	T	1	-1	1|0	G	T
+20002119	phase6_comp_2	1	1.0	A	G	1	-1	1|0	A	G
+20002367	phase6_comp_2	1	1.0	C	T	1	-1	1|0	C	T
+20003460	phase6_comp_3	1	1.0	A	G	1	1	0|1	A	G
+20003940	phase6_comp_3	-1	1.0	C	T	1	-1	1|0	C	T
+20004427	phase6_comp_4	1	1.0	G	A	1	-1	1|0	G	A
+20004492	phase6_comp_4	-1	1.0	A	G	1	1	0|1	A	G
+20005776	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20007310	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20011095	phase6_comp_5	1	1.0	C	G	1	1	0|1	C	G
+20011440	phase6_comp_5	-1	1.0	T	G	1	-1	1|0	T	G
+20011748	phase6_comp_5	-1	1.0	C	T	1	-1	1|0	C	T
+20011963	phase6_comp_5	1	0.92459	C	T	1	1	0|1	C	T
+20012090	phase6_comp_5	-1	0.912879	C	A	0				
+20014299	phase6_comp_6	1	1.0	A	G	1	-1	1|0	A	G
+20014708	phase6_comp_6	1	1.0	C	T	1	-1	1|0	C	T
+20015629	phase6_comp_7	1	1.0	C	T	1	-1	1|0	C	T
+20015743	phase6_comp_7	-1	1.0	C	G	1	1	0|1	C	G
+20015811	phase6_comp_7	-1	1.0	G	A	1	1	0|1	G	A
+20016263	phase6_comp_7	-1	1.0	G	A	1	1	0|1	G	A
+20016640	phase6_comp_7	1	1.0	C	A	1	-1	1|0	C	A
+20017181	phase6_comp_7	-1	1.0	C	T	1	1	0|1	C	T
+20017414	phase6_comp_7	-1	1.0	C	G	1	1	0|1	C	G
+20017735	phase6_comp_7	-1	1.0	G	T	1	1	0|1	G	T
+20018517	phase6_comp_8	1	1.0	C	T	1	1	0|1	C	T
+20018831	phase6_comp_8	1	1.0	G	C	1	1	0|1	G	C
+20019027	phase6_comp_8	1	1.0	T	C	1	1	0|1	T	C
+20019189	phase6_comp_8	-1	1.0	G	A	1	-1	1|0	G	A
+20019469	phase6_comp_8	-1	1.0	A	C	1	-1	1|0	A	C
+20020096	phase6_comp_8	1	1.0	C	T	1	1	0|1	C	T
+20021188	phase6_comp_9	1	1.0	G	T	1	1	0|1	G	T
+20021555	phase6_comp_9	1	1.0	C	T	1	1	0|1	C	T
+20023951	phase6_comp_10	1	1.0	A	G	1	1	0|1	A	G
+20024314	phase6_comp_10	1	1.0	T	C	1	1	0|1	T	C
+20025341	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+20026509	phase6_comp_11	1	1.0	G	C	1	1	0|1	G	C
+20026629	phase6_comp_11	1	1.0	A	G	1	1	0|1	A	G
+20026881	phase6_comp_11	-1	1.0	T	C	1	-1	1|0	T	C
+20027493	phase6_comp_12	1	1.0	C	T	1	1	0|1	C	T
+20027868	phase6_comp_12	1	1.0	G	A	1	1	0|1	G	A
+20027988	phase6_comp_12	-1	1.0	C	T	1	-1	1|0	C	T
+20028218	phase6_comp_12	1	1.0	C	T	1	1	0|1	C	T
+20028969	phase6_comp_12	1	1.0	G	A	1	1	0|1	G	A
+20030030	phase6_comp_13	1	1.0	G	A	1	-1	1|0	G	A
+20030580	phase6_comp_13	-1	1.0	C	T	1	1	0|1	C	T
+20032706	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20034340	phase6_comp_14	1	1.0	C	T	1	1	0|1	C	T
+20034415	phase6_comp_14	1	1.0	G	T	1	1	0|1	G	T
+20035564	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+20035921	phase6_comp_15	1	1.0	C	T	1	-1	1|0	C	T
+20036208	phase6_comp_15	1	1.0	C	T	1	-1	1|0	C	T
+20038244	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20039394	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+20040081	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+20041018	unassigned	0	0.0	C	A	1	-1	1|0	C	A
+20041737	phase6_comp_16	1	1.0	T	C	1	-1	1|0	T	C
+20042355	phase6_comp_16	1	1.0	T	C	1	-1	1|0	T	C
+20043226	phase6_comp_17	1	1.0	C	A	1	-1	1|0	C	A
+20043457	phase6_comp_17	1	1.0	C	T	1	-1	1|0	C	T
+20044441	phase6_comp_18	1	1.0	G	T	1	-1	1|0	G	T
+20044804	phase6_comp_18	1	1.0	T	C	1	-1	1|0	T	C
+20045059	phase6_comp_18	1	1.0	G	A	1	-1	1|0	G	A
+20047928	phase6_comp_19	1	1.0	G	T	0				
+20048167	phase6_comp_19	1	1.0	C	T	1	-1	1|0	C	T
+20049792	phase6_comp_20	1	1.0	G	A	1	-1	1|0	G	A
+20050368	phase6_comp_20	1	1.0	T	G	1	-1	1|0	T	G
+20052112	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+20054086	phase6_comp_21	1	1.0	C	T	1	-1	1|0	C	T
+20054552	phase6_comp_21	1	1.0	T	G	1	-1	1|0	T	G
+20057888	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20058821	unassigned	0	0.0	A	G	1	1	0|1	A	G
+20061817	phase6_comp_22	1	1.0	T	C	1	-1	1|0	T	C
+20061931	phase6_comp_22	1	1.0	A	G	1	-1	1|0	A	G
+20062412	phase6_comp_22	1	1.0	A	C	1	-1	1|0	A	C
+20062878	phase6_comp_22	1	1.0	T	C	1	-1	1|0	T	C
+20063943	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20065009	phase6_comp_23	1	1.0	C	G	1	-1	1|0	C	G
+20065043	phase6_comp_23	1	1.0	G	A	1	-1	1|0	G	A
+20065259	phase6_comp_23	1	1.0	C	T	1	-1	1|0	C	T
+20065261	phase6_comp_23	1	1.0	C	T	1	-1	1|0	C	T
+20066809	phase6_comp_24	1	1.0	C	A	1	-1	1|0	C	A
+20067559	phase6_comp_24	1	1.0	G	T	1	-1	1|0	G	T
+20067577	phase6_comp_24	1	1.0	A	G	1	-1	1|0	A	G
+20069555	phase6_comp_25	1	1.0	C	T	1	-1	1|0	C	T
+20069620	phase6_comp_25	1	1.0	A	G	1	-1	1|0	A	G
+20070283	phase6_comp_25	1	1.0	C	T	1	-1	1|0	C	T
+20072240	phase6_comp_26	1	1.0	G	A	1	-1	1|0	G	A
+20072457	phase6_comp_26	1	1.0	C	T	1	-1	1|0	C	T
+20072500	phase6_comp_26	1	1.0	T	A	1	-1	1|0	T	A
+20072613	phase6_comp_26	1	1.0	T	C	1	-1	1|0	T	C
+20073201	phase6_comp_26	1	1.0	G	A	1	-1	1|0	G	A
+20073296	phase6_comp_26	1	1.0	C	T	1	-1	1|0	C	T
+20073892	phase6_comp_26	1	1.0	G	C	1	-1	1|0	G	C
+20075153	unassigned	0	0.0	A	G	0				
+20076861	unassigned	0	0.0	G	C	1	-1	1|0	G	C
+20077847	phase6_comp_27	1	1.0	G	A	1	-1	1|0	G	A
+20078228	phase6_comp_27	1	1.0	A	G	1	-1	1|0	A	G
+20078613	phase6_comp_27	1	1.0	C	G	1	-1	1|0	C	G
+20078737	phase6_comp_27	1	1.0	C	T	1	-1	1|0	C	T
+20078899	phase6_comp_27	1	1.0	T	C	1	-1	1|0	T	C
+20079088	phase6_comp_27	1	1.0	G	C	1	-1	1|0	G	C
+20079142	phase6_comp_27	1	1.0	G	A	1	-1	1|0	G	A
+20079275	phase6_comp_27	1	1.0	T	G	1	-1	1|0	T	G
+20080563	unassigned	0	0.0	G	C	1	-1	1|0	G	C
+20082321	phase6_comp_28	1	1.0	G	A	1	-1	1|0	G	A
+20082390	phase6_comp_28	1	1.0	A	G	1	-1	1|0	A	G
+20083433	unassigned	0	0.0	C	A	1	-1	1|0	C	A
+20084214	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+20086483	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20088335	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20092059	phase6_comp_29	1	1.0	C	T	1	-1	1|0	C	T
+20092080	phase6_comp_29	1	1.0	A	G	1	-1	1|0	A	G
+20092499	phase6_comp_29	1	1.0	C	G	1	-1	1|0	C	G
+20093274	phase6_comp_30	1	1.0	G	A	1	-1	1|0	G	A
+20093288	phase6_comp_30	1	1.0	T	C	1	-1	1|0	T	C
+20093995	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20095047	phase6_comp_31	1	1.0	G	A	1	-1	1|0	G	A
+20095339	phase6_comp_31	1	1.0	C	T	1	-1	1|0	C	T
+20095423	phase6_comp_31	1	1.0	T	C	1	-1	1|0	T	C
+20095438	phase6_comp_31	1	1.0	T	C	1	-1	1|0	T	C
+20097158	phase6_comp_32	1	1.0	G	A	1	-1	1|0	G	A
+20097298	phase6_comp_32	-1	1.0	T	C	1	1	0|1	T	C
+20099233	phase6_comp_33	1	1.0	A	G	1	-1	1|0	A	G
+20099665	phase6_comp_33	1	1.0	T	A	1	-1	1|0	T	A
+20099735	phase6_comp_33	1	1.0	C	T	1	-1	1|0	C	T
+20100122	phase6_comp_33	-1	1.0	A	G	1	1	0|1	A	G
+20100169	phase6_comp_33	1	1.0	C	A	1	-1	1|0	C	A
+20101560	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20102357	phase6_comp_34	1	1.0	T	C	1	-1	1|0	T	C
+20102669	phase6_comp_34	1	1.0	A	T	1	-1	1|0	A	T
+20103090	phase6_comp_34	1	1.0	A	G	1	-1	1|0	A	G
+20103422	phase6_comp_34	1	1.0	T	C	1	-1	1|0	T	C
+20103670	phase6_comp_34	1	1.0	T	C	1	-1	1|0	T	C
+20104889	phase6_comp_35	1	1.0	G	A	1	-1	1|0	G	A
+20105440	phase6_comp_35	1	1.0	A	G	1	-1	1|0	A	G
+20108159	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+20108872	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20109722	phase6_comp_36	1	1.0	A	G	1	-1	1|0	A	G
+20109813	phase6_comp_36	1	1.0	A	G	1	-1	1|0	A	G
+20110645	phase6_comp_37	1	1.0	G	C	1	-1	1|0	G	C
+20110998	phase6_comp_37	1	1.0	G	A	1	-1	1|0	G	A
+20111808	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20112229	phase6_comp_38	1	1.0	G	T	1	-1	1|0	G	T
+20112368	phase6_comp_38	1	1.0	C	G	1	-1	1|0	C	G
+20113073	unassigned	0	0.0	T	C	1	1	0|1	T	C
+20114567	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+20115489	phase6_comp_39	1	1.0	G	A	1	-1	1|0	G	A
+20115666	phase6_comp_39	1	1.0	T	C	1	-1	1|0	T	C
+20117296	phase6_comp_40	1	1.0	A	C	1	-1	1|0	A	C
+20117330	phase6_comp_40	1	1.0	T	G	1	-1	1|0	T	G
+20118118	phase6_comp_41	1	1.0	A	T	1	-1	1|0	A	T
+20118546	phase6_comp_41	1	1.0	C	A	1	-1	1|0	C	A
+20118581	phase6_comp_41	1	1.0	T	C	1	-1	1|0	T	C
+20120434	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+20121417	phase6_comp_42	1	1.0	T	G	1	-1	1|0	T	G
+20121802	phase6_comp_42	1	1.0	A	G	1	-1	1|0	A	G
+20122147	phase6_comp_42	1	1.0	C	T	1	-1	1|0	C	T
+20124153	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+20124998	phase6_comp_43	1	1.0	T	C	1	-1	1|0	T	C
+20125730	phase6_comp_43	1	1.0	T	G	1	-1	1|0	T	G
+20126254	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+20127355	phase6_comp_44	1	1.0	G	A	1	-1	1|0	G	A
+20127434	phase6_comp_44	1	1.0	G	T	1	-1	1|0	G	T
+20127890	phase6_comp_44	1	1.0	G	A	1	-1	1|0	G	A
+20127946	phase6_comp_44	1	1.0	G	A	1	-1	1|0	G	A
+20127987	phase6_comp_44	1	1.0	T	C	1	-1	1|0	T	C
+20128039	phase6_comp_44	1	1.0	C	T	1	-1	1|0	C	T
+20128349	phase6_comp_44	1	1.0	C	A	1	-1	1|0	C	A
+20128492	phase6_comp_44	1	1.0	T	G	1	-1	1|0	T	G
+20128573	phase6_comp_44	1	1.0	G	A	1	-1	1|0	G	A
+20128659	phase6_comp_44	1	1.0	T	G	1	-1	1|0	T	G
+20129449	phase6_comp_45	1	1.0	G	C	1	-1	1|0	G	C
+20129523	phase6_comp_45	1	1.0	T	C	1	-1	1|0	T	C
+20129563	phase6_comp_45	1	1.0	C	T	1	-1	1|0	C	T
+20129577	phase6_comp_45	1	1.0	G	C	1	-1	1|0	G	C
+20129578	phase6_comp_45	1	1.0	G	T	1	-1	1|0	G	T
+20129821	phase6_comp_45	1	1.0	G	T	1	-1	1|0	G	T
+20129822	phase6_comp_45	1	1.0	T	G	1	-1	1|0	T	G
+20130122	phase6_comp_45	1	1.0	A	G	1	-1	1|0	A	G
+20130829	phase6_comp_46	1	1.0	G	C	1	-1	1|0	G	C
+20130927	phase6_comp_46	1	1.0	T	C	1	-1	1|0	T	C
+20131117	phase6_comp_46	1	1.0	A	T	0				
+20131255	phase6_comp_46	1	1.0	G	A	1	-1	1|0	G	A
+20131479	phase6_comp_46	1	1.0	A	G	1	-1	1|0	A	G
+20131685	phase6_comp_46	1	1.0	G	A	1	-1	1|0	G	A
+20131738	phase6_comp_46	1	1.0	G	A	1	-1	1|0	G	A
+20133456	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+20134122	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20135489	phase6_comp_47	1	1.0	T	G	1	-1	1|0	T	G
+20135982	phase6_comp_47	1	1.0	T	C	1	-1	1|0	T	C
+20137677	phase6_comp_48	1	1.0	C	T	1	-1	1|0	C	T
+20138179	phase6_comp_48	1	1.0	T	C	1	-1	1|0	T	C
+20138945	phase6_comp_48	1	1.0	C	T	1	-1	1|0	C	T
+20139179	phase6_comp_48	1	1.0	C	T	1	-1	1|0	C	T
+20139218	phase6_comp_48	1	1.0	G	T	1	-1	1|0	G	T
+20140031	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20141151	phase6_comp_49	1	1.0	T	C	1	-1	1|0	T	C
+20141357	phase6_comp_49	1	1.0	G	A	1	-1	1|0	G	A
+20141358	phase6_comp_49	1	1.0	A	C	1	-1	1|0	A	C
+20141583	phase6_comp_49	1	1.0	T	C	1	-1	1|0	T	C
+20142625	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20143593	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20144776	phase6_comp_50	1	1.0	T	C	1	-1	1|0	T	C
+20145115	phase6_comp_50	1	1.0	T	A	1	-1	1|0	T	A
+20145449	phase6_comp_50	1	1.0	A	G	1	-1	1|0	A	G
+20145495	phase6_comp_50	-1	1.0	A	C	1	1	0|1	A	C
+20145767	phase6_comp_50	1	0.942786	T	C	1	-1	1|0	T	C
+20145778	phase6_comp_50	1	1.0	C	T	1	-1	1|0	C	T
+20146624	phase6_comp_51	1	1.0	A	G	1	-1	1|0	A	G
+20146827	phase6_comp_51	1	1.0	C	A	1	-1	1|0	C	A
+20146919	phase6_comp_51	1	1.0	T	C	1	-1	1|0	T	C
+20147216	phase6_comp_51	1	1.0	C	T	1	-1	1|0	C	T
+20147688	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+20148438	phase6_comp_52	1	1.0	T	C	1	-1	1|0	T	C
+20148808	phase6_comp_52	1	1.0	C	T	1	-1	1|0	C	T
+20148955	phase6_comp_52	1	1.0	C	G	1	-1	1|0	C	G
+20149083	phase6_comp_52	1	1.0	T	C	1	-1	1|0	T	C
+20149116	phase6_comp_52	1	1.0	C	T	1	-1	1|0	C	T
+20149886	unassigned	0	0.0	T	C	0				
+20150582	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+20151242	phase6_comp_53	1	1.0	G	T	1	-1	1|0	G	T
+20151263	phase6_comp_53	1	1.0	G	A	1	-1	1|0	G	A
+20151370	phase6_comp_53	1	1.0	G	A	1	-1	1|0	G	A
+20151776	phase6_comp_53	-1	1.0	C	T	0				
+20154856	unassigned	0	0.0	C	G	1	1	0|1	C	G
+20156103	phase6_comp_54	1	1.0	C	T	1	-1	1|0	C	T
+20156108	phase6_comp_54	1	1.0	G	A	1	-1	1|0	G	A
+20156259	phase6_comp_54	1	1.0	C	T	1	-1	1|0	C	T
+20157140	phase6_comp_55	1	1.0	T	G	1	-1	1|0	T	G
+20157240	phase6_comp_55	1	1.0	T	C	1	-1	1|0	T	C
+20157290	phase6_comp_55	-1	1.0	G	T	1	1	0|1	G	T
+20157334	phase6_comp_55	-1	1.0	G	A	1	1	0|1	G	A
+20157379	phase6_comp_55	-1	1.0	G	C	1	1	0|1	G	C
+20157598	phase6_comp_55	-1	1.0	A	G	1	1	0|1	A	G
+20157735	phase6_comp_55	-1	1.0	C	T	1	1	0|1	C	T
+20158626	phase6_comp_56	1	1.0	G	A	1	-1	1|0	G	A
+20159010	phase6_comp_56	-1	1.0	G	A	1	1	0|1	G	A
+20159869	phase6_comp_57	1	1.0	C	A	1	1	0|1	C	A
+20160635	phase6_comp_57	1	1.0	T	G	1	1	0|1	T	G
+20160659	phase6_comp_57	1	1.0	A	C	1	1	0|1	A	C
+20160844	phase6_comp_57	-1	1.0	G	T	1	-1	1|0	G	T
+20160845	phase6_comp_57	-1	1.0	G	T	1	-1	1|0	G	T
+20161647	unassigned	0	0.0	A	G	0				
+20167669	unassigned	0	0.0	T	C	1	1	0|1	T	C
+20169221	phase6_comp_58	1	1.0	G	A	1	1	0|1	G	A
+20169342	phase6_comp_58	1	1.0	C	T	1	1	0|1	C	T
+20169363	phase6_comp_58	1	1.0	G	A	1	1	0|1	G	A
+20169776	phase6_comp_58	1	1.0	C	T	1	1	0|1	C	T
+20170442	phase6_comp_59	1	1.0	G	A	1	1	0|1	G	A
+20170810	phase6_comp_59	1	1.0	C	A	1	1	0|1	C	A
+20171526	unassigned	0	0.0	A	G	1	1	0|1	A	G
+20172766	phase6_comp_60	1	1.0	A	G	1	1	0|1	A	G
+20173063	phase6_comp_60	1	1.0	A	G	1	1	0|1	A	G
+20173449	phase6_comp_60	1	1.0	T	C	1	1	0|1	T	C
+20173507	phase6_comp_60	1	1.0	C	T	1	1	0|1	C	T
+20173772	phase6_comp_60	1	1.0	G	A	1	1	0|1	G	A
+20173794	phase6_comp_60	1	1.0	G	C	1	1	0|1	G	C
+20175098	phase6_comp_61	1	1.0	G	A	1	1	0|1	G	A
+20175547	phase6_comp_61	1	1.0	G	A	1	1	0|1	G	A
+20175939	phase6_comp_61	1	1.0	C	G	1	1	0|1	C	G
+20176837	phase6_comp_62	1	1.0	T	C	1	-1	1|0	T	C
+20177066	phase6_comp_62	1	1.0	G	A	1	-1	1|0	G	A
+20177279	phase6_comp_62	1	1.0	G	T	1	-1	1|0	G	T
+20177426	phase6_comp_62	1	1.0	G	A	1	-1	1|0	G	A
+20177841	phase6_comp_62	1	1.0	T	C	1	-1	1|0	T	C
+20178341	phase6_comp_62	1	1.0	C	T	1	-1	1|0	C	T
+20178661	phase6_comp_62	1	1.0	C	T	1	-1	1|0	C	T
+20178679	phase6_comp_62	1	1.0	T	C	1	-1	1|0	T	C
+20179163	phase6_comp_62	1	1.0	G	A	1	-1	1|0	G	A
+20179178	phase6_comp_62	1	1.0	T	G	1	-1	1|0	T	G
+20179181	phase6_comp_62	1	1.0	G	C	1	-1	1|0	G	C
+20182570	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20183473	unassigned	0	0.0	C	A	1	-1	1|0	C	A
+20184045	phase6_comp_63	1	1.0	C	T	0				
+20184130	phase6_comp_63	-1	1.0	C	T	0				
+20184790	phase6_comp_64	1	1.0	C	T	1	-1	1|0	C	T
+20184883	phase6_comp_64	1	1.0	C	T	1	-1	1|0	C	T
+20186003	unassigned	0	0.0	G	C	1	-1	1|0	G	C
+20186760	phase6_comp_65	1	1.0	G	C	1	-1	1|0	G	C
+20187189	phase6_comp_65	1	1.0	G	A	1	-1	1|0	G	A
+20187330	phase6_comp_65	1	1.0	C	A	1	-1	1|0	C	A
+20187436	phase6_comp_65	1	1.0	C	T	1	-1	1|0	C	T
+20189538	phase6_comp_66	1	1.0	C	T	1	-1	1|0	C	T
+20189696	phase6_comp_66	1	1.0	G	A	1	-1	1|0	G	A
+20189797	phase6_comp_66	1	1.0	A	T	1	-1	1|0	A	T
+20190072	phase6_comp_66	1	1.0	C	G	1	-1	1|0	C	G
+20190146	phase6_comp_66	1	1.0	A	G	1	-1	1|0	A	G
+20190325	phase6_comp_66	1	1.0	A	G	1	-1	1|0	A	G
+20190420	phase6_comp_66	1	1.0	G	A	1	-1	1|0	G	A
+20190500	phase6_comp_66	1	1.0	T	C	1	-1	1|0	T	C
+20190572	phase6_comp_66	1	1.0	G	A	1	-1	1|0	G	A
+20190624	phase6_comp_66	1	1.0	A	G	1	-1	1|0	A	G
+20190652	phase6_comp_66	1	1.0	A	G	1	-1	1|0	A	G
+20190663	phase6_comp_66	1	1.0	G	A	1	-1	1|0	G	A
+20190682	phase6_comp_66	1	1.0	A	G	1	-1	1|0	A	G
+20190685	phase6_comp_66	1	1.0	C	T	1	-1	1|0	C	T
+20191276	phase6_comp_66	1	1.0	T	G	1	-1	1|0	T	G
+20191278	phase6_comp_66	1	0.954274	G	A	1	-1	1|0	G	A
+20191392	phase6_comp_66	1	1.0	C	T	1	-1	1|0	C	T
+20191406	phase6_comp_66	1	1.0	A	G	1	-1	1|0	A	G
+20191466	phase6_comp_66	1	1.0	C	T	1	-1	1|0	C	T
+20191516	phase6_comp_66	1	1.0	T	C	1	-1	1|0	T	C
+20191518	phase6_comp_66	1	1.0	G	A	1	-1	1|0	G	A
+20191523	phase6_comp_66	1	1.0	T	C	1	-1	1|0	T	C
+20191573	phase6_comp_66	1	1.0	A	C	1	-1	1|0	A	C
+20191700	phase6_comp_66	1	1.0	A	T	1	-1	1|0	A	T
+20191732	phase6_comp_66	1	1.0	T	C	1	-1	1|0	T	C
+20191763	phase6_comp_66	1	1.0	G	A	1	-1	1|0	G	A
+20191782	phase6_comp_66	1	1.0	T	C	1	-1	1|0	T	C
+20191816	phase6_comp_66	1	1.0	G	A	1	-1	1|0	G	A
+20191856	phase6_comp_66	1	1.0	G	A	1	-1	1|0	G	A
+20191917	phase6_comp_66	-1	1.0	G	T	1	1	0|1	G	T
+20191980	phase6_comp_66	1	1.0	T	C	1	-1	1|0	T	C
+20205063	phase6_comp_67	1	1.0	A	C	1	-1	1|0	A	C
+20205064	phase6_comp_67	1	1.0	G	C	1	-1	1|0	G	C
+20205636	phase6_comp_67	1	1.0	C	A	1	-1	1|0	C	A
+20206338	phase6_comp_67	1	1.0	G	C	1	-1	1|0	G	C
+20209812	unassigned	0	0.0	T	A	1	-1	1|0	T	A
+20214431	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20215206	phase6_comp_68	1	1.0	G	A	1	-1	1|0	G	A
+20215436	phase6_comp_68	-1	1.0	C	T	1	1	0|1	C	T
+20216474	phase6_comp_69	1	1.0	G	A	1	-1	1|0	G	A
+20216513	phase6_comp_69	-1	1.0	C	T	1	1	0|1	C	T
+20216636	phase6_comp_69	-1	1.0	C	T	1	1	0|1	C	T
+20217401	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20218257	phase6_comp_70	1	1.0	C	A	1	-1	1|0	C	A
+20218309	phase6_comp_70	1	1.0	G	C	1	-1	1|0	G	C
+20220302	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+20220834	phase6_comp_71	1	1.0	C	T	1	1	0|1	C	T
+20221507	phase6_comp_71	1	1.0	T	C	1	1	0|1	T	C
+20221902	phase6_comp_71	-1	1.0	G	A	1	-1	1|0	G	A
+20221964	phase6_comp_71	1	1.0	G	A	1	1	0|1	G	A
+20222252	phase6_comp_71	-1	1.0	A	G	1	-1	1|0	A	G
+20222532	phase6_comp_71	-1	1.0	C	A	1	-1	1|0	C	A
+20222596	phase6_comp_71	-1	1.0	G	A	1	-1	1|0	G	A
+20222840	phase6_comp_71	-1	1.0	C	T	1	-1	1|0	C	T
+20223805	unassigned	0	0.0	C	G	1	-1	1|0	C	G
+20226112	phase6_comp_72	1	1.0	G	A	0				
+20226288	phase6_comp_72	-1	1.0	C	G	0				
+20226702	phase6_comp_72	-1	1.0	C	T	1	-1	1|0	C	T
+20227376	phase6_comp_73	1	1.0	C	T	1	-1	1|0	C	T
+20228047	phase6_comp_73	1	1.0	A	G	1	-1	1|0	A	G
+20228417	phase6_comp_73	1	1.0	T	C	1	-1	1|0	T	C
+20229281	phase6_comp_74	1	1.0	T	G	1	1	0|1	T	G
+20229513	phase6_comp_74	-1	1.0	G	A	1	-1	1|0	G	A
+20229680	phase6_comp_74	1	1.0	T	A	1	1	0|1	T	A
+20230157	phase6_comp_74	1	1.0	C	T	1	1	0|1	C	T
+20230737	phase6_comp_75	1	1.0	G	A	1	1	0|1	G	A
+20231474	phase6_comp_75	-1	1.0	G	A	1	-1	1|0	G	A
+20231957	phase6_comp_75	1	1.0	G	C	1	1	0|1	G	C
+20232125	phase6_comp_75	1	1.0	G	A	1	1	0|1	G	A
+20234321	phase6_comp_76	1	1.0	C	A	1	-1	1|0	C	A
+20234440	phase6_comp_76	1	1.0	A	T	1	-1	1|0	A	T
+20238932	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+20240432	unassigned	0	0.0	C	G	1	1	0|1	C	G
+20241241	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20245708	phase6_comp_77	1	1.0	C	T	1	1	0|1	C	T
+20245933	phase6_comp_77	-1	1.0	A	G	1	-1	1|0	A	G
+20247002	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20252666	unassigned	0	0.0	C	G	1	1	0|1	C	G
+20253913	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20257651	unassigned	0	0.0	T	C	1	1	0|1	T	C
+20258558	unassigned	0	0.0	T	A	1	-1	1|0	T	A
+20260868	phase6_comp_78	1	1.0	G	A	1	-1	1|0	G	A
+20261190	phase6_comp_78	1	1.0	A	G	1	-1	1|0	A	G
+20261898	phase6_comp_78	1	1.0	G	A	1	-1	1|0	G	A
+20262028	phase6_comp_78	1	1.0	A	C	1	-1	1|0	A	C
+20262284	phase6_comp_78	1	1.0	G	A	1	-1	1|0	G	A
+20263563	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20268787	unassigned	0	0.0	G	T	1	1	0|1	G	T
+20271450	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20274816	unassigned	0	0.0	T	C	1	1	0|1	T	C
+20276025	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20278886	phase6_comp_79	1	1.0	C	T	1	-1	1|0	C	T
+20278892	phase6_comp_79	-1	1.0	T	C	1	1	0|1	T	C
+20278949	phase6_comp_79	-1	1.0	G	A	1	1	0|1	G	A
+20280166	phase6_comp_80	1	1.0	G	A	1	-1	1|0	G	A
+20280611	phase6_comp_80	-1	1.0	G	C	1	1	0|1	G	C
+20280689	phase6_comp_80	-1	1.0	C	A	1	1	0|1	C	A
+20281264	phase6_comp_80	-1	1.0	A	G	1	1	0|1	A	G
+20282844	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20285372	phase6_comp_81	1	1.0	C	T	1	1	0|1	C	T
+20285377	phase6_comp_81	1	1.0	C	T	1	1	0|1	C	T
+20285881	phase6_comp_81	-1	1.0	A	G	1	-1	1|0	A	G
+20285918	phase6_comp_81	1	1.0	G	A	1	1	0|1	G	A
+20285919	phase6_comp_81	1	1.0	C	T	1	1	0|1	C	T
+20285937	phase6_comp_81	1	1.0	C	G	1	1	0|1	C	G
+20285954	phase6_comp_81	1	1.0	G	A	1	1	0|1	G	A
+20287845	phase6_comp_82	1	1.0	A	T	1	1	0|1	A	T
+20287859	phase6_comp_82	1	1.0	C	T	1	1	0|1	C	T
+20287887	phase6_comp_82	1	1.0	T	C	1	1	0|1	T	C
+20287888	phase6_comp_82	1	1.0	G	A	1	1	0|1	G	A
+20288113	phase6_comp_82	1	1.0	G	A	1	1	0|1	G	A
+20288162	phase6_comp_82	1	1.0	T	A	1	1	0|1	T	A
+20288230	phase6_comp_82	1	1.0	T	C	0				
+20288238	phase6_comp_82	1	1.0	T	C	0				
+20288247	phase6_comp_82	1	1.0	G	T	0				
+20289425	unassigned	0	0.0	C	A	1	1	0|1	C	A
+20290948	phase6_comp_83	1	1.0	A	G	1	-1	1|0	A	G
+20291430	phase6_comp_83	-1	1.0	C	T	1	1	0|1	C	T
+20291636	phase6_comp_83	-1	1.0	G	A	1	1	0|1	G	A
+20292916	phase6_comp_84	1	1.0	G	A	1	1	0|1	G	A
+20293259	phase6_comp_84	1	1.0	A	G	1	1	0|1	A	G
+20293738	phase6_comp_84	1	1.0	A	T	1	1	0|1	A	T
+20293818	phase6_comp_84	1	1.0	C	T	1	1	0|1	C	T
+20294070	phase6_comp_84	-1	1.0	T	C	1	-1	1|0	T	C
+20295705	phase6_comp_85	1	1.0	C	T	1	1	0|1	C	T
+20295895	phase6_comp_85	1	1.0	G	A	1	1	0|1	G	A
+20296209	phase6_comp_85	1	1.0	G	A	0				
+20298576	unassigned	0	0.0	T	G	1	1	0|1	T	G
+20304870	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20307439	phase6_comp_86	1	1.0	G	A	1	1	0|1	G	A
+20308003	phase6_comp_86	1	1.0	G	A	1	1	0|1	G	A
+20308791	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20313823	phase6_comp_87	1	1.0	A	G	0				
+20314277	phase6_comp_87	1	1.0	T	G	1	1	0|1	T	G
+20314753	phase6_comp_87	1	1.0	A	T	1	1	0|1	A	T
+20316141	phase6_comp_88	1	1.0	G	A	1	1	0|1	G	A
+20316331	phase6_comp_88	1	1.0	G	A	1	1	0|1	G	A
+20316583	phase6_comp_88	1	1.0	G	A	1	1	0|1	G	A
+20317834	unassigned	0	0.0	A	G	1	1	0|1	A	G
+20319470	phase6_comp_89	1	1.0	C	T	1	1	0|1	C	T
+20320080	phase6_comp_89	1	1.0	T	A	1	1	0|1	T	A
+20321228	phase6_comp_90	1	1.0	G	A	1	1	0|1	G	A
+20321277	phase6_comp_90	1	1.0	C	A	1	1	0|1	C	A
+20321406	phase6_comp_90	1	1.0	T	G	0				
+20323902	phase6_comp_91	1	1.0	G	A	1	-1	1|0	G	A
+20323930	phase6_comp_91	1	1.0	C	T	1	-1	1|0	C	T
+20328070	phase6_comp_92	1	1.0	G	A	1	-1	1|0	G	A
+20328406	phase6_comp_92	1	1.0	C	T	1	-1	1|0	C	T
+20335688	unassigned	0	0.0	G	A	0				
+20336152	unassigned	0	0.0	A	C	0				
+20337902	phase6_comp_93	1	1.0	C	A	0				
+20337911	phase6_comp_93	1	1.0	C	A	0				
+20346735	unassigned	0	0.0	G	C	1	1	0|1	G	C
+20349034	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+20350029	unassigned	0	0.0	A	T	1	-1	1|0	A	T
+20350813	unassigned	0	0.0	A	G	1	1	0|1	A	G
+20361361	phase6_comp_94	1	1.0	C	G	0				
+20361820	phase6_comp_94	1	1.0	C	T	0				
+20363513	phase6_comp_95	1	1.0	A	G	0				
+20363826	phase6_comp_95	1	1.0	G	A	0				
+20367493	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20378881	unassigned	0	0.0	G	T	1	-1	1|0	G	T
+20383026	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20384399	phase6_comp_96	1	1.0	G	A	1	-1	1|0	G	A
+20384500	phase6_comp_96	1	1.0	G	T	1	-1	1|0	G	T
+20384589	phase6_comp_96	-1	1.0	G	C	1	1	0|1	G	C
+20384769	phase6_comp_96	1	1.0	G	C	1	-1	1|0	G	C
+20385085	phase6_comp_96	-1	1.0	C	A	1	1	0|1	C	A
+20385336	phase6_comp_96	-1	1.0	C	T	1	1	0|1	C	T
+20386488	phase6_comp_97	1	1.0	T	C	1	-1	1|0	T	C
+20386943	phase6_comp_97	1	1.0	G	C	1	-1	1|0	G	C
+20386997	phase6_comp_97	-1	1.0	T	C	1	1	0|1	T	C
+20387600	phase6_comp_97	1	1.0	T	C	1	-1	1|0	T	C
+20388202	phase6_comp_97	1	1.0	G	A	1	-1	1|0	G	A
+20389222	phase6_comp_98	1	1.0	C	T	1	1	0|1	C	T
+20389224	phase6_comp_98	-1	1.0	A	C	1	-1	1|0	A	C
+20393763	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20394752	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20396846	phase6_comp_99	1	1.0	A	G	1	-1	1|0	A	G
+20396965	phase6_comp_99	1	1.0	C	T	1	-1	1|0	C	T
+20397049	phase6_comp_99	1	1.0	G	C	1	-1	1|0	G	C
+20397829	phase6_comp_100	1	1.0	A	G	1	-1	1|0	A	G
+20398186	phase6_comp_100	-1	1.0	T	G	1	1	0|1	T	G
+20398357	phase6_comp_100	1	1.0	C	G	0				
+20398358	phase6_comp_100	1	1.0	A	G	0				
+20398397	phase6_comp_100	1	1.0	T	G	1	-1	1|0	T	G
+20398811	phase6_comp_100	1	1.0	T	C	1	-1	1|0	T	C
+20398862	phase6_comp_100	1	1.0	C	T	1	-1	1|0	C	T
+20398981	phase6_comp_100	1	1.0	A	T	1	-1	1|0	A	T
+20399325	phase6_comp_101	1	1.0	G	A	1	-1	1|0	G	A
+20399481	phase6_comp_101	1	1.0	G	T	1	-1	1|0	G	T
+20399505	phase6_comp_101	1	1.0	T	G	1	-1	1|0	T	G
+20399949	phase6_comp_101	-1	1.0	T	G	1	1	0|1	T	G
+20400216	phase6_comp_101	-1	1.0	C	G	1	1	0|1	C	G
+20400260	phase6_comp_101	-1	1.0	T	A	1	1	0|1	T	A
+20400365	phase6_comp_101	-1	1.0	G	T	1	1	0|1	G	T
+20400399	phase6_comp_101	-1	1.0	C	T	1	1	0|1	C	T
+20400936	phase6_comp_102	1	1.0	A	G	1	1	0|1	A	G
+20400951	phase6_comp_102	1	1.0	G	A	1	1	0|1	G	A
+20400993	phase6_comp_102	1	1.0	A	G	1	1	0|1	A	G
+20401050	phase6_comp_102	1	1.0	A	G	1	1	0|1	A	G
+20402186	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20404664	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+20406773	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20407686	phase6_comp_103	1	1.0	T	G	1	1	0|1	T	G
+20408110	phase6_comp_103	1	1.0	C	G	1	1	0|1	C	G
+20408940	unassigned	0	0.0	T	C	1	1	0|1	T	C
+20410305	phase6_comp_104	1	1.0	T	G	1	1	0|1	T	G
+20410731	phase6_comp_104	1	1.0	T	C	1	1	0|1	T	C
+20411699	unassigned	0	0.0	C	A	1	-1	1|0	C	A
+20413501	phase6_comp_105	1	1.0	C	T	1	1	0|1	C	T
+20413740	phase6_comp_105	1	1.0	G	A	1	1	0|1	G	A
+20414228	phase6_comp_105	1	1.0	G	A	1	1	0|1	G	A
+20414345	phase6_comp_105	-1	1.0	T	C	1	-1	1|0	T	C
+20414601	phase6_comp_105	1	1.0	C	T	1	1	0|1	C	T
+20414714	phase6_comp_105	1	1.0	C	A	1	1	0|1	C	A
+20416500	phase6_comp_106	1	1.0	C	T	1	1	0|1	C	T
+20416600	phase6_comp_106	-1	1.0	A	C	1	-1	1|0	A	C
+20417863	phase6_comp_107	1	1.0	A	G	1	1	0|1	A	G
+20417882	phase6_comp_107	1	1.0	G	A	1	1	0|1	G	A
+20418308	phase6_comp_107	1	1.0	G	A	0				
+20419231	unassigned	0	0.0	G	C	1	1	0|1	G	C
+20419776	phase6_comp_108	1	1.0	T	C	1	1	0|1	T	C
+20420189	phase6_comp_108	-1	1.0	A	G	1	-1	1|0	A	G
+20420792	phase6_comp_108	1	1.0	G	C	1	1	0|1	G	C
+20420877	phase6_comp_108	1	1.0	C	T	1	1	0|1	C	T
+20420910	phase6_comp_108	1	1.0	T	C	1	1	0|1	T	C
+20420957	phase6_comp_108	1	1.0	C	T	1	1	0|1	C	T
+20421260	phase6_comp_108	1	1.0	A	G	1	1	0|1	A	G
+20421266	phase6_comp_108	1	1.0	G	T	1	1	0|1	G	T
+20421909	phase6_comp_109	1	1.0	G	A	1	1	0|1	G	A
+20421976	phase6_comp_109	1	1.0	C	G	1	1	0|1	C	G
+20422553	phase6_comp_109	1	1.0	G	A	1	1	0|1	G	A
+20423382	phase6_comp_110	1	1.0	A	G	1	1	0|1	A	G
+20423776	phase6_comp_110	1	1.0	A	G	1	1	0|1	A	G
+20425314	phase6_comp_111	1	1.0	T	G	1	1	0|1	T	G
+20425478	phase6_comp_111	1	1.0	G	C	1	1	0|1	G	C
+20425532	phase6_comp_111	1	1.0	G	C	1	1	0|1	G	C
+20429930	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20431352	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20432201	unassigned	0	0.0	A	C	1	1	0|1	A	C
+20433563	phase6_comp_112	1	1.0	T	C	1	1	0|1	T	C
+20433955	phase6_comp_112	1	1.0	C	G	1	1	0|1	C	G
+20434682	phase6_comp_113	1	1.0	A	G	1	1	0|1	A	G
+20434759	phase6_comp_113	1	1.0	T	A	1	1	0|1	T	A
+20434787	phase6_comp_113	1	1.0	T	C	1	1	0|1	T	C
+20434903	phase6_comp_113	1	1.0	G	C	1	1	0|1	G	C
+20435287	phase6_comp_113	1	1.0	T	C	1	1	0|1	T	C
+20435401	phase6_comp_113	1	1.0	G	A	1	1	0|1	G	A
+20435628	phase6_comp_113	1	1.0	G	A	1	1	0|1	G	A
+20436436	phase6_comp_114	1	1.0	C	G	1	1	0|1	C	G
+20437151	phase6_comp_114	1	1.0	C	A	1	1	0|1	C	A
+20439627	phase6_comp_115	1	1.0	T	C	1	1	0|1	T	C
+20439788	phase6_comp_115	1	1.0	G	C	1	1	0|1	G	C
+20439792	phase6_comp_115	1	1.0	T	C	1	1	0|1	T	C
+20440197	phase6_comp_115	1	1.0	T	G	1	1	0|1	T	G
+20440439	phase6_comp_115	1	1.0	T	C	1	1	0|1	T	C
+20440637	phase6_comp_115	1	1.0	C	T	1	1	0|1	C	T
+20440839	phase6_comp_115	1	1.0	T	G	1	1	0|1	T	G
+20441133	phase6_comp_115	1	1.0	A	G	1	1	0|1	A	G
+20441167	phase6_comp_115	1	1.0	T	C	1	1	0|1	T	C
+20441470	phase6_comp_115	-1	1.0	C	T	1	-1	1|0	C	T
+20441830	phase6_comp_115	1	1.0	G	T	1	1	0|1	G	T
+20441888	phase6_comp_115	1	1.0	T	C	1	1	0|1	T	C
+20443173	unassigned	0	0.0	T	G	1	1	0|1	T	G
+20445685	phase6_comp_116	1	1.0	A	G	1	1	0|1	A	G
+20445969	phase6_comp_116	1	1.0	C	T	1	1	0|1	C	T
+20446696	phase6_comp_117	1	1.0	G	A	1	1	0|1	G	A
+20446784	phase6_comp_117	-1	0.944444	G	A	1	-1	1|0	G	A
+20446934	phase6_comp_117	-1	1.0	T	C	1	-1	1|0	T	C
+20450063	unassigned	0	0.0	A	T	1	1	0|1	A	T
+20452671	unassigned	0	0.0	A	G	1	1	0|1	A	G
+20455767	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+20456517	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20457358	phase6_comp_118	1	1.0	G	C	1	-1	1|0	G	C
+20457387	phase6_comp_118	1	1.0	G	T	1	-1	1|0	G	T
+20457643	phase6_comp_118	1	1.0	C	A	1	-1	1|0	C	A
+20458441	phase6_comp_119	1	1.0	C	A	0				
+20458960	phase6_comp_119	1	1.0	T	C	1	1	0|1	T	C
+20461906	phase6_comp_120	1	1.0	T	C	1	1	0|1	T	C
+20461985	phase6_comp_120	1	0.980919	C	A	1	1	0|1	C	A
+20462024	phase6_comp_120	1	1.0	A	G	1	1	0|1	A	G
+20462137	phase6_comp_120	1	1.0	C	T	1	1	0|1	C	T
+20462144	phase6_comp_120	-1	1.0	G	A	1	-1	1|0	G	A
+20462263	phase6_comp_120	-1	1.0	C	T	0				
+20462896	unassigned	0	0.0	C	G	1	1	0|1	C	G
+20463817	phase6_comp_121	1	1.0	G	A	1	-1	1|0	G	A
+20463980	phase6_comp_121	1	1.0	A	G	1	-1	1|0	A	G
+20464134	phase6_comp_121	1	1.0	G	C	1	-1	1|0	G	C
+20466246	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20467587	phase6_comp_122	1	1.0	A	T	1	-1	1|0	A	T
+20467718	phase6_comp_122	-1	1.0	G	A	1	1	0|1	G	A
+20467850	phase6_comp_122	-1	1.0	G	A	1	1	0|1	G	A
+20468658	unassigned	0	0.0	G	T	1	-1	1|0	G	T
+20470086	phase6_comp_123	1	1.0	C	A	1	1	0|1	C	A
+20470185	phase6_comp_123	1	1.0	T	A	1	1	0|1	T	A
+20470773	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+20472977	phase6_comp_124	1	1.0	T	C	1	1	0|1	T	C
+20473223	phase6_comp_124	1	1.0	G	C	1	1	0|1	G	C
+20474251	phase6_comp_125	1	1.0	G	A	1	1	0|1	G	A
+20474351	phase6_comp_125	1	1.0	A	G	1	1	0|1	A	G
+20477750	phase6_comp_126	1	1.0	T	C	1	1	0|1	T	C
+20478049	phase6_comp_126	1	1.0	C	T	1	1	0|1	C	T
+20478293	phase6_comp_126	1	1.0	G	C	1	1	0|1	G	C
+20478794	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20480026	phase6_comp_127	1	1.0	T	C	1	1	0|1	T	C
+20480423	phase6_comp_127	1	1.0	C	T	1	1	0|1	C	T
+20480802	phase6_comp_127	1	1.0	C	T	1	1	0|1	C	T
+20480956	phase6_comp_127	1	1.0	C	G	1	1	0|1	C	G
+20481552	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20483768	phase6_comp_128	1	1.0	T	C	1	1	0|1	T	C
+20483942	phase6_comp_128	1	1.0	T	C	1	1	0|1	T	C
+20484149	phase6_comp_128	1	1.0	T	C	1	1	0|1	T	C
+20484575	phase6_comp_128	1	1.0	A	G	1	1	0|1	A	G
+20485334	unassigned	0	0.0	A	G	1	1	0|1	A	G
+20487870	phase6_comp_129	1	1.0	A	G	1	1	0|1	A	G
+20488097	phase6_comp_129	1	1.0	C	G	1	1	0|1	C	G
+20490049	unassigned	0	0.0	G	C	1	1	0|1	G	C
+20496153	unassigned	0	0.0	A	G	0				
+20499234	phase6_comp_130	1	1.0	C	T	1	-1	1|0	C	T
+20499320	phase6_comp_130	-1	1.0	C	T	1	1	0|1	C	T
+20500019	unassigned	0	0.0	C	A	1	1	0|1	C	A
+20501351	phase6_comp_131	1	1.0	G	C	1	1	0|1	G	C
+20501410	phase6_comp_131	-1	1.0	C	T	1	-1	1|0	C	T
+20503104	phase6_comp_132	1	1.0	G	A	0				
+20503358	phase6_comp_132	1	1.0	T	A	0				
+20505342	unassigned	0	0.0	G	A	0				
+20508359	unassigned	0	0.0	T	G	1	-1	1|0	T	G
+20510653	phase6_comp_133	1	1.0	C	T	1	1	0|1	C	T
+20510858	phase6_comp_133	1	1.0	A	C	1	1	0|1	A	C
+20511004	phase6_comp_133	1	1.0	A	C	1	1	0|1	A	C
+20512978	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20514677	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20515674	phase6_comp_134	1	1.0	C	T	1	1	0|1	C	T
+20515741	phase6_comp_134	1	1.0	G	A	1	1	0|1	G	A
+20519106	phase6_comp_135	1	1.0	G	A	1	1	0|1	G	A
+20519271	phase6_comp_135	1	1.0	A	G	1	1	0|1	A	G
+20519588	phase6_comp_135	1	1.0	G	A	1	1	0|1	G	A
+20521406	phase6_comp_136	1	1.0	G	T	0				
+20521490	phase6_comp_136	1	1.0	G	A	1	1	0|1	G	A
+20522222	unassigned	0	0.0	A	G	1	1	0|1	A	G
+20528665	unassigned	0	0.0	A	T	1	1	0|1	A	T
+20529351	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20530623	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20531991	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20532793	unassigned	0	0.0	A	G	1	1	0|1	A	G
+20534541	phase6_comp_137	1	1.0	G	A	0				
+20534815	phase6_comp_137	1	1.0	A	G	1	1	0|1	A	G
+20534817	phase6_comp_137	1	1.0	T	C	1	1	0|1	T	C
+20534984	phase6_comp_137	-1	1.0	G	C	1	-1	1|0	G	C
+20535740	phase6_comp_138	1	1.0	T	A	0				
+20535980	phase6_comp_138	-1	1.0	G	A	0				
+20536261	phase6_comp_138	-1	1.0	C	A	1	-1	1|0	C	A
+20536972	phase6_comp_139	1	1.0	C	A	1	-1	1|0	C	A
+20537281	phase6_comp_139	1	1.0	G	A	1	-1	1|0	G	A
+20538798	phase6_comp_140	1	1.0	C	A	1	-1	1|0	C	A
+20539482	phase6_comp_140	1	1.0	T	C	1	-1	1|0	T	C
+20541934	phase6_comp_141	1	1.0	C	T	1	1	0|1	C	T
+20542406	phase6_comp_141	1	1.0	G	A	1	1	0|1	G	A
+20542613	phase6_comp_141	1	1.0	T	C	1	1	0|1	T	C
+20542639	phase6_comp_141	-1	1.0	G	A	1	-1	1|0	G	A
+20543833	unassigned	0	0.0	T	C	0				
+20545684	phase6_comp_142	1	1.0	G	A	1	-1	1|0	G	A
+20545689	phase6_comp_142	1	1.0	T	A	1	-1	1|0	T	A
+20546290	phase6_comp_142	1	1.0	G	T	1	-1	1|0	G	T
+20546789	phase6_comp_142	-1	1.0	C	T	1	1	0|1	C	T
+20547511	phase6_comp_142	-1	1.0	G	A	1	1	0|1	G	A
+20553828	phase6_comp_143	1	1.0	G	A	1	1	0|1	G	A
+20554415	phase6_comp_143	1	1.0	A	C	1	1	0|1	A	C
+20555257	phase6_comp_144	1	1.0	G	A	1	1	0|1	G	A
+20555354	phase6_comp_144	1	1.0	C	T	1	1	0|1	C	T
+20555906	phase6_comp_144	1	1.0	A	G	1	1	0|1	A	G
+20555977	phase6_comp_144	1	1.0	C	T	1	1	0|1	C	T
+20556396	phase6_comp_144	1	1.0	A	G	1	1	0|1	A	G
+20558683	unassigned	0	0.0	A	G	1	1	0|1	A	G
+20559223	phase6_comp_145	1	1.0	A	G	1	1	0|1	A	G
+20559470	phase6_comp_145	1	1.0	G	A	1	1	0|1	G	A
+20560071	phase6_comp_145	-1	1.0	A	G	1	-1	1|0	A	G
+20560470	phase6_comp_145	1	1.0	G	A	1	1	0|1	G	A
+20562333	unassigned	0	0.0	A	G	1	1	0|1	A	G
+20565019	phase6_comp_146	1	1.0	A	G	1	1	0|1	A	G
+20565109	phase6_comp_146	1	1.0	T	C	1	1	0|1	T	C
+20565757	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20567052	phase6_comp_147	1	1.0	A	G	1	1	0|1	A	G
+20567068	phase6_comp_147	1	1.0	G	T	1	1	0|1	G	T
+20568116	unassigned	0	0.0	C	A	1	-1	1|0	C	A
+20569741	phase6_comp_148	1	1.0	A	G	1	1	0|1	A	G
+20570494	phase6_comp_148	1	1.0	C	A	1	1	0|1	C	A
+20572272	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20573843	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20574999	phase6_comp_149	1	1.0	C	G	1	1	0|1	C	G
+20575495	phase6_comp_149	1	1.0	C	A	1	1	0|1	C	A
+20577992	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20580722	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20581659	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20584618	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20585921	unassigned	0	0.0	T	C	1	1	0|1	T	C
+20587905	phase6_comp_150	1	1.0	G	A	1	1	0|1	G	A
+20588354	phase6_comp_150	1	1.0	G	A	1	1	0|1	G	A
+20595079	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20595849	phase6_comp_151	1	1.0	C	T	0				
+20596186	phase6_comp_151	1	1.0	A	G	0				
+20600473	phase6_comp_152	1	1.0	A	G	0				
+20601235	phase6_comp_152	1	1.0	T	C	0				
+20601963	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20607741	phase6_comp_153	1	1.0	C	T	1	-1	1|0	C	T
+20607751	phase6_comp_153	1	1.0	G	A	1	-1	1|0	G	A
+20607924	phase6_comp_153	1	1.0	A	C	1	-1	1|0	A	C
+20608092	phase6_comp_153	1	1.0	G	A	1	-1	1|0	G	A
+20608132	phase6_comp_153	1	1.0	G	A	1	-1	1|0	G	A
+20608283	phase6_comp_153	1	1.0	G	C	1	-1	1|0	G	C
+20608691	phase6_comp_153	1	1.0	C	T	1	-1	1|0	C	T
+20608920	phase6_comp_153	1	1.0	G	A	1	-1	1|0	G	A
+20608981	phase6_comp_153	1	1.0	G	A	1	-1	1|0	G	A
+20609188	phase6_comp_153	1	1.0	T	C	1	-1	1|0	T	C
+20611268	phase6_comp_154	1	1.0	T	C	1	-1	1|0	T	C
+20611983	phase6_comp_154	1	1.0	T	C	1	-1	1|0	T	C
+20612109	phase6_comp_154	1	1.0	A	G	1	-1	1|0	A	G
+20612170	phase6_comp_154	1	1.0	G	A	1	-1	1|0	G	A
+20612440	phase6_comp_154	1	1.0	A	G	1	-1	1|0	A	G
+20612877	phase6_comp_154	1	1.0	A	G	1	-1	1|0	A	G
+20631723	phase6_comp_155	1	1.0	A	G	1	1	0|1	A	G
+20631968	phase6_comp_155	1	1.0	G	C	1	1	0|1	G	C
+20632012	phase6_comp_155	-1	1.0	C	T	1	-1	1|0	C	T
+20633758	phase6_comp_156	1	1.0	C	T	1	-1	1|0	C	T
+20634103	phase6_comp_156	1	1.0	C	T	1	-1	1|0	C	T
+20634462	phase6_comp_156	1	1.0	T	C	1	-1	1|0	T	C
+20635122	phase6_comp_157	1	1.0	C	T	1	-1	1|0	C	T
+20635462	phase6_comp_157	1	1.0	A	G	1	-1	1|0	A	G
+20635611	phase6_comp_157	1	1.0	G	A	1	-1	1|0	G	A
+20635770	phase6_comp_157	1	1.0	T	C	1	-1	1|0	T	C
+20636232	phase6_comp_158	1	1.0	G	A	1	-1	1|0	G	A
+20636775	phase6_comp_158	1	1.0	T	C	1	-1	1|0	T	C
+20636842	phase6_comp_158	1	1.0	A	C	1	-1	1|0	A	C
+20636948	phase6_comp_158	1	1.0	T	C	1	-1	1|0	T	C
+20637484	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20639180	phase6_comp_159	1	1.0	G	A	1	1	0|1	G	A
+20639232	phase6_comp_159	1	1.0	G	A	1	1	0|1	G	A
+20639510	phase6_comp_159	1	1.0	G	A	1	1	0|1	G	A
+20640057	phase6_comp_159	-1	1.0	G	C	1	-1	1|0	G	C
+20642308	phase6_comp_160	1	1.0	C	T	1	-1	1|0	C	T
+20642945	phase6_comp_160	1	1.0	A	G	1	-1	1|0	A	G
+20644248	phase6_comp_161	1	1.0	G	A	1	1	0|1	G	A
+20644598	phase6_comp_161	-1	1.0	T	A	1	-1	1|0	T	A
+20644678	phase6_comp_161	1	1.0	G	A	1	1	0|1	G	A
+20644903	phase6_comp_161	-1	1.0	A	G	1	-1	1|0	A	G
+20644921	phase6_comp_161	-1	1.0	T	C	1	-1	1|0	T	C
+20646293	phase6_comp_162	1	1.0	C	G	1	-1	1|0	C	G
+20646787	phase6_comp_162	1	1.0	C	T	1	-1	1|0	C	T
+20647135	phase6_comp_162	1	1.0	G	T	1	-1	1|0	G	T
+20648150	phase6_comp_163	1	1.0	T	G	1	-1	1|0	T	G
+20648210	phase6_comp_163	1	1.0	G	C	1	-1	1|0	G	C
+20648535	phase6_comp_163	-1	1.0	C	T	1	1	0|1	C	T
+20648599	phase6_comp_163	1	1.0	A	T	1	-1	1|0	A	T
+20648823	phase6_comp_163	-1	1.0	T	G	1	1	0|1	T	G
+20649159	phase6_comp_163	-1	1.0	T	G	1	1	0|1	T	G
+20649203	phase6_comp_163	1	1.0	A	G	1	-1	1|0	A	G
+20649323	phase6_comp_163	-1	1.0	T	C	1	1	0|1	T	C
+20649769	phase6_comp_163	-1	1.0	T	C	1	1	0|1	T	C
+20649788	phase6_comp_163	-1	1.0	G	A	1	1	0|1	G	A
+20650189	phase6_comp_163	-1	1.0	G	A	1	1	0|1	G	A
+20653091	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20658281	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20663480	phase6_comp_164	1	1.0	C	A	1	1	0|1	C	A
+20663632	phase6_comp_164	1	1.0	A	T	1	1	0|1	A	T
+20665512	unassigned	0	0.0	T	G	0				
+20668651	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20676778	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+20678131	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20679967	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20688672	unassigned	0	0.0	G	T	1	-1	1|0	G	T
+20693055	phase6_comp_165	1	1.0	G	A	1	-1	1|0	G	A
+20693084	phase6_comp_165	1	1.0	T	C	1	-1	1|0	T	C
+20693156	phase6_comp_165	1	1.0	T	C	1	-1	1|0	T	C
+20701950	unassigned	0	0.0	A	C	1	-1	1|0	A	C
+20714371	phase6_comp_166	1	1.0	A	G	1	-1	1|0	A	G
+20714785	phase6_comp_166	-1	1.0	C	A	1	1	0|1	C	A
+20735860	unassigned	0	0.0	G	T	1	-1	1|0	G	T
+20740493	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+20756275	phase6_comp_167	1	1.0	G	A	1	-1	1|0	G	A
+20756481	phase6_comp_167	-1	1.0	A	T	1	1	0|1	A	T
+20791177	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20793005	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20795724	unassigned	0	0.0	C	A	1	-1	1|0	C	A
+20806773	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+20808740	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20811452	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+20826067	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+20831911	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+20835182	unassigned	0	0.0	T	C	1	1	0|1	T	C
+20839583	unassigned	0	0.0	G	C	1	-1	1|0	G	C
+20845284	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20866043	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20866751	unassigned	0	0.0	C	G	1	1	0|1	C	G
+20867517	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20875969	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+20882271	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20891565	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20918464	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20921738	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20949530	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20961214	phase6_comp_168	1	1.0	A	G	0				
+20961277	phase6_comp_168	1	1.0	A	G	0				
+20962269	phase6_comp_169	1	1.0	C	A	1	1	0|1	C	A
+20962763	phase6_comp_169	-1	1.0	A	T	1	-1	1|0	A	T
+20963373	phase6_comp_169	-1	1.0	A	G	1	-1	1|0	A	G
+20964753	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20965815	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20966909	phase6_comp_170	1	1.0	T	C	1	1	0|1	T	C
+20967195	phase6_comp_170	-1	1.0	G	T	1	-1	1|0	G	T
+20968297	unassigned	0	0.0	A	G	1	1	0|1	A	G
+20976319	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+20983036	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+20983675	phase6_comp_171	1	1.0	G	T	1	1	0|1	G	T
+20983724	phase6_comp_171	1	1.0	G	C	1	1	0|1	G	C
+20984254	phase6_comp_171	-1	1.0	T	C	1	-1	1|0	T	C
+20985135	phase6_comp_172	1	1.0	A	G	1	1	0|1	A	G
+20985462	phase6_comp_172	1	1.0	T	C	1	1	0|1	T	C
+20985626	phase6_comp_172	1	1.0	T	G	1	1	0|1	T	G
+20985799	phase6_comp_172	1	1.0	T	C	1	1	0|1	T	C
+20987880	unassigned	0	0.0	G	C	1	1	0|1	G	C
+20988220	unassigned	0	0.0	C	T	1	1	0|1	C	T
+20990303	phase6_comp_173	1	1.0	A	C	1	1	0|1	A	C
+20990595	phase6_comp_173	1	1.0	C	T	1	1	0|1	C	T
+20990616	phase6_comp_173	1	1.0	A	G	1	1	0|1	A	G
+20990631	phase6_comp_173	1	1.0	G	C	1	1	0|1	G	C
+20991988	phase6_comp_174	1	1.0	C	T	1	1	0|1	C	T
+20992196	phase6_comp_174	1	1.0	T	C	1	1	0|1	T	C
+20992430	phase6_comp_174	1	1.0	A	C	1	1	0|1	A	C
+20993795	unassigned	0	0.0	T	C	1	1	0|1	T	C
+20994748	unassigned	0	0.0	A	G	1	1	0|1	A	G
+20996172	unassigned	0	0.0	A	G	1	1	0|1	A	G
+20996647	unassigned	0	0.0	G	A	1	1	0|1	G	A
+20999039	unassigned	0	0.0	G	A	1	1	0|1	G	A
+21002260	phase6_comp_175	1	1.0	T	C	1	-1	1|0	T	C
+21002277	phase6_comp_175	1	1.0	A	G	1	-1	1|0	A	G
+21002717	phase6_comp_175	-1	1.0	C	T	1	1	0|1	C	T
+21003313	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+21004364	phase6_comp_176	1	1.0	A	G	1	1	0|1	A	G
+21004368	phase6_comp_176	-1	0.974118	T	G	1	-1	1|0	T	G
+21004765	phase6_comp_176	1	1.0	C	T	0				
+21005099	phase6_comp_176	1	1.0	G	A	1	1	0|1	G	A
+21006262	phase6_comp_177	1	0.907258	A	T	0				
+21006277	phase6_comp_177	-1	1.0	A	C	0				
+21006457	phase6_comp_177	-1	1.0	A	G	0				
+21006647	phase6_comp_177	1	1.0	A	G	1	1	0|1	A	G
+21006949	phase6_comp_177	1	1.0	T	A	1	1	0|1	T	A
+21006951	phase6_comp_177	-1	1.0	C	T	1	-1	1|0	C	T
+21006953	phase6_comp_177	-1	1.0	T	A	1	-1	1|0	T	A
+21007235	phase6_comp_177	-1	1.0	C	T	1	-1	1|0	C	T
+21007581	phase6_comp_177	-1	1.0	T	G	1	-1	1|0	T	G
+21007818	phase6_comp_177	1	1.0	G	A	1	1	0|1	G	A
+21008185	phase6_comp_177	1	1.0	A	C	1	1	0|1	A	C
+21008238	phase6_comp_177	-1	1.0	T	G	1	-1	1|0	T	G
+21008560	phase6_comp_177	-1	1.0	C	A	1	-1	1|0	C	A
+21009017	phase6_comp_178	1	1.0	G	A	1	1	0|1	G	A
+21009103	phase6_comp_178	1	1.0	G	A	1	1	0|1	G	A
+21009455	unassigned	0	0.0	T	C	1	1	0|1	T	C
+21010578	phase6_comp_179	1	1.0	T	A	1	1	0|1	T	A
+21010870	phase6_comp_179	-1	1.0	T	C	1	-1	1|0	T	C
+21010925	phase6_comp_179	-1	1.0	C	G	1	-1	1|0	C	G
+21011098	phase6_comp_179	1	1.0	G	A	1	1	0|1	G	A
+21011470	phase6_comp_179	1	1.0	G	A	1	1	0|1	G	A
+21011785	phase6_comp_179	1	1.0	G	T	1	1	0|1	G	T
+21012063	phase6_comp_179	-1	1.0	G	A	1	-1	1|0	G	A
+21015387	unassigned	0	0.0	G	C	0				
+21016364	phase6_comp_180	1	1.0	A	G	1	1	0|1	A	G
+21016472	phase6_comp_180	1	1.0	G	C	1	1	0|1	G	C
+21016938	phase6_comp_180	1	1.0	C	A	1	1	0|1	C	A
+21018116	phase6_comp_181	1	1.0	G	T	1	1	0|1	G	T
+21018178	phase6_comp_181	1	1.0	C	G	1	1	0|1	C	G
+21019189	unassigned	0	0.0	C	T	1	1	0|1	C	T
+21019783	phase6_comp_182	1	1.0	T	C	1	1	0|1	T	C
+21019846	phase6_comp_182	1	1.0	G	T	1	1	0|1	G	T
+21021803	unassigned	0	0.0	T	C	1	1	0|1	T	C
+21022574	phase6_comp_183	1	1.0	G	T	1	-1	1|0	G	T
+21023012	phase6_comp_183	1	1.0	C	A	1	-1	1|0	C	A
+21023045	phase6_comp_183	1	1.0	C	T	1	-1	1|0	C	T
+21023669	unassigned	0	0.0	A	C	1	-1	1|0	A	C
+21024372	phase6_comp_184	1	1.0	T	G	1	-1	1|0	T	G
+21024609	phase6_comp_184	1	1.0	A	G	1	-1	1|0	A	G
+21024817	phase6_comp_184	1	1.0	C	G	1	-1	1|0	C	G
+21024961	phase6_comp_184	1	1.0	A	G	1	-1	1|0	A	G
+21025775	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21027357	phase6_comp_185	1	1.0	T	C	1	-1	1|0	T	C
+21027393	phase6_comp_185	1	1.0	A	G	1	-1	1|0	A	G
+21028193	phase6_comp_185	1	1.0	T	C	1	-1	1|0	T	C
+21028324	phase6_comp_185	1	1.0	G	A	1	-1	1|0	G	A
+21028607	phase6_comp_185	1	1.0	A	C	1	-1	1|0	A	C
+21028993	phase6_comp_186	1	1.0	T	C	1	-1	1|0	T	C
+21029023	phase6_comp_186	1	1.0	G	A	1	-1	1|0	G	A
+21030289	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21031696	phase6_comp_187	1	1.0	C	T	1	1	0|1	C	T
+21031730	phase6_comp_187	-1	1.0	G	A	1	-1	1|0	G	A
+21032188	phase6_comp_187	-1	1.0	C	T	1	-1	1|0	C	T
+21032774	phase6_comp_187	-1	1.0	G	A	1	-1	1|0	G	A
+21033678	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21034316	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+21037357	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+21038654	unassigned	0	0.0	C	A	1	-1	1|0	C	A
+21041125	phase6_comp_188	1	1.0	A	C	1	-1	1|0	A	C
+21041246	phase6_comp_188	1	1.0	A	G	1	-1	1|0	A	G
+21041467	phase6_comp_188	1	1.0	A	T	1	-1	1|0	A	T
+21041468	phase6_comp_188	1	1.0	A	G	1	-1	1|0	A	G
+21041495	phase6_comp_188	1	1.0	C	T	1	-1	1|0	C	T
+21041515	phase6_comp_188	1	0.938667	A	T	1	-1	1|0	A	T
+21041522	phase6_comp_188	1	1.0	G	A	1	-1	1|0	G	A
+21042362	unassigned	0	0.0	T	A	1	-1	1|0	T	A
+21044958	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+21051802	phase6_comp_189	1	1.0	C	T	1	-1	1|0	C	T
+21052641	phase6_comp_189	1	1.0	G	A	0				
+21054729	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21055330	unassigned	0	0.0	C	G	1	-1	1|0	C	G
+21057771	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21060241	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21061453	phase6_comp_190	1	1.0	A	G	1	-1	1|0	A	G
+21061864	phase6_comp_190	1	1.0	A	C	1	-1	1|0	A	C
+21062115	phase6_comp_190	1	1.0	G	A	1	-1	1|0	G	A
+21062530	phase6_comp_190	1	1.0	T	C	1	-1	1|0	T	C
+21062837	phase6_comp_190	1	1.0	G	C	1	-1	1|0	G	C
+21063905	unassigned	0	0.0	G	T	1	-1	1|0	G	T
+21080798	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21085267	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+21089527	unassigned	0	0.0	A	C	1	1	0|1	A	C
+21103357	unassigned	0	0.0	G	C	1	1	0|1	G	C
+21103793	phase6_comp_191	1	1.0	C	T	1	1	0|1	C	T
+21104483	phase6_comp_191	-1	1.0	G	A	1	-1	1|0	G	A
+21104515	phase6_comp_191	-1	1.0	T	G	1	-1	1|0	T	G
+21104636	phase6_comp_191	-1	1.0	A	G	1	-1	1|0	A	G
+21104962	phase6_comp_191	-1	1.0	C	A	1	-1	1|0	C	A
+21105106	phase6_comp_191	-1	1.0	C	T	1	-1	1|0	C	T
+21105719	phase6_comp_191	-1	1.0	A	G	1	-1	1|0	A	G
+21106985	unassigned	0	0.0	G	A	1	1	0|1	G	A
+21108369	unassigned	0	0.0	C	G	1	1	0|1	C	G
+21110937	unassigned	0	0.0	T	G	1	1	0|1	T	G
+21156182	unassigned	0	0.0	C	G	0				
+21360719	unassigned	0	0.0	C	G	0				
+21363286	unassigned	0	0.0	G	C	0				
+21368925	unassigned	0	0.0	G	C	0				
+21444062	phase6_comp_192	1	1.0	G	C	0				
+21444618	phase6_comp_192	1	1.0	A	G	0				
+21447200	unassigned	0	0.0	C	A	0				
+21448672	unassigned	0	0.0	T	G	0				
+21449846	unassigned	0	0.0	C	T	0				
+21452112	unassigned	0	0.0	T	C	0				
+21454844	phase6_comp_193	1	1.0	G	A	0				
+21454896	phase6_comp_193	-1	1.0	T	C	0				
+21455149	phase6_comp_193	-1	1.0	G	T	0				
+21457878	unassigned	0	0.0	G	A	0				
+21480391	unassigned	0	0.0	T	G	0				
+21541452	unassigned	0	0.0	C	T	0				
+21562901	unassigned	0	0.0	G	T	1	-1	1|0	G	T
+21565579	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21572167	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+21582546	unassigned	0	0.0	C	A	1	-1	1|0	C	A
+21597269	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21600268	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21617026	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21628051	unassigned	0	0.0	C	G	1	-1	1|0	C	G
+21629564	phase6_comp_194	1	1.0	G	A	1	-1	1|0	G	A
+21629916	phase6_comp_194	1	1.0	A	G	1	-1	1|0	A	G
+21631884	unassigned	0	0.0	G	T	1	-1	1|0	G	T
+21632538	unassigned	0	0.0	T	G	1	-1	1|0	T	G
+21634235	phase6_comp_195	1	1.0	C	T	0				
+21634313	phase6_comp_195	1	1.0	C	T	1	-1	1|0	C	T
+21638580	phase6_comp_196	1	1.0	T	C	1	-1	1|0	T	C
+21638778	phase6_comp_196	1	1.0	T	G	1	-1	1|0	T	G
+21640742	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21642781	unassigned	0	0.0	G	A	1	1	0|1	G	A
+21644753	unassigned	0	0.0	C	T	0				
+21646175	unassigned	0	0.0	G	C	1	-1	1|0	G	C
+21648039	phase6_comp_197	1	1.0	T	C	0				
+21648292	phase6_comp_197	1	1.0	T	C	1	1	0|1	T	C
+21648302	phase6_comp_197	-1	1.0	A	G	1	-1	1|0	A	G
+21648710	phase6_comp_197	1	1.0	G	T	1	1	0|1	G	T
+21649644	phase6_comp_198	1	1.0	C	G	1	-1	1|0	C	G
+21650129	phase6_comp_198	1	1.0	G	A	1	-1	1|0	G	A
+21651398	phase6_comp_199	1	1.0	G	C	1	1	0|1	G	C
+21651430	phase6_comp_199	1	1.0	C	G	1	1	0|1	C	G
+21651930	phase6_comp_199	-1	1.0	G	T	1	-1	1|0	G	T
+21653081	phase6_comp_200	1	1.0	T	C	1	1	0|1	T	C
+21653239	phase6_comp_200	-1	1.0	C	G	1	-1	1|0	C	G
+21655862	unassigned	0	0.0	G	C	1	-1	1|0	G	C
+21656334	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21659377	unassigned	0	0.0	A	C	0				
+21660945	unassigned	0	0.0	C	T	1	1	0|1	C	T
+21665468	unassigned	0	0.0	C	A	1	1	0|1	C	A
+21667716	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21669653	phase6_comp_201	1	1.0	C	T	1	-1	1|0	C	T
+21669861	phase6_comp_201	1	1.0	C	T	1	-1	1|0	C	T
+21671173	phase6_comp_202	1	1.0	A	G	1	-1	1|0	A	G
+21671187	phase6_comp_202	-1	1.0	A	G	1	1	0|1	A	G
+21671677	phase6_comp_202	1	1.0	A	C	1	-1	1|0	A	C
+21672031	phase6_comp_202	1	1.0	A	T	1	-1	1|0	A	T
+21673059	phase6_comp_203	1	1.0	C	T	1	-1	1|0	C	T
+21673328	phase6_comp_203	-1	1.0	C	T	1	1	0|1	C	T
+21673421	phase6_comp_203	1	1.0	A	G	1	-1	1|0	A	G
+21674043	phase6_comp_204	1	1.0	G	A	1	-1	1|0	G	A
+21674445	phase6_comp_204	1	1.0	A	G	1	-1	1|0	A	G
+21674665	phase6_comp_204	1	1.0	T	C	1	-1	1|0	T	C
+21675265	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21676392	phase6_comp_205	1	1.0	C	G	0				
+21676406	phase6_comp_205	1	1.0	A	G	0				
+21676415	phase6_comp_205	1	1.0	G	A	1	-1	1|0	G	A
+21676839	phase6_comp_205	1	1.0	C	T	1	-1	1|0	C	T
+21677066	phase6_comp_205	1	1.0	G	A	1	-1	1|0	G	A
+21677084	phase6_comp_205	1	1.0	C	T	1	-1	1|0	C	T
+21677197	phase6_comp_205	1	1.0	C	T	1	-1	1|0	C	T
+21678528	phase6_comp_206	1	1.0	A	G	1	-1	1|0	A	G
+21678596	phase6_comp_206	1	1.0	C	T	1	-1	1|0	C	T
+21678702	phase6_comp_206	1	1.0	C	T	1	-1	1|0	C	T
+21679303	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21679863	phase6_comp_207	1	1.0	A	G	1	-1	1|0	A	G
+21679958	phase6_comp_207	1	1.0	G	A	1	-1	1|0	G	A
+21680399	phase6_comp_207	1	1.0	T	C	0				
+21680479	phase6_comp_207	1	1.0	C	T	0				
+21680723	phase6_comp_207	1	1.0	G	A	0				
+21681662	phase6_comp_208	1	1.0	C	T	1	-1	1|0	C	T
+21682223	phase6_comp_208	1	1.0	C	T	1	-1	1|0	C	T
+21682543	phase6_comp_208	1	1.0	T	C	1	-1	1|0	T	C
+21682899	phase6_comp_208	1	1.0	T	C	1	-1	1|0	T	C
+21682934	phase6_comp_208	1	1.0	G	A	1	-1	1|0	G	A
+21684169	phase6_comp_209	1	1.0	C	T	1	-1	1|0	C	T
+21684537	phase6_comp_209	1	1.0	A	G	1	-1	1|0	A	G
+21684910	phase6_comp_209	1	1.0	C	T	1	-1	1|0	C	T
+21685574	phase6_comp_210	1	1.0	A	C	1	1	0|1	A	C
+21686042	phase6_comp_210	-1	1.0	G	A	1	-1	1|0	G	A
+21686121	phase6_comp_210	1	1.0	A	G	1	1	0|1	A	G
+21686424	phase6_comp_210	-1	1.0	G	A	1	-1	1|0	G	A
+21687149	phase6_comp_211	1	1.0	C	T	1	1	0|1	C	T
+21687312	phase6_comp_211	-1	1.0	G	T	1	-1	1|0	G	T
+21688029	phase6_comp_212	1	1.0	C	T	1	-1	1|0	C	T
+21688151	phase6_comp_212	1	1.0	C	T	1	-1	1|0	C	T
+21690097	phase6_comp_213	1	1.0	G	A	1	1	0|1	G	A
+21690738	phase6_comp_213	-1	1.0	T	C	1	-1	1|0	T	C
+21691314	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21692029	phase6_comp_214	1	1.0	C	T	1	-1	1|0	C	T
+21692256	phase6_comp_214	-1	1.0	T	C	1	1	0|1	T	C
+21692364	phase6_comp_214	-1	1.0	G	C	1	1	0|1	G	C
+21692389	phase6_comp_214	1	1.0	T	C	1	-1	1|0	T	C
+21692449	phase6_comp_214	1	1.0	T	C	1	-1	1|0	T	C
+21692523	phase6_comp_214	-1	1.0	T	C	1	1	0|1	T	C
+21692966	phase6_comp_214	1	1.0	G	A	1	-1	1|0	G	A
+21694573	phase6_comp_215	1	1.0	C	T	1	1	0|1	C	T
+21695080	phase6_comp_215	-1	1.0	G	T	1	-1	1|0	G	T
+21695494	phase6_comp_215	1	1.0	C	T	1	1	0|1	C	T
+21697294	unassigned	0	0.0	G	T	1	-1	1|0	G	T
+21701726	unassigned	0	0.0	G	A	1	1	0|1	G	A
+21702984	phase6_comp_216	1	1.0	G	A	1	1	0|1	G	A
+21703711	phase6_comp_216	-1	1.0	C	G	0				
+21704066	phase6_comp_216	1	1.0	A	G	1	1	0|1	A	G
+21704297	phase6_comp_216	-1	1.0	T	C	1	-1	1|0	T	C
+21704517	phase6_comp_216	-1	1.0	C	T	1	-1	1|0	C	T
+21705004	phase6_comp_216	1	1.0	C	T	1	1	0|1	C	T
+21706156	phase6_comp_217	1	1.0	C	T	1	-1	1|0	C	T
+21706384	phase6_comp_217	-1	1.0	G	A	1	1	0|1	G	A
+21709048	unassigned	0	0.0	T	C	1	1	0|1	T	C
+21710133	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21710999	phase6_comp_218	1	1.0	G	A	1	-1	1|0	G	A
+21711001	phase6_comp_218	1	1.0	G	A	1	-1	1|0	G	A
+21711133	phase6_comp_218	-1	1.0	T	C	1	1	0|1	T	C
+21713850	phase6_comp_219	1	1.0	C	T	1	1	0|1	C	T
+21714228	phase6_comp_219	-1	1.0	G	A	1	-1	1|0	G	A
+21715468	unassigned	0	0.0	T	C	0				
+21715952	phase6_comp_220	1	1.0	G	A	0				
+21715982	phase6_comp_220	1	1.0	A	G	0				
+21716200	phase6_comp_220	1	1.0	C	T	0				
+21719984	phase6_comp_221	1	1.0	C	T	0				
+21720055	phase6_comp_221	1	1.0	G	A	0				
+21721210	phase6_comp_222	1	1.0	G	A	1	-1	1|0	G	A
+21721496	phase6_comp_222	1	1.0	T	C	1	-1	1|0	T	C
+21722116	phase6_comp_222	1	1.0	G	A	1	-1	1|0	G	A
+21722410	phase6_comp_222	1	1.0	G	A	1	-1	1|0	G	A
+21723342	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21726446	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+21727284	phase6_comp_223	1	1.0	C	T	1	-1	1|0	C	T
+21727904	phase6_comp_223	1	1.0	G	C	1	-1	1|0	G	C
+21728499	phase6_comp_223	1	1.0	C	T	1	-1	1|0	C	T
+21728630	phase6_comp_223	-1	1.0	G	A	1	1	0|1	G	A
+21733034	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+21733471	phase6_comp_224	1	1.0	C	A	1	1	0|1	C	A
+21733893	phase6_comp_224	-1	1.0	T	C	1	-1	1|0	T	C
+21735973	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21736917	phase6_comp_225	1	1.0	C	G	1	-1	1|0	C	G
+21736955	phase6_comp_225	-1	1.0	C	T	1	1	0|1	C	T
+21738830	phase6_comp_226	1	1.0	T	G	1	-1	1|0	T	G
+21739303	phase6_comp_226	-1	1.0	G	A	1	1	0|1	G	A
+21741482	phase6_comp_227	1	1.0	C	T	1	1	0|1	C	T
+21741631	phase6_comp_227	1	1.0	T	C	1	1	0|1	T	C
+21742513	phase6_comp_228	1	1.0	G	C	1	1	0|1	G	C
+21742717	phase6_comp_228	1	1.0	G	A	1	1	0|1	G	A
+21742941	phase6_comp_228	-1	1.0	G	A	1	-1	1|0	G	A
+21746167	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21747706	phase6_comp_229	1	1.0	C	G	1	-1	1|0	C	G
+21747835	phase6_comp_229	1	0.8	G	A	1	-1	1|0	G	A
+21750584	unassigned	0	0.0	A	C	1	-1	1|0	A	C
+21752246	phase6_comp_230	1	1.0	T	C	1	-1	1|0	T	C
+21752329	phase6_comp_230	1	1.0	C	A	1	-1	1|0	C	A
+21755092	phase6_comp_231	1	1.0	T	C	1	-1	1|0	T	C
+21755307	phase6_comp_231	1	1.0	C	A	1	-1	1|0	C	A
+21755545	phase6_comp_231	1	1.0	A	T	0				
+21758238	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+21758513	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21759451	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+21760715	phase6_comp_232	1	1.0	C	G	1	-1	1|0	C	G
+21761064	phase6_comp_232	1	1.0	G	A	1	-1	1|0	G	A
+21761209	phase6_comp_232	1	1.0	T	C	1	-1	1|0	T	C
+21761597	phase6_comp_232	1	1.0	C	T	1	-1	1|0	C	T
+21761913	phase6_comp_232	1	1.0	C	G	1	-1	1|0	C	G
+21762178	phase6_comp_232	1	1.0	C	T	1	-1	1|0	C	T
+21766866	phase6_comp_233	1	1.0	A	G	1	-1	1|0	A	G
+21767265	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+21767860	phase6_comp_233	1	1.0	T	C	1	-1	1|0	T	C
+21768458	phase6_comp_233	1	1.0	C	G	1	-1	1|0	C	G
+21768900	phase6_comp_233	1	1.0	A	C	1	-1	1|0	A	C
+21770751	unassigned	0	0.0	A	C	1	-1	1|0	A	C
+21771914	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21774389	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21774926	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+21776244	phase6_comp_234	1	1.0	C	T	1	1	0|1	C	T
+21776656	phase6_comp_234	-1	1.0	C	G	1	-1	1|0	C	G
+21776836	phase6_comp_234	-1	1.0	T	G	1	-1	1|0	T	G
+21778114	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21782556	phase6_comp_235	1	1.0	G	A	1	-1	1|0	G	A
+21782880	phase6_comp_235	1	1.0	C	T	1	-1	1|0	C	T
+21784161	phase6_comp_236	1	1.0	C	A	1	-1	1|0	C	A
+21784298	phase6_comp_236	1	1.0	C	A	1	-1	1|0	C	A
+21784402	phase6_comp_236	1	1.0	G	A	1	-1	1|0	G	A
+21785558	phase6_comp_237	1	1.0	C	T	1	-1	1|0	C	T
+21785601	phase6_comp_237	1	1.0	T	C	1	-1	1|0	T	C
+21785847	phase6_comp_237	1	1.0	C	T	1	-1	1|0	C	T
+21785920	phase6_comp_237	1	1.0	C	T	0				
+21789103	phase6_comp_238	1	1.0	A	T	1	-1	1|0	A	T
+21789470	phase6_comp_238	1	1.0	A	C	1	-1	1|0	A	C
+21790812	phase6_comp_239	1	1.0	T	C	1	-1	1|0	T	C
+21790964	phase6_comp_239	1	1.0	T	C	1	-1	1|0	T	C
+21791345	phase6_comp_239	1	1.0	A	G	1	-1	1|0	A	G
+21791443	phase6_comp_239	1	1.0	A	T	1	-1	1|0	A	T
+21792110	phase6_comp_239	1	1.0	A	G	1	-1	1|0	A	G
+21793085	phase6_comp_240	1	1.0	C	T	1	-1	1|0	C	T
+21793327	phase6_comp_240	1	1.0	G	A	1	-1	1|0	G	A
+21793412	phase6_comp_240	1	1.0	G	A	1	-1	1|0	G	A
+21793732	phase6_comp_240	1	1.0	A	C	1	-1	1|0	A	C
+21794442	phase6_comp_241	1	1.0	T	C	1	-1	1|0	T	C
+21794854	phase6_comp_241	1	1.0	T	C	0				
+21796693	phase6_comp_242	1	1.0	G	A	1	-1	1|0	G	A
+21796997	phase6_comp_242	1	1.0	C	G	1	-1	1|0	C	G
+21797532	phase6_comp_243	1	1.0	G	A	1	-1	1|0	G	A
+21797650	phase6_comp_243	1	1.0	A	C	1	-1	1|0	A	C
+21798191	phase6_comp_243	1	1.0	T	C	1	-1	1|0	T	C
+21800355	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21802500	unassigned	0	0.0	C	A	1	-1	1|0	C	A
+21803372	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+21808085	phase6_comp_244	1	1.0	A	T	1	-1	1|0	A	T
+21808704	phase6_comp_244	1	1.0	T	C	1	-1	1|0	T	C
+21809136	phase6_comp_244	1	1.0	A	G	1	-1	1|0	A	G
+21810308	unassigned	0	0.0	T	G	1	-1	1|0	T	G
+21810634	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21811715	phase6_comp_245	1	1.0	G	A	1	-1	1|0	G	A
+21812161	phase6_comp_245	1	1.0	A	G	1	-1	1|0	A	G
+21813913	phase6_comp_246	1	1.0	G	A	1	-1	1|0	G	A
+21813957	phase6_comp_246	1	1.0	A	G	1	-1	1|0	A	G
+21814589	phase6_comp_247	1	1.0	C	T	1	-1	1|0	C	T
+21814606	phase6_comp_247	1	1.0	G	C	1	-1	1|0	G	C
+21814910	phase6_comp_247	1	1.0	G	T	0				
+21816026	unassigned	0	0.0	T	A	0				
+21819618	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21823010	phase6_comp_248	1	1.0	A	T	1	-1	1|0	A	T
+21823660	phase6_comp_248	1	1.0	C	T	1	-1	1|0	C	T
+21824198	phase6_comp_248	1	1.0	T	A	1	-1	1|0	T	A
+21826584	phase6_comp_249	1	1.0	A	C	1	-1	1|0	A	C
+21826804	phase6_comp_249	1	1.0	G	A	1	-1	1|0	G	A
+21827189	phase6_comp_249	1	1.0	T	C	1	-1	1|0	T	C
+21829844	unassigned	0	0.0	G	C	1	-1	1|0	G	C
+21831058	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+21832190	phase6_comp_250	1	1.0	A	C	1	-1	1|0	A	C
+21832273	phase6_comp_250	1	1.0	T	C	1	-1	1|0	T	C
+21832514	phase6_comp_250	1	1.0	G	A	1	-1	1|0	G	A
+21832804	phase6_comp_250	1	1.0	G	T	1	-1	1|0	G	T
+21833371	phase6_comp_251	1	1.0	A	C	1	-1	1|0	A	C
+21833720	phase6_comp_251	1	1.0	T	C	1	-1	1|0	T	C
+21833894	phase6_comp_251	1	1.0	G	A	1	-1	1|0	G	A
+21835874	unassigned	0	0.0	C	A	1	-1	1|0	C	A
+21836496	unassigned	0	0.0	T	A	1	-1	1|0	T	A
+21838188	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+21841117	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+21842243	phase6_comp_252	1	1.0	G	A	1	-1	1|0	G	A
+21842359	phase6_comp_252	1	1.0	C	T	1	-1	1|0	C	T
+21846241	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+21847187	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21847875	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21850504	phase6_comp_253	1	1.0	G	A	1	-1	1|0	G	A
+21851322	phase6_comp_253	1	1.0	A	C	1	-1	1|0	A	C
+21854306	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21855846	phase6_comp_254	1	1.0	A	C	1	-1	1|0	A	C
+21856587	phase6_comp_254	1	1.0	C	A	1	-1	1|0	C	A
+21858180	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+21860457	phase6_comp_255	1	1.0	G	A	1	-1	1|0	G	A
+21860600	phase6_comp_255	1	1.0	G	A	1	-1	1|0	G	A
+21860875	phase6_comp_255	1	1.0	G	C	1	-1	1|0	G	C
+21864332	unassigned	0	0.0	G	C	1	-1	1|0	G	C
+21865784	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21867813	phase6_comp_256	1	1.0	A	T	1	-1	1|0	A	T
+21868030	phase6_comp_256	1	1.0	T	G	1	-1	1|0	T	G
+21870308	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+21873158	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+21878381	phase6_comp_257	1	1.0	G	A	1	-1	1|0	G	A
+21878392	phase6_comp_257	1	1.0	C	T	1	-1	1|0	C	T
+21879633	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21881399	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+21882464	phase6_comp_258	1	1.0	A	G	1	-1	1|0	A	G
+21882555	phase6_comp_258	1	1.0	T	C	1	-1	1|0	T	C
+21882912	phase6_comp_258	1	1.0	A	G	0				
+21884717	phase6_comp_259	1	1.0	C	T	1	-1	1|0	C	T
+21885014	phase6_comp_259	1	1.0	C	T	1	-1	1|0	C	T
+21885875	phase6_comp_260	1	1.0	T	C	1	-1	1|0	T	C
+21886556	phase6_comp_260	1	1.0	G	T	1	-1	1|0	G	T
+21887601	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+21890558	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+21892296	phase6_comp_261	1	1.0	C	T	1	-1	1|0	C	T
+21892420	phase6_comp_261	1	1.0	C	T	1	-1	1|0	C	T
+21892449	phase6_comp_261	1	1.0	A	C	1	-1	1|0	A	C
+21893970	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21895828	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21898048	phase6_comp_262	1	1.0	T	C	1	-1	1|0	T	C
+21898126	phase6_comp_262	1	1.0	G	A	1	-1	1|0	G	A
+21899707	phase6_comp_263	1	1.0	C	G	1	-1	1|0	C	G
+21899799	phase6_comp_263	1	1.0	G	A	1	-1	1|0	G	A
+21901258	phase6_comp_264	1	1.0	G	A	1	-1	1|0	G	A
+21901760	phase6_comp_264	1	1.0	A	G	1	-1	1|0	A	G
+21902185	phase6_comp_264	1	1.0	C	T	1	-1	1|0	C	T
+21902186	phase6_comp_264	1	1.0	A	G	1	-1	1|0	A	G
+21904094	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21906101	phase6_comp_265	1	1.0	C	T	1	-1	1|0	C	T
+21906236	phase6_comp_265	1	1.0	G	A	1	-1	1|0	G	A
+21907107	phase6_comp_266	1	1.0	T	C	1	-1	1|0	T	C
+21907717	phase6_comp_266	1	1.0	A	G	1	-1	1|0	A	G
+21907753	phase6_comp_266	1	1.0	C	A	1	-1	1|0	C	A
+21908029	phase6_comp_266	1	1.0	A	G	1	-1	1|0	A	G
+21909133	phase6_comp_267	1	1.0	G	A	1	-1	1|0	G	A
+21909687	phase6_comp_267	1	1.0	G	A	1	-1	1|0	G	A
+21909763	phase6_comp_267	1	1.0	A	C	1	-1	1|0	A	C
+21909797	phase6_comp_267	1	1.0	C	T	1	-1	1|0	C	T
+21910504	phase6_comp_267	1	1.0	T	G	1	-1	1|0	T	G
+21911000	phase6_comp_268	1	1.0	T	A	1	-1	1|0	T	A
+21911214	phase6_comp_268	1	1.0	T	A	1	-1	1|0	T	A
+21911452	phase6_comp_268	1	1.0	C	T	1	-1	1|0	C	T
+21911495	phase6_comp_268	1	1.0	G	C	1	-1	1|0	G	C
+21911725	phase6_comp_268	1	1.0	A	G	1	-1	1|0	A	G
+21912844	phase6_comp_269	1	1.0	A	C	1	-1	1|0	A	C
+21913268	phase6_comp_269	1	1.0	C	T	1	-1	1|0	C	T
+21913871	phase6_comp_270	1	1.0	A	G	1	-1	1|0	A	G
+21913884	phase6_comp_270	1	1.0	C	T	1	-1	1|0	C	T
+21914386	phase6_comp_270	1	1.0	A	G	1	-1	1|0	A	G
+21914545	phase6_comp_270	1	0.875	A	G	1	-1	1|0	A	G
+21916481	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+21918862	phase6_comp_271	1	1.0	G	A	1	-1	1|0	G	A
+21918869	phase6_comp_271	1	1.0	T	C	1	-1	1|0	T	C
+21920372	unassigned	0	0.0	G	A	1	1	0|1	G	A
+21921151	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21924354	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+21926544	unassigned	0	0.0	C	G	1	-1	1|0	C	G
+21927265	phase6_comp_272	1	1.0	T	C	1	-1	1|0	T	C
+21927529	phase6_comp_272	1	1.0	G	A	1	-1	1|0	G	A
+21927890	phase6_comp_272	1	1.0	C	T	1	-1	1|0	C	T
+21928404	phase6_comp_272	1	1.0	A	G	1	-1	1|0	A	G
+21928908	phase6_comp_272	1	1.0	A	G	1	-1	1|0	A	G
+21929985	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21931615	unassigned	0	0.0	T	C	0				
+21933490	phase6_comp_273	1	1.0	G	A	1	-1	1|0	G	A
+21933592	phase6_comp_273	1	1.0	T	C	1	-1	1|0	T	C
+21933937	phase6_comp_273	1	1.0	T	C	1	-1	1|0	T	C
+21934659	phase6_comp_274	1	1.0	C	T	1	-1	1|0	C	T
+21935025	phase6_comp_274	1	1.0	G	A	1	-1	1|0	G	A
+21936031	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+21937727	phase6_comp_275	1	1.0	C	T	1	-1	1|0	C	T
+21937845	phase6_comp_275	1	1.0	C	T	1	-1	1|0	C	T
+21938623	unassigned	0	0.0	C	A	1	-1	1|0	C	A
+21941747	phase6_comp_276	1	1.0	C	T	1	-1	1|0	C	T
+21942087	phase6_comp_276	1	1.0	A	G	1	-1	1|0	A	G
+21944102	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21946306	phase6_comp_277	1	1.0	A	G	1	-1	1|0	A	G
+21946569	phase6_comp_277	1	1.0	T	C	1	-1	1|0	T	C
+21951257	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+21953147	unassigned	0	0.0	G	C	1	-1	1|0	G	C
+21958130	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21958756	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21959457	phase6_comp_278	1	1.0	A	C	1	-1	1|0	A	C
+21960091	phase6_comp_278	1	1.0	T	C	1	-1	1|0	T	C
+21961900	phase6_comp_279	1	1.0	G	A	1	-1	1|0	G	A
+21962168	phase6_comp_279	1	1.0	G	A	1	-1	1|0	G	A
+21962259	phase6_comp_279	1	1.0	G	A	1	-1	1|0	G	A
+21962965	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21969695	unassigned	0	0.0	G	C	1	-1	1|0	G	C
+21971252	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+21975710	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+21976637	unassigned	0	0.0	C	T	1	1	0|1	C	T
+21977447	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21978690	phase6_comp_280	1	1.0	G	C	1	-1	1|0	G	C
+21978846	phase6_comp_280	1	1.0	C	T	1	-1	1|0	C	T
+21980398	phase6_comp_281	1	1.0	C	T	1	-1	1|0	C	T
+21980565	phase6_comp_281	1	1.0	C	T	1	-1	1|0	C	T
+21985504	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+21987474	phase6_comp_282	1	1.0	C	T	1	-1	1|0	C	T
+21987595	phase6_comp_282	1	1.0	G	A	0				
+21987798	phase6_comp_282	1	1.0	G	A	1	-1	1|0	G	A
+21988067	phase6_comp_282	1	1.0	T	G	1	-1	1|0	T	G
+21990548	unassigned	0	0.0	G	T	1	1	0|1	G	T
+21994691	unassigned	0	0.0	C	T	1	1	0|1	C	T
+21996886	phase6_comp_283	1	1.0	G	A	1	1	0|1	G	A
+21997641	phase6_comp_283	1	1.0	T	C	1	1	0|1	T	C
+22000151	phase6_comp_284	1	1.0	T	C	1	1	0|1	T	C
+22000273	phase6_comp_284	1	1.0	C	T	1	1	0|1	C	T
+22000971	phase6_comp_284	1	1.0	T	C	1	1	0|1	T	C
+22001099	phase6_comp_284	1	1.0	G	A	1	1	0|1	G	A
+22001243	phase6_comp_284	1	1.0	C	G	1	1	0|1	C	G
+22002873	phase6_comp_285	1	1.0	C	T	1	1	0|1	C	T
+22002927	phase6_comp_285	1	1.0	A	C	1	1	0|1	A	C
+22018037	unassigned	0	0.0	A	G	1	1	0|1	A	G
+22026269	phase6_comp_286	1	1.0	G	A	1	1	0|1	G	A
+22026506	phase6_comp_286	-1	1.0	C	G	1	-1	1|0	C	G
+22039828	unassigned	0	0.0	C	T	0				
+22040637	unassigned	0	0.0	C	T	0				
+22041356	unassigned	0	0.0	C	T	0				
+22042626	phase6_comp_287	1	1.0	C	T	0				
+22042657	phase6_comp_287	1	1.0	G	A	0				
+22043509	phase6_comp_288	1	1.0	T	C	0				
+22043729	phase6_comp_288	1	1.0	C	T	0				
+22044328	unassigned	0	0.0	G	C	0				
+22045498	phase6_comp_289	1	1.0	T	A	0				
+22045518	phase6_comp_289	1	1.0	C	T	0				
+22049685	phase6_comp_290	1	1.0	G	A	0				
+22049988	phase6_comp_290	1	1.0	C	A	0				
+22052260	unassigned	0	0.0	C	T	0				
+22052909	unassigned	0	0.0	G	A	0				
+22055912	unassigned	0	0.0	G	T	0				
+22057357	phase6_comp_291	1	1.0	T	C	0				
+22057436	phase6_comp_291	-1	1.0	C	T	0				
+22058076	phase6_comp_291	1	1.0	C	G	0				
+22058753	unassigned	0	0.0	G	A	0				
+22060806	phase6_comp_292	1	1.0	G	C	0				
+22061000	phase6_comp_292	-1	1.0	T	C	0				
+22061038	phase6_comp_292	1	1.0	C	T	0				
+22061134	phase6_comp_292	-1	1.0	A	G	0				
+22061399	phase6_comp_292	-1	1.0	C	G	0				
+22061762	phase6_comp_292	-1	1.0	A	C	0				
+22061882	phase6_comp_292	1	1.0	A	G	0				
+22062309	unassigned	0	0.0	T	G	0				
+22063799	unassigned	0	0.0	C	G	0				
+22064696	unassigned	0	0.0	T	C	0				
+22065525	unassigned	0	0.0	T	C	0				
+22066629	phase6_comp_293	1	1.0	T	A	0				
+22066838	phase6_comp_293	-1	1.0	A	G	0				
+22067522	phase6_comp_294	1	1.0	C	T	0				
+22067642	phase6_comp_294	1	1.0	C	T	0				
+22067649	phase6_comp_294	1	1.0	T	C	0				
+22067920	phase6_comp_294	1	1.0	C	G	0				
+22068211	phase6_comp_294	1	1.0	C	T	0				
+22068223	phase6_comp_294	1	1.0	T	C	0				
+22068338	phase6_comp_294	1	1.0	G	C	0				
+22068728	phase6_comp_294	1	1.0	T	C	0				
+22069891	unassigned	0	0.0	C	A	0				
+22071734	phase6_comp_295	1	1.0	C	A	0				
+22071735	phase6_comp_295	1	1.0	A	G	0				
+22072490	phase6_comp_296	1	1.0	G	T	0				
+22072612	phase6_comp_296	-1	1.0	G	A	0				
+22072859	phase6_comp_296	-1	1.0	T	G	0				
+22073009	phase6_comp_296	1	1.0	C	T	0				
+22073826	unassigned	0	0.0	C	T	0				
+22074462	unassigned	0	0.0	A	G	0				
+22075941	phase6_comp_297	1	1.0	T	A	0				
+22076192	phase6_comp_297	-1	1.0	G	A	0				
+22076400	phase6_comp_297	-1	1.0	A	G	0				
+22076541	phase6_comp_297	-1	1.0	G	A	0				
+22077420	unassigned	0	0.0	G	A	0				
+22078699	phase6_comp_298	1	1.0	A	G	0				
+22078769	phase6_comp_298	1	1.0	C	G	0				
+22078923	phase6_comp_298	1	1.0	G	T	0				
+22078927	phase6_comp_298	1	1.0	A	G	0				
+22078936	phase6_comp_298	-1	1.0	G	T	0				
+22078957	phase6_comp_298	-1	1.0	C	A	0				
+22079072	phase6_comp_298	1	1.0	C	A	0				
+22079192	phase6_comp_298	1	1.0	C	T	0				
+22079442	phase6_comp_298	-1	1.0	A	G	0				
+22080038	phase6_comp_298	1	1.0	G	A	0				
+22080156	phase6_comp_298	1	1.0	T	C	0				
+22080425	phase6_comp_298	1	1.0	C	T	0				
+22080522	phase6_comp_298	1	1.0	T	G	0				
+22080527	phase6_comp_298	1	1.0	G	T	0				
+22080595	phase6_comp_298	1	1.0	C	T	0				
+22080601	phase6_comp_298	1	1.0	C	T	0				
+22081055	phase6_comp_298	1	1.0	G	A	0				
+22081507	phase6_comp_298	1	1.0	C	T	0				
+22081750	phase6_comp_298	1	1.0	G	A	0				
+22081768	phase6_comp_298	1	1.0	G	A	0				
+22081776	phase6_comp_298	1	1.0	A	T	0				
+22081841	phase6_comp_298	1	1.0	T	C	0				
+22081861	phase6_comp_298	-1	1.0	G	A	0				
+22082453	phase6_comp_298	-1	1.0	T	C	0				
+22082803	phase6_comp_298	1	1.0	C	T	0				
+22083244	phase6_comp_298	1	1.0	C	T	0				
+22084548	phase6_comp_299	1	1.0	C	T	0				
+22084694	phase6_comp_299	1	1.0	C	A	0				
+22084887	phase6_comp_299	1	1.0	G	A	0				
+22085655	phase6_comp_300	1	1.0	C	G	0				
+22085855	phase6_comp_300	1	1.0	T	C	0				
+22086377	phase6_comp_300	1	1.0	C	T	0				
+22090164	unassigned	0	0.0	A	C	0				
+22092163	unassigned	0	0.0	A	G	0				
+22093327	unassigned	0	0.0	C	G	0				
+22108050	unassigned	0	0.0	C	A	0				
+22110263	phase6_comp_301	1	1.0	G	A	0				
+22110640	phase6_comp_301	1	1.0	T	A	0				
+22111134	phase6_comp_301	-1	1.0	C	T	0				
+22114623	unassigned	0	0.0	T	A	0				
+22115625	unassigned	0	0.0	C	G	0				
+22117242	unassigned	0	0.0	G	A	0				
+22117961	phase6_comp_302	1	1.0	C	T	0				
+22118111	phase6_comp_302	1	1.0	G	T	0				
+22119038	unassigned	0	0.0	A	G	0				
+22120552	unassigned	0	0.0	T	C	0				
+22122209	unassigned	0	0.0	C	T	0				
+22122996	unassigned	0	0.0	C	T	0				
+22124022	phase6_comp_303	1	1.0	G	A	0				
+22124383	phase6_comp_303	1	1.0	G	A	0				
+22125395	phase6_comp_304	1	1.0	C	A	0				
+22125567	phase6_comp_304	1	1.0	C	T	0				
+22126814	phase6_comp_305	1	1.0	G	A	0				
+22127050	phase6_comp_305	1	1.0	G	A	0				
+22127104	phase6_comp_305	1	1.0	A	G	0				
+22128059	phase6_comp_306	1	1.0	G	A	0				
+22128243	phase6_comp_306	1	1.0	A	C	0				
+22128380	phase6_comp_306	1	1.0	C	T	0				
+22128520	phase6_comp_306	1	1.0	C	T	0				
+22128759	phase6_comp_306	1	1.0	G	A	0				
+22128866	phase6_comp_306	1	1.0	A	T	0				
+22128978	phase6_comp_306	1	1.0	A	G	0				
+22129063	phase6_comp_306	1	1.0	A	G	0				
+22129073	phase6_comp_306	1	1.0	A	G	0				
+22129856	phase6_comp_307	1	1.0	G	A	0				
+22129955	phase6_comp_307	-1	1.0	C	A	0				
+22130731	phase6_comp_307	-1	1.0	T	C	0				
+22130737	phase6_comp_307	-1	1.0	C	T	0				
+22130811	phase6_comp_307	-1	1.0	A	T	0				
+22130838	phase6_comp_307	-1	1.0	C	G	0				
+22130948	phase6_comp_307	-1	1.0	A	G	0				
+22131047	phase6_comp_307	-1	1.0	A	G	0				
+22131069	phase6_comp_307	-1	1.0	G	A	0				
+22131281	phase6_comp_307	-1	1.0	T	C	0				
+22131287	phase6_comp_307	-1	1.0	G	A	0				
+22131383	phase6_comp_307	-1	1.0	T	C	0				
+22131434	phase6_comp_307	-1	1.0	A	G	0				
+22131536	phase6_comp_307	-1	1.0	T	G	0				
+22131593	phase6_comp_307	-1	1.0	T	C	0				
+22131601	phase6_comp_307	-1	1.0	A	G	0				
+22131619	phase6_comp_307	-1	1.0	T	C	0				
+22131627	phase6_comp_307	-1	1.0	T	C	0				
+22131639	phase6_comp_307	-1	1.0	G	C	0				
+22131648	phase6_comp_307	-1	1.0	G	A	0				
+22131715	phase6_comp_307	-1	1.0	C	T	0				
+22132397	phase6_comp_308	1	1.0	C	T	0				
+22132415	phase6_comp_308	1	1.0	G	C	0				
+22132541	phase6_comp_308	1	1.0	T	C	0				
+22132636	phase6_comp_308	1	1.0	T	C	0				
+22132863	phase6_comp_308	1	1.0	G	A	0				
+22132952	phase6_comp_308	1	1.0	C	T	0				
+22132999	phase6_comp_308	1	1.0	G	A	0				
+22133024	phase6_comp_308	1	1.0	T	C	0				
+22133629	phase6_comp_309	1	1.0	C	T	0				
+22133650	phase6_comp_309	1	1.0	T	A	0				
+22133765	phase6_comp_309	1	1.0	C	G	0				
+22133873	phase6_comp_309	1	1.0	T	C	0				
+22133909	phase6_comp_309	-1	1.0	C	T	0				
+22133989	phase6_comp_309	1	1.0	G	A	0				
+22134231	phase6_comp_309	1	1.0	T	C	0				
+22134365	phase6_comp_309	1	1.0	T	C	0				
+22134775	phase6_comp_309	1	1.0	G	A	0				
+22134921	phase6_comp_309	1	1.0	T	G	0				
+22135167	phase6_comp_309	1	1.0	T	C	0				
+22135336	phase6_comp_309	1	1.0	A	G	0				
+22135544	phase6_comp_309	1	1.0	T	A	0				
+22135612	phase6_comp_309	1	1.0	T	C	0				
+22135815	phase6_comp_309	1	1.0	T	C	0				
+22135947	phase6_comp_309	1	1.0	G	A	0				
+22136175	phase6_comp_309	1	1.0	G	A	0				
+22136286	phase6_comp_309	1	1.0	A	G	0				
+22136581	phase6_comp_309	1	1.0	G	C	0				
+22137267	phase6_comp_310	1	1.0	G	C	0				
+22137415	phase6_comp_310	1	1.0	A	G	0				
+22137556	phase6_comp_310	1	1.0	T	C	0				
+22137683	phase6_comp_310	1	1.0	A	T	0				
+22137690	phase6_comp_310	1	1.0	C	T	0				
+22137699	phase6_comp_310	1	1.0	C	T	0				
+22137852	phase6_comp_310	1	1.0	C	G	0				
+22137997	phase6_comp_310	1	1.0	T	A	0				
+22138099	phase6_comp_310	1	1.0	A	G	0				
+22138100	phase6_comp_310	1	1.0	G	A	0				
+22138343	phase6_comp_310	1	1.0	A	G	0				
+22138633	phase6_comp_310	-1	1.0	C	T	0				
+22138845	phase6_comp_310	1	1.0	A	T	0				
+22139062	phase6_comp_310	1	1.0	T	C	0				
+22139152	phase6_comp_310	1	1.0	A	C	0				
+22139655	phase6_comp_310	1	1.0	T	C	0				
+22140149	phase6_comp_310	1	1.0	C	T	0				
+22141088	unassigned	0	0.0	G	A	0				
+22141753	unassigned	0	0.0	A	G	0				
+22142491	phase6_comp_311	1	1.0	C	G	0				
+22143005	phase6_comp_311	1	1.0	C	T	0				
+22143100	phase6_comp_311	1	1.0	A	G	0				
+22143110	phase6_comp_311	-1	1.0	T	G	0				
+22143513	phase6_comp_311	1	1.0	G	A	0				
+22143981	phase6_comp_311	1	1.0	T	C	0				
+22144396	phase6_comp_311	1	1.0	G	A	0				
+22144548	phase6_comp_311	1	1.0	A	G	0				
+22144916	phase6_comp_311	1	1.0	A	G	0				
+22145526	phase6_comp_311	1	1.0	T	C	0				
+22145708	phase6_comp_311	1	1.0	C	T	0				
+22145879	phase6_comp_311	-1	1.0	G	A	0				
+22146272	phase6_comp_311	1	1.0	G	A	0				
+22147440	unassigned	0	0.0	C	A	0				
+22149240	phase6_comp_312	1	1.0	A	G	0				
+22149505	phase6_comp_312	1	1.0	A	G	0				
+22149888	phase6_comp_313	1	1.0	G	T	0				
+22150100	phase6_comp_313	1	1.0	C	T	0				
+22150764	phase6_comp_313	-1	1.0	G	A	0				
+22151036	phase6_comp_313	1	1.0	G	A	0				
+22151195	phase6_comp_313	1	1.0	T	C	0				
+22152035	phase6_comp_314	1	1.0	C	T	0				
+22152176	phase6_comp_314	1	1.0	A	C	0				
+22152664	phase6_comp_314	1	1.0	C	G	0				
+22153259	phase6_comp_314	-1	1.0	C	T	0				
+22154322	phase6_comp_315	1	1.0	A	G	0				
+22154715	phase6_comp_315	1	1.0	C	G	0				
+22155208	phase6_comp_315	-1	1.0	G	A	0				
+22156654	phase6_comp_316	1	1.0	G	A	0				
+22157334	phase6_comp_316	-1	1.0	T	A	0				
+22159186	unassigned	0	0.0	T	C	0				
+22160031	phase6_comp_317	1	1.0	G	A	0				
+22160312	phase6_comp_317	-1	1.0	G	C	0				
+22162605	phase6_comp_318	1	1.0	C	T	0				
+22162743	phase6_comp_318	-1	1.0	C	G	0				
+22162769	phase6_comp_318	-1	1.0	T	A	0				
+22162812	phase6_comp_318	1	1.0	A	G	0				
+22162927	phase6_comp_318	1	1.0	G	C	0				
+22163086	phase6_comp_318	-1	1.0	C	A	0				
+22163945	phase6_comp_319	1	1.0	C	T	0				
+22164374	phase6_comp_319	1	1.0	C	T	0				
+22165354	phase6_comp_320	1	1.0	G	T	0				
+22165378	phase6_comp_320	1	1.0	T	C	0				
+22165674	phase6_comp_320	1	1.0	G	A	0				
+22165909	phase6_comp_320	1	1.0	G	A	0				
+22166155	phase6_comp_320	1	1.0	T	C	0				
+22166332	phase6_comp_320	1	1.0	C	T	0				
+22166665	phase6_comp_320	1	1.0	C	G	0				
+22166765	phase6_comp_320	1	1.0	G	T	0				
+22167105	phase6_comp_320	1	1.0	G	A	0				
+22167132	phase6_comp_320	1	1.0	G	T	0				
+22167872	phase6_comp_321	1	1.0	C	T	0				
+22167879	phase6_comp_321	1	1.0	G	A	0				
+22168196	phase6_comp_321	1	1.0	A	C	0				
+22168470	phase6_comp_321	1	1.0	G	A	0				
+22168489	phase6_comp_321	1	1.0	G	A	0				
+22168591	phase6_comp_321	1	1.0	T	C	0				
+22168670	phase6_comp_321	1	1.0	G	C	0				
+22168680	phase6_comp_321	1	1.0	T	C	0				
+22168698	phase6_comp_321	1	1.0	G	T	0				
+22168805	phase6_comp_321	1	1.0	A	G	0				
+22168878	phase6_comp_321	1	1.0	G	A	0				
+22168958	phase6_comp_321	1	1.0	G	C	0				
+22169294	phase6_comp_321	1	1.0	A	G	0				
+22170254	phase6_comp_322	1	1.0	C	T	0				
+22170813	phase6_comp_322	1	1.0	A	C	0				
+22171673	phase6_comp_323	1	1.0	C	A	0				
+22171676	phase6_comp_323	1	1.0	G	A	0				
+22172816	phase6_comp_324	1	1.0	A	G	0				
+22173173	phase6_comp_324	1	1.0	T	A	0				
+22173445	phase6_comp_324	1	1.0	T	C	0				
+22173535	phase6_comp_324	1	1.0	G	A	0				
+22175116	phase6_comp_325	1	1.0	G	C	0				
+22175337	phase6_comp_325	1	1.0	T	C	0				
+22175338	phase6_comp_325	1	1.0	G	A	0				
+22175614	phase6_comp_325	1	1.0	G	A	0				
+22175777	phase6_comp_325	1	1.0	A	G	0				
+22176637	phase6_comp_326	1	1.0	C	T	0				
+22176674	phase6_comp_326	1	1.0	C	T	0				
+22177186	phase6_comp_327	1	1.0	T	C	0				
+22177442	phase6_comp_327	1	1.0	A	G	0				
+22177813	phase6_comp_327	1	1.0	C	T	0				
+22178083	phase6_comp_327	1	1.0	G	A	0				
+22178249	phase6_comp_327	1	1.0	A	C	0				
+22178375	phase6_comp_327	1	1.0	C	T	0				
+22178837	phase6_comp_327	1	1.0	C	T	0				
+22178915	phase6_comp_327	1	1.0	G	T	0				
+22178938	phase6_comp_327	1	1.0	C	T	0				
+22178942	phase6_comp_327	1	1.0	A	G	0				
+22178958	phase6_comp_327	1	1.0	C	A	0				
+22179031	phase6_comp_327	1	1.0	G	T	0				
+22179233	phase6_comp_327	1	1.0	C	G	0				
+22179648	phase6_comp_327	1	1.0	C	T	0				
+22179934	phase6_comp_327	1	1.0	A	C	0				
+22179973	phase6_comp_327	1	1.0	G	A	0				
+22180136	phase6_comp_327	1	1.0	C	T	0				
+22180158	phase6_comp_327	1	1.0	C	T	0				
+22180296	phase6_comp_327	1	1.0	C	A	0				
+22180475	phase6_comp_327	1	1.0	T	A	0				
+22180477	phase6_comp_327	1	1.0	G	A	0				
+22180598	phase6_comp_327	1	1.0	A	T	0				
+22180747	phase6_comp_327	1	1.0	A	G	0				
+22180754	phase6_comp_327	1	1.0	A	G	0				
+22181505	unassigned	0	0.0	C	T	0				
+22182108	phase6_comp_328	1	1.0	A	G	0				
+22182456	phase6_comp_328	1	1.0	G	T	0				
+22182550	phase6_comp_328	1	1.0	T	C	0				
+22182566	phase6_comp_328	1	1.0	C	T	0				
+22183259	unassigned	0	0.0	C	T	0				
+22183755	phase6_comp_329	1	1.0	T	C	0				
+22183804	phase6_comp_329	1	1.0	A	G	0				
+22183834	phase6_comp_329	1	1.0	A	G	0				
+22184348	phase6_comp_329	1	1.0	A	G	0				
+22184526	phase6_comp_329	1	1.0	G	C	0				
+22185176	phase6_comp_329	1	1.0	C	G	0				
+22185250	phase6_comp_329	1	1.0	G	A	0				
+22185314	phase6_comp_329	1	1.0	A	G	0				
+22185359	phase6_comp_329	1	1.0	T	G	0				
+22185882	phase6_comp_329	1	1.0	T	C	0				
+22185915	phase6_comp_329	1	1.0	T	C	0				
+22185929	phase6_comp_329	1	1.0	G	A	0				
+22186042	phase6_comp_329	1	1.0	C	T	0				
+22186667	phase6_comp_329	1	1.0	C	T	0				
+22186888	phase6_comp_329	1	1.0	C	T	0				
+22187099	phase6_comp_329	1	1.0	C	A	0				
+22187693	phase6_comp_329	1	1.0	A	G	0				
+22187916	phase6_comp_329	1	1.0	T	C	0				
+22187951	phase6_comp_329	1	1.0	T	C	0				
+22188126	phase6_comp_329	1	1.0	T	C	0				
+22188141	phase6_comp_329	1	1.0	G	A	0				
+22188288	phase6_comp_329	1	1.0	C	T	0				
+22188339	phase6_comp_329	1	1.0	G	A	0				
+22188367	phase6_comp_329	1	1.0	G	T	0				
+22188499	phase6_comp_329	1	1.0	T	C	0				
+22188521	phase6_comp_329	1	1.0	C	G	0				
+22188734	phase6_comp_329	1	1.0	T	C	0				
+22188754	phase6_comp_329	1	1.0	G	T	0				
+22188885	phase6_comp_329	1	1.0	A	G	0				
+22189015	phase6_comp_329	1	1.0	A	G	0				
+22189137	phase6_comp_329	1	1.0	T	C	0				
+22189203	phase6_comp_329	1	1.0	T	C	0				
+22189314	phase6_comp_329	1	1.0	G	A	0				
+22189370	phase6_comp_329	1	1.0	T	C	0				
+22189371	phase6_comp_329	1	0.944973	G	A	0				
+22190115	phase6_comp_329	1	1.0	A	C	0				
+22190135	phase6_comp_329	1	1.0	C	T	0				
+22190613	phase6_comp_330	1	1.0	A	G	0				
+22191124	phase6_comp_330	1	1.0	T	C	0				
+22191427	phase6_comp_330	1	1.0	A	C	0				
+22191677	phase6_comp_330	1	1.0	G	T	0				
+22191692	phase6_comp_330	1	1.0	A	T	0				
+22191764	phase6_comp_330	1	1.0	T	C	0				
+22191791	phase6_comp_330	1	1.0	T	C	0				
+22191967	phase6_comp_330	1	1.0	G	A	0				
+22192629	phase6_comp_330	1	1.0	G	A	0				
+22192666	phase6_comp_330	1	1.0	A	G	0				
+22192947	phase6_comp_330	1	1.0	C	A	0				
+22193065	phase6_comp_330	1	1.0	T	C	0				
+22193136	phase6_comp_330	1	0.975075	A	G	0				
+22193205	phase6_comp_330	1	1.0	G	A	0				
+22193232	phase6_comp_330	1	1.0	G	A	0				
+22193417	phase6_comp_330	1	1.0	C	G	0				
+22193490	phase6_comp_330	1	1.0	T	A	0				
+22193575	phase6_comp_330	1	1.0	C	T	0				
+22193641	phase6_comp_330	1	1.0	A	G	0				
+22193745	phase6_comp_330	1	1.0	A	T	0				
+22194092	phase6_comp_330	1	1.0	T	C	0				
+22194768	phase6_comp_330	1	1.0	C	A	0				
+22195398	phase6_comp_330	1	1.0	G	A	0				
+22195399	phase6_comp_330	1	1.0	A	G	0				
+22196001	phase6_comp_330	1	1.0	C	G	0				
+22196050	phase6_comp_330	1	1.0	G	C	0				
+22196484	phase6_comp_330	1	1.0	T	C	0				
+22196562	phase6_comp_330	1	1.0	G	C	0				
+22196582	phase6_comp_330	1	1.0	T	A	0				
+22203913	phase6_comp_331	1	1.0	A	G	0				
+22204064	phase6_comp_331	1	1.0	T	G	0				
+22208643	phase6_comp_332	1	1.0	C	A	0				
+22208677	phase6_comp_332	1	1.0	C	A	0				
+22210343	unassigned	0	0.0	A	T	0				
+22211328	phase6_comp_333	1	1.0	C	T	0				
+22211398	phase6_comp_333	1	1.0	T	C	0				
+22211485	phase6_comp_333	1	1.0	G	A	0				
+22212172	phase6_comp_334	1	1.0	T	G	0				
+22212577	phase6_comp_334	1	1.0	A	G	0				
+22212585	phase6_comp_334	1	1.0	A	G	0				
+22213371	phase6_comp_334	1	1.0	G	A	0				
+22213557	phase6_comp_334	1	1.0	A	G	0				
+22213623	phase6_comp_334	1	1.0	G	T	0				
+22214140	phase6_comp_334	1	1.0	C	T	0				
+22214430	phase6_comp_334	1	1.0	T	C	0				
+22215058	phase6_comp_334	1	1.0	T	A	0				
+22215164	phase6_comp_334	1	1.0	C	A	0				
+22215250	phase6_comp_334	1	1.0	T	G	0				
+22215368	phase6_comp_334	1	1.0	A	C	0				
+22215881	phase6_comp_334	1	1.0	A	G	0				
+22216268	phase6_comp_334	1	1.0	A	G	0				
+22216431	phase6_comp_334	1	1.0	C	T	0				
+22217066	phase6_comp_334	1	1.0	T	A	0				
+22217220	phase6_comp_334	1	1.0	G	A	0				
+22217289	phase6_comp_334	1	1.0	G	C	0				
+22217462	phase6_comp_334	1	1.0	C	T	0				
+22217589	phase6_comp_334	1	1.0	C	T	0				
+22217807	phase6_comp_334	1	1.0	T	C	0				
+22218420	phase6_comp_334	1	1.0	C	T	0				
+22218430	phase6_comp_334	1	1.0	G	A	0				
+22218512	phase6_comp_334	1	1.0	G	A	0				
+22218550	phase6_comp_334	1	1.0	G	C	0				
+22218817	phase6_comp_334	1	1.0	T	C	0				
+22218973	phase6_comp_334	1	1.0	C	T	0				
+22219022	phase6_comp_334	1	1.0	G	A	0				
+22219445	phase6_comp_334	1	1.0	C	T	0				
+22219486	phase6_comp_334	1	1.0	C	A	0				
+22219581	phase6_comp_334	1	1.0	C	G	0				
+22219643	phase6_comp_334	1	1.0	T	C	0				
+22219713	phase6_comp_334	1	1.0	G	A	0				
+22219856	phase6_comp_334	1	1.0	A	G	0				
+22220066	phase6_comp_334	1	1.0	G	C	0				
+22220463	phase6_comp_334	1	1.0	C	T	0				
+22223476	unassigned	0	0.0	A	G	0				
+22224737	phase6_comp_335	1	1.0	T	C	0				
+22224948	phase6_comp_335	1	1.0	C	T	0				
+22230656	unassigned	0	0.0	T	C	0				
+22241850	unassigned	0	0.0	C	T	0				
+22242663	phase6_comp_336	1	1.0	G	A	0				
+22242719	phase6_comp_336	-1	1.0	G	C	0				
+22242762	phase6_comp_336	-1	1.0	T	C	0				
+22242880	phase6_comp_336	-1	1.0	C	G	0				
+22242995	phase6_comp_336	1	1.0	A	G	0				
+22243190	phase6_comp_336	1	1.0	G	A	0				
+22243331	phase6_comp_336	1	1.0	G	A	0				
+22243392	phase6_comp_336	1	1.0	T	A	0				
+22243418	phase6_comp_336	1	1.0	A	G	0				
+22243795	phase6_comp_336	1	1.0	T	C	0				
+22244312	phase6_comp_336	1	1.0	T	G	0				
+22244331	phase6_comp_336	1	1.0	C	T	0				
+22244645	phase6_comp_336	1	1.0	G	A	0				
+22245396	unassigned	0	0.0	T	C	0				
+22246500	phase6_comp_337	1	1.0	A	G	0				
+22246855	phase6_comp_337	1	1.0	G	A	0				
+22246873	phase6_comp_337	1	1.0	T	C	0				
+22246881	phase6_comp_337	1	1.0	T	C	0				
+22247403	phase6_comp_337	1	1.0	A	G	0				
+22248357	phase6_comp_337	1	1.0	C	G	0				
+22248613	phase6_comp_337	1	1.0	G	A	0				
+22249507	unassigned	0	0.0	C	T	0				
+22250493	phase6_comp_338	1	1.0	G	A	0				
+22250552	phase6_comp_338	1	1.0	C	T	0				
+22251113	phase6_comp_338	1	1.0	G	A	0				
+22251119	phase6_comp_338	1	1.0	T	A	0				
+22251616	phase6_comp_338	1	1.0	A	T	0				
+22252379	phase6_comp_339	1	1.0	G	A	0				
+22252831	phase6_comp_339	1	1.0	G	A	0				
+22253791	phase6_comp_340	1	1.0	T	C	0				
+22254337	phase6_comp_340	1	1.0	G	A	0				
+22255031	phase6_comp_341	1	1.0	C	A	0				
+22255060	phase6_comp_341	1	1.0	T	C	0				
+22255106	phase6_comp_341	1	1.0	G	A	0				
+22255223	phase6_comp_341	1	1.0	A	C	0				
+22255427	phase6_comp_341	1	1.0	A	G	0				
+22256801	phase6_comp_342	1	1.0	C	G	0				
+22257080	phase6_comp_342	1	1.0	A	G	0				
+22257159	phase6_comp_342	1	1.0	C	G	0				
+22257367	phase6_comp_342	1	1.0	C	A	0				
+22257668	phase6_comp_342	1	1.0	T	C	0				
+22258034	phase6_comp_342	1	1.0	A	G	0				
+22258245	phase6_comp_342	1	1.0	C	T	0				
+22258395	phase6_comp_342	1	1.0	C	T	0				
+22258492	phase6_comp_342	1	1.0	C	G	0				
+22258495	phase6_comp_342	1	1.0	T	C	0				
+22258499	phase6_comp_342	1	1.0	T	C	0				
+22258500	phase6_comp_342	1	1.0	G	A	0				
+22258687	phase6_comp_342	1	1.0	C	T	0				
+22258845	phase6_comp_342	1	1.0	G	T	0				
+22258868	phase6_comp_342	1	1.0	A	G	0				
+22258889	phase6_comp_342	1	1.0	T	C	0				
+22259880	unassigned	0	0.0	A	G	0				
+22260693	unassigned	0	0.0	T	A	0				
+22270993	unassigned	0	0.0	T	C	0				
+22276923	unassigned	0	0.0	A	T	0				
+22280095	unassigned	0	0.0	C	T	0				
+22282049	unassigned	0	0.0	G	A	0				
+22294565	unassigned	0	0.0	G	C	0				
+22297542	unassigned	0	0.0	T	C	0				
+22300116	unassigned	0	0.0	G	C	0				
+22305873	unassigned	0	0.0	T	C	0				
+22306690	unassigned	0	0.0	A	G	0				
+22307297	unassigned	0	0.0	A	T	0				
+22309303	unassigned	0	0.0	A	G	0				
+22310201	phase6_comp_343	1	1.0	G	A	0				
+22310274	phase6_comp_343	1	1.0	A	G	0				
+22311853	phase6_comp_344	1	1.0	G	A	0				
+22311995	phase6_comp_344	1	1.0	G	A	0				
+22312669	phase6_comp_344	1	1.0	C	A	0				
+22313441	phase6_comp_345	1	1.0	T	C	0				
+22313536	phase6_comp_345	1	1.0	G	A	0				
+22317491	unassigned	0	0.0	C	A	0				
+22319600	phase6_comp_346	1	1.0	T	A	0				
+22319731	phase6_comp_346	1	1.0	A	G	0				
+22320244	phase6_comp_346	1	1.0	C	A	0				
+22322051	unassigned	0	0.0	A	G	0				
+22323311	phase6_comp_347	1	1.0	G	A	0				
+22323540	phase6_comp_347	1	1.0	G	A	0				
+22325761	unassigned	0	0.0	G	C	0				
+22326954	unassigned	0	0.0	G	A	0				
+22329940	unassigned	0	0.0	G	A	0				
+22332207	unassigned	0	0.0	T	G	0				
+22333120	phase6_comp_348	1	1.0	A	T	0				
+22333609	phase6_comp_348	1	1.0	C	T	0				
+22333754	phase6_comp_348	1	1.0	A	G	0				
+22333761	phase6_comp_348	1	1.0	A	C	0				
+22333854	phase6_comp_348	1	1.0	A	T	0				
+22334436	unassigned	0	0.0	C	T	0				
+22337262	unassigned	0	0.0	C	G	0				
+22338716	unassigned	0	0.0	A	G	0				
+22339941	phase6_comp_349	1	1.0	G	A	0				
+22339960	phase6_comp_349	1	1.0	A	G	0				
+22340029	phase6_comp_349	1	1.0	A	G	0				
+22340303	phase6_comp_349	1	1.0	T	C	0				
+22342056	unassigned	0	0.0	G	A	0				
+22342993	unassigned	0	0.0	T	G	0				
+22344671	phase6_comp_350	1	1.0	G	C	0				
+22344740	phase6_comp_350	-1	1.0	G	A	0				
+22346977	unassigned	0	0.0	A	C	0				
+22384187	unassigned	0	0.0	C	A	0				
+22385243	phase6_comp_351	1	1.0	A	C	0				
+22385537	phase6_comp_351	-1	1.0	A	G	0				
+22385823	phase6_comp_351	-1	1.0	T	C	0				
+22386395	phase6_comp_351	-1	1.0	G	C	0				
+22386488	phase6_comp_351	-1	1.0	G	A	0				
+22386739	phase6_comp_351	-1	1.0	C	T	0				
+22387571	phase6_comp_352	1	1.0	T	C	0				
+22387590	phase6_comp_352	1	1.0	G	A	0				
+22387662	phase6_comp_352	1	1.0	A	T	0				
+22387689	phase6_comp_352	1	1.0	A	G	0				
+22387757	phase6_comp_352	1	1.0	G	T	0				
+22387969	phase6_comp_352	-1	1.0	T	C	0				
+22388141	phase6_comp_352	1	1.0	T	G	0				
+22388256	phase6_comp_352	1	1.0	A	G	0				
+22388363	phase6_comp_352	1	1.0	A	G	0				
+22388417	phase6_comp_352	1	1.0	G	A	0				
+22388758	phase6_comp_352	1	1.0	T	C	0				
+22388888	phase6_comp_352	1	1.0	A	G	0				
+22389369	phase6_comp_352	1	1.0	T	C	0				
+22389494	phase6_comp_352	1	1.0	T	C	0				
+22389768	phase6_comp_352	1	1.0	G	A	0				
+22389839	phase6_comp_352	1	1.0	A	G	0				
+22390142	phase6_comp_352	1	1.0	T	G	0				
+22390359	phase6_comp_352	1	1.0	G	C	0				
+22390468	phase6_comp_352	1	1.0	A	G	0				
+22391157	phase6_comp_353	1	1.0	G	A	0				
+22391236	phase6_comp_353	-1	1.0	T	G	0				
+22391419	phase6_comp_353	-1	1.0	C	T	0				
+22391604	phase6_comp_353	-1	1.0	C	G	0				
+22391931	phase6_comp_353	-1	1.0	T	C	0				
+22392081	phase6_comp_353	-1	1.0	G	A	0				
+22392087	phase6_comp_353	-1	1.0	C	A	0				
+22392670	phase6_comp_353	-1	1.0	T	C	0				
+22392775	phase6_comp_353	-1	1.0	T	C	0				
+22392961	phase6_comp_353	-1	1.0	T	C	0				
+22392982	phase6_comp_353	-1	1.0	A	C	0				
+22393094	phase6_comp_353	-1	1.0	A	C	0				
+22393276	phase6_comp_353	-1	1.0	T	G	0				
+22393339	phase6_comp_353	-1	1.0	T	C	0				
+22393522	phase6_comp_353	-1	1.0	C	G	0				
+22393734	phase6_comp_353	-1	1.0	G	A	0				
+22393765	phase6_comp_353	-1	1.0	G	A	0				
+22393862	phase6_comp_353	-1	1.0	T	A	0				
+22394160	phase6_comp_353	1	1.0	G	A	0				
+22394203	phase6_comp_353	-1	1.0	A	G	0				
+22394387	phase6_comp_353	1	1.0	T	G	0				
+22394556	phase6_comp_353	-1	1.0	A	G	0				
+22394746	phase6_comp_353	-1	1.0	G	A	0				
+22394813	phase6_comp_353	-1	1.0	T	C	0				
+22396347	phase6_comp_354	1	1.0	T	C	0				
+22396878	phase6_comp_354	1	1.0	A	G	0				
+22398024	unassigned	0	0.0	G	C	0				
+22398694	phase6_comp_355	1	1.0	C	G	0				
+22398697	phase6_comp_355	1	1.0	A	G	0				
+22398939	phase6_comp_355	1	1.0	G	A	0				
+22399091	phase6_comp_355	1	1.0	G	A	0				
+22399519	phase6_comp_355	1	1.0	C	T	0				
+22402943	phase6_comp_356	1	1.0	C	T	0				
+22403437	phase6_comp_356	-1	1.0	A	G	0				
+22403510	phase6_comp_356	-1	1.0	C	T	0				
+22403515	phase6_comp_356	-1	1.0	C	T	0				
+22403543	phase6_comp_356	-1	1.0	G	C	0				
+22403568	phase6_comp_356	-1	1.0	G	C	0				
+22403599	phase6_comp_356	1	0.956285	G	C	0				
+22403601	phase6_comp_356	1	0.953233	G	A	0				
+22403612	phase6_comp_356	-1	1.0	A	G	0				
+22403616	phase6_comp_356	-1	1.0	C	T	0				
+22403905	phase6_comp_356	-1	1.0	G	A	0				
+22404103	phase6_comp_356	1	1.0	C	T	0				
+22404328	phase6_comp_356	-1	1.0	G	A	0				
+22404389	phase6_comp_356	-1	1.0	C	T	0				
+22404503	phase6_comp_356	1	1.0	C	T	0				
+22404712	phase6_comp_356	-1	1.0	T	C	0				
+22405810	phase6_comp_357	1	1.0	G	A	0				
+22406075	phase6_comp_357	1	1.0	A	G	0				
+22406131	phase6_comp_357	-1	1.0	A	G	0				
+22406719	phase6_comp_358	1	1.0	T	C	0				
+22406954	phase6_comp_358	1	1.0	T	C	0				
+22407211	phase6_comp_358	1	1.0	T	C	0				
+22407326	phase6_comp_358	1	1.0	T	G	0				
+22407557	phase6_comp_358	1	1.0	T	C	0				
+22408027	phase6_comp_358	1	1.0	G	A	0				
+22408319	phase6_comp_358	1	1.0	C	T	0				
+22408439	phase6_comp_358	1	1.0	T	C	0				
+22409194	phase6_comp_359	1	1.0	C	T	0				
+22409202	phase6_comp_359	1	1.0	T	C	0				
+22409755	unassigned	0	0.0	G	A	0				
+22410928	unassigned	0	0.0	C	T	0				
+22411907	phase6_comp_360	1	1.0	T	A	0				
+22411955	phase6_comp_360	1	1.0	A	G	0				
+22413174	unassigned	0	0.0	T	C	0				
+22415587	phase6_comp_361	1	1.0	A	G	0				
+22415607	phase6_comp_361	-1	1.0	C	G	0				
+22415608	phase6_comp_361	-1	1.0	T	G	0				
+22416197	phase6_comp_362	1	1.0	C	T	0				
+22416459	phase6_comp_362	1	1.0	A	G	0				
+22416538	phase6_comp_362	1	1.0	T	G	0				
+22417016	phase6_comp_362	1	1.0	G	A	0				
+22417090	phase6_comp_362	1	1.0	A	G	0				
+22418134	unassigned	0	0.0	G	A	0				
+22421471	phase6_comp_363	1	1.0	C	T	0				
+22421867	phase6_comp_363	-1	1.0	C	T	0				
+22422307	phase6_comp_363	-1	1.0	C	T	0				
+22422653	phase6_comp_363	-1	1.0	G	C	0				
+22423211	unassigned	0	0.0	C	T	0				
+22427814	unassigned	0	0.0	G	A	0				
+22430644	phase6_comp_364	1	1.0	C	T	0				
+22430970	phase6_comp_364	1	1.0	A	C	0				
+22435633	phase6_comp_365	1	1.0	G	A	0				
+22435724	phase6_comp_365	-1	1.0	C	T	0				
+22436273	phase6_comp_365	-1	1.0	A	G	0				
+22438825	unassigned	0	0.0	C	T	0				
+22439773	unassigned	0	0.0	T	C	0				
+22446352	unassigned	0	0.0	A	T	0				
+22453458	unassigned	0	0.0	C	T	0				
+22458070	unassigned	0	0.0	T	C	0				
+22465392	unassigned	0	0.0	C	T	0				
+22470938	unassigned	0	0.0	A	G	0				
+22476281	unassigned	0	0.0	G	T	0				
+22492608	phase6_comp_366	1	1.0	T	C	0				
+22492755	phase6_comp_366	1	1.0	A	G	0				
+22492847	phase6_comp_366	1	1.0	C	T	0				
+22493165	phase6_comp_366	1	1.0	C	T	0				
+22497060	unassigned	0	0.0	C	G	0				
+22515739	phase6_comp_367	1	1.0	C	T	0				
+22515823	phase6_comp_367	1	1.0	G	A	0				
+22516629	phase6_comp_367	-1	1.0	C	T	0				
+22518319	phase6_comp_368	1	1.0	G	C	0				
+22518680	phase6_comp_368	1	1.0	C	A	0				
+22518684	phase6_comp_368	1	1.0	A	C	0				
+22520312	phase6_comp_369	1	1.0	A	T	0				
+22520464	phase6_comp_369	-1	1.0	G	C	0				
+22522092	phase6_comp_370	1	1.0	G	A	0				
+22522679	phase6_comp_370	-1	1.0	C	T	0				
+22523142	phase6_comp_371	1	1.0	G	A	0				
+22523226	phase6_comp_371	1	1.0	G	C	0				
+22523231	phase6_comp_371	1	1.0	G	A	0				
+22524139	unassigned	0	0.0	C	T	0				
+22525718	unassigned	0	0.0	G	A	0				
+22526933	unassigned	0	0.0	A	G	0				
+22528580	unassigned	0	0.0	G	A	0				
+22544242	phase6_comp_372	1	1.0	G	A	0				
+22544766	phase6_comp_372	-1	1.0	C	T	0				
+22546824	phase6_comp_373	1	1.0	G	A	0				
+22547242	phase6_comp_373	-1	1.0	C	A	0				
+22548659	unassigned	0	0.0	G	T	0				
+22551334	phase6_comp_374	1	1.0	T	C	0				
+22551631	phase6_comp_374	1	1.0	C	A	0				
+22552544	unassigned	0	0.0	T	C	0				
+22553148	unassigned	0	0.0	G	T	0				
+22554298	phase6_comp_375	1	1.0	C	G	0				
+22554430	phase6_comp_375	1	1.0	C	T	0				
+22554491	phase6_comp_375	1	1.0	C	T	0				
+22554694	phase6_comp_375	1	1.0	A	G	0				
+22554840	phase6_comp_375	-1	1.0	G	A	0				
+22554893	phase6_comp_375	1	1.0	C	T	0				
+22554901	phase6_comp_375	1	1.0	A	G	0				
+22555145	phase6_comp_375	1	1.0	T	C	0				
+22555731	phase6_comp_376	1	1.0	C	A	0				
+22556179	phase6_comp_376	-1	1.0	T	A	0				
+22556382	phase6_comp_376	-1	1.0	C	T	0				
+22556472	phase6_comp_376	1	1.0	G	A	0				
+22556814	phase6_comp_376	-1	1.0	A	G	0				
+22556943	phase6_comp_376	-1	1.0	G	A	0				
+22556944	phase6_comp_376	-1	1.0	A	G	0				
+22556994	phase6_comp_376	-1	0.958333	A	G	0				
+22558865	phase6_comp_377	1	1.0	A	T	0				
+22559001	phase6_comp_377	-1	1.0	G	A	0				
+22559582	phase6_comp_377	1	1.0	G	T	0				
+22559762	phase6_comp_377	-1	1.0	G	A	0				
+22559834	phase6_comp_377	-1	1.0	T	C	0				
+22559846	phase6_comp_377	-1	1.0	T	C	0				
+22559848	phase6_comp_377	-1	1.0	C	G	0				
+22560219	phase6_comp_377	-1	1.0	T	G	0				
+22560222	phase6_comp_377	-1	1.0	G	A	0				
+22563267	phase6_comp_378	1	1.0	C	T	0				
+22563277	phase6_comp_378	1	1.0	A	G	0				
+22563375	phase6_comp_378	-1	1.0	C	T	0				
+22563404	phase6_comp_378	-1	1.0	C	G	0				
+22564042	phase6_comp_378	1	1.0	C	T	0				
+22565895	unassigned	0	0.0	G	A	0				
+22566767	phase6_comp_379	1	1.0	G	T	0				
+22566871	phase6_comp_379	-1	1.0	G	A	0				
+22567185	phase6_comp_379	1	1.0	T	C	0				
+22569686	unassigned	0	0.0	C	T	0				
+22571263	phase6_comp_380	1	1.0	T	A	0				
+22571511	phase6_comp_380	1	1.0	C	T	0				
+22571744	phase6_comp_380	1	1.0	G	T	0				
+22573382	unassigned	0	0.0	C	T	0				
+22573666	phase6_comp_381	1	1.0	C	T	0				
+22574130	phase6_comp_381	1	1.0	C	T	0				
+22574521	phase6_comp_381	1	1.0	C	T	0				
+22574586	phase6_comp_381	1	1.0	A	C	0				
+22574656	phase6_comp_381	1	1.0	C	G	0				
+22574840	phase6_comp_381	1	1.0	T	C	0				
+22575151	phase6_comp_381	1	1.0	C	G	0				
+22575712	phase6_comp_382	1	1.0	T	C	0				
+22576156	phase6_comp_382	1	1.0	A	G	0				
+22578682	phase6_comp_383	1	1.0	A	G	0				
+22578940	phase6_comp_383	-1	1.0	C	G	0				
+22579106	phase6_comp_383	-1	1.0	A	T	0				
+22579121	phase6_comp_383	-1	1.0	G	A	0				
+22579124	phase6_comp_383	-1	1.0	C	T	0				
+22580176	phase6_comp_384	1	1.0	G	C	0				
+22580414	phase6_comp_384	1	1.0	C	T	0				
+22581530	unassigned	0	0.0	A	T	0				
+22582631	unassigned	0	0.0	C	G	0				
+22583673	phase6_comp_385	1	1.0	C	T	0				
+22583925	phase6_comp_385	1	1.0	A	C	0				
+22584393	unassigned	0	0.0	T	C	0				
+22586092	phase6_comp_386	1	1.0	T	C	0				
+22586139	phase6_comp_386	1	1.0	A	C	0				
+22586227	phase6_comp_386	1	1.0	C	T	0				
+22586383	phase6_comp_386	1	1.0	G	T	0				
+22586441	phase6_comp_386	1	1.0	T	C	0				
+22586672	phase6_comp_386	1	1.0	A	G	0				
+22586797	phase6_comp_386	1	1.0	C	T	0				
+22586894	phase6_comp_386	1	1.0	C	T	0				
+22586995	phase6_comp_386	1	1.0	T	C	0				
+22587188	phase6_comp_386	1	1.0	G	A	0				
+22587231	phase6_comp_386	1	1.0	T	C	0				
+22587331	phase6_comp_386	1	1.0	G	A	0				
+22587334	phase6_comp_386	1	1.0	T	C	0				
+22587335	phase6_comp_386	1	1.0	A	G	0				
+22587749	unassigned	0	0.0	G	C	0				
+22588905	phase6_comp_387	1	1.0	C	T	0				
+22589012	phase6_comp_387	1	1.0	C	T	0				
+22589245	phase6_comp_387	1	1.0	T	C	0				
+22589681	phase6_comp_387	1	1.0	T	C	0				
+22589770	phase6_comp_387	1	1.0	G	T	0				
+22592684	unassigned	0	0.0	G	A	0				
+22597746	unassigned	0	0.0	T	C	0				
+22628736	unassigned	0	0.0	C	T	0				
+22635695	phase6_comp_388	1	1.0	G	C	0				
+22635709	phase6_comp_388	1	1.0	T	G	0				
+22637854	unassigned	0	0.0	G	C	0				
+22646241	phase6_comp_389	1	1.0	T	C	0				
+22646250	phase6_comp_389	1	1.0	C	T	0				
+22646259	phase6_comp_389	1	1.0	G	A	0				
+22646786	phase6_comp_389	-1	1.0	A	G	0				
+22654698	unassigned	0	0.0	G	A	0				
+22679817	phase6_comp_390	1	1.0	G	A	0				
+22680014	phase6_comp_390	1	1.0	A	G	0				
+22680047	phase6_comp_390	1	1.0	C	T	0				
+22680749	phase6_comp_390	1	1.0	T	G	0				
+22680761	phase6_comp_390	1	1.0	G	A	0				
+22680901	phase6_comp_390	1	1.0	C	G	0				
+22680923	phase6_comp_390	1	1.0	G	A	0				
+22681273	phase6_comp_390	1	1.0	A	C	0				
+22681774	phase6_comp_390	1	1.0	A	T	0				
+22682835	phase6_comp_391	1	1.0	G	A	0				
+22683071	phase6_comp_391	1	1.0	T	G	0				
+22684737	phase6_comp_392	1	1.0	G	A	0				
+22684964	phase6_comp_392	1	1.0	T	C	0				
+22685396	unassigned	0	0.0	A	G	0				
+22686350	phase6_comp_393	1	1.0	G	T	0				
+22686633	phase6_comp_393	1	1.0	G	A	0				
+22687132	phase6_comp_393	-1	1.0	A	T	0				
+22687518	phase6_comp_393	1	0.75	G	T	0				
+22688079	unassigned	0	0.0	T	C	0				
+22688928	phase6_comp_394	1	1.0	T	G	0				
+22689117	phase6_comp_394	1	1.0	A	G	0				
+22689176	phase6_comp_394	1	1.0	A	G	0				
+22690933	phase6_comp_395	1	1.0	G	C	0				
+22690934	phase6_comp_395	1	1.0	C	T	0				
+22693873	unassigned	0	0.0	A	C	0				
+22694840	phase6_comp_396	1	1.0	T	C	0				
+22694853	phase6_comp_396	1	1.0	A	G	0				
+22695084	phase6_comp_396	1	1.0	G	T	0				
+22695262	phase6_comp_396	1	1.0	C	G	0				
+22696531	unassigned	0	0.0	G	A	0				
+22697228	phase6_comp_397	1	1.0	C	T	0				
+22697877	phase6_comp_397	1	1.0	A	G	0				
+22697904	phase6_comp_397	1	1.0	G	C	0				
+22697977	phase6_comp_397	1	1.0	T	C	0				
+22698282	phase6_comp_397	1	1.0	G	T	0				
+22698615	phase6_comp_397	1	1.0	C	A	0				
+22699377	phase6_comp_398	1	1.0	C	T	0				
+22699426	phase6_comp_398	1	1.0	T	G	0				
+22699852	phase6_comp_398	1	0.936132	A	T	0				
+22699858	phase6_comp_398	1	1.0	G	T	0				
+22699926	phase6_comp_398	1	1.0	C	T	0				
+22700900	unassigned	0	0.0	G	T	0				
+22701758	unassigned	0	0.0	G	C	0				
+22702527	phase6_comp_399	1	1.0	T	C	0				
+22702868	phase6_comp_399	1	1.0	C	G	0				
+22702918	phase6_comp_399	1	1.0	C	T	0				
+22703264	phase6_comp_399	1	1.0	A	G	0				
+22703861	unassigned	0	0.0	G	A	0				
+22705660	unassigned	0	0.0	T	C	0				
+22706436	unassigned	0	0.0	G	A	0				
+22707986	phase6_comp_400	1	1.0	T	C	0				
+22708037	phase6_comp_400	1	1.0	C	G	0				
+22708651	phase6_comp_400	1	1.0	G	C	0				
+22708922	phase6_comp_400	1	1.0	T	G	0				
+22712955	phase6_comp_401	1	1.0	C	A	0				
+22713267	phase6_comp_401	1	1.0	C	T	0				
+22747030	unassigned	0	0.0	G	A	0				
+22759034	phase6_comp_402	1	1.0	G	A	0				
+22759042	phase6_comp_402	1	1.0	G	A	0				
+22905237	phase6_comp_402	1	1.0	G	A	0				
+22905247	phase6_comp_402	1	1.0	C	G	0				
+22905439	phase6_comp_402	1	1.0	A	G	0				
+22905483	phase6_comp_402	1	1.0	A	C	0				
+22905487	phase6_comp_402	1	1.0	C	G	0				
+22905817	phase6_comp_402	1	1.0	C	T	0				
+22912049	unassigned	0	0.0	G	A	0				
+22941860	unassigned	0	0.0	C	G	1	1	0|1	C	G
+22989052	unassigned	0	0.0	C	A	1	1	0|1	C	A
+23004031	unassigned	0	0.0	C	T	1	1	0|1	C	T
+23020112	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+23112535	phase6_comp_403	1	1.0	C	T	1	-1	1|0	C	T
+23112694	phase6_comp_403	-1	1.0	A	G	1	1	0|1	A	G
+23113179	phase6_comp_403	-1	1.0	C	T	1	1	0|1	C	T
+23114509	phase6_comp_404	1	1.0	T	C	1	-1	1|0	T	C
+23114515	phase6_comp_404	1	1.0	T	C	1	-1	1|0	T	C
+23114911	phase6_comp_404	1	1.0	A	G	1	-1	1|0	A	G
+23115233	phase6_comp_404	1	1.0	T	C	1	-1	1|0	T	C
+23115299	phase6_comp_404	1	1.0	C	T	1	-1	1|0	C	T
+23116390	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+23117676	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+23118752	phase6_comp_405	1	1.0	G	T	1	-1	1|0	G	T
+23118816	phase6_comp_405	1	1.0	G	C	1	-1	1|0	G	C
+23119238	phase6_comp_405	1	1.0	A	G	1	-1	1|0	A	G
+23119536	phase6_comp_405	1	1.0	A	G	1	-1	1|0	A	G
+23120996	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23121933	phase6_comp_406	1	1.0	G	A	1	-1	1|0	G	A
+23122270	phase6_comp_406	1	1.0	A	G	1	-1	1|0	A	G
+23122891	phase6_comp_406	1	1.0	A	G	1	-1	1|0	A	G
+23123844	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+23124893	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23125617	phase6_comp_407	1	1.0	G	A	1	-1	1|0	G	A
+23125759	phase6_comp_407	1	1.0	G	C	1	-1	1|0	G	C
+23125763	phase6_comp_407	1	1.0	A	G	1	-1	1|0	A	G
+23126281	phase6_comp_407	1	1.0	C	T	1	-1	1|0	C	T
+23126351	phase6_comp_407	1	1.0	T	C	1	-1	1|0	T	C
+23126994	phase6_comp_407	1	1.0	T	C	1	-1	1|0	T	C
+23127251	phase6_comp_407	1	1.0	G	A	1	-1	1|0	G	A
+23127903	phase6_comp_407	1	1.0	G	A	1	-1	1|0	G	A
+23128473	phase6_comp_407	1	1.0	G	A	1	-1	1|0	G	A
+23129346	phase6_comp_408	1	1.0	C	T	1	-1	1|0	C	T
+23129437	phase6_comp_408	1	1.0	G	A	1	-1	1|0	G	A
+23129824	phase6_comp_408	1	1.0	T	G	0				
+23130412	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23132608	phase6_comp_409	1	1.0	A	G	1	-1	1|0	A	G
+23132638	phase6_comp_409	1	1.0	A	T	1	-1	1|0	A	T
+23133563	phase6_comp_410	1	1.0	G	A	1	-1	1|0	G	A
+23133575	phase6_comp_410	1	1.0	C	T	1	-1	1|0	C	T
+23134657	unassigned	0	0.0	G	C	1	-1	1|0	G	C
+23135457	phase6_comp_411	1	1.0	G	A	1	-1	1|0	G	A
+23135783	phase6_comp_411	1	1.0	A	G	0				
+23138775	unassigned	0	0.0	T	G	1	-1	1|0	T	G
+23140273	phase6_comp_412	1	1.0	A	G	1	-1	1|0	A	G
+23140531	phase6_comp_412	1	1.0	C	T	1	-1	1|0	C	T
+23140557	phase6_comp_412	1	1.0	C	A	1	-1	1|0	C	A
+23141068	phase6_comp_412	1	1.0	G	A	1	-1	1|0	G	A
+23141582	phase6_comp_412	1	1.0	C	A	1	-1	1|0	C	A
+23142067	phase6_comp_412	1	0.67647	A	C	1	-1	1|0	A	C
+23146382	unassigned	0	0.0	G	T	1	-1	1|0	G	T
+23146855	phase6_comp_413	1	1.0	G	A	1	-1	1|0	G	A
+23147175	phase6_comp_413	1	1.0	A	G	1	-1	1|0	A	G
+23147498	phase6_comp_413	1	1.0	T	G	1	-1	1|0	T	G
+23148813	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+23149457	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23153489	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+23154358	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+23155487	phase6_comp_414	1	1.0	T	C	1	-1	1|0	T	C
+23155811	phase6_comp_414	1	1.0	G	A	1	-1	1|0	G	A
+23156143	phase6_comp_414	1	1.0	A	G	0				
+23156147	phase6_comp_414	1	1.0	C	A	0				
+23157487	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23159492	unassigned	0	0.0	T	G	1	-1	1|0	T	G
+23160271	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23160934	phase6_comp_415	1	1.0	G	A	1	-1	1|0	G	A
+23161195	phase6_comp_415	1	1.0	C	T	1	-1	1|0	C	T
+23162218	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23163712	unassigned	0	0.0	C	T	1	1	0|1	C	T
+23164884	unassigned	0	0.0	C	G	1	1	0|1	C	G
+23168617	unassigned	0	0.0	C	A	1	-1	1|0	C	A
+23170073	phase6_comp_416	1	1.0	A	G	1	-1	1|0	A	G
+23170580	phase6_comp_416	1	1.0	C	A	1	-1	1|0	C	A
+23170626	phase6_comp_416	1	1.0	G	A	1	-1	1|0	G	A
+23171336	unassigned	0	0.0	A	C	1	-1	1|0	A	C
+23171734	phase6_comp_417	1	1.0	C	T	1	-1	1|0	C	T
+23172107	phase6_comp_417	1	1.0	T	C	1	-1	1|0	T	C
+23172263	phase6_comp_418	1	1.0	A	G	1	-1	1|0	A	G
+23172793	phase6_comp_418	1	1.0	A	G	1	-1	1|0	A	G
+23173235	phase6_comp_419	1	1.0	C	T	1	-1	1|0	C	T
+23173768	phase6_comp_419	1	1.0	A	G	1	-1	1|0	A	G
+23173790	phase6_comp_419	1	1.0	G	C	1	-1	1|0	G	C
+23173827	phase6_comp_419	1	1.0	C	T	1	-1	1|0	C	T
+23173875	phase6_comp_419	1	1.0	C	T	1	-1	1|0	C	T
+23174610	phase6_comp_419	1	1.0	C	A	1	-1	1|0	C	A
+23175789	phase6_comp_420	1	1.0	T	C	1	-1	1|0	T	C
+23176028	phase6_comp_420	1	1.0	A	G	1	-1	1|0	A	G
+23176057	phase6_comp_420	1	1.0	T	G	1	-1	1|0	T	G
+23176064	phase6_comp_420	1	1.0	A	C	1	-1	1|0	A	C
+23176859	phase6_comp_421	1	1.0	G	A	1	-1	1|0	G	A
+23176997	phase6_comp_421	1	1.0	T	C	1	-1	1|0	T	C
+23178907	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23180482	phase6_comp_422	1	1.0	T	G	1	-1	1|0	T	G
+23180617	phase6_comp_422	1	1.0	G	C	1	-1	1|0	G	C
+23180623	phase6_comp_422	1	1.0	A	G	1	-1	1|0	A	G
+23181443	phase6_comp_423	1	1.0	C	A	1	-1	1|0	C	A
+23181882	phase6_comp_423	1	1.0	C	T	1	-1	1|0	C	T
+23182895	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+23184103	phase6_comp_424	1	1.0	T	C	1	-1	1|0	T	C
+23184456	phase6_comp_424	1	1.0	A	C	1	-1	1|0	A	C
+23185423	phase6_comp_425	1	1.0	A	T	1	-1	1|0	A	T
+23185590	phase6_comp_425	1	1.0	G	A	1	-1	1|0	G	A
+23185719	phase6_comp_425	1	1.0	C	G	1	-1	1|0	C	G
+23185721	phase6_comp_425	1	1.0	G	T	1	-1	1|0	G	T
+23186584	unassigned	0	0.0	C	G	1	-1	1|0	C	G
+23187981	phase6_comp_426	1	1.0	T	G	1	-1	1|0	T	G
+23188247	phase6_comp_426	1	1.0	T	C	1	-1	1|0	T	C
+23189844	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23192948	phase6_comp_427	1	1.0	A	G	1	-1	1|0	A	G
+23193312	phase6_comp_427	1	1.0	T	C	1	-1	1|0	T	C
+23194956	phase6_comp_428	1	1.0	G	C	1	-1	1|0	G	C
+23194973	phase6_comp_428	1	1.0	A	G	1	-1	1|0	A	G
+23195042	phase6_comp_428	1	1.0	C	T	1	-1	1|0	C	T
+23195210	phase6_comp_428	1	1.0	C	T	1	-1	1|0	C	T
+23195836	phase6_comp_428	1	1.0	C	T	1	-1	1|0	C	T
+23196170	phase6_comp_428	1	1.0	T	C	1	-1	1|0	T	C
+23196400	phase6_comp_428	1	1.0	G	A	1	-1	1|0	G	A
+23196511	phase6_comp_428	1	1.0	T	C	1	-1	1|0	T	C
+23196550	phase6_comp_428	1	1.0	T	C	1	-1	1|0	T	C
+23196782	phase6_comp_428	1	1.0	C	A	1	-1	1|0	C	A
+23196783	phase6_comp_428	1	1.0	A	G	1	-1	1|0	A	G
+23197124	phase6_comp_428	1	1.0	A	G	1	-1	1|0	A	G
+23197209	phase6_comp_428	1	1.0	G	A	1	-1	1|0	G	A
+23197253	phase6_comp_428	1	1.0	G	A	1	-1	1|0	G	A
+23198227	phase6_comp_429	1	1.0	T	G	1	-1	1|0	T	G
+23198422	phase6_comp_429	1	1.0	A	G	1	-1	1|0	A	G
+23198612	phase6_comp_429	1	1.0	A	G	1	-1	1|0	A	G
+23198726	phase6_comp_429	1	1.0	C	T	1	-1	1|0	C	T
+23198896	phase6_comp_429	1	1.0	T	G	1	-1	1|0	T	G
+23198948	phase6_comp_429	1	1.0	G	C	1	-1	1|0	G	C
+23199301	phase6_comp_429	1	1.0	C	T	1	-1	1|0	C	T
+23199912	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+23200348	phase6_comp_430	1	1.0	A	G	1	-1	1|0	A	G
+23200352	phase6_comp_430	1	1.0	C	T	1	-1	1|0	C	T
+23202307	phase6_comp_431	1	1.0	A	G	1	-1	1|0	A	G
+23202749	phase6_comp_431	1	1.0	A	G	1	-1	1|0	A	G
+23203247	phase6_comp_431	1	1.0	C	A	1	-1	1|0	C	A
+23203692	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23205407	phase6_comp_432	1	1.0	G	C	1	-1	1|0	G	C
+23205640	phase6_comp_432	1	1.0	T	G	1	-1	1|0	T	G
+23206863	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23220704	unassigned	0	0.0	A	C	1	-1	1|0	A	C
+23221793	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+23233473	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23236554	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23241976	unassigned	0	0.0	T	C	1	1	0|1	T	C
+23242945	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23244758	unassigned	0	0.0	C	G	1	-1	1|0	C	G
+23245154	phase6_comp_433	1	1.0	C	T	1	-1	1|0	C	T
+23245707	phase6_comp_433	1	1.0	C	T	1	-1	1|0	C	T
+23246006	phase6_comp_433	1	1.0	G	A	1	-1	1|0	G	A
+23246967	phase6_comp_433	1	1.0	A	G	1	-1	1|0	A	G
+23247296	phase6_comp_433	1	1.0	C	G	1	-1	1|0	C	G
+23247373	phase6_comp_433	1	1.0	A	T	1	-1	1|0	A	T
+23247571	phase6_comp_433	1	1.0	T	G	1	-1	1|0	T	G
+23247755	phase6_comp_433	1	1.0	A	G	1	-1	1|0	A	G
+23248082	phase6_comp_433	1	1.0	G	A	1	-1	1|0	G	A
+23248213	phase6_comp_433	1	1.0	G	A	1	-1	1|0	G	A
+23249536	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+23250255	phase6_comp_434	1	1.0	T	G	1	-1	1|0	T	G
+23250864	phase6_comp_434	1	1.0	G	A	1	-1	1|0	G	A
+23255805	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23257682	phase6_comp_435	1	1.0	G	A	1	-1	1|0	G	A
+23257826	phase6_comp_435	1	1.0	G	A	1	-1	1|0	G	A
+23260033	phase6_comp_436	1	1.0	G	C	1	-1	1|0	G	C
+23260155	phase6_comp_436	1	1.0	C	T	1	-1	1|0	C	T
+23261650	phase6_comp_437	1	1.0	T	G	1	-1	1|0	T	G
+23261770	phase6_comp_437	1	1.0	T	G	1	-1	1|0	T	G
+23264560	phase6_comp_438	1	1.0	C	A	1	-1	1|0	C	A
+23264771	phase6_comp_438	1	1.0	A	G	1	-1	1|0	A	G
+23264778	phase6_comp_438	1	1.0	G	A	1	-1	1|0	G	A
+23265255	phase6_comp_438	1	1.0	C	G	1	-1	1|0	C	G
+23267313	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23269170	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23270441	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+23271352	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23272239	phase6_comp_439	1	1.0	G	A	1	-1	1|0	G	A
+23272438	phase6_comp_439	1	1.0	G	A	1	-1	1|0	G	A
+23273159	phase6_comp_439	1	1.0	G	A	1	-1	1|0	G	A
+23273614	phase6_comp_440	1	1.0	A	G	1	-1	1|0	A	G
+23274168	phase6_comp_440	1	1.0	C	T	1	-1	1|0	C	T
+23274246	phase6_comp_440	1	1.0	C	T	1	-1	1|0	C	T
+23274529	phase6_comp_440	1	1.0	C	A	1	-1	1|0	C	A
+23274691	phase6_comp_440	1	1.0	G	A	1	-1	1|0	G	A
+23275368	phase6_comp_441	1	1.0	G	C	1	-1	1|0	G	C
+23275893	phase6_comp_441	1	1.0	G	C	1	-1	1|0	G	C
+23276045	phase6_comp_441	1	1.0	A	G	1	-1	1|0	A	G
+23276126	phase6_comp_441	1	1.0	G	A	1	-1	1|0	G	A
+23278154	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23279200	unassigned	0	0.0	T	G	1	-1	1|0	T	G
+23281906	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+23285436	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23286826	phase6_comp_442	1	1.0	A	G	1	-1	1|0	A	G
+23287289	phase6_comp_442	1	1.0	G	C	1	-1	1|0	G	C
+23287365	phase6_comp_442	1	1.0	T	C	1	-1	1|0	T	C
+23287415	phase6_comp_442	1	1.0	A	T	1	-1	1|0	A	T
+23288496	phase6_comp_443	1	1.0	T	C	1	-1	1|0	T	C
+23288503	phase6_comp_443	1	1.0	C	T	1	-1	1|0	C	T
+23288805	phase6_comp_443	1	1.0	C	T	1	-1	1|0	C	T
+23288992	phase6_comp_443	1	1.0	A	G	1	-1	1|0	A	G
+23289452	phase6_comp_443	1	1.0	T	C	1	-1	1|0	T	C
+23289614	phase6_comp_443	1	1.0	T	C	1	-1	1|0	T	C
+23289636	phase6_comp_443	1	1.0	T	C	1	-1	1|0	T	C
+23290070	phase6_comp_443	1	1.0	A	G	1	-1	1|0	A	G
+23290326	phase6_comp_443	1	1.0	A	G	1	-1	1|0	A	G
+23290449	phase6_comp_443	1	1.0	C	A	1	-1	1|0	C	A
+23290674	phase6_comp_443	1	1.0	A	T	1	-1	1|0	A	T
+23291286	phase6_comp_443	1	1.0	T	C	1	-1	1|0	T	C
+23291655	phase6_comp_443	1	1.0	G	A	1	-1	1|0	G	A
+23291757	phase6_comp_443	1	1.0	A	G	1	-1	1|0	A	G
+23293000	phase6_comp_444	1	1.0	C	T	1	-1	1|0	C	T
+23293187	phase6_comp_444	1	1.0	G	A	1	-1	1|0	G	A
+23297228	unassigned	0	0.0	T	G	0				
+23299167	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23301203	phase6_comp_445	1	1.0	A	G	1	-1	1|0	A	G
+23301295	phase6_comp_445	1	1.0	G	A	1	-1	1|0	G	A
+23302607	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23303227	phase6_comp_446	1	1.0	G	A	1	-1	1|0	G	A
+23303531	phase6_comp_446	1	1.0	G	T	1	-1	1|0	G	T
+23303835	phase6_comp_446	-1	1.0	A	G	1	1	0|1	A	G
+23304852	phase6_comp_447	1	1.0	C	T	1	1	0|1	C	T
+23304853	phase6_comp_447	-1	1.0	G	A	1	-1	1|0	G	A
+23305613	unassigned	0	0.0	A	T	1	1	0|1	A	T
+23307182	unassigned	0	0.0	A	G	1	1	0|1	A	G
+23307551	phase6_comp_448	1	1.0	C	T	1	1	0|1	C	T
+23307702	phase6_comp_448	-1	1.0	G	A	1	-1	1|0	G	A
+23307898	phase6_comp_448	1	1.0	T	A	0				
+23308435	phase6_comp_448	-1	1.0	A	T	1	-1	1|0	A	T
+23308800	phase6_comp_448	-1	1.0	G	T	1	-1	1|0	G	T
+23308968	phase6_comp_448	1	1.0	G	A	1	1	0|1	G	A
+23309019	phase6_comp_448	-1	1.0	A	G	1	-1	1|0	A	G
+23309116	phase6_comp_448	-1	1.0	G	A	1	-1	1|0	G	A
+23309717	phase6_comp_448	1	1.0	A	G	1	1	0|1	A	G
+23312620	phase6_comp_449	1	1.0	C	A	1	1	0|1	C	A
+23312897	phase6_comp_449	1	1.0	C	T	1	1	0|1	C	T
+23313961	unassigned	0	0.0	T	G	1	1	0|1	T	G
+23315079	phase6_comp_450	1	1.0	C	G	0				
+23315694	phase6_comp_450	-1	1.0	C	T	1	1	0|1	C	T
+23315876	phase6_comp_450	1	1.0	T	A	1	-1	1|0	T	A
+23318605	phase6_comp_451	1	1.0	G	A	1	1	0|1	G	A
+23318706	phase6_comp_451	1	1.0	G	C	1	1	0|1	G	C
+23319047	phase6_comp_451	1	1.0	C	T	1	1	0|1	C	T
+23319180	phase6_comp_451	1	1.0	C	T	1	1	0|1	C	T
+23319238	phase6_comp_451	1	1.0	T	C	1	1	0|1	T	C
+23319273	phase6_comp_451	1	1.0	A	G	1	1	0|1	A	G
+23319312	phase6_comp_451	-1	1.0	G	A	1	-1	1|0	G	A
+23319378	phase6_comp_451	1	1.0	A	C	0				
+23319608	phase6_comp_451	1	1.0	G	A	1	1	0|1	G	A
+23319709	phase6_comp_451	1	1.0	T	G	1	1	0|1	T	G
+23319928	phase6_comp_451	-1	1.0	G	A	1	-1	1|0	G	A
+23320153	phase6_comp_451	1	1.0	A	C	1	1	0|1	A	C
+23321002	phase6_comp_452	1	1.0	T	A	1	1	0|1	T	A
+23321179	phase6_comp_452	1	1.0	T	G	1	1	0|1	T	G
+23321728	phase6_comp_452	-1	1.0	G	A	1	-1	1|0	G	A
+23321867	phase6_comp_452	-1	1.0	G	T	0				
+23323169	phase6_comp_453	1	1.0	A	C	1	1	0|1	A	C
+23323478	phase6_comp_453	1	1.0	A	G	1	1	0|1	A	G
+23324192	unassigned	0	0.0	T	G	1	1	0|1	T	G
+23325544	phase6_comp_454	1	1.0	C	T	1	1	0|1	C	T
+23325797	phase6_comp_454	1	1.0	G	C	1	1	0|1	G	C
+23325825	phase6_comp_454	1	1.0	A	G	1	1	0|1	A	G
+23326023	phase6_comp_454	1	1.0	A	C	1	1	0|1	A	C
+23326170	phase6_comp_454	1	1.0	T	A	1	1	0|1	T	A
+23326197	phase6_comp_454	1	1.0	C	T	1	1	0|1	C	T
+23326441	phase6_comp_454	1	1.0	C	T	1	1	0|1	C	T
+23331576	phase6_comp_455	1	1.0	G	A	1	-1	1|0	G	A
+23332030	phase6_comp_455	-1	1.0	T	C	1	1	0|1	T	C
+23333814	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+23343708	unassigned	0	0.0	G	C	1	1	0|1	G	C
+23344618	phase6_comp_456	1	1.0	G	A	1	-1	1|0	G	A
+23344711	phase6_comp_456	-1	1.0	G	A	1	1	0|1	G	A
+23344718	phase6_comp_456	-1	1.0	T	A	1	1	0|1	T	A
+23345947	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23349377	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+23353217	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+23371780	phase6_comp_457	1	1.0	A	G	1	-1	1|0	A	G
+23371938	phase6_comp_457	-1	1.0	C	A	1	1	0|1	C	A
+23372148	phase6_comp_457	-1	1.0	G	T	0				
+23372928	phase6_comp_458	1	1.0	A	T	0				
+23373408	phase6_comp_458	1	1.0	G	A	1	1	0|1	G	A
+23383603	unassigned	0	0.0	G	C	1	-1	1|0	G	C
+23388503	phase6_comp_459	1	1.0	G	A	0				
+23388661	phase6_comp_459	1	1.0	A	G	0				
+23388684	phase6_comp_459	1	1.0	C	T	0				
+23390428	phase6_comp_460	1	1.0	A	T	1	-1	1|0	A	T
+23390698	phase6_comp_460	1	1.0	C	A	1	-1	1|0	C	A
+23391205	phase6_comp_460	-1	1.0	A	G	1	1	0|1	A	G
+23394026	phase6_comp_461	1	1.0	T	C	1	-1	1|0	T	C
+23394054	phase6_comp_461	1	1.0	G	A	1	-1	1|0	G	A
+23396462	phase6_comp_462	1	1.0	C	T	1	1	0|1	C	T
+23397094	phase6_comp_462	-1	1.0	C	T	1	-1	1|0	C	T
+23397911	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23399623	phase6_comp_463	1	1.0	A	G	1	-1	1|0	A	G
+23399831	phase6_comp_463	1	1.0	A	G	1	-1	1|0	A	G
+23400121	phase6_comp_463	1	1.0	C	A	1	-1	1|0	C	A
+23401974	unassigned	0	0.0	C	G	1	1	0|1	C	G
+23404165	phase6_comp_464	1	1.0	G	A	1	1	0|1	G	A
+23404736	phase6_comp_464	-1	1.0	T	C	1	-1	1|0	T	C
+23405143	phase6_comp_464	-1	1.0	C	G	1	-1	1|0	C	G
+23405358	phase6_comp_464	1	1.0	G	A	1	1	0|1	G	A
+23405423	phase6_comp_464	-1	1.0	G	A	1	-1	1|0	G	A
+23405437	phase6_comp_464	-1	1.0	C	T	1	-1	1|0	C	T
+23405478	phase6_comp_464	-1	1.0	G	A	1	-1	1|0	G	A
+23405683	phase6_comp_464	-1	1.0	G	T	1	-1	1|0	G	T
+23406182	phase6_comp_464	-1	1.0	G	A	1	-1	1|0	G	A
+23406338	phase6_comp_464	-1	1.0	T	C	0				
+23406724	phase6_comp_464	-1	1.0	T	C	1	-1	1|0	T	C
+23406883	phase6_comp_464	-1	1.0	C	A	1	-1	1|0	C	A
+23408125	phase6_comp_465	1	1.0	C	T	1	-1	1|0	C	T
+23408162	phase6_comp_465	1	1.0	T	C	1	-1	1|0	T	C
+23410096	phase6_comp_466	1	1.0	A	G	1	1	0|1	A	G
+23410211	phase6_comp_466	-1	1.0	C	T	1	-1	1|0	C	T
+23411702	unassigned	0	0.0	A	G	1	1	0|1	A	G
+23412779	phase6_comp_467	1	1.0	C	T	1	-1	1|0	C	T
+23413041	phase6_comp_467	1	1.0	A	G	1	-1	1|0	A	G
+23413220	phase6_comp_467	-1	1.0	C	G	1	1	0|1	C	G
+23413681	phase6_comp_467	1	1.0	C	T	1	-1	1|0	C	T
+23413777	phase6_comp_467	1	1.0	T	C	1	-1	1|0	T	C
+23413863	phase6_comp_467	1	1.0	A	G	1	-1	1|0	A	G
+23414784	phase6_comp_468	1	1.0	G	A	1	1	0|1	G	A
+23415247	phase6_comp_468	-1	1.0	C	G	1	-1	1|0	C	G
+23415383	phase6_comp_468	1	1.0	G	A	1	1	0|1	G	A
+23416448	phase6_comp_469	1	1.0	G	T	1	1	0|1	G	T
+23416451	phase6_comp_469	1	1.0	G	A	1	1	0|1	G	A
+23416457	phase6_comp_469	1	1.0	C	A	1	1	0|1	C	A
+23418999	phase6_comp_470	1	1.0	G	A	1	-1	1|0	G	A
+23419119	phase6_comp_470	1	1.0	C	A	1	-1	1|0	C	A
+23419169	phase6_comp_470	1	1.0	T	C	1	-1	1|0	T	C
+23419202	phase6_comp_470	-1	1.0	G	A	1	1	0|1	G	A
+23419204	phase6_comp_470	1	1.0	G	T	1	-1	1|0	G	T
+23419337	phase6_comp_470	1	1.0	C	G	1	-1	1|0	C	G
+23419529	phase6_comp_470	1	1.0	C	A	1	-1	1|0	C	A
+23419556	phase6_comp_470	1	1.0	G	A	1	-1	1|0	G	A
+23419569	phase6_comp_470	1	1.0	C	T	1	-1	1|0	C	T
+23419599	phase6_comp_470	1	1.0	A	G	1	-1	1|0	A	G
+23419725	phase6_comp_470	1	1.0	C	T	1	-1	1|0	C	T
+23419980	phase6_comp_470	-1	1.0	T	G	1	1	0|1	T	G
+23420034	phase6_comp_470	1	1.0	G	C	1	-1	1|0	G	C
+23420049	phase6_comp_470	1	1.0	C	G	1	-1	1|0	C	G
+23420077	phase6_comp_470	-1	1.0	T	C	1	1	0|1	T	C
+23420245	phase6_comp_470	-1	1.0	G	A	1	1	0|1	G	A
+23420250	phase6_comp_470	1	1.0	A	T	1	-1	1|0	A	T
+23420459	phase6_comp_470	1	1.0	C	T	1	-1	1|0	C	T
+23420480	phase6_comp_470	1	1.0	C	T	1	-1	1|0	C	T
+23420552	phase6_comp_470	1	1.0	T	C	1	-1	1|0	T	C
+23420656	phase6_comp_470	1	1.0	A	G	1	-1	1|0	A	G
+23420867	phase6_comp_470	1	1.0	G	A	0				
+23420927	phase6_comp_470	1	1.0	A	G	0				
+23421309	phase6_comp_470	1	1.0	T	A	1	-1	1|0	T	A
+23421320	phase6_comp_470	1	1.0	G	C	1	-1	1|0	G	C
+23421782	phase6_comp_471	1	1.0	G	T	1	1	0|1	G	T
+23422085	phase6_comp_471	-1	1.0	C	T	1	-1	1|0	C	T
+23422819	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+23423828	unassigned	0	0.0	T	A	1	-1	1|0	T	A
+23426863	phase6_comp_472	1	1.0	G	C	1	-1	1|0	G	C
+23427184	phase6_comp_472	1	1.0	T	C	1	-1	1|0	T	C
+23428372	unassigned	0	0.0	G	T	1	-1	1|0	G	T
+23435318	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23437635	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23438046	phase6_comp_473	1	1.0	C	T	1	1	0|1	C	T
+23438512	phase6_comp_473	-1	1.0	C	T	1	-1	1|0	C	T
+23438888	phase6_comp_473	-1	1.0	T	C	1	-1	1|0	T	C
+23439018	phase6_comp_473	-1	1.0	A	C	1	-1	1|0	A	C
+23439440	phase6_comp_473	-1	1.0	T	G	1	-1	1|0	T	G
+23439641	phase6_comp_473	-1	1.0	T	C	1	-1	1|0	T	C
+23440538	phase6_comp_474	1	1.0	G	A	1	-1	1|0	G	A
+23440670	phase6_comp_474	1	1.0	A	G	1	-1	1|0	A	G
+23440861	phase6_comp_474	1	1.0	C	G	1	-1	1|0	C	G
+23441123	phase6_comp_474	1	1.0	C	G	0				
+23441304	phase6_comp_474	1	1.0	C	T	1	-1	1|0	C	T
+23441945	phase6_comp_474	1	1.0	A	C	0				
+23443380	phase6_comp_475	1	1.0	A	G	1	-1	1|0	A	G
+23443412	phase6_comp_475	1	1.0	C	G	1	-1	1|0	C	G
+23444264	phase6_comp_476	1	1.0	A	G	1	-1	1|0	A	G
+23444570	phase6_comp_476	1	1.0	A	T	1	-1	1|0	A	T
+23444583	phase6_comp_476	1	1.0	C	T	1	-1	1|0	C	T
+23445821	phase6_comp_477	1	1.0	A	G	1	-1	1|0	A	G
+23446404	phase6_comp_477	1	1.0	A	C	1	-1	1|0	A	C
+23446758	phase6_comp_477	1	1.0	A	C	1	-1	1|0	A	C
+23447474	phase6_comp_477	1	1.0	G	C	1	-1	1|0	G	C
+23447554	phase6_comp_477	1	1.0	C	T	1	-1	1|0	C	T
+23447782	phase6_comp_477	1	1.0	G	A	1	-1	1|0	G	A
+23449191	phase6_comp_478	1	1.0	G	A	0				
+23449686	phase6_comp_478	1	1.0	C	T	1	-1	1|0	C	T
+23449796	phase6_comp_478	1	1.0	A	G	1	-1	1|0	A	G
+23449841	phase6_comp_478	1	1.0	A	G	1	-1	1|0	A	G
+23449924	phase6_comp_478	1	1.0	C	G	1	-1	1|0	C	G
+23450016	phase6_comp_478	1	1.0	A	G	1	-1	1|0	A	G
+23450377	phase6_comp_478	1	1.0	G	A	1	-1	1|0	G	A
+23450384	phase6_comp_478	-1	1.0	C	T	1	1	0|1	C	T
+23450431	phase6_comp_478	1	1.0	A	G	1	-1	1|0	A	G
+23450594	phase6_comp_478	1	1.0	G	A	1	-1	1|0	G	A
+23450671	phase6_comp_478	1	1.0	A	G	1	-1	1|0	A	G
+23451614	phase6_comp_479	1	1.0	C	T	1	-1	1|0	C	T
+23452133	phase6_comp_479	1	1.0	A	G	1	-1	1|0	A	G
+23452386	phase6_comp_479	1	1.0	A	G	1	-1	1|0	A	G
+23452657	phase6_comp_479	1	1.0	A	G	1	-1	1|0	A	G
+23452733	phase6_comp_479	1	1.0	G	C	1	-1	1|0	G	C
+23452863	phase6_comp_479	1	1.0	A	G	1	-1	1|0	A	G
+23452927	phase6_comp_479	1	1.0	G	A	1	-1	1|0	G	A
+23453003	phase6_comp_479	1	1.0	T	C	1	-1	1|0	T	C
+23453746	phase6_comp_479	1	1.0	G	T	0				
+23455534	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23456538	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23457883	phase6_comp_480	1	1.0	T	A	1	-1	1|0	T	A
+23458091	phase6_comp_480	1	1.0	A	G	1	-1	1|0	A	G
+23458098	phase6_comp_480	1	1.0	C	G	1	-1	1|0	C	G
+23458389	phase6_comp_480	1	1.0	A	G	1	-1	1|0	A	G
+23458671	phase6_comp_480	1	1.0	G	A	1	-1	1|0	G	A
+23458936	phase6_comp_480	1	1.0	C	T	1	-1	1|0	C	T
+23458968	phase6_comp_480	1	1.0	G	A	1	-1	1|0	G	A
+23459225	phase6_comp_480	1	1.0	C	T	1	-1	1|0	C	T
+23459243	phase6_comp_480	1	1.0	G	C	1	-1	1|0	G	C
+23460055	phase6_comp_481	1	1.0	C	T	1	-1	1|0	C	T
+23460119	phase6_comp_481	1	1.0	A	T	1	-1	1|0	A	T
+23466249	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23467490	phase6_comp_482	1	1.0	A	G	1	-1	1|0	A	G
+23468111	phase6_comp_482	1	1.0	G	A	1	-1	1|0	G	A
+23469053	phase6_comp_483	1	1.0	G	A	1	-1	1|0	G	A
+23469460	phase6_comp_483	1	1.0	A	G	1	-1	1|0	A	G
+23469940	phase6_comp_483	1	1.0	C	T	1	-1	1|0	C	T
+23470292	phase6_comp_483	1	1.0	A	G	1	-1	1|0	A	G
+23471299	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23472268	phase6_comp_484	1	1.0	T	C	1	-1	1|0	T	C
+23472811	phase6_comp_484	1	1.0	C	T	1	-1	1|0	C	T
+23472893	phase6_comp_484	1	1.0	G	A	1	-1	1|0	G	A
+23473573	phase6_comp_485	1	1.0	T	C	1	-1	1|0	T	C
+23473955	phase6_comp_485	1	1.0	C	T	1	-1	1|0	C	T
+23474840	phase6_comp_486	1	1.0	T	C	1	-1	1|0	T	C
+23474908	phase6_comp_486	1	1.0	C	A	1	-1	1|0	C	A
+23474959	phase6_comp_486	1	1.0	C	T	1	-1	1|0	C	T
+23475053	phase6_comp_486	1	1.0	G	A	1	-1	1|0	G	A
+23475182	phase6_comp_486	1	1.0	A	C	1	-1	1|0	A	C
+23475227	phase6_comp_486	1	1.0	C	T	1	-1	1|0	C	T
+23475571	phase6_comp_486	1	1.0	C	A	1	-1	1|0	C	A
+23475606	phase6_comp_486	1	1.0	C	A	1	-1	1|0	C	A
+23475610	phase6_comp_486	1	1.0	T	C	1	-1	1|0	T	C
+23475649	phase6_comp_486	1	1.0	A	G	1	-1	1|0	A	G
+23475651	phase6_comp_486	1	1.0	A	G	1	-1	1|0	A	G
+23475704	phase6_comp_486	1	1.0	G	A	1	-1	1|0	G	A
+23475843	phase6_comp_486	1	1.0	T	A	1	-1	1|0	T	A
+23475896	phase6_comp_486	1	1.0	C	T	1	-1	1|0	C	T
+23475979	phase6_comp_486	1	0.931548	G	A	1	-1	1|0	G	A
+23477142	phase6_comp_487	1	1.0	C	T	1	-1	1|0	C	T
+23477510	phase6_comp_487	1	1.0	G	T	1	-1	1|0	G	T
+23477779	phase6_comp_487	1	1.0	G	A	1	-1	1|0	G	A
+23478803	phase6_comp_488	1	1.0	T	C	1	-1	1|0	T	C
+23479243	phase6_comp_488	1	1.0	C	A	1	-1	1|0	C	A
+23482278	unassigned	0	0.0	C	A	1	1	0|1	C	A
+23482996	unassigned	0	0.0	T	C	1	1	0|1	T	C
+23483741	phase6_comp_489	1	1.0	T	C	0				
+23484362	phase6_comp_489	1	1.0	A	G	1	1	0|1	A	G
+23484488	phase6_comp_489	1	1.0	C	T	1	1	0|1	C	T
+23485117	unassigned	0	0.0	G	A	1	1	0|1	G	A
+23487089	phase6_comp_490	1	1.0	C	T	1	1	0|1	C	T
+23487515	phase6_comp_490	1	1.0	G	A	1	1	0|1	G	A
+23488062	phase6_comp_490	1	1.0	A	G	1	1	0|1	A	G
+23488166	phase6_comp_490	1	1.0	C	T	1	1	0|1	C	T
+23488306	phase6_comp_490	1	1.0	A	G	1	1	0|1	A	G
+23488578	phase6_comp_490	1	1.0	T	C	1	1	0|1	T	C
+23488823	phase6_comp_490	1	1.0	T	C	1	1	0|1	T	C
+23489799	unassigned	0	0.0	C	A	1	1	0|1	C	A
+23490412	unassigned	0	0.0	T	G	1	1	0|1	T	G
+23491152	phase6_comp_491	1	1.0	A	T	1	1	0|1	A	T
+23491402	phase6_comp_491	1	1.0	T	C	1	1	0|1	T	C
+23491414	phase6_comp_491	1	1.0	G	C	1	1	0|1	G	C
+23491525	phase6_comp_491	1	1.0	C	T	1	1	0|1	C	T
+23491691	phase6_comp_491	1	1.0	A	G	1	1	0|1	A	G
+23492186	phase6_comp_491	1	1.0	G	C	1	1	0|1	G	C
+23492253	phase6_comp_491	1	1.0	T	C	0				
+23492373	phase6_comp_491	1	1.0	G	T	1	1	0|1	G	T
+23492427	phase6_comp_491	1	1.0	C	T	0				
+23492496	phase6_comp_491	1	1.0	C	A	0				
+23492852	phase6_comp_491	1	1.0	A	C	1	1	0|1	A	C
+23493082	phase6_comp_491	1	1.0	C	T	1	1	0|1	C	T
+23493858	unassigned	0	0.0	A	G	1	1	0|1	A	G
+23494632	phase6_comp_492	1	1.0	T	C	1	1	0|1	T	C
+23494633	phase6_comp_492	1	1.0	G	C	1	1	0|1	G	C
+23495203	phase6_comp_493	1	1.0	C	T	1	1	0|1	C	T
+23495472	phase6_comp_493	1	1.0	C	T	1	1	0|1	C	T
+23496013	phase6_comp_493	1	1.0	G	A	1	1	0|1	G	A
+23496078	phase6_comp_493	1	1.0	C	T	1	1	0|1	C	T
+23496117	phase6_comp_493	1	1.0	A	G	1	1	0|1	A	G
+23496125	phase6_comp_493	1	1.0	C	A	1	1	0|1	C	A
+23496364	phase6_comp_493	1	1.0	G	A	1	1	0|1	G	A
+23496558	phase6_comp_493	1	1.0	T	C	1	1	0|1	T	C
+23496646	phase6_comp_493	1	1.0	G	C	1	1	0|1	G	C
+23497117	phase6_comp_493	1	1.0	G	A	1	1	0|1	G	A
+23497280	phase6_comp_493	1	1.0	T	G	1	1	0|1	T	G
+23497308	phase6_comp_493	1	1.0	G	A	1	1	0|1	G	A
+23497733	phase6_comp_493	1	1.0	A	G	1	1	0|1	A	G
+23497874	phase6_comp_493	1	1.0	C	T	1	1	0|1	C	T
+23498296	phase6_comp_493	1	1.0	G	A	0				
+23498344	phase6_comp_493	1	1.0	T	A	0				
+23500943	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23505931	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23507943	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+23509227	unassigned	0	0.0	C	T	0				
+23514896	unassigned	0	0.0	G	A	1	1	0|1	G	A
+23518184	unassigned	0	0.0	G	A	1	1	0|1	G	A
+23535070	phase6_comp_494	1	1.0	G	C	1	-1	1|0	G	C
+23535502	phase6_comp_494	1	1.0	C	T	1	-1	1|0	C	T
+23537152	phase6_comp_495	1	1.0	C	T	1	-1	1|0	C	T
+23537630	phase6_comp_495	1	1.0	A	T	1	-1	1|0	A	T
+23537840	phase6_comp_495	1	1.0	T	C	1	-1	1|0	T	C
+23537863	phase6_comp_495	1	1.0	G	T	1	-1	1|0	G	T
+23537910	phase6_comp_495	1	1.0	G	C	1	-1	1|0	G	C
+23538626	phase6_comp_496	1	1.0	T	C	1	-1	1|0	T	C
+23538691	phase6_comp_496	1	1.0	G	A	1	-1	1|0	G	A
+23539421	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+23541180	phase6_comp_497	1	1.0	T	C	1	-1	1|0	T	C
+23541623	phase6_comp_497	1	1.0	C	A	1	-1	1|0	C	A
+23541860	phase6_comp_497	1	1.0	T	C	1	-1	1|0	T	C
+23542740	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+23543834	unassigned	0	0.0	G	T	1	-1	1|0	G	T
+23573153	unassigned	0	0.0	T	G	1	-1	1|0	T	G
+23574009	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+23575639	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+23583592	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+23584762	phase6_comp_498	1	1.0	T	C	1	-1	1|0	T	C
+23584947	phase6_comp_498	1	1.0	G	A	1	-1	1|0	G	A
+23586704	phase6_comp_499	1	1.0	C	T	1	-1	1|0	C	T
+23587326	phase6_comp_499	1	1.0	G	A	1	-1	1|0	G	A
+23588835	phase6_comp_500	1	1.0	A	G	1	-1	1|0	A	G
+23589020	phase6_comp_500	1	1.0	C	T	1	-1	1|0	C	T
+23589223	phase6_comp_500	1	1.0	G	A	1	-1	1|0	G	A
+23590791	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23591838	phase6_comp_501	1	1.0	C	T	1	-1	1|0	C	T
+23591997	phase6_comp_501	1	1.0	T	C	1	-1	1|0	T	C
+23592834	unassigned	0	0.0	A	G	0				
+23593400	phase6_comp_502	1	1.0	A	G	1	-1	1|0	A	G
+23593752	phase6_comp_502	-1	1.0	C	T	1	1	0|1	C	T
+23593903	phase6_comp_502	1	1.0	G	A	1	-1	1|0	G	A
+23594127	phase6_comp_502	1	1.0	T	G	1	-1	1|0	T	G
+23594295	phase6_comp_502	1	1.0	G	A	1	-1	1|0	G	A
+23595480	phase6_comp_503	1	1.0	G	C	1	-1	1|0	G	C
+23595774	phase6_comp_503	1	1.0	G	A	1	-1	1|0	G	A
+23596164	phase6_comp_503	1	1.0	T	A	1	-1	1|0	T	A
+23607557	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+23612330	unassigned	0	0.0	G	C	1	-1	1|0	G	C
+23620217	phase6_comp_504	1	1.0	T	C	1	-1	1|0	T	C
+23620967	phase6_comp_504	-1	1.0	G	A	1	1	0|1	G	A
+23622833	unassigned	0	0.0	C	T	0				
+23623535	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+23624960	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23626800	phase6_comp_505	1	1.0	T	C	1	-1	1|0	T	C
+23627175	phase6_comp_505	1	1.0	T	C	1	-1	1|0	T	C
+23627233	phase6_comp_505	1	1.0	T	C	1	-1	1|0	T	C
+23627899	phase6_comp_506	1	1.0	G	A	1	-1	1|0	G	A
+23628521	phase6_comp_506	1	1.0	C	T	1	-1	1|0	C	T
+23628841	phase6_comp_506	1	1.0	C	T	1	-1	1|0	C	T
+23629411	phase6_comp_507	1	1.0	A	G	1	-1	1|0	A	G
+23629779	phase6_comp_507	1	1.0	A	G	1	-1	1|0	A	G
+23631538	phase6_comp_508	1	1.0	C	T	1	-1	1|0	C	T
+23631707	phase6_comp_508	1	1.0	A	G	1	-1	1|0	A	G
+23631725	phase6_comp_508	1	1.0	C	T	1	-1	1|0	C	T
+23632013	phase6_comp_508	1	1.0	A	G	1	-1	1|0	A	G
+23632581	phase6_comp_508	-1	1.0	T	A	1	1	0|1	T	A
+23632583	phase6_comp_508	-1	1.0	G	C	1	1	0|1	G	C
+23637155	phase6_comp_509	1	1.0	C	T	1	1	0|1	C	T
+23637593	phase6_comp_509	1	1.0	A	G	1	1	0|1	A	G
+23638568	phase6_comp_510	1	1.0	C	G	1	1	0|1	C	G
+23638681	phase6_comp_510	1	1.0	C	A	1	1	0|1	C	A
+23638746	phase6_comp_510	-1	1.0	C	T	1	-1	1|0	C	T
+23638754	phase6_comp_510	-1	1.0	T	C	1	-1	1|0	T	C
+23638781	phase6_comp_510	1	1.0	T	A	1	1	0|1	T	A
+23640588	phase6_comp_511	1	1.0	C	T	1	1	0|1	C	T
+23640605	phase6_comp_511	-1	1.0	T	C	1	-1	1|0	T	C
+23640812	phase6_comp_511	-1	1.0	G	T	1	-1	1|0	G	T
+23642591	phase6_comp_512	1	1.0	G	A	0				
+23643145	phase6_comp_512	-1	1.0	C	T	1	-1	1|0	C	T
+23643868	phase6_comp_512	1	1.0	T	C	0				
+23645421	unassigned	0	0.0	C	A	1	1	0|1	C	A
+23647866	phase6_comp_513	1	1.0	G	A	1	1	0|1	G	A
+23648493	phase6_comp_513	-1	1.0	C	T	1	-1	1|0	C	T
+23648564	phase6_comp_513	1	1.0	T	G	0				
+23649788	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23650424	phase6_comp_514	1	1.0	C	T	1	1	0|1	C	T
+23650593	phase6_comp_514	-1	1.0	G	T	1	-1	1|0	G	T
+23650945	phase6_comp_514	1	1.0	T	G	1	1	0|1	T	G
+23650948	phase6_comp_514	1	1.0	G	A	1	1	0|1	G	A
+23650993	phase6_comp_514	1	1.0	A	G	1	1	0|1	A	G
+23651171	phase6_comp_514	1	1.0	T	C	1	1	0|1	T	C
+23651229	phase6_comp_514	1	0.9653	A	T	1	1	0|1	A	T
+23651431	phase6_comp_514	1	1.0	G	A	1	1	0|1	G	A
+23651485	phase6_comp_514	1	1.0	T	C	1	1	0|1	T	C
+23651644	phase6_comp_514	1	1.0	G	C	1	1	0|1	G	C
+23651775	phase6_comp_514	1	1.0	C	T	1	1	0|1	C	T
+23651839	phase6_comp_514	-1	1.0	G	A	1	-1	1|0	G	A
+23651952	phase6_comp_514	1	1.0	G	A	1	1	0|1	G	A
+23651981	phase6_comp_514	1	1.0	G	T	1	1	0|1	G	T
+23652164	phase6_comp_514	1	1.0	G	C	1	1	0|1	G	C
+23652746	phase6_comp_514	1	1.0	C	T	1	1	0|1	C	T
+23652839	phase6_comp_514	1	1.0	A	C	1	1	0|1	A	C
+23652869	phase6_comp_514	1	1.0	G	A	1	1	0|1	G	A
+23653026	phase6_comp_514	1	1.0	C	T	1	1	0|1	C	T
+23653353	phase6_comp_514	1	1.0	C	G	1	1	0|1	C	G
+23653374	phase6_comp_514	1	1.0	T	C	1	1	0|1	T	C
+23653422	phase6_comp_514	1	1.0	T	C	1	1	0|1	T	C
+23653646	phase6_comp_514	1	1.0	T	G	1	1	0|1	T	G
+23653763	phase6_comp_514	1	1.0	G	A	1	1	0|1	G	A
+23653810	phase6_comp_514	1	1.0	C	T	1	1	0|1	C	T
+23654038	phase6_comp_514	1	1.0	C	A	1	1	0|1	C	A
+23654072	phase6_comp_514	1	1.0	T	C	1	1	0|1	T	C
+23654074	phase6_comp_514	1	1.0	A	G	1	1	0|1	A	G
+23654276	phase6_comp_514	1	1.0	A	G	1	1	0|1	A	G
+23654403	phase6_comp_514	1	1.0	C	T	1	1	0|1	C	T
+23654442	phase6_comp_514	1	1.0	G	A	1	1	0|1	G	A
+23654515	phase6_comp_514	1	1.0	A	G	1	1	0|1	A	G
+23654535	phase6_comp_514	1	1.0	T	C	1	1	0|1	T	C
+23654820	phase6_comp_514	1	1.0	T	C	1	1	0|1	T	C
+23655079	phase6_comp_514	1	1.0	G	A	1	1	0|1	G	A
+23655464	phase6_comp_514	1	1.0	T	C	1	1	0|1	T	C
+23655810	phase6_comp_514	1	1.0	T	C	1	1	0|1	T	C
+23656021	phase6_comp_514	1	1.0	G	C	1	1	0|1	G	C
+23656288	phase6_comp_514	1	1.0	A	G	1	1	0|1	A	G
+23656593	phase6_comp_514	1	1.0	G	A	1	1	0|1	G	A
+23656707	phase6_comp_514	1	1.0	G	A	1	1	0|1	G	A
+23656875	phase6_comp_514	1	1.0	T	C	1	1	0|1	T	C
+23656912	phase6_comp_514	1	1.0	T	C	1	1	0|1	T	C
+23657070	phase6_comp_514	1	1.0	T	C	1	1	0|1	T	C
+23657097	phase6_comp_514	1	1.0	T	A	1	1	0|1	T	A
+23657131	phase6_comp_514	1	1.0	C	T	1	1	0|1	C	T
+23657161	phase6_comp_514	1	1.0	C	T	1	1	0|1	C	T
+23657440	phase6_comp_514	1	1.0	T	C	1	1	0|1	T	C
+23657865	phase6_comp_515	1	1.0	C	T	0				
+23658299	phase6_comp_515	-1	1.0	C	T	1	1	0|1	C	T
+23658341	phase6_comp_515	1	1.0	G	T	1	-1	1|0	G	T
+23658362	phase6_comp_515	1	1.0	T	C	1	-1	1|0	T	C
+23658380	phase6_comp_515	1	1.0	G	A	0				
+23658382	phase6_comp_515	1	1.0	C	G	0				
+23658806	phase6_comp_515	1	1.0	G	A	1	-1	1|0	G	A
+23658907	phase6_comp_515	-1	1.0	C	T	1	1	0|1	C	T
+23659069	phase6_comp_515	1	1.0	A	C	0				
+23659456	phase6_comp_515	-1	1.0	C	T	1	1	0|1	C	T
+23659650	phase6_comp_515	1	1.0	T	G	1	-1	1|0	T	G
+23659788	phase6_comp_515	-1	1.0	A	T	1	1	0|1	A	T
+23660335	phase6_comp_515	-1	1.0	T	G	1	1	0|1	T	G
+23660828	phase6_comp_515	1	1.0	C	T	1	-1	1|0	C	T
+23660938	phase6_comp_515	-1	1.0	T	A	0				
+23662124	unassigned	0	0.0	G	A	1	1	0|1	G	A
+23662600	phase6_comp_516	1	1.0	C	A	1	-1	1|0	C	A
+23662727	phase6_comp_516	-1	1.0	G	C	1	1	0|1	G	C
+23662892	phase6_comp_516	-1	1.0	G	T	1	1	0|1	G	T
+23663107	phase6_comp_516	-1	1.0	C	G	1	1	0|1	C	G
+23663127	phase6_comp_516	-1	1.0	G	T	1	1	0|1	G	T
+23663252	phase6_comp_516	1	1.0	C	T	1	-1	1|0	C	T
+23663337	phase6_comp_516	-1	1.0	A	C	1	1	0|1	A	C
+23663561	phase6_comp_516	-1	1.0	C	T	1	1	0|1	C	T
+23663914	phase6_comp_516	1	1.0	A	C	1	-1	1|0	A	C
+23663953	phase6_comp_516	-1	1.0	C	T	1	1	0|1	C	T
+23664341	phase6_comp_516	-1	1.0	C	T	1	1	0|1	C	T
+23664746	phase6_comp_516	-1	1.0	C	G	1	1	0|1	C	G
+23664747	phase6_comp_516	1	0.930451	G	A	1	-1	1|0	G	A
+23665229	phase6_comp_516	1	1.0	G	A	1	-1	1|0	G	A
+23665954	phase6_comp_516	-1	1.0	C	T	1	1	0|1	C	T
+23666216	phase6_comp_516	1	1.0	A	G	1	-1	1|0	A	G
+23666222	phase6_comp_516	1	1.0	A	C	1	-1	1|0	A	C
+23666308	phase6_comp_516	-1	1.0	T	C	1	1	0|1	T	C
+23666310	phase6_comp_516	-1	1.0	C	T	1	1	0|1	C	T
+23666316	phase6_comp_516	-1	1.0	A	G	1	1	0|1	A	G
+23666512	phase6_comp_516	-1	1.0	T	C	1	1	0|1	T	C
+23666586	phase6_comp_516	-1	1.0	C	T	1	1	0|1	C	T
+23666596	phase6_comp_516	-1	1.0	A	G	1	1	0|1	A	G
+23667054	phase6_comp_516	-1	1.0	C	G	1	1	0|1	C	G
+23667175	phase6_comp_516	1	1.0	C	T	1	-1	1|0	C	T
+23667257	phase6_comp_516	-1	1.0	A	G	1	1	0|1	A	G
+23667303	phase6_comp_516	-1	1.0	C	T	1	1	0|1	C	T
+23667731	phase6_comp_516	-1	1.0	G	T	1	1	0|1	G	T
+23668073	phase6_comp_516	-1	1.0	T	C	1	1	0|1	T	C
+23668209	phase6_comp_516	-1	1.0	T	C	1	1	0|1	T	C
+23668290	phase6_comp_516	-1	1.0	T	C	1	1	0|1	T	C
+23668726	phase6_comp_516	-1	1.0	T	C	1	1	0|1	T	C
+23669169	phase6_comp_516	-1	1.0	C	T	1	1	0|1	C	T
+23669533	phase6_comp_516	1	1.0	G	A	1	-1	1|0	G	A
+23669606	phase6_comp_516	1	1.0	A	G	1	-1	1|0	A	G
+23669698	phase6_comp_516	-1	1.0	A	C	1	1	0|1	A	C
+23670437	unassigned	0	0.0	G	A	1	1	0|1	G	A
+23670991	phase6_comp_517	1	1.0	C	G	1	1	0|1	C	G
+23671101	phase6_comp_517	1	1.0	G	A	1	1	0|1	G	A
+23671270	phase6_comp_517	1	1.0	T	C	1	1	0|1	T	C
+23671390	phase6_comp_517	1	1.0	G	A	1	1	0|1	G	A
+23671392	phase6_comp_517	1	1.0	G	A	1	1	0|1	G	A
+23671515	phase6_comp_517	1	1.0	C	T	1	1	0|1	C	T
+23671570	phase6_comp_517	-1	1.0	C	G	1	-1	1|0	C	G
+23671681	phase6_comp_517	-1	1.0	G	A	1	-1	1|0	G	A
+23671717	phase6_comp_517	-1	1.0	C	T	1	-1	1|0	C	T
+23671993	phase6_comp_517	1	1.0	A	G	1	1	0|1	A	G
+23672042	phase6_comp_517	-1	1.0	C	T	1	-1	1|0	C	T
+23673728	phase6_comp_518	1	1.0	G	A	1	1	0|1	G	A
+23673843	phase6_comp_518	1	1.0	C	T	1	1	0|1	C	T
+23673951	phase6_comp_518	-1	1.0	G	A	1	-1	1|0	G	A
+23674714	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+23675826	phase6_comp_519	1	1.0	C	G	1	1	0|1	C	G
+23675828	phase6_comp_519	1	1.0	G	C	1	1	0|1	G	C
+23676663	phase6_comp_520	1	1.0	T	C	1	-1	1|0	T	C
+23676688	phase6_comp_520	-1	1.0	T	C	1	1	0|1	T	C
+23678388	phase6_comp_521	1	1.0	C	T	1	1	0|1	C	T
+23678873	phase6_comp_521	-1	1.0	T	C	0				
+23679220	phase6_comp_521	1	1.0	C	T	1	1	0|1	C	T
+23679275	phase6_comp_521	-1	1.0	G	A	1	-1	1|0	G	A
+23679302	phase6_comp_521	1	1.0	C	T	1	1	0|1	C	T
+23679338	phase6_comp_521	1	1.0	T	A	1	1	0|1	T	A
+23679645	phase6_comp_521	1	1.0	C	T	1	1	0|1	C	T
+23679698	phase6_comp_521	1	1.0	C	T	1	1	0|1	C	T
+23679706	phase6_comp_521	1	1.0	T	C	1	1	0|1	T	C
+23679928	phase6_comp_521	1	1.0	C	T	1	1	0|1	C	T
+23680120	phase6_comp_521	1	1.0	G	A	1	1	0|1	G	A
+23680444	phase6_comp_521	1	1.0	C	T	1	1	0|1	C	T
+23680788	phase6_comp_521	1	1.0	A	T	1	1	0|1	A	T
+23680950	phase6_comp_521	-1	1.0	C	T	1	-1	1|0	C	T
+23682628	phase6_comp_522	1	1.0	C	T	1	1	0|1	C	T
+23682820	phase6_comp_522	-1	1.0	G	C	0				
+23683303	phase6_comp_522	1	1.0	T	C	0				
+23686003	phase6_comp_522	-1	1.0	T	C	1	-1	1|0	T	C
+23686164	phase6_comp_522	-1	1.0	T	C	1	-1	1|0	T	C
+23686225	phase6_comp_522	1	1.0	T	C	1	1	0|1	T	C
+23686888	phase6_comp_522	-1	1.0	A	G	1	-1	1|0	A	G
+23687459	phase6_comp_522	1	1.0	T	G	1	1	0|1	T	G
+23689525	unassigned	0	0.0	G	T	1	1	0|1	G	T
+23690584	unassigned	0	0.0	T	A	1	-1	1|0	T	A
+23691682	phase6_comp_523	1	1.0	A	G	1	-1	1|0	A	G
+23692101	phase6_comp_523	-1	1.0	A	G	1	1	0|1	A	G
+23695119	unassigned	0	0.0	T	G	1	-1	1|0	T	G
+23700393	unassigned	0	0.0	C	G	1	-1	1|0	C	G
+23702301	unassigned	0	0.0	C	G	1	1	0|1	C	G
+23703134	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23703458	phase6_comp_524	1	1.0	C	T	1	-1	1|0	C	T
+23703775	phase6_comp_524	-1	1.0	A	C	1	1	0|1	A	C
+23704065	phase6_comp_524	1	1.0	A	C	1	-1	1|0	A	C
+23704124	phase6_comp_524	1	1.0	C	A	1	-1	1|0	C	A
+23707386	phase6_comp_525	1	1.0	T	C	1	-1	1|0	T	C
+23707390	phase6_comp_525	1	1.0	G	A	1	-1	1|0	G	A
+23707531	phase6_comp_525	1	1.0	T	C	1	-1	1|0	T	C
+23708101	phase6_comp_526	1	1.0	G	A	1	-1	1|0	G	A
+23708284	phase6_comp_526	1	1.0	C	A	1	-1	1|0	C	A
+23709844	unassigned	0	0.0	C	T	1	1	0|1	C	T
+23711037	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+23712256	phase6_comp_527	1	1.0	A	T	1	-1	1|0	A	T
+23712478	phase6_comp_527	1	1.0	G	C	1	-1	1|0	G	C
+23713215	unassigned	0	0.0	C	A	1	1	0|1	C	A
+23714350	unassigned	0	0.0	G	A	1	1	0|1	G	A
+23715298	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23716713	unassigned	0	0.0	G	C	1	1	0|1	G	C
+23718901	unassigned	0	0.0	C	A	1	1	0|1	C	A
+23719511	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23720333	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+23720576	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23722627	phase6_comp_528	1	1.0	A	G	1	-1	1|0	A	G
+23722702	phase6_comp_528	1	1.0	C	T	1	-1	1|0	C	T
+23723603	unassigned	0	0.0	A	T	1	1	0|1	A	T
+23724205	phase6_comp_529	1	1.0	G	C	1	1	0|1	G	C
+23724212	phase6_comp_529	1	1.0	T	G	1	1	0|1	T	G
+23724604	phase6_comp_529	1	1.0	C	T	0				
+23726460	phase6_comp_530	1	1.0	T	A	1	-1	1|0	T	A
+23726701	phase6_comp_530	-1	1.0	C	T	1	1	0|1	C	T
+23728229	phase6_comp_531	1	1.0	T	C	1	1	0|1	T	C
+23728710	phase6_comp_531	1	1.0	A	G	1	1	0|1	A	G
+23729690	phase6_comp_532	1	1.0	G	A	1	1	0|1	G	A
+23730069	phase6_comp_532	1	1.0	G	C	1	1	0|1	G	C
+23731753	unassigned	0	0.0	C	T	1	1	0|1	C	T
+23732377	phase6_comp_533	1	1.0	C	T	1	1	0|1	C	T
+23732968	phase6_comp_533	1	1.0	T	C	1	1	0|1	T	C
+23733483	phase6_comp_533	1	1.0	T	A	1	1	0|1	T	A
+23733566	phase6_comp_533	-1	1.0	T	C	1	-1	1|0	T	C
+23733828	phase6_comp_533	-1	1.0	C	T	1	-1	1|0	C	T
+23735702	unassigned	0	0.0	C	A	1	-1	1|0	C	A
+23736706	phase6_comp_534	1	1.0	T	C	1	-1	1|0	T	C
+23736745	phase6_comp_534	1	1.0	G	A	1	-1	1|0	G	A
+23737484	unassigned	0	0.0	T	C	0				
+23739899	phase6_comp_535	1	1.0	C	T	1	-1	1|0	C	T
+23739925	phase6_comp_535	1	1.0	T	C	1	-1	1|0	T	C
+23740628	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23743065	phase6_comp_536	1	1.0	C	T	1	-1	1|0	C	T
+23743680	phase6_comp_536	1	1.0	G	A	1	-1	1|0	G	A
+23743920	phase6_comp_536	1	1.0	A	G	1	-1	1|0	A	G
+23746137	phase6_comp_537	1	1.0	G	A	1	-1	1|0	G	A
+23746437	phase6_comp_537	1	1.0	T	C	1	-1	1|0	T	C
+23746883	phase6_comp_537	1	1.0	C	A	1	-1	1|0	C	A
+23747803	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23748607	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23749573	unassigned	0	0.0	T	A	0				
+23750410	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23751238	phase6_comp_538	1	1.0	A	T	1	-1	1|0	A	T
+23751602	phase6_comp_538	1	1.0	C	A	1	-1	1|0	C	A
+23752028	phase6_comp_538	1	1.0	G	C	0				
+23752289	phase6_comp_538	1	1.0	T	G	1	-1	1|0	T	G
+23752725	phase6_comp_538	1	1.0	T	C	1	-1	1|0	T	C
+23753946	phase6_comp_539	1	1.0	A	G	1	-1	1|0	A	G
+23754003	phase6_comp_539	1	1.0	A	G	1	-1	1|0	A	G
+23754040	phase6_comp_539	1	1.0	A	G	1	-1	1|0	A	G
+23754081	phase6_comp_539	1	1.0	G	T	1	-1	1|0	G	T
+23754277	phase6_comp_539	1	1.0	C	T	1	-1	1|0	C	T
+23754539	phase6_comp_539	1	1.0	T	A	1	-1	1|0	T	A
+23754778	phase6_comp_539	1	1.0	G	A	0				
+23756069	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+23767275	phase6_comp_540	1	1.0	T	C	1	1	0|1	T	C
+23767363	phase6_comp_540	1	1.0	T	C	1	1	0|1	T	C
+23767587	phase6_comp_540	1	1.0	T	G	1	1	0|1	T	G
+23768857	unassigned	0	0.0	C	A	1	1	0|1	C	A
+23770713	phase6_comp_541	1	1.0	A	G	1	1	0|1	A	G
+23771049	phase6_comp_541	1	1.0	A	G	0				
+23771357	phase6_comp_541	1	1.0	C	T	1	1	0|1	C	T
+23773328	unassigned	0	0.0	C	T	1	1	0|1	C	T
+23774399	phase6_comp_542	1	1.0	G	T	1	1	0|1	G	T
+23774630	phase6_comp_542	1	1.0	T	C	1	1	0|1	T	C
+23775338	phase6_comp_543	1	1.0	C	T	1	1	0|1	C	T
+23775729	phase6_comp_543	1	1.0	A	G	1	1	0|1	A	G
+23779191	unassigned	0	0.0	C	T	1	1	0|1	C	T
+23780080	phase6_comp_544	1	1.0	A	G	1	1	0|1	A	G
+23780312	phase6_comp_544	1	1.0	G	A	1	1	0|1	G	A
+23782655	unassigned	0	0.0	A	G	1	1	0|1	A	G
+23783378	unassigned	0	0.0	G	A	1	1	0|1	G	A
+23784667	unassigned	0	0.0	A	C	1	1	0|1	A	C
+23785201	phase6_comp_545	1	1.0	C	A	1	1	0|1	C	A
+23785308	phase6_comp_545	1	1.0	T	C	1	1	0|1	T	C
+23786193	unassigned	0	0.0	G	A	1	1	0|1	G	A
+23786818	unassigned	0	0.0	T	G	1	1	0|1	T	G
+23791181	phase6_comp_546	1	1.0	C	G	1	1	0|1	C	G
+23791383	phase6_comp_546	1	1.0	G	A	1	1	0|1	G	A
+23792115	phase6_comp_547	1	1.0	T	C	1	1	0|1	T	C
+23792207	phase6_comp_547	1	1.0	T	C	1	1	0|1	T	C
+23792571	phase6_comp_547	1	1.0	G	A	1	1	0|1	G	A
+23794027	unassigned	0	0.0	T	C	1	1	0|1	T	C
+23796157	unassigned	0	0.0	G	A	1	1	0|1	G	A
+23796654	unassigned	0	0.0	G	A	1	1	0|1	G	A
+23797155	phase6_comp_548	1	1.0	C	T	0				
+23797174	phase6_comp_548	1	1.0	G	A	0				
+23797293	phase6_comp_548	1	1.0	T	C	0				
+23798161	unassigned	0	0.0	A	G	1	1	0|1	A	G
+23799164	phase6_comp_549	1	1.0	C	T	1	-1	1|0	C	T
+23799657	phase6_comp_549	-1	1.0	T	C	0				
+23800143	phase6_comp_550	1	1.0	T	A	1	1	0|1	T	A
+23800336	phase6_comp_550	1	1.0	T	C	1	1	0|1	T	C
+23800551	phase6_comp_550	1	1.0	C	A	1	1	0|1	C	A
+23801315	unassigned	0	0.0	C	G	1	1	0|1	C	G
+23803208	phase6_comp_551	1	1.0	A	G	1	1	0|1	A	G
+23803488	phase6_comp_551	1	1.0	G	C	1	1	0|1	G	C
+23803540	phase6_comp_551	1	1.0	C	T	1	1	0|1	C	T
+23804373	phase6_comp_552	1	1.0	C	T	1	1	0|1	C	T
+23804613	phase6_comp_552	1	1.0	G	A	1	1	0|1	G	A
+23804869	phase6_comp_552	1	1.0	A	G	1	1	0|1	A	G
+23805136	phase6_comp_552	1	1.0	G	A	1	1	0|1	G	A
+23806086	phase6_comp_553	1	1.0	A	G	1	1	0|1	A	G
+23806502	phase6_comp_553	1	1.0	C	T	1	1	0|1	C	T
+23807581	unassigned	0	0.0	T	A	1	1	0|1	T	A
+23808666	phase6_comp_554	1	1.0	G	A	0				
+23809023	phase6_comp_554	1	1.0	T	C	0				
+23809084	phase6_comp_554	1	1.0	T	C	0				
+23809396	phase6_comp_554	1	1.0	T	C	0				
+23809792	phase6_comp_554	1	1.0	A	G	0				
+23809921	phase6_comp_554	1	1.0	T	A	1	1	0|1	T	A
+23809952	phase6_comp_554	1	1.0	C	T	1	1	0|1	C	T
+23810928	unassigned	0	0.0	C	T	1	1	0|1	C	T
+23812924	phase6_comp_555	1	1.0	G	C	1	1	0|1	G	C
+23813089	phase6_comp_555	1	1.0	A	T	1	1	0|1	A	T
+23813368	phase6_comp_555	1	1.0	G	A	1	1	0|1	G	A
+23813427	phase6_comp_555	1	1.0	G	A	1	1	0|1	G	A
+23813841	phase6_comp_555	1	1.0	T	A	1	1	0|1	T	A
+23813922	phase6_comp_555	1	1.0	C	T	1	1	0|1	C	T
+23814024	phase6_comp_555	1	1.0	A	T	1	1	0|1	A	T
+23815223	phase6_comp_556	1	1.0	G	T	1	1	0|1	G	T
+23815491	phase6_comp_556	1	1.0	G	A	1	1	0|1	G	A
+23815497	phase6_comp_556	1	1.0	G	A	1	1	0|1	G	A
+23815962	phase6_comp_556	1	1.0	A	G	1	1	0|1	A	G
+23816078	phase6_comp_556	1	1.0	C	G	1	1	0|1	C	G
+23816128	phase6_comp_556	1	1.0	C	A	1	1	0|1	C	A
+23816386	phase6_comp_556	1	1.0	G	A	1	1	0|1	G	A
+23816510	phase6_comp_556	1	1.0	G	C	1	1	0|1	G	C
+23816522	phase6_comp_556	1	1.0	A	G	1	1	0|1	A	G
+23817120	phase6_comp_556	1	1.0	A	T	1	1	0|1	A	T
+23817250	phase6_comp_556	1	1.0	G	T	1	1	0|1	G	T
+23819294	phase6_comp_557	1	1.0	G	A	1	1	0|1	G	A
+23819530	phase6_comp_557	1	1.0	C	T	1	1	0|1	C	T
+23819777	phase6_comp_557	1	1.0	G	T	1	1	0|1	G	T
+23820558	phase6_comp_557	1	1.0	C	T	1	1	0|1	C	T
+23821963	phase6_comp_558	1	1.0	A	G	1	1	0|1	A	G
+23822322	phase6_comp_558	1	1.0	A	G	1	1	0|1	A	G
+23824601	unassigned	0	0.0	G	A	1	1	0|1	G	A
+23826022	phase6_comp_559	1	1.0	A	G	1	1	0|1	A	G
+23826357	phase6_comp_559	1	1.0	G	C	1	1	0|1	G	C
+23827009	phase6_comp_560	1	1.0	G	C	1	1	0|1	G	C
+23827564	phase6_comp_560	1	1.0	C	T	1	1	0|1	C	T
+23828841	phase6_comp_561	1	1.0	T	C	1	1	0|1	T	C
+23829014	phase6_comp_561	1	1.0	C	T	1	1	0|1	C	T
+23829118	phase6_comp_561	1	1.0	A	G	1	1	0|1	A	G
+23829884	phase6_comp_562	1	1.0	G	A	1	1	0|1	G	A
+23830262	phase6_comp_562	1	1.0	G	A	1	1	0|1	G	A
+23830954	unassigned	0	0.0	A	C	1	1	0|1	A	C
+23831820	phase6_comp_563	1	1.0	A	G	1	1	0|1	A	G
+23832116	phase6_comp_563	1	1.0	G	A	1	1	0|1	G	A
+23832221	phase6_comp_563	1	1.0	A	G	1	1	0|1	A	G
+23832948	phase6_comp_563	1	1.0	C	T	1	1	0|1	C	T
+23833021	phase6_comp_563	1	1.0	G	A	1	1	0|1	G	A
+23835324	unassigned	0	0.0	A	C	1	1	0|1	A	C
+23836092	phase6_comp_564	1	1.0	G	A	1	1	0|1	G	A
+23836403	phase6_comp_564	1	1.0	C	G	1	1	0|1	C	G
+23837537	unassigned	0	0.0	G	C	1	1	0|1	G	C
+23839465	unassigned	0	0.0	A	G	1	1	0|1	A	G
+23841011	unassigned	0	0.0	C	T	1	1	0|1	C	T
+23844171	phase6_comp_565	1	1.0	T	G	1	1	0|1	T	G
+23844536	phase6_comp_565	1	1.0	T	C	1	1	0|1	T	C
+23844926	phase6_comp_565	1	1.0	C	T	1	1	0|1	C	T
+23845299	phase6_comp_565	1	1.0	T	C	1	1	0|1	T	C
+23845433	phase6_comp_565	1	1.0	G	A	1	1	0|1	G	A
+23845633	phase6_comp_565	1	1.0	A	G	1	1	0|1	A	G
+23846845	unassigned	0	0.0	C	G	1	-1	1|0	C	G
+23848827	phase6_comp_566	1	1.0	G	A	1	-1	1|0	G	A
+23849329	phase6_comp_566	1	1.0	T	C	1	-1	1|0	T	C
+23849894	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23851812	unassigned	0	0.0	C	G	1	1	0|1	C	G
+23857127	phase6_comp_567	1	1.0	G	T	0				
+23857332	phase6_comp_567	1	1.0	C	T	1	1	0|1	C	T
+23858073	phase6_comp_568	1	1.0	G	A	1	1	0|1	G	A
+23858483	phase6_comp_568	1	1.0	A	G	1	1	0|1	A	G
+23858484	phase6_comp_568	1	1.0	G	T	1	1	0|1	G	T
+23858640	phase6_comp_568	1	1.0	G	A	1	1	0|1	G	A
+23859375	phase6_comp_569	1	1.0	T	G	1	-1	1|0	T	G
+23859387	phase6_comp_569	-1	1.0	C	G	1	1	0|1	C	G
+23860642	phase6_comp_570	1	1.0	G	T	1	1	0|1	G	T
+23860764	phase6_comp_570	-1	1.0	C	A	0				
+23860990	phase6_comp_570	1	1.0	T	C	1	1	0|1	T	C
+23860995	phase6_comp_570	1	1.0	G	A	1	1	0|1	G	A
+23861559	phase6_comp_570	1	1.0	A	G	1	1	0|1	A	G
+23861837	phase6_comp_570	1	1.0	G	A	1	1	0|1	G	A
+23862441	phase6_comp_570	1	1.0	G	A	1	1	0|1	G	A
+23862465	phase6_comp_570	1	1.0	C	T	1	1	0|1	C	T
+23862466	phase6_comp_570	1	1.0	A	G	1	1	0|1	A	G
+23862469	phase6_comp_570	1	1.0	T	C	1	1	0|1	T	C
+23862589	phase6_comp_570	-1	1.0	C	T	0				
+23862625	phase6_comp_570	1	0.948484	A	T	0				
+23862714	phase6_comp_570	1	1.0	A	C	1	1	0|1	A	C
+23862812	phase6_comp_570	1	1.0	G	A	1	1	0|1	G	A
+23863251	phase6_comp_570	1	1.0	G	C	1	1	0|1	G	C
+23863368	phase6_comp_570	1	1.0	G	A	1	1	0|1	G	A
+23864397	phase6_comp_571	1	1.0	C	T	1	-1	1|0	C	T
+23864443	phase6_comp_571	-1	1.0	C	T	1	1	0|1	C	T
+23864444	phase6_comp_571	1	1.0	G	A	1	-1	1|0	G	A
+23864475	phase6_comp_571	1	1.0	C	T	1	-1	1|0	C	T
+23864693	phase6_comp_571	1	1.0	G	A	1	-1	1|0	G	A
+23864984	phase6_comp_571	1	1.0	G	A	0				
+23865039	phase6_comp_571	-1	1.0	G	A	0				
+23865775	phase6_comp_572	1	1.0	A	G	1	-1	1|0	A	G
+23865996	phase6_comp_572	1	1.0	T	C	1	-1	1|0	T	C
+23866059	phase6_comp_572	1	1.0	T	C	1	-1	1|0	T	C
+23866195	phase6_comp_572	1	1.0	G	A	1	-1	1|0	G	A
+23867863	unassigned	0	0.0	A	C	1	1	0|1	A	C
+23870061	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23870639	phase6_comp_573	1	1.0	A	G	1	-1	1|0	A	G
+23870649	phase6_comp_573	1	1.0	A	G	1	-1	1|0	A	G
+23870658	phase6_comp_573	1	1.0	C	G	1	-1	1|0	C	G
+23870722	phase6_comp_573	1	1.0	C	T	1	-1	1|0	C	T
+23870817	phase6_comp_573	1	1.0	C	T	1	-1	1|0	C	T
+23870972	phase6_comp_573	1	1.0	G	A	1	-1	1|0	G	A
+23871134	phase6_comp_573	1	1.0	A	G	1	-1	1|0	A	G
+23871166	phase6_comp_573	1	1.0	T	G	1	-1	1|0	T	G
+23871313	phase6_comp_573	1	1.0	C	T	1	-1	1|0	C	T
+23875262	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+23879218	phase6_comp_574	1	1.0	G	C	1	1	0|1	G	C
+23879258	phase6_comp_574	1	1.0	C	T	1	1	0|1	C	T
+23880419	phase6_comp_575	1	1.0	T	C	1	1	0|1	T	C
+23880523	phase6_comp_575	1	1.0	C	T	1	1	0|1	C	T
+23880557	phase6_comp_575	1	1.0	T	C	1	1	0|1	T	C
+23881480	unassigned	0	0.0	C	T	1	1	0|1	C	T
+23882468	phase6_comp_576	1	1.0	G	A	1	1	0|1	G	A
+23882472	phase6_comp_576	1	1.0	C	A	1	1	0|1	C	A
+23885059	unassigned	0	0.0	A	C	1	-1	1|0	A	C
+23885741	unassigned	0	0.0	A	T	1	-1	1|0	A	T
+23886750	unassigned	0	0.0	T	C	1	1	0|1	T	C
+23888222	unassigned	0	0.0	G	A	0				
+23890320	phase6_comp_577	1	1.0	G	A	1	1	0|1	G	A
+23890538	phase6_comp_577	1	1.0	G	A	1	1	0|1	G	A
+23890560	phase6_comp_577	1	1.0	G	A	1	1	0|1	G	A
+23890688	phase6_comp_577	1	1.0	G	A	1	1	0|1	G	A
+23890859	phase6_comp_577	1	1.0	C	T	1	1	0|1	C	T
+23891405	phase6_comp_577	1	1.0	C	T	1	1	0|1	C	T
+23891540	phase6_comp_577	1	1.0	A	G	0				
+23891542	phase6_comp_577	1	1.0	G	C	0				
+23891811	phase6_comp_577	1	1.0	G	A	1	1	0|1	G	A
+23891985	phase6_comp_577	1	1.0	A	G	1	1	0|1	A	G
+23895559	unassigned	0	0.0	G	C	1	-1	1|0	G	C
+23897951	phase6_comp_578	1	1.0	T	C	1	1	0|1	T	C
+23898153	phase6_comp_578	1	1.0	G	A	1	1	0|1	G	A
+23898914	phase6_comp_579	1	1.0	C	T	1	1	0|1	C	T
+23899346	phase6_comp_579	1	1.0	A	G	1	1	0|1	A	G
+23899424	phase6_comp_579	1	1.0	G	T	1	1	0|1	G	T
+23900700	phase6_comp_580	1	1.0	C	T	1	1	0|1	C	T
+23900786	phase6_comp_580	1	1.0	A	G	1	1	0|1	A	G
+23901386	phase6_comp_581	1	1.0	G	A	1	1	0|1	G	A
+23901549	phase6_comp_581	1	1.0	C	T	1	1	0|1	C	T
+23903105	unassigned	0	0.0	A	G	1	1	0|1	A	G
+23905123	phase6_comp_582	1	1.0	A	G	1	1	0|1	A	G
+23905606	phase6_comp_582	1	1.0	T	C	1	1	0|1	T	C
+23905607	phase6_comp_582	1	1.0	G	C	1	1	0|1	G	C
+23905979	phase6_comp_582	1	1.0	T	G	1	1	0|1	T	G
+23906127	phase6_comp_582	1	1.0	A	G	1	1	0|1	A	G
+23906227	phase6_comp_582	1	1.0	G	A	1	1	0|1	G	A
+23906525	phase6_comp_582	1	1.0	T	C	1	1	0|1	T	C
+23906574	phase6_comp_582	1	1.0	T	C	1	1	0|1	T	C
+23906594	phase6_comp_582	1	1.0	A	G	1	1	0|1	A	G
+23907271	phase6_comp_582	1	1.0	A	C	1	1	0|1	A	C
+23907299	phase6_comp_582	1	1.0	A	G	1	1	0|1	A	G
+23907429	phase6_comp_582	1	1.0	A	C	1	1	0|1	A	C
+23907501	phase6_comp_582	1	1.0	G	A	1	1	0|1	G	A
+23907552	phase6_comp_582	1	1.0	C	T	1	1	0|1	C	T
+23907613	phase6_comp_582	1	1.0	A	G	1	1	0|1	A	G
+23908168	phase6_comp_582	1	1.0	T	C	1	1	0|1	T	C
+23908458	phase6_comp_582	1	1.0	C	A	1	1	0|1	C	A
+23908608	phase6_comp_582	1	1.0	C	G	1	1	0|1	C	G
+23909157	phase6_comp_582	1	1.0	T	C	1	1	0|1	T	C
+23909330	phase6_comp_582	1	1.0	C	T	1	1	0|1	C	T
+23909579	phase6_comp_582	1	1.0	C	A	1	1	0|1	C	A
+23909898	phase6_comp_582	1	1.0	A	G	1	1	0|1	A	G
+23910410	phase6_comp_582	1	1.0	T	C	1	1	0|1	T	C
+23910481	phase6_comp_582	1	1.0	G	T	1	1	0|1	G	T
+23910655	phase6_comp_582	1	1.0	T	C	1	1	0|1	T	C
+23910751	phase6_comp_582	1	1.0	C	G	1	1	0|1	C	G
+23911868	phase6_comp_583	1	1.0	C	T	1	1	0|1	C	T
+23911926	phase6_comp_583	1	1.0	C	T	1	1	0|1	C	T
+23912176	phase6_comp_583	1	1.0	C	T	1	1	0|1	C	T
+23912675	phase6_comp_583	1	1.0	G	T	1	1	0|1	G	T
+23913021	phase6_comp_583	1	1.0	G	A	1	1	0|1	G	A
+23913109	phase6_comp_583	1	1.0	C	T	1	1	0|1	C	T
+23914707	phase6_comp_584	1	1.0	T	C	1	-1	1|0	T	C
+23915150	phase6_comp_584	-1	1.0	G	A	1	1	0|1	G	A
+23916590	unassigned	0	0.0	C	T	1	1	0|1	C	T
+23917585	phase6_comp_585	1	1.0	C	G	0				
+23917919	phase6_comp_585	-1	1.0	T	C	0				
+23918276	phase6_comp_585	1	1.0	C	T	0				
+23918817	phase6_comp_586	1	1.0	C	T	0				
+23919110	phase6_comp_586	1	1.0	T	A	0				
+23919486	phase6_comp_586	1	1.0	C	T	0				
+23919659	phase6_comp_586	1	1.0	G	A	0				
+23919874	phase6_comp_586	1	1.0	G	A	0				
+23920128	phase6_comp_586	1	1.0	T	C	0				
+23921287	phase6_comp_587	1	1.0	C	T	0				
+23921356	phase6_comp_587	-1	1.0	G	C	0				
+23921902	phase6_comp_588	1	1.0	T	G	0				
+23922208	phase6_comp_588	1	1.0	C	T	0				
+23923472	unassigned	0	0.0	C	T	0				
+23924539	phase6_comp_589	1	1.0	T	C	0				
+23924618	phase6_comp_589	-1	1.0	C	T	0				
+23924644	phase6_comp_589	1	1.0	G	C	0				
+23924680	phase6_comp_589	1	1.0	G	A	0				
+23924767	phase6_comp_589	1	1.0	A	C	0				
+23924860	phase6_comp_589	1	1.0	C	T	0				
+23926460	phase6_comp_590	1	1.0	C	T	0				
+23927272	phase6_comp_590	-1	1.0	G	T	0				
+23927512	phase6_comp_590	1	1.0	C	T	0				
+23927728	phase6_comp_590	1	1.0	C	A	0				
+23927818	phase6_comp_590	1	1.0	T	C	0				
+23929935	unassigned	0	0.0	C	T	0				
+23931098	phase6_comp_591	1	1.0	G	T	0				
+23931326	phase6_comp_591	1	1.0	T	C	0				
+23969285	unassigned	0	0.0	G	A	0				
+23970015	phase6_comp_592	1	1.0	G	A	0				
+23970400	phase6_comp_592	-1	1.0	G	A	0				
+23971679	phase6_comp_593	1	1.0	C	G	0				
+23971765	phase6_comp_593	1	1.0	A	G	0				
+23987221	phase6_comp_594	1	0.790233	C	A	0				
+23987320	phase6_comp_594	-1	0.927296	T	G	0				
+23987803	phase6_comp_594	-1	1.0	G	C	0				
+23987909	phase6_comp_594	-1	1.0	C	T	0				
+23989741	unassigned	0	0.0	C	G	0				
+23992230	phase6_comp_595	1	1.0	A	G	0				
+23992260	phase6_comp_595	1	1.0	C	T	0				
+23993783	phase6_comp_596	1	0.732877	G	A	0				
+23993976	phase6_comp_596	-1	1.0	G	A	0				
+23995147	unassigned	0	0.0	T	G	0				
+23995877	phase6_comp_597	1	1.0	T	G	0				
+23996188	phase6_comp_597	1	1.0	C	T	0				
+23996407	phase6_comp_597	1	1.0	T	C	0				
+23996492	phase6_comp_597	1	1.0	A	T	0				
+23997859	phase6_comp_598	1	1.0	T	C	0				
+23997905	phase6_comp_598	1	1.0	G	A	0				
+23997914	phase6_comp_598	1	1.0	T	C	0				
+23998350	phase6_comp_598	1	1.0	C	T	0				
+23998907	phase6_comp_598	1	1.0	G	A	0				
+24001339	phase6_comp_599	1	1.0	C	G	0				
+24001704	phase6_comp_599	1	1.0	G	C	0				
+24003379	phase6_comp_600	1	1.0	T	G	0				
+24003914	phase6_comp_600	1	1.0	A	C	0				
+24005057	phase6_comp_601	1	1.0	T	C	0				
+24005096	phase6_comp_601	1	1.0	G	A	0				
+24008384	phase6_comp_602	1	1.0	C	G	0				
+24009046	phase6_comp_602	1	1.0	G	A	0				
+24011117	unassigned	0	0.0	A	G	0				
+24042251	unassigned	0	0.0	G	C	1	-1	1|0	G	C
+24058591	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+24067613	unassigned	0	0.0	C	A	1	-1	1|0	C	A
+24088384	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24107857	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+24132091	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+24139663	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+24162332	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24190171	unassigned	0	0.0	T	G	0				
+24191335	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24191850	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+24212548	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+24217102	unassigned	0	0.0	G	C	1	1	0|1	G	C
+24217939	phase6_comp_603	1	1.0	T	C	1	1	0|1	T	C
+24218138	phase6_comp_603	1	1.0	A	C	1	1	0|1	A	C
+24218338	phase6_comp_603	1	1.0	G	A	1	1	0|1	G	A
+24219480	phase6_comp_604	1	1.0	A	G	1	1	0|1	A	G
+24219538	phase6_comp_604	1	1.0	A	G	1	1	0|1	A	G
+24219540	phase6_comp_604	1	1.0	G	A	1	1	0|1	G	A
+24220908	phase6_comp_605	1	1.0	A	G	1	1	0|1	A	G
+24220938	phase6_comp_605	1	1.0	T	C	1	1	0|1	T	C
+24221033	phase6_comp_605	1	1.0	C	G	1	1	0|1	C	G
+24221133	phase6_comp_605	1	1.0	C	T	1	1	0|1	C	T
+24221254	phase6_comp_605	1	1.0	C	T	1	1	0|1	C	T
+24221271	phase6_comp_605	1	1.0	C	A	1	1	0|1	C	A
+24221303	phase6_comp_605	1	1.0	C	T	1	1	0|1	C	T
+24221367	phase6_comp_605	1	1.0	T	A	1	1	0|1	T	A
+24221412	phase6_comp_605	1	1.0	G	A	1	1	0|1	G	A
+24221415	phase6_comp_605	1	1.0	T	A	1	1	0|1	T	A
+24221547	phase6_comp_605	1	1.0	C	G	1	1	0|1	C	G
+24222363	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24222893	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24223794	phase6_comp_606	1	1.0	T	C	0				
+24223877	phase6_comp_606	1	1.0	T	C	1	1	0|1	T	C
+24224009	phase6_comp_606	1	1.0	C	T	1	1	0|1	C	T
+24225190	phase6_comp_607	1	1.0	T	C	1	-1	1|0	T	C
+24225735	phase6_comp_607	-1	1.0	C	A	1	1	0|1	C	A
+24225858	phase6_comp_607	-1	1.0	A	G	1	1	0|1	A	G
+24226680	phase6_comp_607	-1	1.0	T	C	1	1	0|1	T	C
+24227169	phase6_comp_607	-1	1.0	T	C	1	1	0|1	T	C
+24228641	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24229043	phase6_comp_608	1	1.0	C	T	1	1	0|1	C	T
+24229493	phase6_comp_608	1	1.0	A	T	1	1	0|1	A	T
+24229691	phase6_comp_608	1	1.0	A	T	1	1	0|1	A	T
+24232795	unassigned	0	0.0	G	T	1	1	0|1	G	T
+24233628	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24235146	phase6_comp_609	1	1.0	C	A	1	1	0|1	C	A
+24235349	phase6_comp_609	1	1.0	T	C	0				
+24235374	phase6_comp_609	1	1.0	G	A	0				
+24235809	phase6_comp_609	1	1.0	T	C	1	1	0|1	T	C
+24236712	unassigned	0	0.0	A	G	0				
+24237439	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24237653	phase6_comp_610	1	1.0	T	C	1	1	0|1	T	C
+24237722	phase6_comp_610	1	1.0	A	G	1	1	0|1	A	G
+24238308	phase6_comp_610	1	1.0	T	C	1	1	0|1	T	C
+24238503	phase6_comp_610	1	1.0	T	C	1	1	0|1	T	C
+24259598	phase6_comp_611	1	1.0	A	G	1	1	0|1	A	G
+24260029	phase6_comp_611	1	1.0	A	G	1	1	0|1	A	G
+24261123	unassigned	0	0.0	C	G	1	1	0|1	C	G
+24261904	phase6_comp_612	1	1.0	T	C	1	1	0|1	T	C
+24262098	phase6_comp_612	-1	1.0	G	A	1	-1	1|0	G	A
+24262297	phase6_comp_612	1	1.0	G	T	1	1	0|1	G	T
+24264106	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24267758	phase6_comp_613	1	1.0	C	T	1	1	0|1	C	T
+24268019	phase6_comp_613	1	1.0	T	C	1	1	0|1	T	C
+24271285	unassigned	0	0.0	G	C	1	1	0|1	G	C
+24273497	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24274751	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24281057	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24285426	phase6_comp_614	1	1.0	G	A	1	1	0|1	G	A
+24285587	phase6_comp_614	1	1.0	C	T	0				
+24285611	phase6_comp_614	1	1.0	T	C	0				
+24298118	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24299330	phase6_comp_615	1	1.0	G	A	1	1	0|1	G	A
+24300186	phase6_comp_615	1	1.0	C	G	1	1	0|1	C	G
+24304886	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24309650	phase6_comp_616	1	1.0	T	C	1	1	0|1	T	C
+24310330	phase6_comp_616	1	1.0	A	G	1	1	0|1	A	G
+24321550	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24323117	phase6_comp_617	1	1.0	C	G	1	1	0|1	C	G
+24323637	phase6_comp_617	1	1.0	T	C	1	1	0|1	T	C
+24328131	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24330750	unassigned	0	0.0	T	G	1	1	0|1	T	G
+24331878	unassigned	0	0.0	A	C	1	1	0|1	A	C
+24334619	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24341900	unassigned	0	0.0	A	C	1	1	0|1	A	C
+24346326	phase6_comp_618	1	1.0	C	T	1	1	0|1	C	T
+24346458	phase6_comp_618	1	1.0	C	G	1	1	0|1	C	G
+24348111	unassigned	0	0.0	T	C	1	1	0|1	T	C
+24349337	phase6_comp_619	1	1.0	C	T	1	1	0|1	C	T
+24349699	phase6_comp_619	1	1.0	G	T	1	1	0|1	G	T
+24354544	phase6_comp_620	1	1.0	T	C	1	1	0|1	T	C
+24355190	phase6_comp_620	1	1.0	T	C	1	1	0|1	T	C
+24359882	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24361566	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24365173	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24371018	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24371634	phase6_comp_621	1	1.0	T	G	1	1	0|1	T	G
+24372513	phase6_comp_621	1	1.0	G	A	1	1	0|1	G	A
+24374272	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24378939	phase6_comp_622	1	1.0	C	T	1	1	0|1	C	T
+24379380	phase6_comp_622	1	1.0	C	T	0				
+24379676	phase6_comp_622	1	1.0	A	G	1	1	0|1	A	G
+24381641	unassigned	0	0.0	T	C	1	1	0|1	T	C
+24384612	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24385712	unassigned	0	0.0	T	C	1	1	0|1	T	C
+24400322	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24405567	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24406596	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24408113	unassigned	0	0.0	G	T	1	-1	1|0	G	T
+24410836	unassigned	0	0.0	G	T	1	1	0|1	G	T
+24411267	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24412467	phase6_comp_623	1	1.0	G	A	1	1	0|1	G	A
+24413025	phase6_comp_623	1	1.0	G	A	1	1	0|1	G	A
+24413521	phase6_comp_623	1	1.0	G	A	1	1	0|1	G	A
+24415699	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24416409	unassigned	0	0.0	T	C	1	1	0|1	T	C
+24418657	phase6_comp_624	1	1.0	C	T	1	1	0|1	C	T
+24419320	phase6_comp_624	1	1.0	G	A	1	1	0|1	G	A
+24419438	phase6_comp_624	1	1.0	G	A	1	1	0|1	G	A
+24424126	phase6_comp_625	1	1.0	G	T	1	-1	1|0	G	T
+24424312	phase6_comp_625	1	1.0	C	A	1	-1	1|0	C	A
+24424515	phase6_comp_625	1	1.0	C	A	1	-1	1|0	C	A
+24434627	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+24437196	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+24440056	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+24451664	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+24461187	unassigned	0	0.0	C	G	1	1	0|1	C	G
+24495387	unassigned	0	0.0	A	T	1	-1	1|0	A	T
+24498888	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24501775	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24504077	unassigned	0	0.0	C	G	1	1	0|1	C	G
+24505827	phase6_comp_626	1	1.0	C	T	0				
+24506638	phase6_comp_626	1	1.0	G	A	1	1	0|1	G	A
+24512384	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24515744	phase6_comp_627	1	1.0	A	G	1	1	0|1	A	G
+24516264	phase6_comp_627	-1	1.0	C	T	1	-1	1|0	C	T
+24516280	phase6_comp_627	-1	1.0	A	G	1	-1	1|0	A	G
+24520214	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24521201	phase6_comp_628	1	1.0	G	T	0				
+24521425	phase6_comp_628	1	1.0	C	A	0				
+24521884	phase6_comp_628	1	1.0	G	A	1	1	0|1	G	A
+24522479	phase6_comp_628	1	1.0	G	A	1	1	0|1	G	A
+24523361	unassigned	0	0.0	T	C	1	1	0|1	T	C
+24524354	unassigned	0	0.0	T	G	1	1	0|1	T	G
+24525246	phase6_comp_629	1	1.0	T	C	1	1	0|1	T	C
+24525590	phase6_comp_629	1	1.0	C	T	1	1	0|1	C	T
+24526484	unassigned	0	0.0	T	G	1	1	0|1	T	G
+24565747	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24585967	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24586554	unassigned	0	0.0	A	T	1	-1	1|0	A	T
+24589774	phase6_comp_630	1	1.0	C	A	0				
+24590177	phase6_comp_630	-1	1.0	G	A	1	1	0|1	G	A
+24590382	phase6_comp_630	-1	1.0	G	T	1	1	0|1	G	T
+24590578	phase6_comp_630	-1	1.0	G	A	1	1	0|1	G	A
+24591997	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24592953	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24593953	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24594381	phase6_comp_631	1	1.0	A	T	1	1	0|1	A	T
+24594391	phase6_comp_631	1	1.0	A	G	1	1	0|1	A	G
+24594679	phase6_comp_631	1	1.0	A	G	1	1	0|1	A	G
+24594949	phase6_comp_631	1	1.0	G	A	1	1	0|1	G	A
+24595896	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24597400	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24598368	phase6_comp_632	1	1.0	G	A	1	1	0|1	G	A
+24598741	phase6_comp_632	1	1.0	T	C	1	1	0|1	T	C
+24598972	phase6_comp_632	1	1.0	T	G	1	1	0|1	T	G
+24599010	phase6_comp_632	1	1.0	A	T	1	1	0|1	A	T
+24599077	phase6_comp_632	1	1.0	G	A	1	1	0|1	G	A
+24599167	phase6_comp_632	1	1.0	G	T	1	1	0|1	G	T
+24599235	phase6_comp_632	1	1.0	G	A	1	1	0|1	G	A
+24599696	phase6_comp_632	1	1.0	C	T	1	1	0|1	C	T
+24599789	phase6_comp_632	1	1.0	C	A	1	1	0|1	C	A
+24600471	phase6_comp_633	1	1.0	G	A	1	1	0|1	G	A
+24600615	phase6_comp_633	1	1.0	G	A	1	1	0|1	G	A
+24601103	phase6_comp_633	1	1.0	A	G	1	1	0|1	A	G
+24601119	phase6_comp_633	1	1.0	G	A	1	1	0|1	G	A
+24601342	phase6_comp_633	1	1.0	G	C	1	1	0|1	G	C
+24601879	phase6_comp_633	1	1.0	T	C	1	1	0|1	T	C
+24602433	phase6_comp_634	1	1.0	T	A	1	1	0|1	T	A
+24602586	phase6_comp_634	1	1.0	C	T	1	1	0|1	C	T
+24604262	phase6_comp_635	1	1.0	A	T	1	1	0|1	A	T
+24604471	phase6_comp_635	1	1.0	A	G	1	1	0|1	A	G
+24606287	unassigned	0	0.0	T	C	0				
+24607967	phase6_comp_636	1	1.0	G	A	1	1	0|1	G	A
+24608239	phase6_comp_636	1	1.0	T	G	1	1	0|1	T	G
+24608641	phase6_comp_636	1	1.0	T	C	0				
+24610949	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+24612601	phase6_comp_637	1	1.0	G	A	0				
+24612683	phase6_comp_637	-1	1.0	C	T	0				
+24613908	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24614421	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24615302	phase6_comp_638	1	1.0	T	C	1	1	0|1	T	C
+24615353	phase6_comp_638	1	1.0	T	C	1	1	0|1	T	C
+24615365	phase6_comp_638	1	1.0	A	G	1	1	0|1	A	G
+24615934	phase6_comp_638	1	1.0	A	T	1	1	0|1	A	T
+24616791	phase6_comp_639	1	1.0	G	T	1	1	0|1	G	T
+24616887	phase6_comp_639	1	1.0	T	C	1	1	0|1	T	C
+24616973	phase6_comp_639	1	1.0	T	A	1	1	0|1	T	A
+24617321	phase6_comp_639	1	1.0	T	C	1	1	0|1	T	C
+24617379	phase6_comp_639	1	1.0	G	A	1	1	0|1	G	A
+24618277	phase6_comp_640	1	1.0	C	G	1	1	0|1	C	G
+24618473	phase6_comp_640	1	1.0	A	C	1	1	0|1	A	C
+24619406	phase6_comp_641	1	1.0	A	G	0				
+24619777	phase6_comp_641	1	1.0	C	G	1	1	0|1	C	G
+24620202	phase6_comp_641	1	1.0	A	T	0				
+24620239	phase6_comp_641	1	1.0	A	G	0				
+24620240	phase6_comp_641	1	1.0	T	C	0				
+24620770	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24621492	unassigned	0	0.0	T	A	1	1	0|1	T	A
+24623188	phase6_comp_642	1	1.0	T	C	1	1	0|1	T	C
+24623400	phase6_comp_642	1	1.0	T	C	1	1	0|1	T	C
+24624273	phase6_comp_643	1	1.0	T	C	1	1	0|1	T	C
+24624521	phase6_comp_643	1	1.0	A	G	1	1	0|1	A	G
+24624857	phase6_comp_643	-1	1.0	G	A	1	-1	1|0	G	A
+24634117	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24641102	unassigned	0	0.0	A	G	0				
+24643672	unassigned	0	0.0	G	C	1	1	0|1	G	C
+24647341	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+24649888	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24652983	unassigned	0	0.0	C	G	1	1	0|1	C	G
+24654351	phase6_comp_451	1	1.0	C	G	1	1	0|1	C	G
+24654359	phase6_comp_451	1	1.0	G	A	1	1	0|1	G	A
+24654606	phase6_comp_451	1	1.0	A	G	1	1	0|1	A	G
+24655298	unassigned	0	0.0	G	T	1	1	0|1	G	T
+24656729	unassigned	0	0.0	T	C	0				
+24657808	unassigned	0	0.0	T	C	1	1	0|1	T	C
+24659202	unassigned	0	0.0	A	C	1	1	0|1	A	C
+24660926	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+24670598	phase6_comp_644	1	1.0	A	G	1	1	0|1	A	G
+24670639	phase6_comp_644	1	1.0	C	G	1	1	0|1	C	G
+24670921	phase6_comp_644	1	1.0	T	G	1	1	0|1	T	G
+24670946	phase6_comp_644	1	1.0	T	C	1	1	0|1	T	C
+24670950	phase6_comp_644	1	1.0	C	T	1	1	0|1	C	T
+24670951	phase6_comp_644	1	1.0	A	G	1	1	0|1	A	G
+24671853	phase6_comp_645	1	1.0	T	C	0				
+24671903	phase6_comp_645	1	1.0	T	C	0				
+24671908	phase6_comp_645	1	1.0	T	C	0				
+24672096	phase6_comp_645	1	1.0	C	T	1	1	0|1	C	T
+24672109	phase6_comp_645	1	1.0	C	T	1	1	0|1	C	T
+24672267	phase6_comp_645	1	1.0	C	T	1	1	0|1	C	T
+24672331	phase6_comp_645	1	1.0	A	G	1	1	0|1	A	G
+24672592	phase6_comp_645	1	1.0	T	C	1	1	0|1	T	C
+24672593	phase6_comp_645	1	1.0	T	G	1	1	0|1	T	G
+24672997	phase6_comp_645	1	1.0	C	T	1	1	0|1	C	T
+24673309	phase6_comp_645	1	1.0	A	G	1	1	0|1	A	G
+24673343	phase6_comp_645	1	1.0	G	A	1	1	0|1	G	A
+24673492	phase6_comp_645	1	1.0	G	A	1	1	0|1	G	A
+24673515	phase6_comp_645	1	1.0	T	C	1	1	0|1	T	C
+24673670	phase6_comp_645	1	1.0	A	T	1	1	0|1	A	T
+24675148	phase6_comp_646	1	1.0	A	T	1	1	0|1	A	T
+24675219	phase6_comp_646	1	1.0	T	G	1	1	0|1	T	G
+24675630	phase6_comp_646	1	1.0	A	G	1	1	0|1	A	G
+24675689	phase6_comp_646	1	1.0	G	A	1	1	0|1	G	A
+24675812	phase6_comp_646	1	1.0	A	G	1	1	0|1	A	G
+24675960	phase6_comp_646	1	1.0	T	C	1	1	0|1	T	C
+24675991	phase6_comp_646	1	1.0	A	G	1	1	0|1	A	G
+24676320	phase6_comp_646	1	1.0	C	T	1	1	0|1	C	T
+24676572	phase6_comp_646	1	1.0	A	G	1	1	0|1	A	G
+24676655	phase6_comp_646	1	1.0	C	T	1	1	0|1	C	T
+24676678	phase6_comp_646	1	1.0	T	C	1	1	0|1	T	C
+24676968	phase6_comp_646	1	1.0	T	C	1	1	0|1	T	C
+24677055	phase6_comp_646	1	1.0	T	C	1	1	0|1	T	C
+24677112	phase6_comp_646	1	1.0	A	G	1	1	0|1	A	G
+24677421	phase6_comp_646	1	1.0	G	A	1	1	0|1	G	A
+24677459	phase6_comp_646	1	1.0	T	C	1	1	0|1	T	C
+24677781	phase6_comp_646	1	1.0	G	C	1	1	0|1	G	C
+24677858	phase6_comp_646	1	1.0	C	G	1	1	0|1	C	G
+24678240	phase6_comp_646	1	1.0	C	T	1	1	0|1	C	T
+24678543	phase6_comp_646	1	1.0	C	G	1	1	0|1	C	G
+24678631	phase6_comp_646	1	1.0	G	A	1	1	0|1	G	A
+24678811	phase6_comp_646	1	1.0	G	A	1	1	0|1	G	A
+24678896	phase6_comp_646	1	1.0	G	T	1	1	0|1	G	T
+24679300	phase6_comp_646	1	1.0	A	G	1	1	0|1	A	G
+24679360	phase6_comp_646	1	1.0	C	G	1	1	0|1	C	G
+24679435	phase6_comp_646	1	1.0	A	G	1	1	0|1	A	G
+24679837	phase6_comp_646	1	1.0	G	A	1	1	0|1	G	A
+24680008	phase6_comp_646	1	1.0	G	A	1	1	0|1	G	A
+24680631	phase6_comp_647	1	1.0	G	T	1	1	0|1	G	T
+24680971	phase6_comp_647	1	1.0	A	G	1	1	0|1	A	G
+24681189	phase6_comp_647	1	1.0	C	T	1	1	0|1	C	T
+24681465	phase6_comp_647	1	1.0	G	A	1	1	0|1	G	A
+24682141	phase6_comp_648	1	1.0	C	G	1	1	0|1	C	G
+24682324	phase6_comp_648	1	1.0	A	G	0				
+24683381	phase6_comp_649	1	1.0	A	C	1	1	0|1	A	C
+24683958	phase6_comp_649	1	1.0	G	A	1	1	0|1	G	A
+24684110	phase6_comp_649	1	1.0	G	A	1	1	0|1	G	A
+24684989	phase6_comp_650	1	1.0	T	G	1	1	0|1	T	G
+24685137	phase6_comp_650	1	1.0	C	G	1	1	0|1	C	G
+24685274	phase6_comp_650	1	1.0	C	T	1	1	0|1	C	T
+24685930	unassigned	0	0.0	G	C	1	1	0|1	G	C
+24686619	phase6_comp_651	1	1.0	T	G	1	1	0|1	T	G
+24686668	phase6_comp_651	1	1.0	C	T	1	1	0|1	C	T
+24686877	phase6_comp_651	1	1.0	C	G	1	1	0|1	C	G
+24687203	phase6_comp_651	1	1.0	G	A	1	1	0|1	G	A
+24687487	phase6_comp_651	1	1.0	G	A	1	1	0|1	G	A
+24687705	phase6_comp_651	1	1.0	A	G	1	1	0|1	A	G
+24687730	phase6_comp_651	1	1.0	G	A	1	1	0|1	G	A
+24687947	phase6_comp_651	1	1.0	C	T	1	1	0|1	C	T
+24688104	phase6_comp_651	1	1.0	G	T	1	1	0|1	G	T
+24688746	phase6_comp_651	1	1.0	G	A	1	1	0|1	G	A
+24688905	phase6_comp_651	1	1.0	A	G	1	1	0|1	A	G
+24688930	phase6_comp_651	1	1.0	A	C	1	1	0|1	A	C
+24689406	phase6_comp_651	1	1.0	C	T	1	1	0|1	C	T
+24689475	phase6_comp_651	1	1.0	T	C	0				
+24690096	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24690767	phase6_comp_652	1	1.0	T	C	1	1	0|1	T	C
+24691197	phase6_comp_652	1	1.0	A	C	1	1	0|1	A	C
+24691276	phase6_comp_652	1	1.0	C	T	1	1	0|1	C	T
+24691289	phase6_comp_652	1	1.0	T	C	1	1	0|1	T	C
+24691301	phase6_comp_652	1	1.0	G	A	1	1	0|1	G	A
+24691707	phase6_comp_652	1	1.0	T	C	1	1	0|1	T	C
+24691764	phase6_comp_652	1	1.0	C	T	1	1	0|1	C	T
+24692527	phase6_comp_653	1	1.0	C	A	1	1	0|1	C	A
+24692662	phase6_comp_653	1	1.0	T	A	1	1	0|1	T	A
+24693355	phase6_comp_654	1	1.0	T	A	1	1	0|1	T	A
+24693784	phase6_comp_654	1	1.0	G	A	1	1	0|1	G	A
+24693792	phase6_comp_654	1	1.0	C	G	1	1	0|1	C	G
+24693802	phase6_comp_654	1	1.0	A	G	1	1	0|1	A	G
+24693806	phase6_comp_654	1	1.0	A	G	1	1	0|1	A	G
+24693914	phase6_comp_654	1	1.0	A	G	1	1	0|1	A	G
+24693947	phase6_comp_654	1	1.0	A	G	1	1	0|1	A	G
+24694039	phase6_comp_654	1	1.0	A	G	1	1	0|1	A	G
+24694198	phase6_comp_654	1	1.0	G	A	1	1	0|1	G	A
+24694403	phase6_comp_654	1	1.0	C	T	1	1	0|1	C	T
+24694743	phase6_comp_654	1	1.0	G	C	1	1	0|1	G	C
+24694801	phase6_comp_654	1	1.0	G	A	1	1	0|1	G	A
+24694896	phase6_comp_654	1	1.0	G	C	1	1	0|1	G	C
+24695018	phase6_comp_654	1	1.0	C	T	1	1	0|1	C	T
+24695022	phase6_comp_654	1	1.0	G	A	1	1	0|1	G	A
+24695031	phase6_comp_654	1	1.0	A	T	1	1	0|1	A	T
+24695305	phase6_comp_654	1	1.0	C	T	1	1	0|1	C	T
+24695428	phase6_comp_654	1	1.0	C	T	1	1	0|1	C	T
+24696050	phase6_comp_654	-1	1.0	C	T	1	-1	1|0	C	T
+24696806	phase6_comp_655	1	1.0	G	A	1	1	0|1	G	A
+24697154	phase6_comp_655	-1	1.0	C	T	1	-1	1|0	C	T
+24701011	phase6_comp_656	1	1.0	A	G	1	1	0|1	A	G
+24701281	phase6_comp_656	1	1.0	T	G	1	1	0|1	T	G
+24702404	phase6_comp_657	1	1.0	C	T	0				
+24702526	phase6_comp_657	-1	1.0	G	A	1	-1	1|0	G	A
+24703148	phase6_comp_658	1	1.0	G	A	1	-1	1|0	G	A
+24703425	phase6_comp_658	1	1.0	G	A	1	-1	1|0	G	A
+24704477	phase6_comp_659	1	1.0	T	C	1	1	0|1	T	C
+24704669	phase6_comp_659	1	1.0	A	G	1	1	0|1	A	G
+24705603	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24706127	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24708388	unassigned	0	0.0	T	C	1	1	0|1	T	C
+24709806	phase6_comp_660	1	1.0	A	G	1	1	0|1	A	G
+24710141	phase6_comp_660	1	1.0	G	T	0				
+24710360	phase6_comp_660	1	1.0	A	G	1	1	0|1	A	G
+24711599	unassigned	0	0.0	G	C	1	1	0|1	G	C
+24712800	phase6_comp_661	1	1.0	A	G	1	1	0|1	A	G
+24713060	phase6_comp_661	1	1.0	G	A	1	1	0|1	G	A
+24713102	phase6_comp_661	1	1.0	T	C	1	1	0|1	T	C
+24714428	phase6_comp_662	1	1.0	T	G	1	1	0|1	T	G
+24714689	phase6_comp_662	1	1.0	T	G	1	1	0|1	T	G
+24717772	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24721953	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24724536	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24727064	phase6_comp_663	1	1.0	A	G	1	1	0|1	A	G
+24727702	phase6_comp_663	-1	1.0	A	G	1	-1	1|0	A	G
+24728961	unassigned	0	0.0	C	G	1	-1	1|0	C	G
+24731898	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+24733859	phase6_comp_664	1	1.0	A	C	1	1	0|1	A	C
+24733997	phase6_comp_664	-1	1.0	A	G	1	-1	1|0	A	G
+24734848	phase6_comp_665	1	1.0	C	A	0				
+24734981	phase6_comp_665	-1	1.0	A	G	1	-1	1|0	A	G
+24735058	phase6_comp_665	1	1.0	A	T	1	1	0|1	A	T
+24735255	phase6_comp_665	1	1.0	T	C	1	1	0|1	T	C
+24736018	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24736531	phase6_comp_666	1	1.0	A	G	1	-1	1|0	A	G
+24736591	phase6_comp_666	1	1.0	C	T	1	-1	1|0	C	T
+24738304	phase6_comp_667	1	1.0	C	T	1	-1	1|0	C	T
+24738324	phase6_comp_667	1	1.0	C	T	1	-1	1|0	C	T
+24740076	phase6_comp_668	1	1.0	G	A	0				
+24740145	phase6_comp_668	1	1.0	G	A	0				
+24740562	phase6_comp_668	1	1.0	G	A	0				
+24741013	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24742916	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24746290	phase6_comp_669	1	1.0	A	G	1	1	0|1	A	G
+24747007	phase6_comp_669	1	1.0	C	T	1	1	0|1	C	T
+24748087	phase6_comp_670	1	1.0	A	G	1	1	0|1	A	G
+24748454	phase6_comp_670	1	1.0	T	C	1	1	0|1	T	C
+24748709	phase6_comp_670	1	1.0	T	C	1	1	0|1	T	C
+24749504	phase6_comp_670	1	1.0	A	G	1	1	0|1	A	G
+24750995	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+24763190	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+24763983	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+24768447	unassigned	0	0.0	T	A	1	1	0|1	T	A
+24770612	unassigned	0	0.0	C	G	1	1	0|1	C	G
+24777997	phase6_comp_671	1	1.0	G	T	1	-1	1|0	G	T
+24778414	phase6_comp_671	-1	1.0	C	T	1	1	0|1	C	T
+24779691	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24787287	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+24806123	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24809752	phase6_comp_672	1	1.0	C	T	1	-1	1|0	C	T
+24810112	phase6_comp_672	-1	1.0	C	G	1	1	0|1	C	G
+24811046	unassigned	0	0.0	G	T	1	-1	1|0	G	T
+24812431	phase6_comp_673	1	1.0	A	G	1	-1	1|0	A	G
+24812801	phase6_comp_673	-1	1.0	G	A	1	1	0|1	G	A
+24814339	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+24828843	phase6_comp_674	1	1.0	G	C	1	1	0|1	G	C
+24828876	phase6_comp_674	1	1.0	A	G	1	1	0|1	A	G
+24829065	phase6_comp_674	-1	1.0	G	A	1	-1	1|0	G	A
+24829066	phase6_comp_674	-1	1.0	G	C	1	-1	1|0	G	C
+24829281	phase6_comp_674	1	1.0	G	A	1	1	0|1	G	A
+24831727	phase6_comp_675	1	1.0	G	A	1	-1	1|0	G	A
+24831930	phase6_comp_675	-1	1.0	T	C	1	1	0|1	T	C
+24832055	phase6_comp_675	1	1.0	C	T	1	-1	1|0	C	T
+24832122	phase6_comp_675	1	1.0	A	G	1	-1	1|0	A	G
+24832329	phase6_comp_675	1	1.0	C	T	1	-1	1|0	C	T
+24833128	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+24834028	unassigned	0	0.0	A	C	1	-1	1|0	A	C
+24834942	phase6_comp_676	1	1.0	G	C	1	1	0|1	G	C
+24835441	phase6_comp_676	-1	1.0	G	A	1	-1	1|0	G	A
+24835455	phase6_comp_676	1	1.0	G	A	1	1	0|1	G	A
+24835603	phase6_comp_676	-1	1.0	G	A	1	-1	1|0	G	A
+24836085	phase6_comp_676	1	1.0	C	T	1	1	0|1	C	T
+24836390	phase6_comp_676	1	1.0	T	C	1	1	0|1	T	C
+24836895	phase6_comp_676	-1	1.0	T	C	1	-1	1|0	T	C
+24837411	phase6_comp_676	-1	1.0	G	C	1	-1	1|0	G	C
+24838011	phase6_comp_676	-1	1.0	A	G	1	-1	1|0	A	G
+24838253	phase6_comp_676	1	1.0	C	T	1	1	0|1	C	T
+24838514	phase6_comp_676	-1	1.0	G	A	1	-1	1|0	G	A
+24839176	phase6_comp_676	-1	1.0	C	T	1	-1	1|0	C	T
+24839861	phase6_comp_677	1	1.0	A	T	1	-1	1|0	A	T
+24839936	phase6_comp_677	1	0.892523	T	C	0				
+24840412	phase6_comp_677	1	1.0	C	T	1	-1	1|0	C	T
+24840861	phase6_comp_677	1	1.0	T	C	1	-1	1|0	T	C
+24840911	phase6_comp_677	1	1.0	C	T	1	-1	1|0	C	T
+24841052	phase6_comp_677	1	1.0	G	A	1	-1	1|0	G	A
+24841062	phase6_comp_677	1	1.0	A	G	1	-1	1|0	A	G
+24842325	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+24843590	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+24845414	phase6_comp_678	1	1.0	G	A	1	-1	1|0	G	A
+24845870	phase6_comp_678	1	1.0	G	C	1	-1	1|0	G	C
+24846625	phase6_comp_678	1	1.0	A	G	1	-1	1|0	A	G
+24846741	phase6_comp_678	1	1.0	A	C	1	-1	1|0	A	C
+24847009	phase6_comp_678	1	1.0	T	G	1	-1	1|0	T	G
+24848093	unassigned	0	0.0	C	A	1	-1	1|0	C	A
+24848661	phase6_comp_679	1	1.0	T	A	1	-1	1|0	T	A
+24848912	phase6_comp_679	1	1.0	A	G	1	-1	1|0	A	G
+24849151	phase6_comp_679	1	1.0	T	C	1	-1	1|0	T	C
+24850145	unassigned	0	0.0	G	A	1	-1	1|0	G	A
+24850767	phase6_comp_680	1	1.0	G	A	1	-1	1|0	G	A
+24850969	phase6_comp_680	1	1.0	C	T	1	-1	1|0	C	T
+24850970	phase6_comp_680	1	1.0	A	G	1	-1	1|0	A	G
+24851663	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+24852782	phase6_comp_681	1	1.0	A	G	1	-1	1|0	A	G
+24853154	phase6_comp_681	1	1.0	T	C	1	-1	1|0	T	C
+24855533	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24857898	unassigned	0	0.0	A	G	1	-1	1|0	A	G
+24858590	phase6_comp_682	1	1.0	C	T	1	-1	1|0	C	T
+24858741	phase6_comp_682	1	1.0	G	A	1	-1	1|0	G	A
+24858961	phase6_comp_682	1	1.0	G	A	1	-1	1|0	G	A
+24859613	phase6_comp_682	1	1.0	A	G	1	-1	1|0	A	G
+24859992	phase6_comp_682	1	1.0	C	T	1	-1	1|0	C	T
+24860567	phase6_comp_682	1	1.0	G	A	1	-1	1|0	G	A
+24862859	phase6_comp_683	1	1.0	G	C	1	-1	1|0	G	C
+24862860	phase6_comp_683	1	1.0	G	A	1	-1	1|0	G	A
+24862935	phase6_comp_683	1	1.0	C	T	1	-1	1|0	C	T
+24862961	phase6_comp_683	1	1.0	C	A	1	-1	1|0	C	A
+24864803	phase6_comp_684	1	1.0	A	T	1	-1	1|0	A	T
+24865017	phase6_comp_684	1	1.0	G	A	1	-1	1|0	G	A
+24865076	phase6_comp_684	1	1.0	G	T	1	-1	1|0	G	T
+24865892	phase6_comp_684	1	1.0	T	C	1	-1	1|0	T	C
+24865919	phase6_comp_684	1	1.0	G	A	1	-1	1|0	G	A
+24866381	phase6_comp_684	1	1.0	G	A	1	-1	1|0	G	A
+24866402	phase6_comp_684	1	1.0	C	T	1	-1	1|0	C	T
+24866510	phase6_comp_684	1	1.0	T	C	1	-1	1|0	T	C
+24866580	phase6_comp_684	1	1.0	C	T	1	-1	1|0	C	T
+24866595	phase6_comp_684	1	1.0	C	G	1	-1	1|0	C	G
+24866617	phase6_comp_684	1	1.0	A	G	1	-1	1|0	A	G
+24866882	phase6_comp_684	1	1.0	A	G	1	-1	1|0	A	G
+24867273	phase6_comp_684	1	1.0	G	A	1	-1	1|0	G	A
+24867306	phase6_comp_684	1	1.0	C	T	1	-1	1|0	C	T
+24869667	phase6_comp_685	1	1.0	T	C	1	-1	1|0	T	C
+24869844	phase6_comp_685	1	1.0	A	G	1	-1	1|0	A	G
+24869915	phase6_comp_685	1	1.0	A	G	1	-1	1|0	A	G
+24871394	unassigned	0	0.0	T	A	1	-1	1|0	T	A
+24873337	phase6_comp_686	1	1.0	T	C	1	-1	1|0	T	C
+24873551	phase6_comp_686	1	1.0	C	A	1	-1	1|0	C	A
+24873648	phase6_comp_686	1	1.0	C	T	1	-1	1|0	C	T
+24873803	phase6_comp_686	1	1.0	C	T	1	-1	1|0	C	T
+24874488	phase6_comp_687	1	1.0	G	C	1	-1	1|0	G	C
+24875077	phase6_comp_687	1	1.0	G	C	1	-1	1|0	G	C
+24876486	unassigned	0	0.0	C	T	1	-1	1|0	C	T
+24879426	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+24881571	phase6_comp_688	1	1.0	C	A	1	1	0|1	C	A
+24881600	phase6_comp_688	-1	1.0	C	A	1	-1	1|0	C	A
+24882076	phase6_comp_688	-1	1.0	C	G	1	-1	1|0	C	G
+24882355	phase6_comp_688	-1	1.0	G	C	1	-1	1|0	G	C
+24882929	phase6_comp_689	1	1.0	G	A	1	-1	1|0	G	A
+24882974	phase6_comp_689	-1	1.0	T	C	1	1	0|1	T	C
+24886798	unassigned	0	0.0	T	C	1	-1	1|0	T	C
+24890049	unassigned	0	0.0	T	C	0				
+24890559	phase6_comp_690	1	1.0	G	A	1	1	0|1	G	A
+24890562	phase6_comp_690	1	1.0	G	A	1	1	0|1	G	A
+24890569	phase6_comp_690	1	1.0	C	G	1	1	0|1	C	G
+24891016	phase6_comp_690	1	1.0	A	C	1	1	0|1	A	C
+24891725	phase6_comp_690	1	1.0	G	A	1	1	0|1	G	A
+24894886	phase6_comp_691	1	1.0	A	T	1	1	0|1	A	T
+24895109	phase6_comp_691	1	1.0	C	T	1	1	0|1	C	T
+24895128	phase6_comp_691	1	1.0	C	A	1	1	0|1	C	A
+24904673	phase6_comp_692	1	1.0	C	G	1	1	0|1	C	G
+24904691	phase6_comp_692	1	1.0	A	G	1	1	0|1	A	G
+24908506	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24911604	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24912305	phase6_comp_693	1	1.0	T	C	1	1	0|1	T	C
+24912539	phase6_comp_693	1	1.0	C	T	1	1	0|1	C	T
+24913422	phase6_comp_694	1	1.0	C	T	1	1	0|1	C	T
+24913481	phase6_comp_694	1	1.0	G	A	1	1	0|1	G	A
+24913583	phase6_comp_694	1	1.0	A	C	1	1	0|1	A	C
+24914055	phase6_comp_694	1	1.0	T	C	0				
+24914484	phase6_comp_694	1	1.0	A	C	0				
+24914611	phase6_comp_694	1	1.0	A	T	1	1	0|1	A	T
+24915040	phase6_comp_694	1	1.0	A	G	1	1	0|1	A	G
+24915073	phase6_comp_694	1	1.0	G	A	1	1	0|1	G	A
+24915337	phase6_comp_694	1	1.0	C	G	1	1	0|1	C	G
+24917479	phase6_comp_695	1	1.0	C	T	1	1	0|1	C	T
+24918185	phase6_comp_695	1	1.0	G	T	1	1	0|1	G	T
+24935972	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24938902	phase6_comp_696	1	1.0	G	A	1	1	0|1	G	A
+24939010	phase6_comp_696	1	1.0	C	T	1	1	0|1	C	T
+24939126	phase6_comp_696	1	1.0	C	T	1	1	0|1	C	T
+24939827	unassigned	0	0.0	T	G	1	1	0|1	T	G
+24940853	unassigned	0	0.0	A	G	0				
+24942187	phase6_comp_697	1	1.0	G	A	1	1	0|1	G	A
+24942216	phase6_comp_697	1	1.0	G	A	1	1	0|1	G	A
+24943987	unassigned	0	0.0	T	C	1	1	0|1	T	C
+24945236	unassigned	0	0.0	A	G	1	1	0|1	A	G
+24947831	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24949570	unassigned	0	0.0	T	C	1	1	0|1	T	C
+24955076	phase6_comp_698	1	1.0	T	C	1	1	0|1	T	C
+24955412	phase6_comp_698	1	1.0	C	A	1	1	0|1	C	A
+24955800	phase6_comp_698	1	1.0	A	C	1	1	0|1	A	C
+24956996	unassigned	0	0.0	A	C	1	1	0|1	A	C
+24960040	unassigned	0	0.0	G	A	1	1	0|1	G	A
+24963195	unassigned	0	0.0	C	G	1	1	0|1	C	G
+24964703	unassigned	0	0.0	C	G	1	1	0|1	C	G
+24965793	phase6_comp_699	1	1.0	T	C	0				
+24966100	phase6_comp_699	1	1.0	C	T	1	1	0|1	C	T
+24966796	phase6_comp_700	1	1.0	T	C	1	1	0|1	T	C
+24967444	phase6_comp_700	1	1.0	G	A	1	1	0|1	G	A
+24967843	phase6_comp_700	1	1.0	T	A	1	1	0|1	T	A
+24968461	phase6_comp_700	1	1.0	C	T	1	1	0|1	C	T
+24969161	phase6_comp_701	1	1.0	A	G	1	1	0|1	A	G
+24969272	phase6_comp_701	1	1.0	C	A	1	1	0|1	C	A
+24969747	phase6_comp_702	1	1.0	C	T	1	1	0|1	C	T
+24970444	phase6_comp_702	1	1.0	T	C	1	1	0|1	T	C
+24970742	phase6_comp_702	1	1.0	C	A	0				
+24970897	phase6_comp_702	1	1.0	G	C	1	1	0|1	G	C
+24971060	phase6_comp_702	1	1.0	T	C	1	1	0|1	T	C
+24971211	phase6_comp_702	1	1.0	C	G	1	1	0|1	C	G
+24971396	phase6_comp_702	1	1.0	G	C	1	1	0|1	G	C
+24971411	phase6_comp_702	1	1.0	T	G	1	1	0|1	T	G
+24971468	phase6_comp_702	1	1.0	G	T	0				
+24971728	phase6_comp_702	1	1.0	G	T	1	1	0|1	G	T
+24972459	unassigned	0	0.0	C	T	1	1	0|1	C	T
+24973117	phase6_comp_703	1	1.0	G	A	1	1	0|1	G	A
+24973352	phase6_comp_703	1	1.0	C	T	0				
+24973539	phase6_comp_703	1	1.0	A	G	1	1	0|1	A	G
+24973542	phase6_comp_703	1	1.0	T	C	1	1	0|1	T	C
+24973570	phase6_comp_703	1	1.0	A	T	1	1	0|1	A	T
+24978018	unassigned	0	0.0	A	C	1	1	0|1	A	C
+24987174	unassigned	0	0.0	T	A	1	1	0|1	T	A
+24988398	unassigned	0	0.0	C	T	1	-1	1|0	C	T

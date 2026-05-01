@@ -1,0 +1,29 @@
+{
+  "obs_tsv": "results/experiments/chr22_refaware_v3_on/readobs_refaware_v3.obs_debug.tsv",
+  "variant_json": "data/derived/hg002_chr22_variants.real.json",
+  "out_tsv": "results/phase6/chr22_20_25mb_wmec/fragments.tsv",
+  "detected_columns": {
+    "read_id": "read_id",
+    "pos": "site_pos",
+    "allele": "allele",
+    "weight": "allele_confidence",
+    "ambiguous_cols": [
+      "is_ambiguous"
+    ]
+  },
+  "rows_in": 131667,
+  "rows_kept": 103809,
+  "skipped_region": 0,
+  "skipped_nonvariant": 23540,
+  "skipped_allele": 0,
+  "skipped_weight": 3341,
+  "skipped_ambiguous": 977,
+  "raw_reads": 74906,
+  "fragments": 16813,
+  "site_observations_seen_after_grouping": 103809,
+  "site_observations_used_after_grouping": 98283,
+  "duplicate_read_sites_collapsed": 5526,
+  "min_sites_per_fragment": 2,
+  "min_weight": 0.05,
+  "max_weight": 10.0
+}

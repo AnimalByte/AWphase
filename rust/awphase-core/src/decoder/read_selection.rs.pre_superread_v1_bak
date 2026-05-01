@@ -1,0 +1,355 @@
+use std::collections::{BTreeMap, HashMap, HashSet};
+
+use serde::{Deserialize, Serialize};
+
+use crate::types::{ReadObservation, VariantSite};
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ReadSelectionConfig {
+    pub max_reads: usize,
+    pub max_per_site: usize,
+    pub min_sites_per_read: usize,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+pub struct ReadSelectionSummary {
+    pub input_observations: usize,
+    pub output_observations: usize,
+    pub input_reads: usize,
+    pub output_reads: usize,
+    pub target_sites: usize,
+    pub covered_sites_before: usize,
+    pub covered_sites_after: usize,
+}
+
+#[derive(Debug, Clone)]
+struct ReadBundle {
+    read_id: String,
+    observations: Vec<ReadObservation>,
+    unique_sites: Vec<u64>,
+    signature: String,
+    score: f32,
+    informative_sites: usize,
+    bridge_pairs: usize,
+}
+
+fn variant_site_set(variants: &[VariantSite]) -> HashSet<u64> {
+    variants.iter().map(|v| v.pos).collect()
+}
+
+fn variant_site_rank(variants: &[VariantSite]) -> HashMap<u64, usize> {
+    variants
+        .iter()
+        .enumerate()
+        .map(|(i, v)| (v.pos, i))
+        .collect()
+}
+
+fn dedup_best_observation_per_site(obs: &[ReadObservation]) -> Vec<ReadObservation> {
+    let mut best: BTreeMap<u64, ReadObservation> = BTreeMap::new();
+
+    for o in obs {
+        let key = o.site_pos;
+        let new_score = (o.baseq as i32) + (o.mapq as i32);
+
+        match best.get(&key) {
+            Some(prev) => {
+                let prev_score = (prev.baseq as i32) + (prev.mapq as i32);
+                if new_score > prev_score {
+                    best.insert(key, o.clone());
+                }
+            }
+            None => {
+                best.insert(key, o.clone());
+            }
+        }
+    }
+
+    best.into_values().collect()
+}
+
+fn signature_for_observations(obs: &[ReadObservation]) -> String {
+    let mut parts = Vec::with_capacity(obs.len());
+    for o in obs {
+        parts.push(format!("{}:{}", o.site_pos, o.allele));
+    }
+    parts.join("|")
+}
+
+fn count_bridge_pairs(unique_sites: &[u64], site_rank: &HashMap<u64, usize>) -> usize {
+    let mut ranks: Vec<usize> = unique_sites
+        .iter()
+        .filter_map(|p| site_rank.get(p).copied())
+        .collect();
+
+    ranks.sort_unstable();
+    ranks.dedup();
+
+    let mut n = 0usize;
+    for w in ranks.windows(2) {
+        if w[1] == w[0] + 1 {
+            n += 1;
+        }
+    }
+    n
+}
+
+fn bundle_reads(
+    variants: &[VariantSite],
+    reads: &[ReadObservation],
+) -> (Vec<ReadBundle>, usize) {
+    let target_sites = variant_site_set(variants);
+    let site_rank = variant_site_rank(variants);
+
+    let mut grouped: HashMap<String, Vec<ReadObservation>> = HashMap::new();
+    let mut covered_before: HashSet<u64> = HashSet::new();
+
+    for r in reads {
+        if !target_sites.contains(&r.site_pos) {
+            continue;
+        }
+        if r.allele == 0 {
+            continue;
+        }
+        grouped.entry(r.read_id.clone()).or_default().push(r.clone());
+        covered_before.insert(r.site_pos);
+    }
+
+    let mut best_by_signature: HashMap<String, ReadBundle> = HashMap::new();
+
+    for (read_id, obs) in grouped {
+        let dedup = dedup_best_observation_per_site(&obs);
+        if dedup.is_empty() {
+            continue;
+        }
+
+        let unique_sites: Vec<u64> = dedup.iter().map(|x| x.site_pos).collect();
+        let informative_sites = unique_sites.len();
+        let bridge_pairs = count_bridge_pairs(&unique_sites, &site_rank);
+
+        let qual_sum: f32 = dedup
+            .iter()
+            .map(|x| {
+                let bq = (x.baseq as f32 / 40.0).clamp(0.0, 1.0);
+                let mq = (x.mapq as f32 / 60.0).clamp(0.0, 1.0);
+                0.5 + 0.5 * bq * mq
+            })
+            .sum();
+
+        let span_bonus = informative_sites.saturating_sub(1);
+        let score =
+            6.0 * (bridge_pairs as f32) +
+            2.5 * (span_bonus as f32) +
+            1.0 * (informative_sites as f32) +
+            0.25 * qual_sum;
+
+        let signature = signature_for_observations(&dedup);
+
+        let bundle = ReadBundle {
+            read_id,
+            observations: dedup,
+            unique_sites,
+            signature: signature.clone(),
+            score,
+            informative_sites,
+            bridge_pairs,
+        };
+
+        match best_by_signature.get(&signature) {
+            Some(prev) => {
+                if bundle.score > prev.score {
+                    best_by_signature.insert(signature, bundle);
+                }
+            }
+            None => {
+                best_by_signature.insert(signature, bundle);
+            }
+        }
+    }
+
+    let mut bundles: Vec<ReadBundle> = best_by_signature.into_values().collect();
+
+    bundles.sort_by(|a, b| {
+        b.bridge_pairs
+            .cmp(&a.bridge_pairs)
+            .then_with(|| b.informative_sites.cmp(&a.informative_sites))
+            .then_with(|| {
+                b.score
+                    .partial_cmp(&a.score)
+                    .unwrap_or(std::cmp::Ordering::Equal)
+            })
+            .then_with(|| a.signature.cmp(&b.signature))
+            .then_with(|| a.read_id.cmp(&b.read_id))
+    });
+
+    (bundles, covered_before.len())
+}
+
+fn bridge_need(
+    bundle: &ReadBundle,
+    site_cov: &HashMap<u64, usize>,
+    site_rank: &HashMap<u64, usize>,
+    max_per_site: usize,
+) -> bool {
+    let mut ranks: Vec<(usize, u64)> = bundle
+        .unique_sites
+        .iter()
+        .filter_map(|p| site_rank.get(p).copied().map(|r| (r, *p)))
+        .collect();
+
+    ranks.sort_unstable();
+
+    for w in ranks.windows(2) {
+        if w[1].0 == w[0].0 + 1 {
+            let c1 = site_cov.get(&w[0].1).copied().unwrap_or(0);
+            let c2 = site_cov.get(&w[1].1).copied().unwrap_or(0);
+            if c1 < max_per_site || c2 < max_per_site {
+                return true;
+            }
+        }
+    }
+    false
+}
+
+pub fn select_informative_read_observations(
+    variants: &[VariantSite],
+    reads: &[ReadObservation],
+    cfg: &ReadSelectionConfig,
+) -> (Vec<ReadObservation>, ReadSelectionSummary) {
+    let (bundles, covered_before) = bundle_reads(variants, reads);
+    let site_rank = variant_site_rank(variants);
+
+    let mut site_cov: HashMap<u64, usize> = HashMap::new();
+    let mut kept_bundles: Vec<ReadBundle> = Vec::new();
+
+    for bundle in bundles {
+        if kept_bundles.len() >= cfg.max_reads {
+            break;
+        }
+
+        if bundle.informative_sites < cfg.min_sites_per_read {
+            continue;
+        }
+
+        let contributes_undercovered = bundle
+            .unique_sites
+            .iter()
+            .any(|p| site_cov.get(p).copied().unwrap_or(0) < cfg.max_per_site);
+
+        let contributes_bridge = bridge_need(&bundle, &site_cov, &site_rank, cfg.max_per_site);
+
+        if !contributes_undercovered && !contributes_bridge {
+            continue;
+        }
+
+        for p in &bundle.unique_sites {
+            let e = site_cov.entry(*p).or_insert(0);
+            if *e < cfg.max_per_site {
+                *e += 1;
+            }
+        }
+
+        kept_bundles.push(bundle);
+    }
+
+    let mut selected: Vec<ReadObservation> = kept_bundles
+        .iter()
+        .flat_map(|b| b.observations.clone())
+        .collect();
+
+    selected.sort_by(|a, b| {
+        a.site_pos
+            .cmp(&b.site_pos)
+            .then_with(|| a.read_id.cmp(&b.read_id))
+    });
+
+    let covered_after: HashSet<u64> = selected.iter().map(|x| x.site_pos).collect();
+    let output_reads: HashSet<String> = selected.iter().map(|x| x.read_id.clone()).collect();
+    let input_reads: HashSet<String> = reads.iter().map(|x| x.read_id.clone()).collect();
+
+    let summary = ReadSelectionSummary {
+        input_observations: reads.len(),
+        output_observations: selected.len(),
+        input_reads: input_reads.len(),
+        output_reads: output_reads.len(),
+        target_sites: variants.len(),
+        covered_sites_before: covered_before,
+        covered_sites_after: covered_after.len(),
+    };
+
+    (selected, summary)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn obs(read_id: &str, site_pos: u64, allele: i8, baseq: u8, mapq: u8) -> ReadObservation {
+        ReadObservation {
+            read_id: read_id.to_string(),
+            site_pos,
+            allele,
+            baseq,
+            mapq,
+        }
+    }
+
+    fn var(pos: u64) -> VariantSite {
+        VariantSite {
+            pos,
+            ref_allele: "A".to_string(),
+            alt_allele: "G".to_string(),
+            genotype: (0, 1),
+        }
+    }
+
+    #[test]
+    fn prefers_bridge_reads() {
+        let variants = vec![var(10), var(20), var(30)];
+        let reads = vec![
+            obs("r1", 10, 1, 30, 60),
+            obs("r1", 20, 1, 30, 60),
+            obs("r2", 10, 1, 30, 60),
+            obs("r3", 30, -1, 30, 60),
+        ];
+
+        let (sel, summary) = select_informative_read_observations(
+            &variants,
+            &reads,
+            &ReadSelectionConfig {
+                max_reads: 2,
+                max_per_site: 2,
+                min_sites_per_read: 1,
+            },
+        );
+
+        let ids: HashSet<String> = sel.iter().map(|x| x.read_id.clone()).collect();
+        assert!(ids.contains("r1"));
+        assert_eq!(summary.output_reads, 2);
+    }
+
+    #[test]
+    fn deduplicates_identical_signatures() {
+        let variants = vec![var(10), var(20)];
+        let reads = vec![
+            obs("r1", 10, 1, 30, 60),
+            obs("r1", 20, 1, 30, 60),
+            obs("r2", 10, 1, 20, 20),
+            obs("r2", 20, 1, 20, 20),
+        ];
+
+        let (sel, summary) = select_informative_read_observations(
+            &variants,
+            &reads,
+            &ReadSelectionConfig {
+                max_reads: 10,
+                max_per_site: 5,
+                min_sites_per_read: 1,
+            },
+        );
+
+        let ids: HashSet<String> = sel.iter().map(|x| x.read_id.clone()).collect();
+        assert_eq!(ids.len(), 1);
+        assert_eq!(summary.output_reads, 1);
+    }
+}

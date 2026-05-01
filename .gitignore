@@ -1,0 +1,60 @@
+# Build artifacts
+target/
+*.rlib
+*.rmeta
+
+# Python caches and local virtual environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local editor and OS files
+.DS_Store
+*.swp
+*.swo
+
+# Local exports/archives
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+
+# Large or externally staged genomics data
+data/
+baselines/
+references/
+*.bam
+*.bai
+*.cram
+*.crai
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.vcf.gz
+*.bcf
+*.csi
+*.tbi
+*.fa
+*.fai
+*.fasta
+
+# Generated run outputs. Curated summary artifacts under results/ and freezes/
+# can still be tracked explicitly with git add -f when they are part of a
+# documented freeze.
+results/runs/
+results/experiments/
+results/comparisons/
+results/phase7a_windows/
+
+# Local logs and scratch output
+*.log
+tmp/
+scratch/
+# pixi environments
+.pixi/*
+!.pixi/config.toml

@@ -1,0 +1,14 @@
+{
+  "target_tsv": "results/phase7a/chr22_20_25mb_panel_ld_fill_v2/d20000_s20_c085_m5_b2/local_calls.phase7a.tsv",
+  "reference_tsv": "baselines/chr22_20_25mb/illumina_35x_realchr22/local_calls.tsv",
+  "blocks_evaluated": 678,
+  "total_overlap_sites": 3245,
+  "total_residual_errors_after_best_block_orientation": 78,
+  "residual_error_rate_after_best_block_orientation": 0.02403697996918336,
+  "total_adjacent_pair_edges": 2567,
+  "total_adjacent_pair_mismatches": 53,
+  "adjacent_pair_mismatch_rate": 0.020646669263731984,
+  "pure_kept_blocks": 318,
+  "pure_flipped_blocks": 315,
+  "mixed_blocks": 45
+}

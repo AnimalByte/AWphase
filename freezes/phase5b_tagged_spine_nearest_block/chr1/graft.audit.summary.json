@@ -1,0 +1,35 @@
+{
+  "truth_sample": "HG002",
+  "grafted_sites": 251,
+  "truth_comparable_grafted_sites": 251,
+  "same_orientation_correct": 108,
+  "opposite_orientation_correct": 143,
+  "same_orientation_accuracy": 0.4302788844621514,
+  "opposite_orientation_accuracy": 0.5697211155378487,
+  "distance_bins": {
+    "<=1kb": {
+      "n": 241,
+      "truth_comparable": 241,
+      "same_correct": 103,
+      "opposite_correct": 138,
+      "same_accuracy": 0.42738589211618255,
+      "opposite_accuracy": 0.5726141078838174
+    },
+    "1-5kb": {
+      "n": 9,
+      "truth_comparable": 9,
+      "same_correct": 4,
+      "opposite_correct": 5,
+      "same_accuracy": 0.4444444444444444,
+      "opposite_accuracy": 0.5555555555555556
+    },
+    "10-25kb": {
+      "n": 1,
+      "truth_comparable": 1,
+      "same_correct": 1,
+      "opposite_correct": 0,
+      "same_accuracy": 1.0,
+      "opposite_accuracy": 0.0
+    }
+  }
+}

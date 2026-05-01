@@ -1,0 +1,396 @@
+use crate::types::{ReadObservation, VariantSite};
+use serde::{Deserialize, Serialize};
+use std::collections::{BTreeMap, HashMap, HashSet};
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ReadSelectionConfig {
+    pub max_reads: usize,
+    pub max_per_site: usize,
+    pub min_sites_per_read: usize,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+pub struct ReadSelectionSummary {
+    pub input_observations: usize,
+    pub output_observations: usize,
+    pub input_reads: usize,
+    pub output_reads: usize,
+    pub target_sites: usize,
+    pub covered_sites_before: usize,
+    pub covered_sites_after: usize,
+}
+
+#[derive(Debug, Clone)]
+struct ReadBundle {
+    read_id: String,
+    observations: Vec<ReadObservation>,
+    unique_sites: Vec<u64>,
+    score: f32,
+    informative_sites: usize,
+    multi_site_bonus: usize,
+}
+
+fn variant_site_set(variants: &[VariantSite]) -> HashSet<u64> {
+    variants.iter().map(|v| v.pos).collect()
+}
+
+fn dedup_best_observation_per_site(obs: &[ReadObservation]) -> Vec<ReadObservation> {
+    let mut best: BTreeMap<u64, ReadObservation> = BTreeMap::new();
+    for o in obs {
+        let key = o.site_pos;
+        let new_score = (o.baseq as i32) + (o.mapq as i32);
+        match best.get(&key) {
+            Some(prev) => {
+                let prev_score = (prev.baseq as i32) + (prev.mapq as i32);
+                if new_score > prev_score {
+                    best.insert(key, o.clone());
+                }
+            }
+            None => {
+                best.insert(key, o.clone());
+            }
+        }
+    }
+    best.into_values().collect()
+}
+
+fn bundle_reads(variants: &[VariantSite], reads: &[ReadObservation]) -> (Vec<ReadBundle>, usize) {
+    let target_sites = variant_site_set(variants);
+    let mut grouped: HashMap<String, Vec<ReadObservation>> = HashMap::new();
+    let mut covered_before: HashSet<u64> = HashSet::new();
+
+    for r in reads {
+        if !target_sites.contains(&r.site_pos) {
+            continue;
+        }
+        if r.allele == 0 {
+            continue;
+        }
+        grouped
+            .entry(r.read_id.clone())
+            .or_default()
+            .push(r.clone());
+        covered_before.insert(r.site_pos);
+    }
+
+    let mut bundles = Vec::new();
+
+    for (read_id, obs) in grouped {
+        let dedup = dedup_best_observation_per_site(&obs);
+        if dedup.is_empty() {
+            continue;
+        }
+
+        let unique_sites: Vec<u64> = dedup.iter().map(|x| x.site_pos).collect();
+        let informative_sites = unique_sites.len();
+        let multi_site_bonus = informative_sites.saturating_sub(1);
+
+        let qual_sum: f32 = dedup
+            .iter()
+            .map(|x| {
+                let bq = (x.baseq as f32 / 40.0).clamp(0.0, 1.0);
+                let mq = (x.mapq as f32 / 60.0).clamp(0.0, 1.0);
+                0.5 + 0.5 * bq * mq
+            })
+            .sum();
+
+        let score =
+            3.0 * (multi_site_bonus as f32) + 1.0 * (informative_sites as f32) + 0.25 * qual_sum;
+
+        bundles.push(ReadBundle {
+            read_id,
+            observations: dedup,
+            unique_sites,
+            score,
+            informative_sites,
+            multi_site_bonus,
+        });
+    }
+
+    bundles.sort_by(|a, b| {
+        b.multi_site_bonus
+            .cmp(&a.multi_site_bonus)
+            .then_with(|| b.informative_sites.cmp(&a.informative_sites))
+            .then_with(|| {
+                b.score
+                    .partial_cmp(&a.score)
+                    .unwrap_or(std::cmp::Ordering::Equal)
+            })
+            .then_with(|| a.read_id.cmp(&b.read_id))
+    });
+
+    (bundles, covered_before.len())
+}
+
+fn compatible_overlap(a: &ReadBundle, b: &ReadBundle) -> bool {
+    let mut a_map: HashMap<u64, i8> = HashMap::new();
+    let mut shared = 0usize;
+
+    for o in &a.observations {
+        a_map.insert(o.site_pos, o.allele);
+    }
+
+    for o in &b.observations {
+        if let Some(a_allele) = a_map.get(&o.site_pos) {
+            shared += 1;
+            if *a_allele != o.allele {
+                return false;
+            }
+        }
+    }
+
+    shared > 0
+}
+
+fn merge_two_bundles(a: &ReadBundle, b: &ReadBundle, merged_id: String) -> ReadBundle {
+    let mut by_site: BTreeMap<u64, ReadObservation> = BTreeMap::new();
+
+    for o in a.observations.iter().chain(b.observations.iter()) {
+        let new_score = (o.baseq as i32) + (o.mapq as i32);
+        match by_site.get(&o.site_pos) {
+            Some(prev) => {
+                let prev_score = (prev.baseq as i32) + (prev.mapq as i32);
+                if new_score > prev_score {
+                    let mut repl = o.clone();
+                    repl.read_id = merged_id.clone();
+                    by_site.insert(o.site_pos, repl);
+                }
+            }
+            None => {
+                let mut repl = o.clone();
+                repl.read_id = merged_id.clone();
+                by_site.insert(o.site_pos, repl);
+            }
+        }
+    }
+
+    let observations: Vec<ReadObservation> = by_site.into_values().collect();
+    let unique_sites: Vec<u64> = observations.iter().map(|x| x.site_pos).collect();
+    let informative_sites = unique_sites.len();
+    let multi_site_bonus = informative_sites.saturating_sub(1);
+
+    let qual_sum: f32 = observations
+        .iter()
+        .map(|x| {
+            let bq = (x.baseq as f32 / 40.0).clamp(0.0, 1.0);
+            let mq = (x.mapq as f32 / 60.0).clamp(0.0, 1.0);
+            0.5 + 0.5 * bq * mq
+        })
+        .sum();
+
+    let score =
+        3.0 * (multi_site_bonus as f32) + 1.0 * (informative_sites as f32) + 0.25 * qual_sum;
+
+    ReadBundle {
+        read_id: merged_id,
+        observations,
+        unique_sites,
+        score,
+        informative_sites,
+        multi_site_bonus,
+    }
+}
+
+fn merge_selected_bundles(selected: Vec<ReadBundle>) -> Vec<ReadBundle> {
+    let mut merged: Vec<ReadBundle> = Vec::new();
+    let mut next_superread_id = 1usize;
+
+    'outer: for bundle in selected {
+        for idx in 0..merged.len() {
+            if compatible_overlap(&merged[idx], &bundle) {
+                let merged_id = format!("superread_{}", next_superread_id);
+                next_superread_id += 1;
+                let new_bundle = merge_two_bundles(&merged[idx], &bundle, merged_id);
+                merged[idx] = new_bundle;
+                continue 'outer;
+            }
+        }
+        merged.push(bundle);
+    }
+
+    merged.sort_by(|a, b| {
+        b.multi_site_bonus
+            .cmp(&a.multi_site_bonus)
+            .then_with(|| b.informative_sites.cmp(&a.informative_sites))
+            .then_with(|| {
+                b.score
+                    .partial_cmp(&a.score)
+                    .unwrap_or(std::cmp::Ordering::Equal)
+            })
+            .then_with(|| a.read_id.cmp(&b.read_id))
+    });
+
+    merged
+}
+
+pub fn select_informative_read_observations(
+    variants: &[VariantSite],
+    reads: &[ReadObservation],
+    cfg: &ReadSelectionConfig,
+) -> (Vec<ReadObservation>, ReadSelectionSummary) {
+    let (bundles, covered_before) = bundle_reads(variants, reads);
+
+    let mut site_cov: HashMap<u64, usize> = HashMap::new();
+    let mut kept_bundles: Vec<ReadBundle> = Vec::new();
+
+    for bundle in bundles {
+        if kept_bundles.len() >= cfg.max_reads {
+            break;
+        }
+        if bundle.informative_sites < cfg.min_sites_per_read {
+            continue;
+        }
+
+        let contributes_undercovered = bundle
+            .unique_sites
+            .iter()
+            .any(|p| site_cov.get(p).copied().unwrap_or(0) < cfg.max_per_site);
+
+        if !contributes_undercovered {
+            continue;
+        }
+
+        for p in &bundle.unique_sites {
+            let e = site_cov.entry(*p).or_insert(0);
+            if *e < cfg.max_per_site {
+                *e += 1;
+            }
+        }
+
+        kept_bundles.push(bundle);
+    }
+
+    let merged_bundles = merge_selected_bundles(kept_bundles);
+
+    let mut selected: Vec<ReadObservation> = merged_bundles
+        .iter()
+        .flat_map(|b| b.observations.clone())
+        .collect();
+
+    selected.sort_by(|a, b| {
+        a.site_pos
+            .cmp(&b.site_pos)
+            .then_with(|| a.read_id.cmp(&b.read_id))
+    });
+
+    let covered_after: HashSet<u64> = selected.iter().map(|x| x.site_pos).collect();
+    let output_reads: HashSet<String> = selected.iter().map(|x| x.read_id.clone()).collect();
+    let input_reads: HashSet<String> = reads.iter().map(|x| x.read_id.clone()).collect();
+
+    let summary = ReadSelectionSummary {
+        input_observations: reads.len(),
+        output_observations: selected.len(),
+        input_reads: input_reads.len(),
+        output_reads: output_reads.len(),
+        target_sites: variants.len(),
+        covered_sites_before: covered_before,
+        covered_sites_after: covered_after.len(),
+    };
+
+    (selected, summary)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn obs(read_id: &str, site_pos: u64, allele: i8, baseq: u8, mapq: u8) -> ReadObservation {
+        ReadObservation {
+            read_id: read_id.to_string(),
+            site_pos,
+            allele,
+            baseq,
+            mapq,
+            ..Default::default()
+        }
+    }
+
+    fn var(pos: u64) -> VariantSite {
+        VariantSite {
+            pos,
+            ref_allele: "A".to_string(),
+            alt_allele: "G".to_string(),
+            genotype: (0, 1),
+        }
+    }
+
+    #[test]
+    fn prefers_multi_site_reads() {
+        let variants = vec![var(10), var(20), var(30)];
+        let reads = vec![
+            obs("r1", 10, 1, 30, 60),
+            obs("r1", 20, 1, 30, 60),
+            obs("r2", 10, 1, 30, 60),
+            obs("r3", 30, -1, 30, 60),
+        ];
+
+        let (sel, summary) = select_informative_read_observations(
+            &variants,
+            &reads,
+            &ReadSelectionConfig {
+                max_reads: 2,
+                max_per_site: 1,
+                min_sites_per_read: 1,
+            },
+        );
+
+        let ids: HashSet<String> = sel.iter().map(|x| x.read_id.clone()).collect();
+        assert!(ids.iter().any(|x| x == "r1" || x.starts_with("superread_")));
+        assert_eq!(summary.output_reads, 2);
+    }
+
+    #[test]
+    fn merges_compatible_overlap_into_superread() {
+        let variants = vec![var(10), var(20), var(30)];
+        let reads = vec![
+            obs("r1", 10, 1, 30, 60),
+            obs("r1", 20, 1, 30, 60),
+            obs("r2", 20, 1, 30, 60),
+            obs("r2", 30, -1, 30, 60),
+        ];
+
+        let (sel, summary) = select_informative_read_observations(
+            &variants,
+            &reads,
+            &ReadSelectionConfig {
+                max_reads: 10,
+                max_per_site: 5,
+                min_sites_per_read: 1,
+            },
+        );
+
+        let ids: HashSet<String> = sel.iter().map(|x| x.read_id.clone()).collect();
+        assert_eq!(summary.output_reads, 1);
+        assert_eq!(ids.len(), 1);
+
+        let covered: HashSet<u64> = sel.iter().map(|x| x.site_pos).collect();
+        assert!(covered.contains(&10));
+        assert!(covered.contains(&20));
+        assert!(covered.contains(&30));
+    }
+
+    #[test]
+    fn does_not_merge_conflicting_overlap() {
+        let variants = vec![var(10), var(20), var(30)];
+        let reads = vec![
+            obs("r1", 10, 1, 30, 60),
+            obs("r1", 20, 1, 30, 60),
+            obs("r2", 20, -1, 30, 60),
+            obs("r2", 30, -1, 30, 60),
+        ];
+
+        let (sel, summary) = select_informative_read_observations(
+            &variants,
+            &reads,
+            &ReadSelectionConfig {
+                max_reads: 10,
+                max_per_site: 5,
+                min_sites_per_read: 1,
+            },
+        );
+
+        let ids: HashSet<String> = sel.iter().map(|x| x.read_id.clone()).collect();
+        assert_eq!(summary.output_reads, 2);
+        assert_eq!(ids.len(), 2);
+    }
+}

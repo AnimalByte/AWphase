@@ -1,0 +1,6 @@
+metric	value
+correct	2373
+wrong	7
+not_comparable	1378
+unknown_orientation	18
+oriented_site_accuracy	0.9970588235294118

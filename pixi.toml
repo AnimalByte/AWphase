@@ -1,0 +1,38 @@
+[workspace]
+channels = ["conda-forge", "bioconda"]
+name = "awphase"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+validate-phase9d = { cmd = "python scripts/validate_current_phase9d_profile.py", env = { PYTHONPATH = "python" } }
+validate-benchmark-bundles = "python scripts/validate_benchmark_bundles.py"
+phase9d-window = { cmd = "python scripts/phase9d_window.py", env = { PYTHONPATH = "python" } }
+py-compile = { cmd = "python -m compileall -q python/awphase_py scripts", env = { PYTHONPYCACHEPREFIX = ".pixi/pycache" } }
+py-test = { cmd = "pytest -q", env = { PYTHONPATH = "python" } }
+rust-check = "cargo check"
+rust-test = "cargo test"
+shellcheck-scripts = "find scripts -name '*.sh' -print0 | xargs -0 shellcheck"
+check = { depends-on = ["validate-phase9d", "validate-benchmark-bundles", "py-compile", "rust-check", "shellcheck-scripts"] }
+test = { depends-on = ["py-test", "rust-test"] }
+ci = { depends-on = ["check", "test"] }
+
+[dependencies]
+python = "3.11.*"
+numpy = "*"
+pandas = "*"
+scikit-learn = "*"
+xgboost = "*"
+pysam = "*"
+pyyaml = "*"
+scipy = "*"
+whatshap = "*"
+bcftools = "*"
+samtools = "*"
+htslib = "*"
+pip = "*"
+rust = ">=1.95.0,<1.96"
+shellcheck = ">=0.11.0,<0.12"
+
+[pypi-dependencies]
+pytest = "*"

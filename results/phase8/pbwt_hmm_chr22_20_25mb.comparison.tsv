@@ -1,0 +1,7 @@
+method	n_truth_het_sites_in_bed	n_pred_sites_nonzero	n_exact_overlap_sites_phased	pct_truth_sites_phased	hamming_errors	hamming_error_rate	switch_errors	switch_error_rate	truth_correct_pct	raw_block_n50_bp	median_block_span_bp	path
+AWPhase_Phase6C_Rust_WMEC	4533	4326	3099	0.6836532097948379	11	0.0035495321071313327	13	0.0052588996763754045	68.12265607765276	1464	557	results/phase7a_windows/chr22_20_25mb_illumina30x_phase7a/truth_eval_phase6c.metrics.json
+AWPhase_Phase7A_current	4533	4544	3283	0.7242444297374807	17	0.005178190679256778	20	0.007530120481927711	72.04941539819104	3563	681	results/phase7a_windows/chr22_20_25mb_illumina30x_phase7a/truth_eval_phase7a.metrics.json
+AWPhase_Phase8_PBWT	4533	5217	3824	0.843591440547099	15	0.003922594142259414	20	0.006257822277847309	84.02823737039489	8265	826	results/phase7a_windows/chr22_20_25mb_illumina30x_phase7a/truth_eval_phase8pbwt.metrics.json
+AWPhase_Phase8_PBWT_HMM	4533	5219	3826	0.8440326494595191	15	0.003920543648719289	20	0.006253908692933083	84.07235826163688	8267	835	results/phase7a_windows/chr22_20_25mb_illumina30x_phase7a/truth_eval_phase8pbwt_hmm.metrics.json
+WhatsHap_Illumina30x	4533	5492	3944	0.870063975292301	160	0.04056795131845842	156	0.048402109835556935	83.47672622986984	1628	603	baselines/whatshap/chr22_20_25mb_whatshap_illumina30x/truth_eval.metrics.json
+WhatsHap_PacBio_HiFi30x	4533	6170	4529	0.9991175821751599	505	0.1115036431883418	29	0.006417348971011286	88.77123317891021	676255	68453	baselines/whatshap/chr22_20_25mb_whatshap_pacbio/truth_eval.metrics.json

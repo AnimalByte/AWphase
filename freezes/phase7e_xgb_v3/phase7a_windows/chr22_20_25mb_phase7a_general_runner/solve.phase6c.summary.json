@@ -1,0 +1,17 @@
+{
+  "fragments_tsv": "results/phase7a_windows/chr22_20_25mb_phase7a_general_runner/fragments.tsv",
+  "variant_json": "results/phase7a_windows/chr22_20_25mb_phase7a_general_runner/variants.window.json",
+  "raw_fragments": 24420,
+  "raw_connected_components": 678,
+  "components_after_chunking": 678,
+  "components_solved": 678,
+  "components_skipped": 0,
+  "exact_components": 661,
+  "greedy_components": 17,
+  "total_projected_fragments": 24420,
+  "variant_rows": 3776,
+  "solved_sites": 3152,
+  "out_local_calls_tsv": "results/phase7a_windows/chr22_20_25mb_phase7a_general_runner/local_calls.phase6c.tsv",
+  "max_exact_sites": 18,
+  "max_component_sites": 1024
+}

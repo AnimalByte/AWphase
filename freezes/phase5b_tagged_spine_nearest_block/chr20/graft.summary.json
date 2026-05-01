@@ -1,0 +1,15 @@
+{
+  "rows": 5975,
+  "backbone_anchors": 4012,
+  "considered_new_fill_sites": 722,
+  "grafted_sites": 722,
+  "changed_block": 722,
+  "skipped_no_tagged_row": 0,
+  "skipped_not_fill": 5253,
+  "skipped_no_anchor": 0,
+  "skipped_cross_block": 0,
+  "skipped_state_guard": 0,
+  "max_anchor_dist_bp": 100000,
+  "mode": "nearest_block",
+  "require_state_agreement_with_anchor": false
+}

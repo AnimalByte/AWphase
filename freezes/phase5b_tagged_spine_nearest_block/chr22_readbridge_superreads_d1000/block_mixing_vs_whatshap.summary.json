@@ -1,0 +1,14 @@
+{
+  "target_tsv": "results/phase5b/chr22_20_25mb_readbridge_superreads_safe/graft_d1000/grafted.tsv",
+  "reference_tsv": "baselines/chr22_20_25mb/illumina_30x_realchr22/local_calls.tsv",
+  "blocks_evaluated": 435,
+  "total_overlap_sites": 2672,
+  "total_residual_errors_after_best_block_orientation": 630,
+  "residual_error_rate_after_best_block_orientation": 0.23577844311377247,
+  "total_adjacent_pair_edges": 2237,
+  "total_adjacent_pair_mismatches": 569,
+  "adjacent_pair_mismatch_rate": 0.25435851586946806,
+  "pure_kept_blocks": 92,
+  "pure_flipped_blocks": 102,
+  "mixed_blocks": 241
+}

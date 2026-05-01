@@ -1,0 +1,14 @@
+{
+  "target_tsv": "results/phase6/chr22_20_25mb_wmec/local_calls.phase6.tsv",
+  "reference_tsv": "baselines/chr22_20_25mb/illumina_30x_realchr22/local_calls.tsv",
+  "blocks_evaluated": 689,
+  "total_overlap_sites": 3068,
+  "total_residual_errors_after_best_block_orientation": 3,
+  "residual_error_rate_after_best_block_orientation": 0.0009778357235984355,
+  "total_adjacent_pair_edges": 2379,
+  "total_adjacent_pair_mismatches": 2,
+  "adjacent_pair_mismatch_rate": 0.0008406893652795292,
+  "pure_kept_blocks": 357,
+  "pure_flipped_blocks": 330,
+  "mixed_blocks": 2
+}

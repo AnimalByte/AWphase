@@ -1,0 +1,173 @@
+{
+  "rows": 2451,
+  "positives": 2149,
+  "negatives": 302,
+  "positive_rate": 0.8767849857201142,
+  "source_windows": {
+    "chr1_15_20mb_illumina30x_phase7a": 597,
+    "chr20_25_30mb_illumina30x_phase7a": 96,
+    "chr20_30_35mb_illumina30x_phase7a": 290,
+    "chr20_45_50mb_illumina30x_phase7a": 619,
+    "chr22_15_20mb_illumina30x_phase7a": 410,
+    "chr22_20_25mb_illumina30x_phase7a": 439
+  },
+  "physical_groups": {
+    "chr1_15_20mb": 597,
+    "chr20_25_30mb": 96,
+    "chr20_30_35mb": 290,
+    "chr20_45_50mb": 619,
+    "chr22_15_20mb": 410,
+    "chr22_20_25mb": 439
+  },
+  "n_splits": 5,
+  "n_features": 32,
+  "features": [
+    "candidate_accepted_by_rule",
+    "panel_confidence",
+    "panel_margin",
+    "panel_support",
+    "panel_conflict",
+    "support_conflict_ratio",
+    "panel_haplotypes",
+    "anchors",
+    "best_vs_second_margin",
+    "n_block_candidates",
+    "log_panel_margin",
+    "log_panel_support",
+    "log_panel_conflict",
+    "log_best_vs_second_margin",
+    "panel_margin_per_haplotype",
+    "panel_support_per_haplotype",
+    "panel_conflict_per_haplotype",
+    "confidence_x_log_margin",
+    "confidence_x_log_support_conflict_ratio",
+    "nearest_phase6_anchor_dist_bp",
+    "nearest_same_block_anchor_dist_bp",
+    "left_anchors_20kb",
+    "right_anchors_20kb",
+    "left_nearest_anchor_dist_bp",
+    "right_nearest_anchor_dist_bp",
+    "left_anchors_50kb",
+    "right_anchors_50kb",
+    "phase6_block_anchor_count",
+    "phase6_block_span_bp",
+    "phase6_block_density_per_kb",
+    "log_phase6_block_span_bp",
+    "log_phase6_block_anchor_count"
+  ],
+  "cv_accuracy_0.5": 0.707874337005304,
+  "cv_roc_auc": 0.7591949435899649,
+  "cv_average_precision": 0.9577182537153172,
+  "folds": [
+    {
+      "fold": 1,
+      "train_groups": [
+        "chr1_15_20mb",
+        "chr20_25_30mb",
+        "chr20_30_35mb",
+        "chr22_15_20mb",
+        "chr22_20_25mb"
+      ],
+      "test_groups": [
+        "chr20_45_50mb"
+      ],
+      "test_n": 619,
+      "test_pos": 554,
+      "test_neg": 65,
+      "accuracy_0.5": 0.6978998384491115,
+      "roc_auc": 0.7779783393501806,
+      "average_precision": 0.969486122733745,
+      "precision_0.5": 0.9553349875930521,
+      "recall_0.5": 0.6949458483754513,
+      "f1_0.5": 0.8045977011494253
+    },
+    {
+      "fold": 2,
+      "train_groups": [
+        "chr20_25_30mb",
+        "chr20_30_35mb",
+        "chr20_45_50mb",
+        "chr22_15_20mb",
+        "chr22_20_25mb"
+      ],
+      "test_groups": [
+        "chr1_15_20mb"
+      ],
+      "test_n": 597,
+      "test_pos": 519,
+      "test_neg": 78,
+      "accuracy_0.5": 0.6716917922948074,
+      "roc_auc": 0.7533718689788054,
+      "average_precision": 0.9549986597106619,
+      "precision_0.5": 0.9306666666666666,
+      "recall_0.5": 0.6724470134874759,
+      "f1_0.5": 0.7807606263982103
+    },
+    {
+      "fold": 3,
+      "train_groups": [
+        "chr1_15_20mb",
+        "chr20_25_30mb",
+        "chr20_30_35mb",
+        "chr20_45_50mb",
+        "chr22_15_20mb"
+      ],
+      "test_groups": [
+        "chr22_20_25mb"
+      ],
+      "test_n": 439,
+      "test_pos": 394,
+      "test_neg": 45,
+      "accuracy_0.5": 0.6879271070615034,
+      "roc_auc": 0.7783981951494642,
+      "average_precision": 0.9653610348124382,
+      "precision_0.5": 0.9540636042402827,
+      "recall_0.5": 0.6852791878172588,
+      "f1_0.5": 0.7976366322008862
+    },
+    {
+      "fold": 4,
+      "train_groups": [
+        "chr1_15_20mb",
+        "chr20_25_30mb",
+        "chr20_30_35mb",
+        "chr20_45_50mb",
+        "chr22_20_25mb"
+      ],
+      "test_groups": [
+        "chr22_15_20mb"
+      ],
+      "test_n": 410,
+      "test_pos": 354,
+      "test_neg": 56,
+      "accuracy_0.5": 0.7317073170731707,
+      "roc_auc": 0.7622578692493948,
+      "average_precision": 0.9532502268047687,
+      "precision_0.5": 0.9121621621621622,
+      "recall_0.5": 0.7627118644067796,
+      "f1_0.5": 0.8307692307692308
+    },
+    {
+      "fold": 5,
+      "train_groups": [
+        "chr1_15_20mb",
+        "chr20_45_50mb",
+        "chr22_15_20mb",
+        "chr22_20_25mb"
+      ],
+      "test_groups": [
+        "chr20_25_30mb",
+        "chr20_30_35mb"
+      ],
+      "test_n": 386,
+      "test_pos": 328,
+      "test_neg": 58,
+      "accuracy_0.5": 0.7772020725388601,
+      "roc_auc": 0.7681349873843565,
+      "average_precision": 0.9497194315445128,
+      "precision_0.5": 0.9230769230769231,
+      "recall_0.5": 0.8048780487804879,
+      "f1_0.5": 0.8599348534201955
+    }
+  ]
+}

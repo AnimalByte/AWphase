@@ -1,0 +1,71 @@
+{
+  "rows": 1016,
+  "positives": 893,
+  "negatives": 123,
+  "positive_rate": 0.8789370078740157,
+  "source_windows": {
+    "chr20_30_35mb_illumina30x_phase7a": 288,
+    "chr20_30_35mb_illumina35x_phase7a": 282,
+    "chr22_20_25mb_phase7a_general_runner": 446
+  },
+  "physical_groups": {
+    "chr20_30_35mb": 570,
+    "chr22_20_25mb": 446
+  },
+  "n_splits": 2,
+  "features": [
+    "candidate_accepted_by_rule",
+    "panel_confidence",
+    "panel_margin",
+    "panel_support",
+    "panel_conflict",
+    "support_conflict_ratio",
+    "panel_samples",
+    "panel_haplotypes",
+    "anchors",
+    "best_vs_second_margin",
+    "n_block_candidates"
+  ],
+  "cv_accuracy_0.5": 0.7381889763779528,
+  "folds": [
+    {
+      "fold": 1,
+      "train_groups": [
+        "chr22_20_25mb"
+      ],
+      "test_groups": [
+        "chr20_30_35mb"
+      ],
+      "test_n": 570,
+      "test_pos": 493,
+      "test_neg": 77,
+      "accuracy_0.5": 0.7543859649122807,
+      "roc_auc": 0.6564632122441452,
+      "average_precision": 0.927376836011953,
+      "precision_0.5": 0.8930957683741648,
+      "recall_0.5": 0.8133874239350912,
+      "f1_0.5": 0.851380042462845
+    },
+    {
+      "fold": 2,
+      "train_groups": [
+        "chr20_30_35mb"
+      ],
+      "test_groups": [
+        "chr22_20_25mb"
+      ],
+      "test_n": 446,
+      "test_pos": 400,
+      "test_neg": 46,
+      "accuracy_0.5": 0.7174887892376681,
+      "roc_auc": 0.7327989130434782,
+      "average_precision": 0.9592169637268448,
+      "precision_0.5": 0.9363057324840764,
+      "recall_0.5": 0.735,
+      "f1_0.5": 0.8235294117647058
+    }
+  ],
+  "note": "Smoke model. chr20 30x/35x are collapsed into one physical group for CV.",
+  "cv_roc_auc": 0.6833683846356942,
+  "cv_average_precision": 0.9409226616589504
+}

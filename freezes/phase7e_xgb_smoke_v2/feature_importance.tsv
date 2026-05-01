@@ -1,0 +1,12 @@
+feature	gain	weight
+candidate_accepted_by_rule	1.6563291549682617	1.0
+panel_confidence	2.7805469036102295	158.0
+panel_margin	3.432664632797241	175.0
+panel_support	2.077392816543579	58.0
+panel_conflict	1.5731819868087769	125.0
+support_conflict_ratio	2.2672905921936035	29.0
+panel_samples	0.0	0.0
+panel_haplotypes	1.0982943773269653	25.0
+anchors	1.0980180501937866	3.0
+best_vs_second_margin	1.3042819499969482	152.0
+n_block_candidates	1.2295392751693726	49.0

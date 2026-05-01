@@ -1,0 +1,6 @@
+[workspace]
+members = [
+  "rust/awphase-core",
+  "rust/awphase-cli",
+]
+resolver = "2"

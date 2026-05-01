@@ -1,0 +1,119 @@
+{
+  "rows": 1733,
+  "positives": 1527,
+  "negatives": 206,
+  "positive_rate": 0.881130986728217,
+  "source_windows": {
+    "chr20_25_30mb_illumina30x_phase7a": 96,
+    "chr20_30_35mb_illumina30x_phase7a": 290,
+    "chr20_30_35mb_illumina35x_phase7a": 282,
+    "chr20_45_50mb_illumina30x_phase7a": 619,
+    "chr22_20_25mb_phase7a_general_runner": 446
+  },
+  "physical_groups": {
+    "chr20_25_30mb": 96,
+    "chr20_30_35mb": 572,
+    "chr20_45_50mb": 619,
+    "chr22_20_25mb": 446
+  },
+  "n_splits": 4,
+  "features": [
+    "candidate_accepted_by_rule",
+    "panel_confidence",
+    "panel_margin",
+    "panel_support",
+    "panel_conflict",
+    "support_conflict_ratio",
+    "panel_samples",
+    "panel_haplotypes",
+    "anchors",
+    "best_vs_second_margin",
+    "n_block_candidates"
+  ],
+  "cv_accuracy_0.5": 0.7149451817657242,
+  "folds": [
+    {
+      "fold": 1,
+      "train_groups": [
+        "chr20_25_30mb",
+        "chr20_30_35mb",
+        "chr22_20_25mb"
+      ],
+      "test_groups": [
+        "chr20_45_50mb"
+      ],
+      "test_n": 619,
+      "test_pos": 554,
+      "test_neg": 65,
+      "accuracy_0.5": 0.6898222940226171,
+      "roc_auc": 0.77845043043599,
+      "average_precision": 0.9686993597603477,
+      "precision_0.5": 0.9593908629441624,
+      "recall_0.5": 0.6823104693140795,
+      "f1_0.5": 0.7974683544303798
+    },
+    {
+      "fold": 2,
+      "train_groups": [
+        "chr20_25_30mb",
+        "chr20_45_50mb",
+        "chr22_20_25mb"
+      ],
+      "test_groups": [
+        "chr20_30_35mb"
+      ],
+      "test_n": 572,
+      "test_pos": 496,
+      "test_neg": 76,
+      "accuracy_0.5": 0.7202797202797203,
+      "roc_auc": 0.7365502971137521,
+      "average_precision": 0.9505815667024126,
+      "precision_0.5": 0.9307692307692308,
+      "recall_0.5": 0.7318548387096774,
+      "f1_0.5": 0.8194130925507901
+    },
+    {
+      "fold": 3,
+      "train_groups": [
+        "chr20_25_30mb",
+        "chr20_30_35mb",
+        "chr20_45_50mb"
+      ],
+      "test_groups": [
+        "chr22_20_25mb"
+      ],
+      "test_n": 446,
+      "test_pos": 400,
+      "test_neg": 46,
+      "accuracy_0.5": 0.7130044843049327,
+      "roc_auc": 0.7684239130434782,
+      "average_precision": 0.9658801005553027,
+      "precision_0.5": 0.9563758389261745,
+      "recall_0.5": 0.7125,
+      "f1_0.5": 0.8166189111747851
+    },
+    {
+      "fold": 4,
+      "train_groups": [
+        "chr20_30_35mb",
+        "chr20_45_50mb",
+        "chr22_20_25mb"
+      ],
+      "test_groups": [
+        "chr20_25_30mb"
+      ],
+      "test_n": 96,
+      "test_pos": 77,
+      "test_neg": 19,
+      "accuracy_0.5": 0.8541666666666666,
+      "roc_auc": 0.9234449760765551,
+      "average_precision": 0.9804011535275418,
+      "precision_0.5": 0.9565217391304348,
+      "recall_0.5": 0.8571428571428571,
+      "f1_0.5": 0.9041095890410958
+    }
+  ],
+  "note": "Smoke model. chr20 30x/35x are collapsed into one physical group for CV.",
+  "cv_roc_auc": 0.767715108627234,
+  "cv_average_precision": 0.96151639866173
+}

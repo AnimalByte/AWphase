@@ -1,0 +1,243 @@
+use std::fs;
+use std::path::PathBuf;
+use std::time::Instant;
+
+use anyhow::{Context, Result};
+use awphase_core::bridge::boundary::score_boundary;
+use awphase_core::candidate::interface::{CandidateEngine, CandidateSet};
+use awphase_core::candidate::pbwt_stub::PbwtStubEngine;
+use awphase_core::config::BenchmarkConfig;
+use awphase_core::decoder::local::{LocalDecoder, ReadDonorLocalDecoder};
+use awphase_core::io::reads::load_reads_json;
+use awphase_core::io::vcf::load_variants_json;
+use awphase_core::summary::RunSummary;
+use awphase_core::types::{AncestryPrior, WindowId};
+use clap::{Parser, Subcommand};
+
+#[derive(Parser)]
+#[command(name = "awphase")]
+#[command(version = "0.1.0")]
+#[command(about = "awphase starter CLI")]
+struct Cli {
+    #[arg(long, default_value = "configs/benchmark_chr20.yaml")]
+    config: String,
+
+    #[command(subcommand)]
+    command: Commands,
+}
+
+#[derive(Subcommand)]
+enum Commands {
+    Candidates {
+        #[arg(long)]
+        region: Option<String>,
+        #[arg(long)]
+        ancestry_off: bool,
+    },
+    Local {
+        #[arg(long)]
+        region: Option<String>,
+        #[arg(long)]
+        ancestry_off: bool,
+    },
+    Bridge {
+        #[arg(long, default_value = "5.0")]
+        same_score: f32,
+        #[arg(long, default_value = "1.0")]
+        flip_score: f32,
+        #[arg(long, default_value = "5")]
+        informative_sites: usize,
+    },
+    Benchmark {
+        #[arg(long)]
+        region: Option<String>,
+        #[arg(long)]
+        ancestry_off: bool,
+    },
+}
+
+fn parse_region(region: &str) -> Result<WindowId> {
+    let mut parts = region.split(':');
+    let chrom = parts
+        .next()
+        .context("region missing chromosome, expected format chr:start-end")?
+        .to_string();
+    let range = parts
+        .next()
+        .context("region missing coordinates, expected format chr:start-end")?;
+    let mut bounds = range.split('-');
+    let start = bounds
+        .next()
+        .context("region missing start coordinate")?
+        .replace(',', "")
+        .parse::<u64>()?;
+    let end = bounds
+        .next()
+        .context("region missing end coordinate")?
+        .replace(',', "")
+        .parse::<u64>()?;
+
+    Ok(WindowId { chrom, start, end })
+}
+
+fn load_config(path: &str) -> Result<BenchmarkConfig> {
+    let text = fs::read_to_string(path)
+        .with_context(|| format!("failed to read config file: {path}"))?;
+    let cfg: BenchmarkConfig = serde_yaml::from_str(&text)
+        .with_context(|| format!("failed to parse YAML config: {path}"))?;
+    Ok(cfg)
+}
+
+fn ancestry_from_config(cfg: &BenchmarkConfig) -> AncestryPrior {
+    AncestryPrior {
+        groups: cfg.ancestry.groups.clone(),
+        weights: cfg.ancestry.weights.clone(),
+    }
+}
+
+fn ancestry_disabled(cfg: &BenchmarkConfig) -> AncestryPrior {
+    let n = cfg.ancestry.groups.len().max(1);
+    let uniform = 1.0_f32 / (n as f32);
+
+    AncestryPrior {
+        groups: cfg.ancestry.groups.clone(),
+        weights: vec![uniform; cfg.ancestry.groups.len()],
+    }
+}
+
+fn ensure_results_dir(sample_id: &str, ancestry_off: bool) -> Result<PathBuf> {
+    let suffix = if ancestry_off { "ancestry_off" } else { "ancestry_on" };
+    let dir = PathBuf::from(format!("results/runs/{sample_id}/{suffix}"));
+    fs::create_dir_all(&dir)
+        .with_context(|| format!("failed to create results directory: {}", dir.display()))?;
+    Ok(dir)
+}
+
+fn retrieve_candidates(
+    engine: &PbwtStubEngine,
+    window: &WindowId,
+    ancestry: &AncestryPrior,
+) -> Result<CandidateSet> {
+    engine.retrieve(window, ancestry)
+}
+
+fn main() -> Result<()> {
+    let cli = Cli::parse();
+    let cfg = load_config(&cli.config)?;
+
+    match cli.command {
+        Commands::Candidates { region, ancestry_off } => {
+            let ancestry = if ancestry_off {
+                ancestry_disabled(&cfg)
+            } else {
+                ancestry_from_config(&cfg)
+            };
+
+            let region_str = region.unwrap_or_else(|| cfg.region.clone());
+            let window = parse_region(&region_str)?;
+            let engine = PbwtStubEngine;
+            let candidates = retrieve_candidates(&engine, &window, &ancestry)?;
+            println!("{}", serde_json::to_string_pretty(&candidates)?);
+        }
+        Commands::Local { region, ancestry_off } => {
+            let ancestry = if ancestry_off {
+                ancestry_disabled(&cfg)
+            } else {
+                ancestry_from_config(&cfg)
+            };
+
+            let region_str = region.unwrap_or_else(|| cfg.region.clone());
+            let window = parse_region(&region_str)?;
+            let engine = PbwtStubEngine;
+            let candidates = retrieve_candidates(&engine, &window, &ancestry)?;
+            let variants = load_variants_json(&cfg.inputs.target_variants, &window)?;
+            let reads = load_reads_json(&cfg.inputs.target_reads, &window)?;
+
+            let decoder = ReadDonorLocalDecoder;
+            let result = decoder.decode(&window, &variants, &reads, &candidates, &ancestry)?;
+            println!("{}", serde_json::to_string_pretty(&result)?);
+        }
+        Commands::Bridge {
+            same_score,
+            flip_score,
+            informative_sites,
+        } => {
+            let decision = score_boundary(
+                "block_1",
+                "block_2",
+                same_score,
+                flip_score,
+                cfg.bridge.min_confidence,
+                cfg.bridge.min_informative_sites,
+                informative_sites,
+            );
+            println!("{}", serde_json::to_string_pretty(&decision)?);
+        }
+        Commands::Benchmark { region, ancestry_off } => {
+            let ancestry = if ancestry_off {
+                ancestry_disabled(&cfg)
+            } else {
+                ancestry_from_config(&cfg)
+            };
+
+            let timer = Instant::now();
+            let region_str = region.unwrap_or_else(|| cfg.region.clone());
+            let window = parse_region(&region_str)?;
+            let engine = PbwtStubEngine;
+            let candidates = retrieve_candidates(&engine, &window, &ancestry)?;
+            let variants = load_variants_json(&cfg.inputs.target_variants, &window)?;
+            let reads = load_reads_json(&cfg.inputs.target_reads, &window)?;
+
+            let decoder = ReadDonorLocalDecoder;
+            let result = decoder.decode(&window, &variants, &reads, &candidates, &ancestry)?;
+
+            let number_of_sites = result.calls.len();
+            let number_phased = result.calls.iter().filter(|c| c.phase_state != 0).count();
+            let number_abstained = number_of_sites.saturating_sub(number_phased);
+
+            let summary = RunSummary {
+                sample_id: cfg.sample_id.clone(),
+                region: region_str.clone(),
+                decoder_mode: if ancestry_off {
+                    "read_plus_donor_ancestry_off".to_string()
+                } else {
+                    "read_plus_donor_ancestry_on".to_string()
+                },
+                number_of_sites,
+                number_phased,
+                number_abstained,
+                informative_boundaries: 0,
+                joined_boundaries: 0,
+                abstained_boundaries: 0,
+                runtime_seconds: timer.elapsed().as_secs_f32(),
+            };
+
+            let out_dir = ensure_results_dir(&cfg.sample_id, ancestry_off)?;
+            let local_json = out_dir.join("local_decode_result.json");
+            let summary_json = out_dir.join("benchmark_summary.json");
+            let candidates_json = out_dir.join("candidate_set.json");
+            let calls_tsv = out_dir.join("local_calls.tsv");
+
+            fs::write(&candidates_json, serde_json::to_string_pretty(&candidates)?)
+                .with_context(|| format!("failed to write {}", candidates_json.display()))?;
+            fs::write(&local_json, serde_json::to_string_pretty(&result)?)
+                .with_context(|| format!("failed to write {}", local_json.display()))?;
+            fs::write(&summary_json, serde_json::to_string_pretty(&summary)?)
+                .with_context(|| format!("failed to write {}", summary_json.display()))?;
+
+            let mut tsv = String::from("pos\tphase_state\tconfidence\n");
+            for call in &result.calls {
+                tsv.push_str(&format!(
+                    "{}\t{}\t{:.6}\n",
+                    call.pos, call.phase_state, call.confidence
+                ));
+            }
+            fs::write(&calls_tsv, tsv)
+                .with_context(|| format!("failed to write {}", calls_tsv.display()))?;
+
+            println!("{}", serde_json::to_string_pretty(&summary)?);
+        }
+    }
+
+    Ok(())
+}

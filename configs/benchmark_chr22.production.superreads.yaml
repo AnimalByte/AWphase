@@ -1,0 +1,32 @@
+sample_id: HG002
+chromosome: chr22
+region: chr22:20000000-25000000
+
+inputs:
+  target_vcf: data/truth/hg002_chr22/HG002_GRCh38_v5.0q_smvar.chr22_20_25mb.vcf.gz
+  target_reads: data/derived/hg002_chr22_reads.refaware_v3_superreads.json
+  target_variants: data/derived/hg002_chr22_variants.real.json
+  target_site_priors: data/derived/hg002_chr22_site_priors_ancestry_on.json
+  target_block_summaries: null
+  panel_path: data/derived/panel_chr22.bin
+  truth_vcf: data/truth/hg002_chr22/HG002_GRCh38_1_22_v4.2.1_benchmark_hifiasm_v11_phasetransfer.chr22_20_25mb.vcf.gz
+
+ancestry:
+  groups: [afr, amr, eas, eur, sas, mid, oce]
+  weights: [0.02, 0.03, 0.02, 0.88, 0.02, 0.02, 0.01]
+
+candidate_engine:
+  top_k_donors: 32
+  max_composite_states: 16
+
+decoder:
+  window_size: 50000
+  overlap_size: 5000
+  lambda_panel: 1.0
+  lambda_anc: 0.5
+  lambda_switch: 0.2
+
+bridge:
+  min_informative_sites: 2
+  min_confidence: 0.2
+  max_gap_bp: 100000

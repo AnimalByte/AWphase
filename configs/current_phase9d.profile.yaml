@@ -1,0 +1,40 @@
+profile_name: current_phase9d
+profile_version: 1
+
+status:
+  current_project_target: Phase9D
+  promoted_default: Phase8F_ancestry_weighted_multiwindow
+  decision_doc: docs/status/phase9d_decision.md
+  canonical_summary: docs/current_default.md
+  window_manifest: results/phase8f_manifests/phase8f_windows.window_beds.tsv
+  planning_script: scripts/phase9d_window.py
+
+modes:
+  default:
+    method: Phase8F_ancestry_weighted_multiwindow
+    threshold: 0.80
+    purpose: balanced production-facing default
+  conservative:
+    method: Phase8F_ancestry_weighted_multiwindow
+    threshold: 0.90
+    purpose: rare-disease or interpretation-sensitive review
+  exploratory:
+    method: Phase8F_ancestry_weighted_multiwindow
+    threshold: 0.70
+    purpose: bridge-extension exploration only
+
+experimental_phase9:
+  bridge_forest:
+    status: experimental_not_promoted
+    apply_script: python/awphase_py/phase9/apply_phase9d_utility_bridge_forest_v1.py
+    training_script: python/awphase_py/phase9/train_phase9d_wide_bridge_xgb_noleak_safe.py
+    metrics: results/phase9/phase9d_wide_bridge_xgb.noleak.metrics.json
+    summary: results/phase9/phase9d_utility_forest_on_phase8f_t080.average.tsv
+
+required_external_data:
+  included_in_export: false
+  roots:
+    - data/
+    - baselines/
+    - references/
+  note: Raw BAM/CRAM/VCF/BCF/FASTQ/reference files and large intermediates are staged outside the portable export.

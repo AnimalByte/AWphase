@@ -1,0 +1,20 @@
+name: awphase
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scikit-learn
+  - xgboost
+  - pysam
+  - pyyaml
+  - scipy
+  - whatshap
+  - bcftools
+  - samtools
+  - htslib
+  - pip
+  - pip:
+      - pytest
