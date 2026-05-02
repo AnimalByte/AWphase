@@ -131,9 +131,17 @@ Panel-reliance diagnostics are retained separately:
 - `results/phase8/panel_reliance_manifest/panel_reliance.train.average.tsv`
 
 The Phase8 PBWT/HMM runner now emits the original PBWT/HMM paths, v2
-exact-prefix PBWT with forward-backward HMM, and an experimental v3
-bidirectional-prefix PBWT path. On the retained chr6 MHC run, v3 matched v2 but
-was slower, so v2 remains the better current default.
+exact-prefix PBWT with forward-backward HMM, an experimental panel-backed block
+scaffold for v2, and an experimental v3 bidirectional-prefix PBWT path. On the
+retained chr6 MHC short-read run, the v2 block scaffold accepted 940 panel-backed
+joins. It kept hamming error and truth-correct coverage unchanged versus v2
+forward-backward, improved mean switch-corrected N50 from 13.3 kb to 42.4 kb and
+mean switch-corrected NG50 from 3.8 kb to 22.4 kb, but slightly worsened switch
+error rate from 0.204% to 0.226%. It still does not beat WhatsHap Illumina on
+truth-corrected block contiguity in the easier chr6 MHC window, so the scaffold
+is retained as an experimental target for further tuning rather than a promoted
+default. On the retained chr6 MHC run, v3 matched v2 but was slower, so v2
+remains the better current default.
 
 To run AWPhase itself on PacBio Revio HiFi 30x input instead of the manifest's
 Illumina BAM, use:

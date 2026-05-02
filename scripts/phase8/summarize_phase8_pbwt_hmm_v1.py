@@ -6,6 +6,7 @@ from collections import defaultdict
 from pathlib import Path
 
 METRICS = [
+    "benchmark_callable_span_bp",
     "n_truth_het_sites_in_bed",
     "n_pred_sites_nonzero",
     "n_exact_overlap_sites_phased",
@@ -19,7 +20,25 @@ METRICS = [
     "phased_site_accuracy_pct",
     "truth_correct_pct",
     "raw_block_n50_bp",
+    "raw_block_l50",
+    "raw_block_ng50_bp",
+    "raw_block_lg50",
     "median_block_span_bp",
+    "switch_corrected_block_n50_bp",
+    "switch_corrected_block_l50",
+    "switch_corrected_block_ng50_bp",
+    "switch_corrected_block_lg50",
+    "median_switch_corrected_block_span_bp",
+]
+
+SCAFFOLD_METRICS = [
+    "input_blocks",
+    "scaffold_blocks",
+    "joins_considered",
+    "joins_accepted",
+    "joins_same",
+    "joins_flip",
+    "joins_abstained",
 ]
 
 
@@ -78,7 +97,15 @@ def source_root(label, source_suffix):
     return Path(f"results/phase7a_windows/{label}{suffix}")
 
 
-def add_json(rows, split, label, method, path, runtime_seconds=""):
+def add_json(
+    rows,
+    split,
+    label,
+    method,
+    path,
+    runtime_seconds="",
+    scaffold_summary_path=None,
+):
     path = Path(path)
     if not path.exists() or path.stat().st_size == 0:
         return
@@ -91,6 +118,15 @@ def add_json(rows, split, label, method, path, runtime_seconds=""):
     phased = f(metrics.get("n_exact_overlap_sites_phased", 0))
     row["phasing_coverage_pct"] = 100.0 * phased / truth if truth else 0.0
     row["runtime_seconds"] = runtime_seconds
+    for key in SCAFFOLD_METRICS:
+        row[f"block_scaffold_{key}"] = ""
+    if scaffold_summary_path:
+        scaffold_summary_path = Path(scaffold_summary_path)
+        if scaffold_summary_path.exists() and scaffold_summary_path.stat().st_size > 0:
+            with open(scaffold_summary_path) as fh:
+                scaffold = json.load(fh)
+            for key in SCAFFOLD_METRICS:
+                row[f"block_scaffold_{key}"] = scaffold.get(key, "")
     rows.append(row)
 
 
@@ -109,6 +145,21 @@ def summarize(rows):
         serr = sum(f(r["switch_errors"]) for r in method_rows)
         correct = phased - herr
         raw_n50_values = [f(r["raw_block_n50_bp"]) for r in method_rows]
+        raw_l50_values = [f(r["raw_block_l50"]) for r in method_rows]
+        raw_ng50_values = [f(r["raw_block_ng50_bp"]) for r in method_rows]
+        raw_lg50_values = [f(r["raw_block_lg50"]) for r in method_rows]
+        switch_corrected_n50_values = [
+            f(r["switch_corrected_block_n50_bp"]) for r in method_rows
+        ]
+        switch_corrected_l50_values = [
+            f(r["switch_corrected_block_l50"]) for r in method_rows
+        ]
+        switch_corrected_ng50_values = [
+            f(r["switch_corrected_block_ng50_bp"]) for r in method_rows
+        ]
+        switch_corrected_lg50_values = [
+            f(r["switch_corrected_block_lg50"]) for r in method_rows
+        ]
         runtime_values = [
             f(r["runtime_seconds"])
             for r in method_rows
@@ -120,6 +171,9 @@ def summarize(rows):
                 "method": method,
                 "n_windows": len(method_rows),
                 "windows": ",".join(r["label"] for r in method_rows),
+                "total_benchmark_callable_span_bp": int(
+                    sum(f(r["benchmark_callable_span_bp"]) for r in method_rows)
+                ),
                 "total_truth_sites": int(truth),
                 "total_pred_sites_nonzero": int(
                     sum(f(r["n_pred_sites_nonzero"]) for r in method_rows)
@@ -152,6 +206,74 @@ def summarize(rows):
                 / len(method_rows),
                 "median_raw_block_n50_bp": median(raw_n50_values),
                 "stddev_raw_block_n50_bp": population_stddev(raw_n50_values),
+                "mean_raw_block_l50": sum(f(r["raw_block_l50"]) for r in method_rows)
+                / len(method_rows),
+                "median_raw_block_l50": median(raw_l50_values),
+                "stddev_raw_block_l50": population_stddev(raw_l50_values),
+                "mean_raw_block_ng50_bp": sum(
+                    f(r["raw_block_ng50_bp"]) for r in method_rows
+                )
+                / len(method_rows),
+                "median_raw_block_ng50_bp": median(raw_ng50_values),
+                "stddev_raw_block_ng50_bp": population_stddev(raw_ng50_values),
+                "mean_raw_block_lg50": sum(f(r["raw_block_lg50"]) for r in method_rows)
+                / len(method_rows),
+                "median_raw_block_lg50": median(raw_lg50_values),
+                "stddev_raw_block_lg50": population_stddev(raw_lg50_values),
+                "mean_switch_corrected_block_n50_bp": sum(
+                    f(r["switch_corrected_block_n50_bp"]) for r in method_rows
+                )
+                / len(method_rows),
+                "median_switch_corrected_block_n50_bp": median(
+                    switch_corrected_n50_values
+                ),
+                "stddev_switch_corrected_block_n50_bp": population_stddev(
+                    switch_corrected_n50_values
+                ),
+                "mean_switch_corrected_block_l50": sum(
+                    f(r["switch_corrected_block_l50"]) for r in method_rows
+                )
+                / len(method_rows),
+                "median_switch_corrected_block_l50": median(switch_corrected_l50_values),
+                "stddev_switch_corrected_block_l50": population_stddev(
+                    switch_corrected_l50_values
+                ),
+                "mean_switch_corrected_block_ng50_bp": sum(
+                    f(r["switch_corrected_block_ng50_bp"]) for r in method_rows
+                )
+                / len(method_rows),
+                "median_switch_corrected_block_ng50_bp": median(
+                    switch_corrected_ng50_values
+                ),
+                "stddev_switch_corrected_block_ng50_bp": population_stddev(
+                    switch_corrected_ng50_values
+                ),
+                "mean_switch_corrected_block_lg50": sum(
+                    f(r["switch_corrected_block_lg50"]) for r in method_rows
+                )
+                / len(method_rows),
+                "median_switch_corrected_block_lg50": median(switch_corrected_lg50_values),
+                "stddev_switch_corrected_block_lg50": population_stddev(
+                    switch_corrected_lg50_values
+                ),
+                "total_block_scaffold_joins_considered": int(
+                    sum(
+                        f(r.get("block_scaffold_joins_considered", 0))
+                        for r in method_rows
+                    )
+                ),
+                "total_block_scaffold_joins_accepted": int(
+                    sum(
+                        f(r.get("block_scaffold_joins_accepted", 0))
+                        for r in method_rows
+                    )
+                ),
+                "total_block_scaffold_joins_same": int(
+                    sum(f(r.get("block_scaffold_joins_same", 0)) for r in method_rows)
+                ),
+                "total_block_scaffold_joins_flip": int(
+                    sum(f(r.get("block_scaffold_joins_flip", 0)) for r in method_rows)
+                ),
                 "total_runtime_seconds": sum(runtime_values) if runtime_values else 0.0,
                 "mean_runtime_seconds": sum(runtime_values) / len(runtime_values)
                 if runtime_values
@@ -251,6 +373,15 @@ def main():
             rows,
             split,
             label,
+            "AWPhase_Phase8_PBWT_HMM_V2_block_scaffold",
+            root / "truth_eval_phase8pbwt_hmm_v2_scaffold.metrics.json",
+            runtimes.get("AWPhase_Phase8_PBWT_HMM_V2_block_scaffold", ""),
+            root / "phase8_block_scaffold" / "summary.pbwt_hmm_v2_scaffold.json",
+        )
+        add_json(
+            rows,
+            split,
+            label,
             "AWPhase_Phase8_PBWT_V3_bidirectional_prefix",
             root / "truth_eval_phase8pbwt_v3.metrics.json",
             runtimes.get("AWPhase_Phase8_PBWT_V3_bidirectional_prefix", ""),
@@ -298,6 +429,7 @@ def main():
         rows,
         ["split", "label", "method"]
         + METRICS
+        + [f"block_scaffold_{key}" for key in SCAFFOLD_METRICS]
         + ["phasing_coverage_pct", "runtime_seconds", "path"],
     )
     avg_rows = summarize(rows)
@@ -305,6 +437,7 @@ def main():
         "method",
         "n_windows",
         "windows",
+        "total_benchmark_callable_span_bp",
         "total_truth_sites",
         "total_pred_sites_nonzero",
         "total_exact_overlap_sites_phased",
@@ -321,6 +454,31 @@ def main():
         "mean_raw_block_n50_bp",
         "median_raw_block_n50_bp",
         "stddev_raw_block_n50_bp",
+        "mean_raw_block_l50",
+        "median_raw_block_l50",
+        "stddev_raw_block_l50",
+        "mean_raw_block_ng50_bp",
+        "median_raw_block_ng50_bp",
+        "stddev_raw_block_ng50_bp",
+        "mean_raw_block_lg50",
+        "median_raw_block_lg50",
+        "stddev_raw_block_lg50",
+        "mean_switch_corrected_block_n50_bp",
+        "median_switch_corrected_block_n50_bp",
+        "stddev_switch_corrected_block_n50_bp",
+        "mean_switch_corrected_block_l50",
+        "median_switch_corrected_block_l50",
+        "stddev_switch_corrected_block_l50",
+        "mean_switch_corrected_block_ng50_bp",
+        "median_switch_corrected_block_ng50_bp",
+        "stddev_switch_corrected_block_ng50_bp",
+        "mean_switch_corrected_block_lg50",
+        "median_switch_corrected_block_lg50",
+        "stddev_switch_corrected_block_lg50",
+        "total_block_scaffold_joins_considered",
+        "total_block_scaffold_joins_accepted",
+        "total_block_scaffold_joins_same",
+        "total_block_scaffold_joins_flip",
         "total_runtime_seconds",
         "mean_runtime_seconds",
         "median_runtime_seconds",

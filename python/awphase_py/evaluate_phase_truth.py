@@ -29,6 +29,14 @@ def load_bed_intervals(path):
     return dict(intervals)
 
 
+def interval_span_bp(intervals):
+    return sum(
+        end - start
+        for chrom_intervals in intervals.values()
+        for start, end in chrom_intervals
+    )
+
+
 def in_bed(chrom, pos1, intervals):
     zero_pos = pos1 - 1
     for start, end in intervals.get(chrom, []):
@@ -136,17 +144,23 @@ def load_pred_rows(pred_tsv, variant_by_pos, phase_column):
 
 
 def compute_n50(lengths):
-    lengths = [int(x) for x in lengths if int(x) > 0]
+    return compute_x50(lengths, None)[0]
+
+
+def compute_x50(lengths, denominator=None):
+    lengths = sorted((int(x) for x in lengths if int(x) > 0), reverse=True)
     if not lengths:
-        return 0
-    total = sum(lengths)
+        return 0, 0
+    total = sum(lengths) if denominator is None else int(denominator)
+    if total <= 0:
+        return 0, 0
     target = total / 2.0
     running = 0
-    for length in sorted(lengths, reverse=True):
+    for idx, length in enumerate(lengths, start=1):
         running += length
         if running >= target:
-            return length
-    return 0
+            return length, idx
+    return 0, 0
 
 
 def main():
@@ -167,6 +181,8 @@ def main():
     os.makedirs(os.path.dirname(args.out_prefix), exist_ok=True)
 
     variant_by_pos = load_variant_json(args.variant_json)
+    truth_intervals = load_bed_intervals(args.truth_bed)
+    benchmark_callable_span_bp = interval_span_bp(truth_intervals)
     truth_by_exact, truth_by_pos, truth_sample = load_truth_exact(
         args.truth_vcf, args.truth_bed, args.sample
     )
@@ -238,6 +254,7 @@ def main():
     switch_errors = 0
     switch_denom = 0
     block_metric_rows = []
+    switch_corrected_block_spans = []
 
     for block_id, rows in by_block.items():
         rows = sorted(rows, key=lambda x: x["pos"])
@@ -255,12 +272,18 @@ def main():
         hamming_errors += block_hamming_errors
         hamming_denom += len(rows)
 
+        block_switch_errors = 0
+        segment_start = rows[0]["pos"]
         for a, b in zip(rows, rows[1:]):
             pred_rel = a["pred_state"] * b["pred_state"]
             truth_rel = a["truth_state"] * b["truth_state"]
             switch_denom += 1
             if pred_rel != truth_rel:
                 switch_errors += 1
+                block_switch_errors += 1
+                switch_corrected_block_spans.append(a["pos"] - segment_start + 1)
+                segment_start = b["pos"]
+        switch_corrected_block_spans.append(rows[-1]["pos"] - segment_start + 1)
 
         block_metric_rows.append(
             {
@@ -273,6 +296,8 @@ def main():
                 "hamming_rate": (
                     block_hamming_errors / len(rows) if rows else 0.0
                 ),
+                "switch_errors": block_switch_errors,
+                "switch_corrected_segments": block_switch_errors + 1,
                 "chosen_block_polarity": chosen,
             }
         )
@@ -288,12 +313,24 @@ def main():
         positions.sort()
         pred_block_spans.append(positions[-1] - positions[0] + 1)
 
+    raw_block_n50_bp, raw_block_l50 = compute_x50(pred_block_spans)
+    raw_block_ng50_bp, raw_block_lg50 = compute_x50(
+        pred_block_spans, benchmark_callable_span_bp
+    )
+    switch_corrected_block_n50_bp, switch_corrected_block_l50 = compute_x50(
+        switch_corrected_block_spans
+    )
+    switch_corrected_block_ng50_bp, switch_corrected_block_lg50 = compute_x50(
+        switch_corrected_block_spans, benchmark_callable_span_bp
+    )
+
     n_pred_nonzero = sum(1 for r in pred_rows if r["pred_state"] != 0)
     n_exact_overlap_phased = sum(1 for r in matched_rows if r["pred_state"] != 0)
 
     metrics = {
         "truth_sample": truth_sample,
         "phase_column": args.phase_column,
+        "benchmark_callable_span_bp": benchmark_callable_span_bp,
         "n_truth_het_sites_in_bed": len(truth_by_exact),
         "n_pred_rows_total": len(pred_rows),
         "n_pred_sites_nonzero": n_pred_nonzero,
@@ -325,11 +362,26 @@ def main():
             switch_errors / switch_denom if switch_denom else 0.0
         ),
         "n_pred_blocks_nonzero": len(pred_block_positions),
-        "raw_block_n50_bp": compute_n50(pred_block_spans),
+        "raw_block_n50_bp": raw_block_n50_bp,
+        "raw_block_l50": raw_block_l50,
+        "raw_block_ng50_bp": raw_block_ng50_bp,
+        "raw_block_lg50": raw_block_lg50,
         "max_block_span_bp": max(pred_block_spans) if pred_block_spans else 0,
         "median_block_span_bp": (
             sorted(pred_block_spans)[len(pred_block_spans) // 2]
             if pred_block_spans
+            else 0
+        ),
+        "switch_corrected_block_n50_bp": switch_corrected_block_n50_bp,
+        "switch_corrected_block_l50": switch_corrected_block_l50,
+        "switch_corrected_block_ng50_bp": switch_corrected_block_ng50_bp,
+        "switch_corrected_block_lg50": switch_corrected_block_lg50,
+        "max_switch_corrected_block_span_bp": (
+            max(switch_corrected_block_spans) if switch_corrected_block_spans else 0
+        ),
+        "median_switch_corrected_block_span_bp": (
+            sorted(switch_corrected_block_spans)[len(switch_corrected_block_spans) // 2]
+            if switch_corrected_block_spans
             else 0
         ),
         "n_blocks_with_truth_overlap": len(by_block),
@@ -369,6 +421,8 @@ def main():
             "span_bp",
             "hamming_errors",
             "hamming_rate",
+            "switch_errors",
+            "switch_corrected_segments",
             "chosen_block_polarity",
         ]
         writer = csv.DictWriter(f, fieldnames=fieldnames, delimiter="\t")

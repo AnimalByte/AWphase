@@ -24,6 +24,7 @@ mkdir -p \
   "$ROOT/phase8_pbwt_hmm" \
   "$ROOT/phase8_pbwt_v2" \
   "$ROOT/phase8_pbwt_hmm_v2" \
+  "$ROOT/phase8_block_scaffold" \
   "$ROOT/phase8_pbwt_v3" \
   "$ROOT/phase8_pbwt_hmm_v3"
 TIMING_TSV="$ROOT/phase8_timing.tsv"
@@ -57,6 +58,13 @@ if [[ -x "$RUST_PBWT_BIN" ]]; then
   RUST_PBWT_CMD=("$RUST_PBWT_BIN")
 else
   RUST_PBWT_CMD=(cargo run --release --quiet --bin phase_panel_pbwt --)
+fi
+
+RUST_SCAFFOLD_BIN="${AWPHASE_RUST_SCAFFOLD_BIN:-target/release/phase_panel_scaffold}"
+if [[ -x "$RUST_SCAFFOLD_BIN" ]]; then
+  RUST_SCAFFOLD_CMD=("$RUST_SCAFFOLD_BIN")
+else
+  RUST_SCAFFOLD_CMD=(cargo run --release --quiet --bin phase_panel_scaffold --)
 fi
 
 echo "===== ${SOURCE_WINDOW}: Phase8 PBWT projection ====="
@@ -172,6 +180,42 @@ PYTHONPATH=python python python/awphase_py/evaluate_phase_truth.py \
   --sample HG002 \
   --phase-column local_phase_state \
   --out-prefix "$ROOT/truth_eval_phase8pbwt_hmm_v2"
+
+echo
+echo "===== ${SOURCE_WINDOW}: Phase8 PBWT v2 + HMM block scaffolding ====="
+started="$(date +%s)"
+"${RUST_SCAFFOLD_CMD[@]}" \
+  --panel-bcf "$PANEL_BCF" \
+  --input-tsv "$ROOT/local_calls.phase8pbwt_hmm_v2.tsv" \
+  --variant-json "$VARIANT_JSON" \
+  --chrom "$CHROM" \
+  --start "$START" \
+  --end "$END" \
+  --genetic-map "$GENETIC_MAP" \
+  --out-tsv "$ROOT/local_calls.phase8pbwt_hmm_v2_scaffold.tsv" \
+  --out-joins-tsv "$ROOT/phase8_block_scaffold/joins.pbwt_hmm_v2_scaffold.tsv" \
+  --out-summary-json "$ROOT/phase8_block_scaffold/summary.pbwt_hmm_v2_scaffold.json" \
+  --min-anchors-per-block "${AWPHASE_SCAFFOLD_MIN_ANCHORS_PER_BLOCK:-2}" \
+  --max-anchors-per-block "${AWPHASE_SCAFFOLD_MAX_ANCHORS_PER_BLOCK:-48}" \
+  --top-k "${AWPHASE_SCAFFOLD_TOP_K:-64}" \
+  --min-donors "${AWPHASE_SCAFFOLD_MIN_DONORS:-32}" \
+  --min-confidence "${AWPHASE_SCAFFOLD_MIN_CONFIDENCE:-0.55}" \
+  --min-margin "${AWPHASE_SCAFFOLD_MIN_MARGIN:-8.0}" \
+  --max-gap-cm "${AWPHASE_SCAFFOLD_MAX_GAP_CM:-0.50}" \
+  --max-gap-bp "${AWPHASE_SCAFFOLD_MAX_GAP_BP:-2000000}" \
+  > "$ROOT/phase8_block_scaffold/run.pbwt_hmm_v2_scaffold.log" 2>&1
+record_timing "AWPhase_Phase8_PBWT_HMM_V2_block_scaffold" "phase_panel_scaffold" "$started"
+
+cat "$ROOT/phase8_block_scaffold/summary.pbwt_hmm_v2_scaffold.json"
+
+PYTHONPATH=python python python/awphase_py/evaluate_phase_truth.py \
+  --pred-tsv "$ROOT/local_calls.phase8pbwt_hmm_v2_scaffold.tsv" \
+  --variant-json "$VARIANT_JSON" \
+  --truth-vcf "$TRUTH_VCF" \
+  --truth-bed "$TRUTH_BED" \
+  --sample HG002 \
+  --phase-column local_phase_state \
+  --out-prefix "$ROOT/truth_eval_phase8pbwt_hmm_v2_scaffold"
 
 echo
 echo "===== ${SOURCE_WINDOW}: Phase8 PBWT v3 bidirectional-prefix projection ====="

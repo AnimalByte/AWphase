@@ -31,7 +31,10 @@ Report at minimum:
 - switch error rate
 - phased-site accuracy
 - truth-correct percentage
-- block N50
+- raw block N50 and L50
+- raw block NG50 and LG50 against the callable benchmark span
+- switch-corrected block N50 and L50
+- switch-corrected block NG50 and LG50 against the callable benchmark span
 - median block span
 - maximum block span
 - number of bridged windows or accepted bridge edges where applicable
